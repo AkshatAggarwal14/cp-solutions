@@ -1,45 +1,104 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
-int a[4];
+int min(int a, int b)
+{
+    return (a < b ? a : b);
+}
+int max(int a, int b)
+{
+    return (a > b ? a : b);
+}
 
 int main()
 {
-    int n, sum = 0;
+    long int n;
     cin >> n;
-    while (n--)
+    int ctr[5] = {0};
+    int i, input, re = 0;
+    for (i = 0; i < n; i++)
     {
-        int x;
-        cin >> x;
-        sum += x;
-        a[x]++;
+        cin >> input;
+        ctr[input]++;
     }
-    if (sum == 1 or sum == 2 or sum == 5)
+    int entering, leaving, moving;
+    moving = min(ctr[1], ctr[2]);
+    re += moving;
+    ctr[1] -= moving;
+    ctr[2] -= moving;
+    ctr[3] += moving;
+    if (ctr[1] > 0 && ctr[2] == 0)
     {
-        cout << -1 << endl;
-        return 0;
+        moving = ctr[1] / 3;
+        re += moving * 2;
+        ctr[1] -= moving * 3;
+        ctr[3] += moving;
+        if (ctr[1] == 1)
+        {
+            if (ctr[3] >= 1)
+            {
+                re++;
+            }
+            else
+            {
+                if (ctr[4] >= 2)
+                {
+                    re += 2;
+                }
+                else
+                {
+                    re = -1;
+                }
+            }
+        }
+        if (ctr[1] == 2)
+        {
+            if (ctr[4] >= 1)
+            {
+                re += 2;
+            }
+            else
+            {
+                if (ctr[3] >= 2)
+                {
+                    re += 2;
+                }
+                else
+                {
+                    re = -1;
+                }
+            }
+        }
     }
-    int ans = 0;
-    while (a[1] > 0 and a[2] > 0)
+    if (ctr[1] == 0 && ctr[2] > 0)
     {
-        a[3]++;
-        ans++;
-        a[1]--;
-        a[2]--;
+        moving = ctr[2] / 3;
+        re += moving * 2;
+        ctr[2] -= moving * 3;
+        ctr[3] += moving * 2;
+        if (ctr[2] == 1)
+        {
+            if (ctr[4] >= 1)
+            {
+                re++;
+            }
+            else
+            {
+                if (ctr[3] >= 2)
+                {
+                    re += 2;
+                }
+                else
+                {
+                    re = -1;
+                }
+            }
+        }
+        if (ctr[2] == 2)
+        {
+            re += 2; //merge
+        }
     }
-    if (a[1] > 0)
-    {
-        ans += a[1] - a[1] / 3;
-        if (a[1] == 1 and a[3] == 0)
-            ans++;
-    }
-    if (a[2] > 0)
-    {
-        ans += a[2] - a[2] / 3;
-        if (a[2] % 3 == 1 and a[4] == 0)
-            ans++;
-    }
-    cout << ans << endl;
+    cout << re;
     return 0;
 }
