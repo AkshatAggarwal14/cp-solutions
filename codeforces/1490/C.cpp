@@ -1,28 +1,28 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 int main()
 {
-    ll t;
-    cin >> t;
-    for (ll i = 1; i <= t; i++)
+    int t;
+    cin>>t;
+    for (int i = 1; i <= t; i++)
     {
-        ll num, flag = 0, left, cbrtLeft;
-        cin >> num;
-        for (ll i = 1; i < cbrt(num); i++)
+        long long int n, m, g = 0,p, f;
+ 
+        scanf("%lld", &n);
+        for (long long int i = 1; i <=cbrt(n); i++)
         {
-            left = num - (i * i * i);
-            cbrtLeft = cbrt(left);
-            if (left == cbrtLeft * cbrtLeft * cbrtLeft)
+            p = n-(i*i*i);
+            f = cbrt(p);
+            if ((p == (f*f*f)) && (p>0))
             {
-                cout << "YES\n";
-                flag = 1;
+                cout<<"YES\n";
+                g++;
                 break;
             }
         }
-        if (flag == 0)
+        if ((g == 0))
         {
-            cout << "NO\n";
+            cout<<"NO\n";
         }
     }
     return 0;
