@@ -4616,6 +4616,22 @@
     ],
     "timestamp": "May/30/2021 13:47"
   },
+  "CF117954910": {
+    "contest_id": 1523,
+    "language": "GNU C++17",
+    "path": "codeforces/1523/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Game of Life",
+    "problem_url": "https://codeforces.com/contest/1523/problem/A",
+    "submission_id": "CF117954910",
+    "submission_url": "https://codeforces.com/contest/1523/submission/117954910",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "May/31/2021 11:11"
+  },
   "CF117984732": {
     "contest_id": 1102,
     "language": "GNU C++17",
