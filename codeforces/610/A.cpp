@@ -9,19 +9,19 @@ typedef long long ll;
 
 void solve()
 {
-    ll n, ans, half;
+    ll n, i;
     cin >> n;
-    if (n % 2 != 0) //IF odd then answer = 0
+    if (n % 2 != 0)
     {
         cout << 0 << "\n";
         return;
     }
-    half = n / 2; //else we divide it by 2 and find all possible pairs as sides of rectangle
-    if (half % 2 == 0)
-        ans = half / 2 - 1;
-    else
-        ans = half / 2;
-    cout << ans << "\n";
+    n = n / 2;
+    for (i = 0; i < n / 2; i++)
+        ;
+    if (n % 2 == 0)
+        i--;
+    cout << i << "\n";
     return;
 }
 
