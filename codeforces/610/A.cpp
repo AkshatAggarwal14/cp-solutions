@@ -19,7 +19,7 @@ void solve()
     n = n / 2;
     for (i = 0; i < n / 2; i++)
         ;
-    if (n % 2 == 0)
+    if (n == 2 * (n / 2))
         i--;
     cout << i << "\n";
     return;
