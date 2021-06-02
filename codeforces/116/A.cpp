@@ -38,16 +38,20 @@ typedef vector<vl> vvl;
 void solve()
 {
 
-    ll n, a, b, sum = 0, max = 0;
+    ll n, maxi, enter1, exit1, enter, exit, in;
     cin >> n;
-    for (ll i = 0; i < n; i++)
+    n--;
+    cin >> exit1 >> enter1;
+    in = enter1;
+    maxi = max(enter1, exit1);
+    while (n--)
     {
-        cin >> a >> b;
-        sum = sum + (b - a);
-        if (sum > max)
-            max = sum;
+        cin >> exit >> enter;
+        in -= exit;
+        in += enter;
+        maxi = max(maxi, in);
     }
-    cout << max << endl;
+    cout << maxi << "\n";
     return;
 }
 
