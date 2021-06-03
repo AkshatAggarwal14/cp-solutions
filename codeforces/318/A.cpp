@@ -1,4 +1,4 @@
-/*  ॐ */
+/*	ॐ	*/
 // Akshat Aggarwal
 #include <bits/stdc++.h>
 using namespace std;
@@ -37,9 +37,10 @@ typedef vector<vl> vvl;
 
 void solve()
 {
+
     ll n, k;
     cin >> n >> k;
-    k--;
+    k--; //working with indexes
     ll mid = (n + n % 2) / 2 - 1;
     (k > mid) ? cout << (k - mid) * 2 : cout << 2 * k + 1;
     return;
