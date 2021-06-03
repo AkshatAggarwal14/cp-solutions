@@ -40,29 +40,19 @@ void solve()
 
     ll n;
     cin >> n;
-    string s, prev = "";
-    ll ans = 0;
+    string val;
+    ll arr[n], ans = 0;
     fo(i, n)
     {
-        cin >> s;
-        if (s != prev)
-            ans++;
-        prev = s;
+        cin >> val;
+        arr[i] = val[0] - '0';
     }
-    cout << ans << endl;
-    // string val;
-    // ll arr[n], ans = 0;
-    // fo(i, n)
-    // {
-    //     cin >> val;
-    //     arr[i] = val[0] - '0';
-    // }
-    // rep(i, 1, n)
-    // {
-    //     if (arr[i] != arr[i - 1])
-    //         ans++;
-    // }
-    // cout << ans + 1;
+    rep(i, 1, n)
+    {
+        if (arr[i] != arr[i - 1])
+            ans++;
+    }
+    cout << ans + 1;
     return;
 }
 
