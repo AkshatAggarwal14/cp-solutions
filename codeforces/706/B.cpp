@@ -79,18 +79,18 @@ void solve()
     {
         ll x;
         cin >> x;
-        // ll low = 0, high = n; // numElems is the size of the array i.e arr.size()
-        // while (low != high)
-        // {
-        //     ll mid = (low + high) / 2; // Or a fancy way to avoid int overflow
-        //     if (arr[mid] <= x)
-        //         low = mid + 1;
-        //     else
-        //         high = mid;
-        // }
-        // cout << low << "\n";
-        // //* M2
-        cout << upper_bound(arr, arr + n, x) - arr << "\n";
+        ll low = 0, high = n; // numElems is the size of the array i.e arr.size()
+        while (low != high)
+        {
+            ll mid = (low + high) / 2; // Or a fancy way to avoid int overflow
+            if (arr[mid] <= x)
+                low = mid + 1;
+            else
+                high = mid;
+        }
+        cout << low << "\n";
+        //* M2
+        // cout<<upper_bound(arr, arr + n, x) - arr<<"\n";
         // //! https://stackoverflow.com/questions/6553970/find-the-first-element-in-a-sorted-array-that-is-greater-than-the-target
     }
     return;
