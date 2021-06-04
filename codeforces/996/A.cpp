@@ -35,17 +35,9 @@ typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 
-void solve() {
-    int n;
-    cin >> n;
-    int ans = 0;
-    for (int x : {100, 20, 10, 5, 1}) {
-        ans += n / x;
-        n %= x;
-    }
-    cout << ans << '\n';
+void solve()
+{
 
-    /*
     ll n, bills = 0, amount;
     cin >> n;
     while (n)
@@ -67,14 +59,15 @@ void solve() {
     cout << bills << endl;
 
     return;
-    */
 }
 
-int main() {
+int main()
+{
     fast_io();
     ll t = 1;
     //cin >> t;
-    while (t--) {
+    while (t--)
+    {
         solve();
     }
     return 0;
