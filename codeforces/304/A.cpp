@@ -20,7 +20,7 @@ using namespace std;
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
 #define endl "\n"
-#define fast_io()                 \
+#define fast_io()                \
     ios_base::sync_with_stdio(0); \
     cin.tie(0);                   \
     cout.tie(0)
@@ -43,7 +43,7 @@ void solve()
     int ans = 0;
     for (int i = 1; i < n; i++)
     {
-        for (int j = i + 1; (i * i) + (j * j) <= n * n; j++)
+        for (int j = i + 1; j < n; j++)
         {
             int temp = (i * i) + (j * j);
             int temp2 = sqrt(temp);
@@ -64,7 +64,7 @@ int main()
     while (t--)
     {
         solve();
-        cout << "\n";
+        cout<<"\n";
     }
     return 0;
 }
