@@ -47,7 +47,7 @@ void solve()
         {
             int temp = (i * i) + (j * j);
             int temp2 = sqrt(temp);
-            if (temp2 * temp2 == temp)
+            if (temp2 * temp2 == temp and temp2 <= n)
                 ans++;
         }
     }
