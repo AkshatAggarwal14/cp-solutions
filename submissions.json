@@ -4937,6 +4937,22 @@
     ],
     "timestamp": "Jun/03/2021 20:32"
   },
+  "CF118322360": {
+    "contest_id": 1335,
+    "language": "GNU C++17",
+    "path": "codeforces/1335/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Candies and Two Sisters",
+    "problem_url": "https://codeforces.com/contest/1335/problem/A",
+    "submission_id": "CF118322360",
+    "submission_url": "https://codeforces.com/contest/1335/submission/118322360",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jun/04/2021 08:39"
+  },
   "CF118323621": {
     "contest_id": 268,
     "language": "GNU C++17",
