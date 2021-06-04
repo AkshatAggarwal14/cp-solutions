@@ -4937,6 +4937,24 @@
     ],
     "timestamp": "Jun/03/2021 20:32"
   },
+  "CF118324320": {
+    "contest_id": 400,
+    "language": "GNU C++17",
+    "path": "codeforces/400/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Inna and New Matrix of Candies",
+    "problem_url": "https://codeforces.com/contest/400/problem/B",
+    "submission_id": "CF118324320",
+    "submission_url": "https://codeforces.com/contest/400/submission/118324320",
+    "tags": [
+      "brute force",
+      "implementation",
+      "schedules",
+      "*1200"
+    ],
+    "timestamp": "Jun/04/2021 09:25"
+  },
   "CF118325178": {
     "contest_id": 714,
     "language": "GNU C++17",
