@@ -41,15 +41,17 @@ void solve()
     int n;
     cin >> n;
     ll a[n];
-
-    fo(i, n) cin >> a[i];
-
-    fo(i, n) a[i] -= i; //ai=ai-i
-
     map<ll, ll> cnt;
-    fo(i, n) cnt[a[i]]++; //like hash maps--> stores a[i] as key and cnt[a[i]] as value, first gives key. second gives value
-    ll ans = 0;
 
+    fo(i, n)
+    {
+        cin >> a[i];
+        a[i] -= i;   //ai=ai-i
+        cnt[a[i]]++; //like hash maps--> stores a[i] as key and cnt[a[i]] as value, first gives key. second gives value
+    }
+    ll ans = 0;
+    // for (auto i : cnt)
+    //     cout << i.F << " "; //! to print key
     for (auto i : cnt)
     {
         ans += i.S * (i.S - 1) / 2; //! nC2 to make a pair

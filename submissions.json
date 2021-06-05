@@ -5146,6 +5146,24 @@
     ],
     "timestamp": "Jun/05/2021 19:31"
   },
+  "CF118514288": {
+    "contest_id": 1520,
+    "language": "GNU C++17",
+    "path": "codeforces/1520/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Same Differences",
+    "problem_url": "https://codeforces.com/contest/1520/problem/D",
+    "submission_id": "CF118514288",
+    "submission_url": "https://codeforces.com/contest/1520/submission/118514288",
+    "tags": [
+      "data structures",
+      "hashing",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Jun/05/2021 19:51"
+  },
   "CF118528889": {
     "contest_id": 1531,
     "language": "GNU C++17",

@@ -1194,7 +1194,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 39 | [A - Dragons](https://codeforces.com/contest/230/problem/A) | [GNU C++17](./codeforces/230/A.cpp) | `greedy` `sortings` `*1000` | Jun/06/2021 00:49 | 
 38 | [A - Vanya and Cubes](https://codeforces.com/contest/492/problem/A) | [GNU C++17](./codeforces/492/A.cpp) | `implementation` `*800` | Jun/06/2021 00:08 | 
 37 | [A - Зингер | color](https://codeforces.com/contest/1531/problem/A) | [GNU C++17](./codeforces/1531/A.cpp) | `*special problem` `implementation` | Jun/05/2021 22:40 | 
-36 | [D - Same Differences](https://codeforces.com/contest/1520/problem/D) | [GNU C++17](./codeforces/1520/D.cpp) | `data structures` `hashing` `math` `*1200` | Jun/05/2021 19:31 | 
+36 | [D - Same Differences](https://codeforces.com/contest/1520/problem/D) | [GNU C++17](./codeforces/1520/D.cpp) | `data structures` `hashing` `math` `*1200` | Jun/05/2021 19:51 | 
 35 | [B - Ordinary Numbers](https://codeforces.com/contest/1520/problem/B) | [GNU C++17](./codeforces/1520/B.cpp) | `brute force` `math` `number theory` `*800` | Jun/05/2021 18:23 | 
 34 | [A - Do Not Be Distracted!](https://codeforces.com/contest/1520/problem/A) | [GNU C++17](./codeforces/1520/A.cpp) | `brute force` `implementation` `*800` | Jun/05/2021 18:04 | 
 33 | [A - Mishka and Game](https://codeforces.com/contest/703/problem/A) | [GNU C++17](./codeforces/703/A.cpp) | `implementation` `*800` | Jun/05/2021 13:32 | 
