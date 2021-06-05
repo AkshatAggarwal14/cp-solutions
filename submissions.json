@@ -1,4 +1,20 @@
 {
+  "CF118528889": {
+    "contest_id": 1531,
+    "language": "GNU C++17",
+    "path": "codeforces/1531/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "\u0417\u0438\u043d\u0433\u0435\u0440 | color",
+    "problem_url": "https://codeforces.com/contest/1531/problem/A",
+    "submission_id": "CF118528889",
+    "submission_url": "https://codeforces.com/contest/1531/submission/118528889",
+    "tags": [
+      "*special problem",
+      "implementation"
+    ],
+    "timestamp": "Jun/05/2021 22:40"
+  },
   "CF118536930": {
     "contest_id": 230,
     "language": "GNU C++17",
