@@ -38,31 +38,21 @@ typedef vector<vl> vvl;
 
 void solve()
 {
-
     ll n;
     cin >> n;
-    ll ans = 0;
-    for (ll i = 1; i <= n; i = i * 10 + 1)
-        for (ll d = 1; d <= 9; d++)
-            if (i * d <= n)
-                ans++;
-    cout << ans << endl;
 
-    // ll n;
-    // cin >> n;
+    ll temp = 0, ans = 0;
+    ll digs = floor(log10(n)) + 1;
 
-    // ll temp = 0, ans = 0;
-    // ll digs = floor(log10(n)) + 1;
+    fo(i, digs)
+    {
+        temp = temp * 10 + 1;
+        // For each multiple of temp in range 1 to 9, 11,22,33,44,55..99
+        rep(j, 1, 10) if (temp * j <= n)
+            ans++; //no one repeats as all different 1,2,3..9; 11,22,..99; 111,222,..999;
+    }
 
-    // fo(i, digs)
-    // {
-    //     temp = temp * 10 + 1;
-    //     // For each multiple of temp in range 1 to 9, 11,22,33,44,55..99
-    //     rep(j, 1, 10) if (temp * j <= n)
-    //         ans++; //no one repeats as all different 1,2,3..9; 11,22,..99; 111,222,..999;
-    // }
-
-    // cout << ans;
+    cout << ans;
     return;
 }
 
