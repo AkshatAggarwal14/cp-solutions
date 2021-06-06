@@ -41,19 +41,19 @@ typedef vector<vl> vvl;
 void solve()
 {
 
-    int n, m, num;
+    int n, m;
     cin >> n >> m;
     ll a[m];
+    fo(i, m) cin >> a[i];
     ll time = 0, position = 1;
     fo(i, m)
     {
-        cin >> num;
-        if (num >= position)
-            time += num - position;
+        if (a[i] >= position)
+            time += a[i] - position;
         else
-            time += n + num - position;
+            time += n + a[i] - position;
         // time += n - (position - a[i]);
-        position = num;
+        position = a[i];
     }
     cout << time;
     return;
