@@ -41,9 +41,16 @@ typedef vector<vl> vvl;
 void solve()
 {
 
-    ll n, m;
+    ll n, m, cnt;
     cin >> n >> m;
-    cout << (min(n,m) & 1 ? "Akshat" : "Malvika");
+    // while (n && m)
+    // {
+    //     n--;
+    //     m--;
+    //     cnt++;
+    // }
+    cnt = min(n, m);
+    cout << (cnt & 1 ? "Akshat" : "Malvika");
     return;
 }
 
