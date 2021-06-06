@@ -5179,6 +5179,23 @@
     ],
     "timestamp": "Jun/06/2021 00:49"
   },
+  "CF118637515": {
+    "contest_id": 1536,
+    "language": "GNU C++17",
+    "path": "codeforces/1536/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Omkar and Bad Story",
+    "problem_url": "https://codeforces.com/contest/1536/problem/A",
+    "submission_id": "CF118637515",
+    "submission_url": "https://codeforces.com/contest/1536/submission/118637515",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "*800"
+    ],
+    "timestamp": "Jun/06/2021 21:22"
+  },
   "CF118657771": {
     "contest_id": 1536,
     "language": "GNU C++17",

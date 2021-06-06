@@ -40,40 +40,45 @@ typedef vector<vl> vvl;
 
 void solve()
 {
-
     ll n;
     cin >> n;
-    map<ll, bool> cnt;
-    vl a(n);
+    ll arr[n];
+    set<ll> b;
     fo(i, n)
     {
-        cin >> a[i];
-        cnt[a[i]] = true; // added element in set with value true
+        cin >> arr[i];
+        b.insert(arr[i]);
     }
-    // sort(all(a));
-    fo(i, a.size())
+    // fo(i, n)
+    // {
+    //     fo(j, n)
+    //     {
+    //         b.insert(abs(arr[i] - arr[j]));
+    //     }
+    // }
+    ll prev = b.size();
+    while (true)
     {
-        fo(j, a.size())
+        vl c(all(b));
+        sortall(c);
+        for (ll i = 0; i < c.size(); i++)
+            for (ll j = i + 1; j < c.size(); j++)
+                if (c[i] != c[j])
+                    b.insert(abs(c[i] - c[j]));
+        if (b.size() > 300)
         {
-            if (j == i)
-                continue;               // so doesnt add 0 to the vector again and again
-            if (!cnt[abs(a[i] - a[j])]) //if already present then !true
-            {
-                a.push_back(abs(a[i] - a[j]));
-                cnt[a.back()] = true; //added value true to just added element
-            }
-            if (a.size() > 300)
-            {
-                cout << "NO";
-                return;
-            }
+            cout << "no\n";
+            return;
         }
+        if (b.size() == prev)
+            break;
+        prev = b.size();
     }
-    cout << "YES\n";
-    cout << a.size() << "\n";
-    for (auto i : a)
-        cout << i << ' ';
 
+    cout << "yes\n"
+         << b.size() << "\n";
+    tr(it, b) cout << *it << " ";
+    cout << "\n";
     return;
 }
 
@@ -85,7 +90,7 @@ int main()
     while (t--)
     {
         solve();
-        cout << "\n";
+        // cout << "\n";
     }
     return 0;
 }
