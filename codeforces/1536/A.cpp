@@ -41,39 +41,22 @@ typedef vector<vl> vvl;
 void solve()
 {
 
-    int n;
+    ll n, flag = 0;
     cin >> n;
-    map<int, bool> cnt;
-    vector<int> a(n);
-    for (int i = 0; i < n; ++i)
+    ll a[n];
+    fo(i, n)
     {
         cin >> a[i];
-        cnt[a[i]] = true; // added element in set with value true
+        if (a[i] < 0)
+            flag = 1;
     }
-    // sort(all(a));
-    for (int i = 0; i < a.size(); ++i)
+
+    if (flag)
+        cout << "no";
+    else
     {
-        for (int j = 0; j < a.size(); ++j)
-        {
-            if (j == i)
-                continue;               // so doesnt add 0 to the vector again and again
-            if (!cnt[abs(a[i] - a[j])]) //if already present then !true
-            {
-                a.push_back(abs(a[i] - a[j]));
-                cnt[a.back()] = true; //added value true to just added element
-            }
-            if (a.size() > 300)
-            {
-                cout << "NO";
-                return;
-            }
-        }
-    }
-    cout << "YES\n";
-    cout << a.size() << "\n";
-    for (int i : a)
-    {
-        cout << i << ' ';
+        cout << "yes\n101\n";
+        fo(i, 101) cout << i << " ";
     }
 
     return;
