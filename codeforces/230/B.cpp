@@ -38,22 +38,36 @@ typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 
-//ans must be square of a prime
+bool isPrime(int n)
+{
+    // Corner cases
+    if (n <= 1)
+        return false;
+    if (n <= 3)
+        return true;
+
+    // This is checked so that we can skip
+    // middle five numbers in below loop
+    if (n % 2 == 0 || n % 3 == 0)
+        return false;
+
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+
+    return true;
+}
+
 void solve()
 {
     ll n;
     cin >> n;
-    ll b = sqrt(n);
-    ll i = 0;
-    for (i = 2; i * i <= b; i++)
-    {
-        if (b % i == 0)
-            break;
-    }
-    if (i * i > b && b * b == n && n > 1) //i*i>b means doesnt break on last number
+    ll root = sqrt(n);
+    if (isPrime(root) && n == root * root) //ans must be square of a prime number
         cout << "YES";
     else
         cout << "NO";
+
     return;
 }
 
