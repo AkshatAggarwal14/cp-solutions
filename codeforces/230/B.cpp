@@ -48,12 +48,9 @@ void solve()
     for (i = 2; i * i <= b; i++)
     {
         if (b % i == 0)
-        {
-            cout << "NO";
-            return;
-        }
+            break;
     }
-    if (b * b == n && n > 1) //i*i>b means doesnt break on last number
+    if (i * i > b && b * b == n && n > 1) //i*i>b means doesnt break on last number
         cout << "YES";
     else
         cout << "NO";
