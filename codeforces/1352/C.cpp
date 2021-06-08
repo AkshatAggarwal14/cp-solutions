@@ -1,65 +1,63 @@
-#ifdef LOCAL
-// https://github.com/AkshatAggarwal14/Competetive-Programming
-#include "Akshat.hpp"
-#else
-#include "bits/stdc++.h"
+//****************master._.mind****************
+//-----------Author: Akshat Aggarwal-----------
+#include <bits/stdc++.h>
 using namespace std;
-#define dbg(...)
-#endif
-using ll = int64_t;
-auto sz = [](const auto &container) -> ll { return container.size(); };
-#define all(x) (x).begin(), (x).end()
-template <class T, class U = T>
-bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
-template <class T, class U = T>
-bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
-void Math() {
+#define ll long long
+#define fo(i, n) for (ll i = 0; i < n; i++)
+#define rep(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? i++ : i--)
+#define deb(x) cout << #x << "=" << x << endl
+#define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
+#define pb(x) push_back(x)
+#define mp(x, y) make_pair(x, y)
+#define ub() upper_bound()
+#define lb() lower_bound()
+#define F first
+#define S second
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define ps(x, y) fixed << setprecision(y) << x
+#define clr(x) memset(x, 0, sizeof(x))
+#define sortall(x) sort(all(x))
+#define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
+#define PI 3.1415926535897932384626
+#define endl "\n"
+#define fast_io()                 \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0)
+const ll mod = 1e9 + 7;
+const ll inf = LLONG_MAX;
+const double eps = 1e-12;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pl;
+typedef vector<int> vi;
+typedef vector<ll> vl;
+typedef vector<pii> vpii;
+typedef vector<pl> vpl;
+typedef vector<vi> vvi;
+typedef vector<vl> vvl;
+
+void solve()
+{
     ll n, k;
     cin >> n >> k;
-    ll ans = (k - 1) / (n - 1);
-    ans = ans * n + k - ans * (n - 1);
-    cout << ans;
+    ll temp = (k - 1) / (n - 1);
+    temp = temp * n + k - temp * (n - 1);
+    cout << temp;
+
+    return;
 }
 
-template <bool b>
-auto binsearch(auto l, auto r, const auto &pred) {
-    --l, ++r;
-    for (decltype(l) m; m = midpoint(l, r), r > l + 1;) (pred(m) ? l : r) = m;
-    return (b ? l : r);
-}
-
-// returns first i in [l, r], p(i) false, and if none found, returns r + 1
-auto find_first_false(auto l, auto r, const auto &p) {
-    return binsearch<false>(l, r, p);
-}
-
-// returns last i in [l, r], p(i) true, and if none found, returns l - 1
-auto find_last_true(auto l, auto r, const auto &p) {
-    return binsearch<true>(l, r, p);
-}
-
-void BS() {
-    ll n, k;
-    cin >> n >> k;
-    // kth element not divisible by N
-    // first element such that numbers not divisible by N >= K
-    cout << find_first_false(0LL, n * k, [&](ll num) {
-        ll divisible = num / n;
-        ll not_div = num - divisible;
-        return not_div < k;
-    }) << '\n';
-}
-
-// clang-format off
-int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
-#ifdef LOCAL
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-    cout << fixed << setprecision(12);
-    ll tc; cin >> tc; while (tc--)
-    BS();
+int main()
+{
+    fast_io();
+    ll t = 1;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+        cout << "\n";
+    }
     return 0;
 }
