@@ -43,9 +43,7 @@ void solve()
 
     int n;
     cin >> n;
-    set<int> s; // instead of using set could have used
-    //sort(a.begin(), a.end());
-    //a.resize(unique(a.begin(), a.end()) - a.begin());
+    set<int> s;
     fo(i, n)
     {
         ll x;
