@@ -38,25 +38,16 @@ typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 
-/* As integer has to be greater than 12
- * For all even number, 4 is the smallest even composite, and as its even n-4 is divisible by 2 and composite
- * For odd, 9 is smallest odd composite:
- * 13 = 9 + 4
- * 15 = 9 + 6
- * Thus the other half is always even
- */
-
 void solve()
 {
 
     ll n;
     cin >> n;
-    // if (n % 2 == 0)
-    //     cout << 4 << " " << n - 4;
-    // else
-    //     cout << 9 << " " << n - 9;
-    //! As for even we had 4, we can have 8 too
-    cout << 8 + n % 2 << " " << n - 8 - n % 2;
+    if (n % 2 == 0)
+        cout << 4 << " " << n - 4;
+    else
+        cout << 9 << " " << n - 9;
+
     return;
 }
 
