@@ -38,41 +38,46 @@ typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 
+bool check(vl x, ll n)
+{
+    unordered_map<ll, ll> mp;
+    fo(i, x.size())
+    {
+        if (x[i] > n)
+            x[i] -= n;
+        else if (x[i] < n)
+            x[i] += n;
+        mp[x[i]]++;
+    }
+    if (mp.size() == 1)
+        return true;
+    return false;
+}
+
 void solve()
 {
 
-    int n;
+    ll n;
     cin >> n;
-    set<int> s;
-    fo(i, n)
+    vl vec(n);
+    fo(i, n) cin >> vec[i];
+    if (n == 1)
     {
-        ll x;
-        cin >> x;
-        s.insert(x);
-    }
-    vector<ll> v;
-    for (auto &x : s)
-        v.push_back(x);
-
-    if (s.size() == 1) //always zero for one element
         cout << 0;
-    else if (s.size() == 2) // possible only if difference between both is even
-    {
-        ll diff = v[1] - v[0];
-        if (diff % 2 == 0)
-            cout << diff / 2;
-        else
-            cout << diff;
+        return;
     }
-    else if (s.size() == 3) // possible if difference between 2 is equal to difference between next two
+    ll mini = *min_element(all(vec)), maxi = *max_element(all(vec));
+    fo(i, n) vec[i] -= mini;
+    // deb(check(vec, 3));
+    rep(i, 0, maxi)
     {
-        if (v[2] - v[1] == v[1] - v[0])
-            cout << v[1] - v[0];
-        else
-            cout << -1;
+        if (check(vec, i))
+        {
+            cout << i;
+            return;
+        }
     }
-    else
-        cout << -1;
+    cout << -1;
     return;
 }
 
