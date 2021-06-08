@@ -43,36 +43,29 @@ void solve()
 
     ll a, b, ans = 0;
     cin >> a >> b;
-    ll diff = abs(a - b);
-    //! M1 <-- just M2 in one line
-    cout << (diff + 9) / 10;
-    //! M2
-    // if (diff % 10 == 0)
-    //     cout << diff / 10;
-    // else
-    //     cout << diff / 10 + 1;
-    //! M3
-    // if (a == b)
-    // {
-    //     cout << 0;
-    //     return;
-    // }
-    // if (a > b)
-    // {
-    //     ll temp = a;
-    //     a = b;
-    //     b = temp;
-    // }
-    // b -= a;
-    // for (ll i = 10; i >= 1; i--)
-    // {
-    //     if (b == 0)
-    //         break;
-    //     ll temp = b / i;
-    //     b -= temp * i;
-    //     ans += temp;
-    // }
-    // cout << ans;
+    if (a == b)
+    {
+        cout << 0;
+        return;
+    }
+    if (a > b)
+    {
+        ll temp = a;
+        a = b;
+        b = temp;
+    }
+    // now as a is smaller than b;
+    b -= a;
+    // deb(b);
+    for (ll i = 10; i >= 1; i--)
+    {
+        if (b == 0)
+            break;
+        ll temp = b / i;
+        b -= temp * i;
+        ans += temp;
+    }
+    cout << ans;
     return;
 }
 
