@@ -52,24 +52,21 @@ void solve()
     {
         if (m <= n)
         {
-            cout << (ans + n - m); //ans + steps by subtracting 1
+            cout << (ans + n - m);
             return;
         }
         if (m % 2 == 0)
+        {
             m /= 2; //opposite to multiply other
+            ans += 1;
+        }
         else
+        {
             m++; //opposite to plus other
-        ans++;
-        // if (m % 2 == 0)
-        // {
-        //     m /= 2; //opposite to multiply other
-        //     ans += 1;
-        // }
-        // else
-        // {
-        //     m++; //opposite to plus other
-        //     ans++;
-        // }
+            // m /= 2;
+            ans++;
+            // ans += 2;
+        }
     }
     return;
 }
