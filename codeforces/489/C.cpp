@@ -65,21 +65,12 @@ void solve()
     }
 
     for (i = m - 1; i >= 0; i--)
-        a += b[i]; //a stores reverse of b, sorted in increasing order -- 0029
+        a += b[i]; //a stores reverse of b, sorted in increaing order
 
-    // this wil find first non zero number in a
-    // we reduce non zero number by 1
-    // 0029 to 0019
-    for (i = 0; i < m; i++)
-    {
-        if (a[i] != '0')
-        {
-            a[i]--;
-            break;
-        }
-    }
-    a[0]++; //now we add 1 to first digit 0019 to 1019
-    //! thus 0029 to 1019
+    for (i = 0; a[i] == '0'; i++)
+        ; // this wil find first non zero number in a
+    // we reduce non zero number by 1 and add 1 to first digit in a
+    a[i]--, a[0]++;
 
     cout << a << " " << b;
     return;
