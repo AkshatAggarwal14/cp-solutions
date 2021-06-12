@@ -48,7 +48,7 @@ void solve()
     {
         ctr += a;
         a += rem;
-        rem = a % b;
+        rem = a % b; // leftover candles from last group made of b left are added
         a /= b;
     }
     cout << ctr;
