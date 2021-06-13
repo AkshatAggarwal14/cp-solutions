@@ -53,7 +53,7 @@ void solve()
     for (i = n / 2; i < n; i++)
         b += pow(2, i);
 
-    cout << a - b;
+    cout << a - b << endl;
 
     return;
 }
