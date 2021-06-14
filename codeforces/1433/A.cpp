@@ -44,11 +44,9 @@ typedef vector<vl> vvl;
 void solve()
 {
 
-    // ll n;
-    // cin >> n;
-    // string s = to_string(n);
-    string s;
-    cin >> s;
+    ll n;
+    cin >> n;
+    string s = to_string(n);
     cout << (s[0] - '1') * 10 + s.length() * (s.length() + 1) / 2;
 
     return;
