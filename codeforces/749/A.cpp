@@ -43,23 +43,16 @@ typedef vector<vl> vvl;
 
 void solve()
 {
-    //! Approach 1
-    // ll n, temp;
-    // cin >> n;
-    // temp = n;
-    // ll ctr = 1;
-    // (n & 1) ? n -= 3 : n -= 2;
-    // ctr += n / 2;
-    // cout << ctr << ln;
-    // fo(i, ctr - 1) cout << 2 << " ";
-    // cout << ((temp & 1) ? 3 : 2);
 
-    //! Approach 2
-    ll n;
+    ll n, temp;
     cin >> n;
-    cout << n / 2 << ln;
-    fo(i, n / 2 - 1) cout << 2 << " ";
-    cout << ((n & 1) ? 3 : 2);
+    temp = n;
+    ll ctr = 1;
+    (n & 1) ? n -= 3 : n -= 2;
+    ctr += n / 2;
+    cout << ctr << ln;
+    fo(i, ctr - 1) cout << 2 << " ";
+    cout << ((temp & 1) ? 3 : 2);
     return;
 }
 
