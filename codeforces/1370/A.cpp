@@ -41,10 +41,14 @@ typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 //ll divisorCount(ll);
 
+/*
+Let the maximum gcd be equal to g. Since the two numbers in a pair are distinct, one of them must be >g and both of them must be divisible by g. The smallest multiple of g, greater than g, is 2⋅g. Since each number in the pair must be ≤n, we must have 2⋅g≤n, or g≤⌊n/2⌋. We can achieve g=⌊n/2⌋, by choosing ⌊n/2⌋ and 2⋅⌊n/2⌋.
+*/
+
 void solve()
 {
 
-    ll n, hcf = 1;
+    ll n;
     cin >> n;
     cout << n / 2;
     return;
