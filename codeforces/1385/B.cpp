@@ -55,18 +55,17 @@ void solve()
 
     //todo: Method 1 (using unordered_map)
     // unordered map require array to be reversed as thats how they work
-
-    // reverse(all(vec));
-    // std::unordered_set<ll> s(vec.begin(), vec.end());
-    // tr(it, s) cout << *it << " ";
+    reverse(all(vec));
+    std::unordered_set<ll> s(vec.begin(), vec.end());
+    tr(it, s) cout << *it << " ";
 
     //todo: Method 2 (using vector find())
-    fo(i, 2 * n)
-    {
-        if (ans.find(vec[i]) != ans.end())
-            cout << vec[i] << " ";
-        ans.insert(vec[i]);
-    }
+    // fo(i, 2 * n)
+    // {
+    //     if (ans.find(vec[i]) != ans.end())
+    //         cout << vec[i] << " ";
+    //     ans.insert(vec[i]);
+    // }
 
     re;
 }
