@@ -52,7 +52,7 @@ void solve()
     for (ll i = 0; 2020 * i <= n; i++)
     {
         ll left = n - 2020 * i;
-        if (left % 2021 == 0) // check if leftover part is divisible by 2021
+        if (left % 2021 == 0)
         {
             cy;
             re;
