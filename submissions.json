@@ -5584,6 +5584,23 @@
     ],
     "timestamp": "Jun/14/2021 12:00"
   },
+  "CF119526015": {
+    "contest_id": 1475,
+    "language": "GNU C++17",
+    "path": "codeforces/1475/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Odd Divisor",
+    "problem_url": "https://codeforces.com/contest/1475/problem/A",
+    "submission_id": "CF119526015",
+    "submission_url": "https://codeforces.com/contest/1475/submission/119526015",
+    "tags": [
+      "math",
+      "number theory",
+      "*900"
+    ],
+    "timestamp": "Jun/15/2021 16:49"
+  },
   "CF119526353": {
     "contest_id": 1475,
     "language": "GNU C++17",
