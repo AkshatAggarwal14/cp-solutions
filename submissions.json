@@ -5584,6 +5584,23 @@
     ],
     "timestamp": "Jun/14/2021 12:00"
   },
+  "CF119500548": {
+    "contest_id": 1525,
+    "language": "GNU C++17",
+    "path": "codeforces/1525/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Permutation Sort",
+    "problem_url": "https://codeforces.com/contest/1525/problem/B",
+    "submission_id": "CF119500548",
+    "submission_url": "https://codeforces.com/contest/1525/submission/119500548",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*900"
+    ],
+    "timestamp": "Jun/15/2021 10:34"
+  },
   "CF119501490": {
     "contest_id": 1525,
     "language": "GNU C++17",
