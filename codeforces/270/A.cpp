@@ -55,11 +55,11 @@ void solve()
 	//(180-a)*n=360
 	ll a;
 	cin >> a;
-	// if (a < 60) //Although this condition is not required, it helps by not checking the next complex condition and makes it more efficient
-	// {
-	// 	cno;
-	// 	re;
-	// }
+	if (a < 60)
+	{
+		cno;
+		re;
+	}
 	if ((360 / (180 - a)) * (180 - a) == 360)
 		cy;
 	else
