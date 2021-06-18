@@ -5601,6 +5601,23 @@
     ],
     "timestamp": "Jun/17/2021 12:30"
   },
+  "CF119920343": {
+    "contest_id": 1097,
+    "language": "GNU C++17",
+    "path": "codeforces/1097/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Gennady and a Card Game",
+    "problem_url": "https://codeforces.com/contest/1097/problem/A",
+    "submission_id": "CF119920343",
+    "submission_url": "https://codeforces.com/contest/1097/submission/119920343",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jun/19/2021 00:29"
+  },
   "CF119941340": {
     "contest_id": 32,
     "language": "GNU C++17",
