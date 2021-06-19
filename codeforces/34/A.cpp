@@ -51,7 +51,7 @@ void solve()
 {
     ll n;
     cin >> n;
-    ll arr[2 * n]; //2n for making it a circular array
+    ll arr[2 * n];
     fo(i, n)
     {
         cin >> arr[i];
