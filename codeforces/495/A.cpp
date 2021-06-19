@@ -53,11 +53,10 @@ void solve()
     ll good[10] = {2, 7, 2, 3, 3, 4, 2, 5, 1, 2};
     string s;
     cin >> s;
-    cout << good[s[0] - '0'] * good[s[1] - '0'];
-    // ll ans = 1;
-    // fo(i, s.length())
-    //     ans *= good[s[i] - '0'];
-    // cout << ans;
+    ll ans = 1;
+    fo(i, s.length())
+        ans *= good[s[i] - '0'];
+    cout << ans;
     re;
 }
 
@@ -66,8 +65,8 @@ int main()
     fast_io();
 #ifndef ONLINE_JUDGE
     freopen("error.txt", "w", stderr);
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 #endif
     clock_t start, end;
     start = clock();
