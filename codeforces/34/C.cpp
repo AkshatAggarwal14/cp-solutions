@@ -100,7 +100,7 @@ void solve()
     sortall(vec);
     vec.erase(unique(all(vec)), vec.end());
 
-    string result = "";
+    // string result = ""; answer can be stored in a string instead of output
 
     int start, end; // track start and end
     end = start = vec[0];
@@ -114,9 +114,11 @@ void solve()
             // when no longer consecutive, add group to result
             // depending on whether start=end (single item) or not
             if (start == end)
-                result += to_string(start) + ",";
+                cout << start << ",";
+            // result+= to_string(start)+",";
             else
-                result += to_string(start) + "-" + to_string(end) + ",";
+                cout << start << "-" << end << ",";
+            // result+= to_string(start)+"-"+to_string(end)+",";
 
             start = end = vec[i];
         }
@@ -124,13 +126,15 @@ void solve()
 
     // handle the final group
     if (start == end)
-        result += to_string(start);
+        cout << start;
+    // result += to_string(start);
     else
-        result += to_string(start) + "-" + to_string(end);
+        cout << start << "-" << end;
+    // result += to_string(start) + "-" + to_string(end);
 
     _print(vec);
-    _print(result);
-    cout << result;
+    // _print(result);
+    // cout << result;
 
     //**********************CODE ENDS HERE**********************
     re;
