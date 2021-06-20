@@ -1,4 +1,23 @@
 {
+  "CF120160965": {
+    "contest_id": 34,
+    "language": "GNU C++17",
+    "path": "codeforces/34/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Page Numbers",
+    "problem_url": "https://codeforces.com/contest/34/problem/C",
+    "submission_id": "CF120160965",
+    "submission_url": "https://codeforces.com/contest/34/submission/120160965",
+    "tags": [
+      "expression parsing",
+      "implementation",
+      "sortings",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jun/21/2021 01:58"
+  },
   "CF120161897": {
     "contest_id": 935,
     "language": "GNU C++17",
