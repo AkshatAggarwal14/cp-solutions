@@ -78,10 +78,12 @@ void solve()
 {
     //*********************CODE STARTS HERE*********************
 
-    ll a, b, n, a1, b1,ctr=0,ctr1=0;
+    ll a, b, n, ctr = 0;
+    // ll a1, b1, ctr1 = 0;
     cin >> a >> b >> n;
-    a1 = a, b1 = b;
-    for (;;)
+
+    // a1 = a, b1 = b;
+    /*for (;;)
     {
         if(a>n || b>n)
             break;
@@ -102,8 +104,21 @@ void solve()
             break;
         a1+=b1;
         ctr1++;
+    }*/
+
+    //better approach
+    while (true)
+    {
+        if (a > n || b > n)
+            break;
+        if (a >= b)
+            b += a;
+        else if (a < b)
+            a += b;
+        ctr++;
     }
-    cout << min(ctr, ctr1);
+
+    cout << ctr;
 
     //**********************CODE ENDS HERE**********************
     re;
