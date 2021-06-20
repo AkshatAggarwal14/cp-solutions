@@ -1,4 +1,23 @@
 {
+  "CF120157456": {
+    "contest_id": 1368,
+    "language": "GNU C++17",
+    "path": "codeforces/1368/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "C+=",
+    "problem_url": "https://codeforces.com/contest/1368/problem/A",
+    "submission_id": "CF120157456",
+    "submission_url": "https://codeforces.com/contest/1368/submission/120157456",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jun/21/2021 00:30"
+  },
   "CF120159157": {
     "contest_id": 1335,
     "language": "GNU C++17",
