@@ -80,17 +80,20 @@ void solve()
 
     ll n, a, b;
     cin >> n >> a >> b;
-    //to_repeat is a string of b distinct characters
+
     string to_repeat = "";
-    fo(i, b) to_repeat += i + 'a';
+    fo(i, a) to_repeat += i + 'a';
+
+    //to_repeat is a string of b distinct characters
+    // fo(i, b) to_repeat += i + 'a';
     // cout << to_repeat;
+    // ll times_repeat = n / b + 1;
+    // string ans = "";
+    // while (times_repeat--)
+    //     ans += to_repeat;
+    // cout << ans.substr(0, n);
 
-    ll times_repeat = n / b + 1;
-    string ans = "";
-    while (times_repeat--)
-        ans += to_repeat;
-
-    cout << ans.substr(0, n);
+    fo(i, n) cout << to_repeat[i % b];
 
     //**********************CODE ENDS HERE**********************
     re;
