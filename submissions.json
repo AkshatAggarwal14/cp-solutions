@@ -1,4 +1,21 @@
 {
+  "CF120277823": {
+    "contest_id": 630,
+    "language": "GNU C++17",
+    "path": "codeforces/630/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Challenge Pennants",
+    "problem_url": "https://codeforces.com/contest/630/problem/G",
+    "submission_id": "CF120277823",
+    "submission_url": "https://codeforces.com/contest/630/submission/120277823",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Jun/22/2021 15:14"
+  },
   "CF120278035": {
     "contest_id": 630,
     "language": "GNU C++17",
