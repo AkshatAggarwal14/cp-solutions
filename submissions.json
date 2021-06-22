@@ -1,4 +1,21 @@
 {
+  "CF120278035": {
+    "contest_id": 630,
+    "language": "GNU C++17",
+    "path": "codeforces/630/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "Benches",
+    "problem_url": "https://codeforces.com/contest/630/problem/H",
+    "submission_id": "CF120278035",
+    "submission_url": "https://codeforces.com/contest/630/submission/120278035",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Jun/22/2021 15:17"
+  },
   "CF120442783": {
     "contest_id": 1337,
     "language": "GNU C++17",
