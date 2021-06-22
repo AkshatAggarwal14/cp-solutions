@@ -81,22 +81,18 @@ void solve()
     //*********************CODE STARTS HERE*********************
 
     cin >> n >> x;
-    // if (n == 1 || n == 2)
-    // {
-    //     cout << 1;
-    //     re;
-    // }
-    // n -= 2;
-    // ll ans = 1;
-    // if (n % x == 0)
-    //     ans += n / x;
-    // else
-    //     ans += n / x + 1;
-    // cout << ans;
-    if (n <= 2)
+    if (n == 1 || n == 2)
+    {
         cout << 1;
+        re;
+    }
+    n -= 2;
+    ll ans = 1;
+    if (n % x == 0)
+        ans += n / x;
     else
-        cout << (n - 3) / x + 2;
+        ans += n / x + 1;
+    cout << ans;
 
     //**********************CODE ENDS HERE**********************
     re;
