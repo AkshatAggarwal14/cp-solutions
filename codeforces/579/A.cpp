@@ -85,14 +85,6 @@ void solve()
     //! Ans is number of ones in binary representation
     cin >> n;
     ll count = 0;
-    //! m1:
-    /*
-    while (n) {
-        count += n & 1;
-        n >>= 1;
-    }
-    */
-    //! m2: brian kernighan algorithm
     while (n)
     {
         count = count + 1;
