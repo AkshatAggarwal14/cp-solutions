@@ -75,67 +75,24 @@ void _print(multiset<T> v);
 //prime_facorisation(n)
 //primes_less_than(n)
 
-// Function to find maximum distance between equal elements
-int maxDistance(ll arr[], ll n)
-{
-    // Used to store element to first index mapping
-    unordered_map<ll, ll> mp;
-
-    // Traverse elements and find maximum distance between
-    // same occurrences with the help of map.
-    ll max_dist = 0;
-    fo(i, n)
-    {
-        // If this is first occurrence of element, insert its
-        // index in map
-        if (mp.find(arr[i]) == mp.end())
-            mp[arr[i]] = i;
-
-        // Else update max distance
-        else
-            max_dist = max(max_dist, i - mp[arr[i]]);
-    }
-
-    return max_dist;
-}
+//* Global vars
+ll n;
 
 void solve()
 {
     //*********************CODE STARTS HERE*********************
 
-    // FOR ANS CHECK IF 3 ELEMENTS EQUAL OR TWO EQUAL ELEMENTS COMTAIN ONE BETWEEN THEM
-    ll n;
     cin >> n;
-    ll arr[n], flag = 0;
-    map<ll, ll> count;
-    fo(i, n)
-    {
-        cin >> arr[i];
-        count[arr[i]]++;
-        if (count[arr[i]] >= 3)
-            flag = 1;
-    }
-    if (flag)
+    vl arr(n), cnt(n + 1);
+    for (auto &x : arr)
+        cin >> x, cnt[x]++;
+    fo(x, n) if (cnt[arr[x]] - (x < n - 1 && arr[x] == arr[x + 1]) - (x > 0 && arr[x] == arr[x - 1]) >= 2)
     {
         cy;
         re;
     }
 
-    //! m1
-    //check if maximum distance between two equal elements is >1
-    // if (maxDistance(arr, n) > 1)
-    //     cy;
-    // else
-    //     cno;
-
-    //! m2
-    fo(x, n) if (count[arr[x]] - (x < n - 1 && arr[x] == arr[x + 1]) - (x > 0 && arr[x] == arr[x - 1]) >= 2)
-    {
-        cy;
-        re;
-    }
     cno;
-
     //**********************CODE ENDS HERE**********************
     re;
 } //todo solve
