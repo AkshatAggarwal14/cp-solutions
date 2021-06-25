@@ -5958,6 +5958,23 @@
     ],
     "timestamp": "Jun/24/2021 18:39"
   },
+  "CF120499622": {
+    "contest_id": 9,
+    "language": "GNU C++17",
+    "path": "codeforces/9/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Die Roll",
+    "problem_url": "https://codeforces.com/contest/9/problem/A",
+    "submission_id": "CF120499622",
+    "submission_url": "https://codeforces.com/contest/9/submission/120499622",
+    "tags": [
+      "math",
+      "probabilities",
+      "*800"
+    ],
+    "timestamp": "Jun/25/2021 12:49"
+  },
   "CF120526145": {
     "contest_id": 486,
     "language": "GNU C++17",
