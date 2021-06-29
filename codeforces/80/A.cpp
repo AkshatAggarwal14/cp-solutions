@@ -95,25 +95,17 @@ void solve()
 
     ll ctr = 0, check;
     cin >> n >> m;
-
-    //! M1
-    // ll temp = m;
-    // while (m > n)
-    // {
-    //     if (is_prime(m))
-    //     {
-    //         ctr++;
-    //         check = m; // like 2 4 --> 3 is prime which lies in between
-    //     }
-    //     m--;
-    // }
-    // (ctr == 1 && check == temp) ? cy : cno;
-
-    //! M2
-    n++;
-    while (!is_prime(n))
-        ++n;
-    (n == m) ? cy : cno;
+    ll temp = m;
+    while (m > n)
+    {
+        if (is_prime(m))
+        {
+            ctr++;
+            check = m; // like 2 4 --> 3 is prime which lies in between
+        }
+        m--;
+    }
+    (ctr == 1 && check == temp) ? cy : cno;
 
     //**********************CODE ENDS HERE**********************
     re;
