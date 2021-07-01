@@ -6254,6 +6254,22 @@
     ],
     "timestamp": "Jul/01/2021 23:47"
   },
+  "CF121051046": {
+    "contest_id": 624,
+    "language": "GNU C++17",
+    "path": "codeforces/624/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Save Luke",
+    "problem_url": "https://codeforces.com/contest/624/problem/A",
+    "submission_id": "CF121051046",
+    "submission_url": "https://codeforces.com/contest/624/submission/121051046",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jul/01/2021 23:57"
+  },
   "CF121098289": {
     "contest_id": 1454,
     "language": "GNU C++17",
