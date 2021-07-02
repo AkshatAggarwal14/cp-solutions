@@ -6289,6 +6289,23 @@
     ],
     "timestamp": "Jul/02/2021 16:18"
   },
+  "CF121104864": {
+    "contest_id": 1462,
+    "language": "GNU C++17",
+    "path": "codeforces/1462/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Favorite Sequence",
+    "problem_url": "https://codeforces.com/contest/1462/problem/A",
+    "submission_id": "CF121104864",
+    "submission_url": "https://codeforces.com/contest/1462/submission/121104864",
+    "tags": [
+      "implementation",
+      "two pointers",
+      "*800"
+    ],
+    "timestamp": "Jul/02/2021 16:40"
+  },
   "CF121106527": {
     "contest_id": 702,
     "language": "GNU C++17",
