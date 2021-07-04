@@ -1,4 +1,20 @@
 {
+  "CF121284400": {
+    "contest_id": 1345,
+    "language": "GNU C++17",
+    "path": "codeforces/1345/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Puzzle Pieces",
+    "problem_url": "https://codeforces.com/contest/1345/problem/A",
+    "submission_id": "CF121284400",
+    "submission_url": "https://codeforces.com/contest/1345/submission/121284400",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jul/04/2021 11:37"
+  },
   "CF121285598": {
     "contest_id": 433,
     "language": "GNU C++17",
