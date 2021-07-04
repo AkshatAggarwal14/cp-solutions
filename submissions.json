@@ -1,4 +1,20 @@
 {
+  "CF121281792": {
+    "contest_id": 599,
+    "language": "GNU C++17",
+    "path": "codeforces/599/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Patrick and Shopping",
+    "problem_url": "https://codeforces.com/contest/599/problem/A",
+    "submission_id": "CF121281792",
+    "submission_url": "https://codeforces.com/contest/599/submission/121281792",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/04/2021 10:54"
+  },
   "CF121282195": {
     "contest_id": 1391,
     "language": "GNU C++17",
