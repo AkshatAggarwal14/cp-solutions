@@ -77,16 +77,11 @@ void solve() {
     //*********************CODE STARTS HERE*********************
 
     cin >> N >> s;
-    //! m1
-    ll n0 = count(all(s), 'z'), n1 = count(all(s), 'n');
-
-    //!m2
-    // map<char, ll> mp;
-    // fo(i, N) mp[s[i]]++;
-    // ll z = mp['z'], e = mp['e'], r = mp['r'], o = mp['o'], n = mp['n'];
-    // ll n1 = min(n, min(o, e));  //n1 o's and e's used to make ones
-    // ll n0 = min(z, min(r, min(o - n1, e - n1)));
-
+    map<char, ll> mp;
+    fo(i, N) mp[s[i]]++;
+    ll z = mp['z'], e = mp['e'], r = mp['r'], o = mp['o'], n = mp['n'];
+    ll n1 = min(n, min(o, e));  //n1 o's and e's used to make ones
+    ll n0 = min(z, min(r, min(o - n1, e - n1)));
     fo(i, n1) cout << 1 << " ";
     fo(i, n0) cout << 0 << " ";
 
