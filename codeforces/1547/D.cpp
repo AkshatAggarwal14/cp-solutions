@@ -83,8 +83,7 @@ void solve() {
 
     cout << "0 ";
     rep(i, 1, n) {
-        // ll ans = (arr[i] | arr[i - 1]) ^ arr[i];
-        ll ans = arr[i - 1] - (arr[i] & arr[i - 1]);
+        ll ans = (arr[i] | arr[i - 1]) ^ arr[i];
         cout << ans << " ";
         arr[i] ^= ans;
     }
