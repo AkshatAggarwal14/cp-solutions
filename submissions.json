@@ -1,4 +1,20 @@
 {
+  "CF122142277": {
+    "contest_id": 784,
+    "language": "GNU C++17",
+    "path": "codeforces/784/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Numbers Joke",
+    "problem_url": "https://codeforces.com/contest/784/problem/A",
+    "submission_id": "CF122142277",
+    "submission_url": "https://codeforces.com/contest/784/submission/122142277",
+    "tags": [
+      "*special problem",
+      "*1700"
+    ],
+    "timestamp": "Jul/12/2021 00:49"
+  },
   "CF122144303": {
     "contest_id": 912,
     "language": "GNU C++17",
