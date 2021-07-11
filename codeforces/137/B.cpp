@@ -78,17 +78,9 @@ void solve() {
     cin >> n;
     vl arr(n);
     fo(i, n) cin >> arr[i];
-    //! m1
-    ll cnt[5000]{};
-    fo(i, n) cnt[arr[i] - 1] = 1;
-    ll not_present = 0;
-    fo(i, n) if (!cnt[i]) not_present++;
-    cout << not_present;
-
-    //! m2
-    // ll present = 0;
-    // fo(i, n) if (count(all(arr), i + 1) != 0) present++;
-    // cout << n - present;
+    ll present = 0;
+    fo(i, n) if (count(all(arr), i + 1) != 0) present++;
+    cout << n - present;
 
     //**********************CODE ENDS HERE**********************
     cn;

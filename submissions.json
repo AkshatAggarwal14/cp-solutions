@@ -1,4 +1,20 @@
 {
+  "CF122066575": {
+    "contest_id": 137,
+    "language": "GNU C++17",
+    "path": "codeforces/137/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Permutation",
+    "problem_url": "https://codeforces.com/contest/137/problem/B",
+    "submission_id": "CF122066575",
+    "submission_url": "https://codeforces.com/contest/137/submission/122066575",
+    "tags": [
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Jul/11/2021 17:42"
+  },
   "CF122067214": {
     "contest_id": 137,
     "language": "GNU C++17",
