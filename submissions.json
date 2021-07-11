@@ -1,4 +1,22 @@
 {
+  "CF122141773": {
+    "contest_id": 784,
+    "language": "GNU C++17",
+    "path": "codeforces/784/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Twisted Circuit",
+    "problem_url": "https://codeforces.com/contest/784/problem/E",
+    "submission_id": "CF122141773",
+    "submission_url": "https://codeforces.com/contest/784/submission/122141773",
+    "tags": [
+      "*special problem",
+      "brute force",
+      "implementation",
+      "*2000"
+    ],
+    "timestamp": "Jul/12/2021 00:40"
+  },
   "CF122142277": {
     "contest_id": 784,
     "language": "GNU C++17",
