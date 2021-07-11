@@ -1,4 +1,21 @@
 {
+  "CF122135014": {
+    "contest_id": 259,
+    "language": "GNU C++17",
+    "path": "codeforces/259/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Little Elephant and Magic Square",
+    "problem_url": "https://codeforces.com/contest/259/problem/B",
+    "submission_id": "CF122135014",
+    "submission_url": "https://codeforces.com/contest/259/submission/122135014",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Jul/11/2021 23:10"
+  },
   "CF122138409": {
     "contest_id": 1546,
     "language": "GNU C++17",
