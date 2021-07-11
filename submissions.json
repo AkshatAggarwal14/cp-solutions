@@ -1,4 +1,20 @@
 {
+  "CF122144303": {
+    "contest_id": 912,
+    "language": "GNU C++17",
+    "path": "codeforces/912/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Tricky Alchemy",
+    "problem_url": "https://codeforces.com/contest/912/problem/A",
+    "submission_id": "CF122144303",
+    "submission_url": "https://codeforces.com/contest/912/submission/122144303",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/12/2021 01:28"
+  },
   "CF122145080": {
     "contest_id": 106,
     "language": "GNU C++17",
