@@ -1,4 +1,21 @@
 {
+  "CF122440792": {
+    "contest_id": 1102,
+    "language": "GNU C++17",
+    "path": "codeforces/1102/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Array K-Coloring",
+    "problem_url": "https://codeforces.com/contest/1102/problem/B",
+    "submission_id": "CF122440792",
+    "submission_url": "https://codeforces.com/contest/1102/submission/122440792",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Jul/14/2021 18:02"
+  },
   "CF122469451": {
     "contest_id": 1550,
     "language": "GNU C++17",
