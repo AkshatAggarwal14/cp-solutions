@@ -1,4 +1,20 @@
 {
+  "CF122513826": {
+    "contest_id": 424,
+    "language": "GNU C++17",
+    "path": "codeforces/424/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Squats",
+    "problem_url": "https://codeforces.com/contest/424/problem/A",
+    "submission_id": "CF122513826",
+    "submission_url": "https://codeforces.com/contest/424/submission/122513826",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jul/14/2021 22:46"
+  },
   "CF122515824": {
     "contest_id": 424,
     "language": "GNU C++17",
