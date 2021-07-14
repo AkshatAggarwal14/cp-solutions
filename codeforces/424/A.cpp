@@ -62,26 +62,6 @@ class Task {
     }
 
     void Solve() {
-        //!m1
-        ll sit = 0, std = 0;
-        fo(i, n) if (s[i] == 'x') sit++;
-        else std++;
-
-        ll cnt = abs(sit - std) / 2;
-
-        char ch = 'x';
-        if (sit > std) ch = 'X';
-        cout << cnt << ln;
-
-        fo(i, n) if (cnt and s[i] != ch) {
-            s[i] = ch;
-            cnt--;
-        }
-
-        cout << s << ln;
-
-        //!m2
-        /*
         ll x = 0, X = 0, i, j;
         char chi, chj;
         fo(i, n)(s[i] == 'x' ? x++ : X++);
@@ -113,7 +93,6 @@ class Task {
             if (i >= j) break;
         }
         cout << s << ln;
-        */
     }
 };
 
