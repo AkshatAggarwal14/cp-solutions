@@ -1,4 +1,23 @@
 {
+  "CF122515824": {
+    "contest_id": 424,
+    "language": "GNU C++17",
+    "path": "codeforces/424/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Megacity",
+    "problem_url": "https://codeforces.com/contest/424/problem/B",
+    "submission_id": "CF122515824",
+    "submission_url": "https://codeforces.com/contest/424/submission/122515824",
+    "tags": [
+      "binary search",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Jul/14/2021 23:07"
+  },
   "CF122517642": {
     "contest_id": 996,
     "language": "GNU C++17",
