@@ -3,14 +3,16 @@
 //If you don't understand the code below... dont worry, i didn't either
 #include <bits/stdc++.h>
 using namespace std;
+using namespace std::chrono;
 
 #define ll long long
-#define lld long double
+#define ld long double
 #define ull unsigned long long
-#define fo(i, n) for (ll i = 0; i < n; ++i)
-#define rep(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? ++i : --i)
-#define deb(x) cerr << #x << "=" << x << endl
-#define deb2(x, y) cerr << #x << "=" << x << "," << #y << "=" << y << endl
+#define fo(i, n) for (ll i = 0; i < n; i++)
+#define ln '\n'
+#define rep(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? i++ : i--)
+#define deb(x) cout << "[" << #x << "]: " << x << ln
+#define deb2(x, y) cout << "[" << #x << "]: " << x << ", [" << #y << "]: " << y << ln
 #define pb push_back
 #define mp(x, y) make_pair(x, y)
 #define ub upper_bound
@@ -22,20 +24,9 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define ps(x, y) fixed << setprecision(y) << x
 #define clr(x) memset(x, 0, sizeof(x))
-#define sortall(x) sort(all(x))
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
 #define sz(x) ((ll)(x).size())
-#define ln '\n'
-#define cy cout << "YES"
-#define cno cout << "NO"
-#define cn cout << '\n'
-#define re return
-#define fast_io()                 \
-    ios_base::sync_with_stdio(0); \
-    cin.tie(0);                   \
-    cout.tie(0)
-//cin.tie(NULL) is used to read all input before displaying any output
 const ll mod = 1e9 + 7;  //1000000007
 const ll mod2 = 998244353;
 const ll inf = LLONG_MAX;
@@ -46,135 +37,138 @@ typedef vector<ll> vl;
 typedef vector<pl> vpl;
 typedef vector<vl> vvl;
 
-//* --------Debug--------
-void _print(ll t) { cerr << t; }
-void _print(int t) { cerr << t; }
-void _print(string t) { cerr << t; }
-void _print(char t) { cerr << t; }
-void _print(lld t) { cerr << t; }
-void _print(double t) { cerr << t; }
-void _print(ull t) { cerr << t; }
-template <class T, class V>
-void _print(pair<T, V> p);
-template <class T>
-void _print(vector<T> v);
-template <class T>
-void _print(set<T> v);
-template <class T, class V>
-void _print(map<T, V> v);
-template <class T>
-void _print(multiset<T> v);
+string to_string(string s) {
+    return '"' + s + '"';
+}
 
-//divisor_count(ll)
-//prime_facorisation(n)
-//primes_less_than(n)
+string to_string(char ch) {
+    string s(1, ch);
+    return '\'' + s + '\'';
+}
 
+string to_string(const char *s) {
+    return to_string((string)s);
+}
 
-void solve() {
-    //*********************CODE STARTS HERE*********************
+string to_string(bool b) {
+    return (b ? "true" : "false");
+}
 
-    const int M = 100100;
-    bool prime[M];
-    prime[0] = false;
-    prime[1] = false;
-    fill(prime + 2, prime + M, true);
-    for (ll i = 2; i * i < M; ++i) {
-        if (prime[i]) {
-            for (ll j = i + i; j < M; j += i) {
-                prime[j] = false;
-            }
+template <typename A, typename B>
+string to_string(pair<A, B> p) {
+    return "{" + to_string(p.ff) + ", " + to_string(p.ss) + "}";
+}
+
+template <typename A>
+string to_string(A v) {
+    bool first = true;
+    string res = "{";
+    for (const auto &x : v) {
+        if (!first) {
+            res += ", ";
         }
+        first = false;
+        res += to_string(x);
+    }
+    res += "}";
+    return res;
+}
+
+void debug_out() { cerr << endl; }
+template <typename Head, typename... Tail>
+void debug_out(Head H, Tail... T) {
+    cerr << to_string(H) << ln;
+    debug_out(T...);
+}
+
+#ifndef ONLINE_JUDGE
+#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#else
+#define debug(...) 42
+#endif
+
+class Task {
+   public:
+    void Perform() {
+        Read();
+        Solve();
     }
 
-    ll n, m, a, rows[500], cols[500];
-    cin >> n >> m;
-    fill(rows, rows + n, 0);
-    fill(cols, cols + m, 0);
+   private:
+    ll n, m;
+    vector<vector<ll>> mat;
 
-    for (ll r = 0; r < n; ++r) {
-        for (ll c = 0; c < m; ++c) {
-            cin >> a;
-            ll x = a;
-            while (!prime[x]) {
-                ++x;
-            }
-            rows[r] += (x - a);
-            cols[c] += (x - a);
-        }
+    void Read() {
+        cin >> n >> m;
+        mat.resize(n, vector<ll>(m));
+        fo(i, n) fo(j, m) cin >> mat[i][j];
     }
 
-    ll min_row = *min_element(rows, rows + n);
-    ll min_col = *min_element(cols, cols + m);
-    cout << min(min_col, min_row);
+    void Solve() {
+        debug(mat);
+        vector<vl> prime(n, vl(m));
+        fo(i, n) {
+            fo(j, m) {
+                if (isPrime(mat[i][j]))
+                    prime[i][j] = 0;
+                else
+                    prime[i][j] = nextPrime(mat[i][j]) - mat[i][j];
+            }
+        }
+        ll ans = inf;
+        fo(i, n) {
+            ll rowsum = 0;
+            fo(j, m) rowsum += prime[i][j];
+            ans = min(ans, rowsum);
+        }
+        fo(j, m) {
+            ll colsum = 0;
+            fo(i, n) colsum += prime[i][j];
+            ans = min(ans, colsum);
+        }
+        debug(prime);
+        debug(ans);
+        cout << ans << '\n';
+    }
 
-    //**********************CODE ENDS HERE**********************
-    cn;
-    return;
-}  //todo solve
+    bool isPrime(ll n) {
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+        if (n % 2 == 0 || n % 3 == 0) return false;
+        for (ll i = 5; i * i <= n; i = i + 6)
+            if (n % i == 0 || n % (i + 2) == 0)
+                return false;
+        return true;
+    }
+
+    ll nextPrime(ll N) {
+        if (N <= 1)
+            return 2;
+        ll prime = N;
+        bool found = false;
+        while (!found) {
+            prime++;
+            if (isPrime(prime))
+                found = true;
+        }
+        return prime;
+    }
+};
 
 int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    freopen("error.txt", "w", stderr);
 #endif
-    fast_io();
-    clock_t start, end;
-    start = clock();
+    ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    auto start = chrono::high_resolution_clock::now();
 
-    ll tc = 1;
-    //cin >> tc;
-    while (tc--)
-        solve();
+    Task t;
+    t.Perform();
 
-    end = clock();
-    double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
-    cerr << "Time taken:" << ln << ps(time_taken, 6) << " sec\n";
+    auto end = chrono::high_resolution_clock::now();
+    double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+    time_taken *= 1e-6;
+    cerr << ps(time_taken, 6) << " ms" << ln;
     return 0;
-}  //todo main
-
-//* ------Debug------
-template <class T, class V>
-void _print(pair<T, V> p) {
-    cerr << "{";
-    _print(p.ff);
-    cerr << ",";
-    _print(p.ss);
-    cerr << "}";
-}
-template <class T>
-void _print(vector<T> v) {
-    cerr << "[ ";
-    for (T i : v) {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
-template <class T>
-void _print(set<T> v) {
-    cerr << "[ ";
-    for (T i : v) {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
-template <class T>
-void _print(multiset<T> v) {
-    cerr << "[ ";
-    for (T i : v) {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
-template <class T, class V>
-void _print(map<T, V> v) {
-    cerr << "[ ";
-    for (auto i : v) {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
 }
