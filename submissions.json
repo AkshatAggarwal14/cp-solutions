@@ -1,4 +1,21 @@
 {
+  "CF122568185": {
+    "contest_id": 1294,
+    "language": "GNU C++17",
+    "path": "codeforces/1294/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Collecting Packages",
+    "problem_url": "https://codeforces.com/contest/1294/problem/B",
+    "submission_id": "CF122568185",
+    "submission_url": "https://codeforces.com/contest/1294/submission/122568185",
+    "tags": [
+      "implementation",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Jul/15/2021 14:37"
+  },
   "CF122589659": {
     "contest_id": 271,
     "language": "GNU C++17",
