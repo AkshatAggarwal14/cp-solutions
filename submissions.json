@@ -1,4 +1,22 @@
 {
+  "CF122561975": {
+    "contest_id": 1294,
+    "language": "GNU C++17",
+    "path": "codeforces/1294/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Product of Three Numbers",
+    "problem_url": "https://codeforces.com/contest/1294/problem/C",
+    "submission_id": "CF122561975",
+    "submission_url": "https://codeforces.com/contest/1294/submission/122561975",
+    "tags": [
+      "greedy",
+      "math",
+      "number theory",
+      "*1300"
+    ],
+    "timestamp": "Jul/15/2021 13:23"
+  },
   "CF122567800": {
     "contest_id": 1294,
     "language": "GNU C++17",
