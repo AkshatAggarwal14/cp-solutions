@@ -113,21 +113,18 @@ class Task {
             else
                 return false;
         });
-        string ans;
         if (is_sorted(all(arr), [&](pl a, pl b) { return a.ss < b.ss; })) {
             cout << "YES\n";
             ll x = 0, y = 0;
             fo(i, n) {
                 ll movex = arr[i].ff - x;
                 ll movey = arr[i].ss - y;
-                // string X(movex, 'R');
-                // string Y(movey, 'U');
-                // cout << X << Y;
-                ans += string(movex, 'R');
-                ans += string(movey, 'U');
+                string X(movex, 'R');
+                string Y(movey, 'U');
+                cout << X << Y;
                 x = arr[i].ff, y = arr[i].ss;
             }
-            cout << ans << ln;
+            cout << ln;
         } else
             cout << "NO\n";
         debug(arr);
