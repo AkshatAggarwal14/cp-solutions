@@ -1,4 +1,21 @@
 {
+  "CF122547644": {
+    "contest_id": 284,
+    "language": "GNU C++17",
+    "path": "codeforces/284/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Cows and Poker Game",
+    "problem_url": "https://codeforces.com/contest/284/problem/B",
+    "submission_id": "CF122547644",
+    "submission_url": "https://codeforces.com/contest/284/submission/122547644",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Jul/15/2021 10:25"
+  },
   "CF122561975": {
     "contest_id": 1294,
     "language": "GNU C++17",
