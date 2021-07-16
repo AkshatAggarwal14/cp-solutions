@@ -103,14 +103,14 @@ class Task {
     }
 
     void Solve() {
-        ll sum = 0, ans = 0;
-        fo(i,sz(s)) {
+        int cnt = 0, ans = 0;
+        for (int i = 0; i < (int)s.size(); ++i) {
             if (s[i] == '(')
-                ++sum;
+                ++cnt;
             else {
-                if (sum != 0) {
+                if (cnt != 0) {
                     ans += 2;
-                    --sum;
+                    --cnt;
                 }
             }
         }
