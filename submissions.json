@@ -1,4 +1,22 @@
 {
+  "CF122657288": {
+    "contest_id": 761,
+    "language": "GNU C++17",
+    "path": "codeforces/761/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Dasha and friends",
+    "problem_url": "https://codeforces.com/contest/761/problem/B",
+    "submission_id": "CF122657288",
+    "submission_url": "https://codeforces.com/contest/761/submission/122657288",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Jul/16/2021 14:05"
+  },
   "CF122663626": {
     "contest_id": 1107,
     "language": "GNU C++17",
