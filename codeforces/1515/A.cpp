@@ -97,36 +97,6 @@ class Task {
 
    private:
     ll n, x;
-    vl a;
-
-    void Read() {
-        cin >> n >> x;
-        a.resize(n);
-        fo(i, n) cin >> a[i];
-    }
-
-    void Solve() {
-        ll sum = accumulate(a.begin(), a.end(), 0LL);
-        if(sum==x){ //the explosion cant be prevented
-            cout << "NO\n";
-            return;
-        }
-        cout << "YES\n";
-        for (int i = 0; i < n; i++) {
-            if (x == a[i]) {
-                //i+1 will always be less than n because otherwise, the total sum would be x
-                swap(a[i], a[i + 1]);
-            }
-            cout << a[i] << ' ';
-            x -= a[i];
-        }
-        cout << ln;
-        return;
-    }
-
-    //!m2
-    /*
-    ll n, x;
     deque<ll> dq;
 
     void Read() {
@@ -134,6 +104,7 @@ class Task {
         dq.resize(n);
         fo(i, n) cin >> dq[i];
     }
+
     void Solve() {
         sort(all(dq));
         fo(i, n) {
@@ -161,7 +132,6 @@ class Task {
         }
         return true;
     }
-    */
 };
 
 int main() {
