@@ -1,34 +1,19 @@
-/*
-    Akshat Aggarwal , @master._.mind , NIT Hamirpur
-*/
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-
-#include "bits/stdc++.h"
-
+//**********************master._.mind**********************
+//-----------------Author: Akshat Aggarwal-----------------
+//If you don't understand the code below... dont worry, i didn't either
+#include <bits/stdc++.h>
 using namespace std;
-using namespace __gnu_pbds;
-
-template <typename T>
-using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : k-th element in the set
+using namespace std::chrono;
 
 #define ll long long
-#define db long double
-#define str string
+#define ld long double
 #define ull unsigned long long
 #define fo(i, n) for (ll i = 0; i < n; i++)
 #define ln '\n'
 #define rep(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? i++ : i--)
 #define deb(x) cout << "[" << #x << "]: " << x << ln
 #define deb2(x, y) cout << "[" << #x << "]: " << x << ", [" << #y << "]: " << y << ln
-#define bit(x) __builtin_popcount(x)
-#define bitll(x) __builtin_popcountll(x)
-#define popb pop_back
 #define pb push_back
-#define eb emplace_back
 #define mp(x, y) make_pair(x, y)
 #define ub upper_bound
 #define lb lower_bound
@@ -42,30 +27,37 @@ using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_nod
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
 #define sz(x) ((ll)(x).size())
-#define present(b, a) ((a).find((b)) != (a).end())  //if b is present in a
-#define yes() cout << "YES\n"
-#define no() cout << "NO\n"
 const ll mod = 1e9 + 7;  //1000000007
 const ll mod2 = 998244353;
 const ll inf = LLONG_MAX;
-const db eps = 1e-12;
+const double eps = 1e-12;
 typedef pair<ll, ll> pl;
-typedef pair<db, db> pd;
+typedef pair<double, double> pd;
 typedef vector<ll> vl;
 typedef vector<pl> vpl;
 typedef vector<vl> vvl;
 
-//debug template begins
-string to_string(string s) { return '"' + s + '"'; }
+string to_string(string s) {
+    return '"' + s + '"';
+}
+
 string to_string(char ch) {
     string s(1, ch);
     return '\'' + s + '\'';
 }
-string to_string(const char *s) { return to_string((string)s); }
-string to_string(bool b) { return (b ? "true" : "false"); }
+
+string to_string(const char *s) {
+    return to_string((string)s);
+}
+
+string to_string(bool b) {
+    return (b ? "true" : "false");
+}
 
 template <typename A, typename B>
-string to_string(pair<A, B> p) { return "{" + to_string(p.ff) + ", " + to_string(p.ss) + "}"; }
+string to_string(pair<A, B> p) {
+    return "{" + to_string(p.ff) + ", " + to_string(p.ss) + "}";
+}
 
 template <typename A>
 string to_string(A v) {
@@ -94,67 +86,62 @@ void debug_out(Head H, Tail... T) {
 #else
 #define debug(...) 42
 #endif
-//debug template ends
 
-template <typename T>
-void print(T &&t) { cout << t << "\n"; }
-template <typename T, typename... Args>
-void print(T &&t, Args &&...args) {
-    cout << t << " ";
-    print(forward<Args>(args)...);
-}  //print template ends
-
-template <typename T, typename T1>
-T amax(T &a, T1 b) {
-    if (b > a) a = b;
-    return a;
-}
-template <typename T, typename T1>
-T amin(T &a, T1 b) {
-    if (b < a) a = b;
-    return a;
-}
-
-void Solution() {
-    ll n;
-    cin >> n;
-    vl a(n);
-    fo(i, n) cin >> a[i];
-
-    ll cnt = (abs(a[0] - a[n - 1]) > 1);
-    rep(i, 1, n) {
-        if (abs(a[i] - a[i - 1]) > 1) {
-            cnt++;
-        }
-        if (cnt >= 2) {
-            no();
-            return;
-        }
+class Task {
+   public:
+    void Perform() {
+        Read();
+        Solve();
     }
-    yes();
-    //read stuff at the bottom
-}
+
+   private:
+    ll n;
+    deque<ll> dq;
+
+    void Read() {
+        cin >> n;
+        dq.resize(n);
+        fo(i, n) cin >> dq[i];
+    }
+
+    void Solve() {
+        while (dq[0] != 1) {
+            dq.pb(dq[0]);
+            dq.pop_front();
+        }
+        // 3 4 5 1 2 --> 1 2 3 4 5 check inc
+        // 3 2 1 5 4 --> 1 5 4 3 2 --> 5 4 3 2 1 check dec
+        ll flag = 0;
+        if (is_sorted(dq.begin(), dq.end()))
+            flag = 1;
+        debug(dq);
+        dq.pb(dq[0]);
+        dq.pop_front();
+        debug(dq);
+        if (is_sorted(dq.begin(), dq.end(), greater<>()))
+            flag = 1;
+        cout << (flag ? "YES\n" : "NO\n");
+    }
+};
 
 int main() {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
     ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    auto start = chrono::high_resolution_clock::now();
 
-    ll tc = 1;
+    int tc = 1;
     cin >> tc;
     while (tc--) {
-        Solution();
+        Task t;
+        t.Perform();
     }
 
-    // cerr << clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
+    auto end = chrono::high_resolution_clock::now();
+    double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+    time_taken *= 1e-6;
+    cerr << ps(time_taken, 6) << " ms" << ln;
     return 0;
 }
-
-/*
-    ? Stuff to look for ->
-    * stay organised
-    * int overflows, array bounds, etc.
-    * special cases (n=1)?
-    * do something instead of nothing
-    * modulo of negative numbers is not a%b, it is a%b + abs(b)
-    * When using a set, lower_bound(all(set),l) is slower than set.lower_bound(l) because of random iterators
-    * DONT GET STUCK ON ONE APPROACH
-*/
