@@ -1,4 +1,21 @@
 {
+  "CF122745697": {
+    "contest_id": 1505,
+    "language": "GNU C++17",
+    "path": "codeforces/1505/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Math",
+    "problem_url": "https://codeforces.com/contest/1505/problem/F",
+    "submission_id": "CF122745697",
+    "submission_url": "https://codeforces.com/contest/1505/submission/122745697",
+    "tags": [
+      "*special problem",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Jul/17/2021 13:28"
+  },
   "CF122747467": {
     "contest_id": 1505,
     "language": "Secret 2021",
