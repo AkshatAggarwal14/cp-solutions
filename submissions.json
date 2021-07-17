@@ -1,4 +1,20 @@
 {
+  "CF122747467": {
+    "contest_id": 1505,
+    "language": "Secret 2021",
+    "path": "codeforces/1505/I.txt",
+    "platform": "Codeforces",
+    "problem_index": "I",
+    "problem_name": "Mysterious language again, seriously?",
+    "problem_url": "https://codeforces.com/contest/1505/problem/I",
+    "submission_id": "CF122747467",
+    "submission_url": "https://codeforces.com/contest/1505/submission/122747467",
+    "tags": [
+      "*special problem",
+      "*2200"
+    ],
+    "timestamp": "Jul/17/2021 13:52"
+  },
   "CF122766158": {
     "contest_id": 1484,
     "language": "GNU C++17",
