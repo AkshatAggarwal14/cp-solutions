@@ -1,4 +1,21 @@
 {
+  "CF122741463": {
+    "contest_id": 1505,
+    "language": "GNU C++17",
+    "path": "codeforces/1505/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Xenolith? Hippodrome?",
+    "problem_url": "https://codeforces.com/contest/1505/problem/D",
+    "submission_id": "CF122741463",
+    "submission_url": "https://codeforces.com/contest/1505/submission/122741463",
+    "tags": [
+      "*special problem",
+      "number theory",
+      "*1800"
+    ],
+    "timestamp": "Jul/17/2021 12:30"
+  },
   "CF122745697": {
     "contest_id": 1505,
     "language": "GNU C++17",
