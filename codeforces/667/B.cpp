@@ -109,14 +109,10 @@ class Task {
     }
 
     void Solve() {
-        //! [1]
-        cout << 2 * (*max_element(all(arr))) - accumulate(all(arr), 0LL) + 1 << '\n';
-
-        //! [2]
-        //ll mx = *max_element(all(arr));
-        // ll sum = accumulate(all(arr), 0LL);
-        // // sum of n-1 sides is greater than last side ( property )
-        // cout << mx - (sum - mx) + 1 << '\n';
+        ll mx = *max_element(all(arr));
+        ll sum = accumulate(all(arr), 0LL);
+        // sum of n-1 sides is greater than last side ( property )
+        cout << mx - (sum - mx) + 1 << '\n';
     }
 };
 
