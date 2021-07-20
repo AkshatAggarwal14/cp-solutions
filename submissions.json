@@ -1,4 +1,21 @@
 {
+  "CF123092749": {
+    "contest_id": 837,
+    "language": "GNU C++17",
+    "path": "codeforces/837/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Two Seals",
+    "problem_url": "https://codeforces.com/contest/837/problem/C",
+    "submission_id": "CF123092749",
+    "submission_url": "https://codeforces.com/contest/837/submission/123092749",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jul/20/2021 15:22"
+  },
   "CF123094892": {
     "contest_id": 837,
     "language": "GNU C++17",
