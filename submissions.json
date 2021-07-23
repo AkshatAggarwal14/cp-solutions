@@ -1,4 +1,20 @@
 {
+  "CF123547963": {
+    "contest_id": 408,
+    "language": "GNU C++17",
+    "path": "codeforces/408/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Garland",
+    "problem_url": "https://codeforces.com/contest/408/problem/B",
+    "submission_id": "CF123547963",
+    "submission_url": "https://codeforces.com/contest/408/submission/123547963",
+    "tags": [
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Jul/24/2021 01:46"
+  },
   "CF123548171": {
     "contest_id": 133,
     "language": "GNU C++17",
