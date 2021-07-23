@@ -1,4 +1,21 @@
 {
+  "CF123469296": {
+    "contest_id": 1551,
+    "language": "GNU C++17",
+    "path": "codeforces/1551/B1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B1",
+    "problem_name": "Wonderful Coloring - 1",
+    "problem_url": "https://codeforces.com/contest/1551/problem/B1",
+    "submission_id": "CF123469296",
+    "submission_url": "https://codeforces.com/contest/1551/submission/123469296",
+    "tags": [
+      "greedy",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jul/23/2021 20:27"
+  },
   "CF123543427": {
     "contest_id": 1511,
     "language": "GNU C++17",
