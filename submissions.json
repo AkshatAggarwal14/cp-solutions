@@ -1,4 +1,21 @@
 {
+  "CF123622552": {
+    "contest_id": 1466,
+    "language": "GNU C++17",
+    "path": "codeforces/1466/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Last minute enhancements",
+    "problem_url": "https://codeforces.com/contest/1466/problem/B",
+    "submission_id": "CF123622552",
+    "submission_url": "https://codeforces.com/contest/1466/submission/123622552",
+    "tags": [
+      "dp",
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Jul/24/2021 21:29"
+  },
   "CF123623663": {
     "contest_id": 127,
     "language": "GNU C++17",
