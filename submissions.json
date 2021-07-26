@@ -8343,6 +8343,22 @@
     ],
     "timestamp": "Jul/26/2021 16:07"
   },
+  "CF123832899": {
+    "contest_id": 1411,
+    "language": "GNU C++17",
+    "path": "codeforces/1411/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "In-game Chat",
+    "problem_url": "https://codeforces.com/contest/1411/problem/A",
+    "submission_id": "CF123832899",
+    "submission_url": "https://codeforces.com/contest/1411/submission/123832899",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jul/26/2021 17:10"
+  },
   "CF123833516": {
     "contest_id": 954,
     "language": "GNU C++17",
