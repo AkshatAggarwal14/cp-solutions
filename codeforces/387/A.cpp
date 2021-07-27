@@ -121,8 +121,7 @@ void Solution() {
 	if (ansm < 0) ansm += 60, ansh -= 1;
 	if (ansh < 0) ansh += 24;
 
-	// cout << setw(2) << setfill('0') << ansh << ':' << setw(2) << setfill('0') << ansm;
-	printf("%02lld:%02lld", ansh, ansm);
+	cout << setw(2) << setfill('0') << ansh << ':' << setw(2) << setfill('0') << ansm;
 }
 
 int main() {
