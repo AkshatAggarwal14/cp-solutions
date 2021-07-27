@@ -1,4 +1,22 @@
 {
+  "CF123911837": {
+    "contest_id": 735,
+    "language": "GNU C++17",
+    "path": "codeforces/735/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Urbanization",
+    "problem_url": "https://codeforces.com/contest/735/problem/B",
+    "submission_id": "CF123911837",
+    "submission_url": "https://codeforces.com/contest/735/submission/123911837",
+    "tags": [
+      "greedy",
+      "number theory",
+      "sortings",
+      "*1100"
+    ],
+    "timestamp": "Jul/27/2021 13:53"
+  },
   "CF123913916": {
     "contest_id": 535,
     "language": "GNU C++17",
