@@ -1,4 +1,20 @@
 {
+  "CF123919557": {
+    "contest_id": 387,
+    "language": "GNU C++17",
+    "path": "codeforces/387/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "George and Sleep",
+    "problem_url": "https://codeforces.com/contest/387/problem/A",
+    "submission_id": "CF123919557",
+    "submission_url": "https://codeforces.com/contest/387/submission/123919557",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jul/27/2021 15:21"
+  },
   "CF123951685": {
     "contest_id": 265,
     "language": "GNU C++17",
