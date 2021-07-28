@@ -1,4 +1,20 @@
 {
+  "CF123993700": {
+    "contest_id": 765,
+    "language": "GNU C++17",
+    "path": "codeforces/765/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Table Tennis Game 2",
+    "problem_url": "https://codeforces.com/contest/765/problem/C",
+    "submission_id": "CF123993700",
+    "submission_url": "https://codeforces.com/contest/765/submission/123993700",
+    "tags": [
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Jul/28/2021 10:58"
+  },
   "CF124026389": {
     "contest_id": 1133,
     "language": "GNU C++17",
