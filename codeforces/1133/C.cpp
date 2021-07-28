@@ -110,26 +110,16 @@ void Solution() {
 	fo(i, n) cin >> a[i];
 	sort(all(a));
 	debug(a);
-	//! m1
-	ll ans = 0;
+	ll j = 0, mxlen = 0;
 	fo(i, n) {
-		int x = lower_bound(all(a), a[i] - 5) - a.begin();
-		ans = max(ans, i - x + 1);
+		for (; j < n;) {
+			if (a[j] + 5 < a[i])
+				j++;
+			else break;
+		}
+		mxlen = max(mxlen, i - j + 1);
 	}
-	// fo(i, n) ans = max(ans, (ll) (ub(all(a), a[i] + 5) - a.begin() - i));
-	cout << ans << ln;
-
-	//! m2
-	// ll j = 0, mxlen = 0;
-	// fo(i, n) {
-	// 	for (; j < n;) {
-	// 		if (a[j] + 5 < a[i])
-	// 			j++;
-	// 		else break;
-	// 	}
-	// 	mxlen = max(mxlen, i - j + 1);
-	// }
-	// cout << mxlen << ln;
+	cout << mxlen << ln;
 
 }
 
