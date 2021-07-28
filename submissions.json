@@ -1,4 +1,21 @@
 {
+  "CF124029173": {
+    "contest_id": 895,
+    "language": "GNU C++17",
+    "path": "codeforces/895/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Pizza Separation",
+    "problem_url": "https://codeforces.com/contest/895/problem/A",
+    "submission_id": "CF124029173",
+    "submission_url": "https://codeforces.com/contest/895/submission/124029173",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Jul/28/2021 17:37"
+  },
   "CF124037276": {
     "contest_id": 1401,
     "language": "GNU C++17",
