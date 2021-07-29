@@ -1,4 +1,21 @@
 {
+  "CF124099670": {
+    "contest_id": 1163,
+    "language": "GNU C++17",
+    "path": "codeforces/1163/C1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C1",
+    "problem_name": "Power Transmission (Easy Edition)",
+    "problem_url": "https://codeforces.com/contest/1163/problem/C1",
+    "submission_id": "CF124099670",
+    "submission_url": "https://codeforces.com/contest/1163/submission/124099670",
+    "tags": [
+      "brute force",
+      "geometry",
+      "*1900"
+    ],
+    "timestamp": "Jul/29/2021 14:06"
+  },
   "CF124102720": {
     "contest_id": 1163,
     "language": "GNU C++17",

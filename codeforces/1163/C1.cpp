@@ -131,20 +131,14 @@ void Solution() {
     fo(i, sz(line)) cerr << line[i].ff.ff << " " << line[i].ff.ss << " " << line[i].ss << ln;
 
     ll len = sz(line), ans = 0;
-    // fo(i, len) {
-    //     rep(j, i + 1, len) {
-    //         //as parallel lines wont intersect
-    //         if (line[i].ff.ff == line[j].ff.ff && line[i].ff.ss == line[j].ff.ss)
-    //             continue;
-    //         ans++;
-    //     }
-    // }
-    map<pl, ll> mepp;  //for parallel lines
-    fo(i, len)++ mepp[{line[i].ff.ff, line[i].ff.ss}];
-    debug(mepp);
-    ll parallel = 0;
-    tr(it, mepp) if (it->ss != 1) parallel += (it->ss * (it->ss - 1)) / 2;
-    ans = (len * (len - 1)) / 2 - parallel;
+    fo(i, len) {
+        rep(j, i + 1, len) {
+            //as parallel lines wont intersect
+            if (line[i].ff.ff == line[j].ff.ff && line[i].ff.ss == line[j].ff.ss)
+                continue;
+            ans++;
+        }
+    }
     cout << ans << endl;
 }
 
