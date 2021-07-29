@@ -1,4 +1,21 @@
 {
+  "CF124095243": {
+    "contest_id": 1163,
+    "language": "GNU C++17",
+    "path": "codeforces/1163/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Eating Soup",
+    "problem_url": "https://codeforces.com/contest/1163/problem/A",
+    "submission_id": "CF124095243",
+    "submission_url": "https://codeforces.com/contest/1163/submission/124095243",
+    "tags": [
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Jul/29/2021 13:11"
+  },
   "CF124099670": {
     "contest_id": 1163,
     "language": "GNU C++17",
