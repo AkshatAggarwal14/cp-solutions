@@ -1,4 +1,21 @@
 {
+  "CF124416745": {
+    "contest_id": 242,
+    "language": "GNU C++17",
+    "path": "codeforces/242/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Heads or Tails",
+    "problem_url": "https://codeforces.com/contest/242/problem/A",
+    "submission_id": "CF124416745",
+    "submission_url": "https://codeforces.com/contest/242/submission/124416745",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Jul/31/2021 16:29"
+  },
   "CF124496038": {
     "contest_id": 588,
     "language": "GNU C++17",
