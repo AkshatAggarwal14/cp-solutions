@@ -1,4 +1,20 @@
 {
+  "CF124496038": {
+    "contest_id": 588,
+    "language": "GNU C++17",
+    "path": "codeforces/588/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Duff in Love",
+    "problem_url": "https://codeforces.com/contest/588/problem/B",
+    "submission_id": "CF124496038",
+    "submission_url": "https://codeforces.com/contest/588/submission/124496038",
+    "tags": [
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Aug/01/2021 15:36"
+  },
   "CF124498765": {
     "contest_id": 604,
     "language": "GNU C++17",
