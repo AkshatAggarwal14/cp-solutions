@@ -1,4 +1,21 @@
 {
+  "CF124498765": {
+    "contest_id": 604,
+    "language": "GNU C++17",
+    "path": "codeforces/604/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "More Cowbell",
+    "problem_url": "https://codeforces.com/contest/604/problem/B",
+    "submission_id": "CF124498765",
+    "submission_url": "https://codeforces.com/contest/604/submission/124498765",
+    "tags": [
+      "binary search",
+      "greedy",
+      "*1400"
+    ],
+    "timestamp": "Aug/01/2021 16:08"
+  },
   "CF124509250": {
     "contest_id": 957,
     "language": "GNU C++17",
