@@ -117,13 +117,12 @@ void Solution() {
     rep(i, 1, n + 1) {
         st.insert(i);
     }
-    fo(i, m) {
+    rep(i, 0, m) {
         ll u, v;
         cin >> u >> v;
-        if (v < u) swap(u, v);
-        mep[u].insert(v);
-        if (st.find(u) != st.end()) {
-            st.erase(u);
+        mep[min(u, v)].insert(max(u, v));
+        if (st.find(min(u, v)) != st.end()) {
+            st.erase(min(u, v));
         }
     }
     ll q;
@@ -133,19 +132,22 @@ void Solution() {
         cin >> type;
         if (type == 1) {
             cin >> u >> v;
-            if (v < u) swap(u, v);
-            mep[u].insert(v);
-            if (st.find(u) != st.end()) {
-                st.erase(u);
+            mep[min(u, v)].insert(max(u, v));
+            if (st.find(min(u, v)) != st.end()) {
+                st.erase(min(u, v));
             }
         } else if (type == 2) {
             cin >> u >> v;
-            if (v < u) swap(u, v);
-            mep[u].insert(v);
-            mep[u].erase(v);
-            if (mep[u].size() == 0) st.insert(u);
-        } else
+            mep[min(u, v)].insert(max(u, v));
+            ll mini = min(u, v);
+            ll maxi = max(u, v);
+            mep[mini].erase(maxi);
+            if (mep[mini].size() == 0) {
+                st.insert(mini);
+            }
+        } else {
             cout << st.size() << " \n";
+        }
     }
 }
 
