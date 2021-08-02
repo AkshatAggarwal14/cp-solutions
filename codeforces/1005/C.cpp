@@ -120,10 +120,10 @@ T amin(T &a, T1 b) {
     return a;
 }
 
-// ll next2(ll n) {
-// db nxt = log2(n);
-// return static_cast<ll>(pow(2, (ll)nxt + 1));
-// }
+ll next2(ll n) {
+    db nxt = log2(n);
+    return static_cast<ll>(pow(2, (ll)nxt + 1));
+}
 
 void Solution() {
     ll n;
@@ -131,16 +131,16 @@ void Solution() {
     vl a(n);
     map<ll, ll> cnt;
     fo(i, n) cin >> a[i], ++cnt[a[i]];
-    // if (n == 1) {
-    // print(1);
-    // return;
-    // } else if (n == 2) {
-    // if (bitll(a[0] + a[1]) == 1)
-    // cout << 0;
-    // else
-    // cout << 2;
-    // return;
-    // }
+    if (n == 1) {
+        print(1);
+        return;
+    } else if (n == 2) {
+        if (bitll(a[0] + a[1]) == 1)
+            cout << 0;
+        else
+            cout << 2;
+        return;
+    }
     vl two;
     ll t = 1;
     fo(i, 33) {
