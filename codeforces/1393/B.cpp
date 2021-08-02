@@ -125,11 +125,14 @@ void Solution() {
     cin >> n;
     map<ll, ll> mp;
     vl a(n);
-    ll cnt[4]{};  //cnt[0]-> cnt2 [1]->4 [2]->6 [3]->8
-    for (auto &x : a) {
-        cin >> x;
-        ++mp[x];
-        fo(i, 4) cnt[i] += (mp[x] == 2 * i + 2);
+    ll cnt4 = 0, cnt2 = 0, cnt6 = 0, cnt8 = 0;
+    fo(i, n) {
+        cin >> a[i];
+        ++mp[a[i]];
+        cnt2 += (mp[a[i]] == 2);
+        cnt4 += (mp[a[i]] == 4);
+        cnt6 += (mp[a[i]] == 6);
+        cnt8 += (mp[a[i]] == 8);
     }
 
     ll q, x;
@@ -139,12 +142,21 @@ void Solution() {
         cin >> type >> x;
         if (type == '+') {
             ++mp[x];
-            fo(i, 4) cnt[i] += (mp[x] == 2 * i + 2);
+            cnt2 += (mp[x] == 2);
+            cnt4 += (mp[x] == 4);
+            cnt6 += (mp[x] == 6);
+            cnt8 += (mp[x] == 8);
         } else {
             --mp[x];
-            fo(i, 4) cnt[i] -= (mp[x] == 2 * i + 1);
+            cnt2 -= (mp[x] == 1);
+            cnt4 -= (mp[x] == 3);
+            cnt6 -= (mp[x] == 5);
+            cnt8 -= (mp[x] == 7);
         }
-        (cnt[1] >= 2 || (cnt[1] >= 1 && cnt[0] >= 3) || (cnt[2] >= 1 && cnt[0] >= 2) || (cnt[3] >= 1)) ? yes() : no();
+        if (cnt4 >= 2 || (cnt4 >= 1 && cnt2 >= 3) || (cnt6 >= 1 && cnt2 >= 2) || (cnt8 >= 1))
+            yes();
+        else
+            no();
     }
 }
 
