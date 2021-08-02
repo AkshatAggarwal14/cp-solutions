@@ -48,8 +48,8 @@ using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statisti
 #define PI 3.1415926535897932384626
 #define sz(x) ((ll)(x).size())
 #define present(b, a) ((a).find((b)) != (a).end())  //if b is present in a
-#define yes() cout << "respectable\n"
-#define no() cout << "ugly\n"
+#define yes() cout << "YES\n"
+#define no() cout << "NO\n"
 const ll mod = 1e9 + 7;  //1000000007
 const ll mod2 = 998244353;
 const ll inf = LLONG_MAX;
@@ -121,57 +121,38 @@ T amin(T &a, T1 b) {
 }
 
 void Solution() {
-    //! M1
-    vpl a(8);
-    set<ll> x, y;
-    set<pl> xy;
+    ll x, y;
+    vpl inp;
+    vl X;
+    vl Y;
     fo(i, 8) {
-        cin >> a[i].ff >> a[i].ss;
-        x.insert(a[i].ff);
-        y.insert(a[i].ss);
-        xy.insert(a[i]);
+        cin >> x >> y;
+        inp.eb(x, y);
+        X.eb(x);
+        Y.eb(y);
     }
-    if (sz(x) != 3 || sz(y) != 3 || sz(xy) != 8)
-        no();
-    else if (present(mp(*next(x.begin()), *next(y.begin())), xy))
-        no();
-    else
-        yes();
-
-    //! M2
-
-    // ll x, y;
-    // vpl inp;
-    // vl X;
-    // vl Y;
-    // fo(i, 8) {
-    // cin >> x >> y;
-    // inp.eb(x, y);
-    // X.eb(x);
-    // Y.eb(y);
-    // }
-    // sort(all(X));
-    // uniq(X);
-    // sort(all(Y));
-    // uniq(Y);
-    // sort(all(inp));
-    // vpl ans;
-    // if (sz(X) != 3 || sz(Y) != 3)
-    // cout << "ugly";
-    // else {
-    // fo(i, 3) {
-    // fo(j, 3) {
-    // if (i == 1 && j == 1) continue;
-    // ans.eb(X[i], Y[j]);
-    // }
-    // }
-    // sort(all(ans));
-    // debug(ans, inp);
-    // if (ans == inp)
-    // cout << "respectable";
-    // else
-    // cout << "ugly";
-    // }
+    sort(all(X));
+    uniq(X);
+    sort(all(Y));
+    uniq(Y);
+    sort(all(inp));
+    vpl ans;
+    if (sz(X) != 3 || sz(Y) != 3)
+        cout << "ugly";
+    else {
+        fo(i, 3) {
+            fo(j, 3) {
+                if (i == 1 && j == 1) continue;
+                ans.eb(X[i], Y[j]);
+            }
+        }
+        sort(all(ans));
+        debug(ans, inp);
+        if (ans == inp)
+            cout << "respectable";
+        else
+            cout << "ugly";
+    }
 }
 
 int main() {
