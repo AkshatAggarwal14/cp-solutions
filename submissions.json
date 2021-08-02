@@ -1,4 +1,23 @@
 {
+  "CF124705726": {
+    "contest_id": 1393,
+    "language": "GNU C++17",
+    "path": "codeforces/1393/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Applejack and Storages",
+    "problem_url": "https://codeforces.com/contest/1393/problem/B",
+    "submission_id": "CF124705726",
+    "submission_url": "https://codeforces.com/contest/1393/submission/124705726",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Aug/02/2021 21:00"
+  },
   "CF124719782": {
     "contest_id": 876,
     "language": "GNU C++17",

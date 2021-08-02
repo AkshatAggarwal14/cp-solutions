@@ -2,7 +2,7 @@
 // Contest: Codeforces - Codeforces Round #662 (Div. 2)
 // URL: https://codeforces.com/contest/1393/problem/B
 // Author: Akshat Aggarwal , @master._.mind , NIT Hamirpur
-// Created at: 04/08/2021 01:33:54 (UTC +5:30)
+// Created at: 02/08/2021 20:34:55 (UTC +5:30)
 //
 // Powered by CP Editor (https://cpeditor.org)
 
@@ -15,7 +15,7 @@ using namespace std;
 using namespace __gnu_pbds;
 
 template <typename T>
-using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 //member functions :
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
@@ -123,38 +123,28 @@ T amin(T &a, T1 b) {
 void Solution() {
     ll n;
     cin >> n;
-
-    map<ll, ll> m;
-    fo(i, n) {
-        ll x;
+    map<ll, ll> mp;
+    vl a(n);
+    ll cnt[4]{};  //cnt[0]-> cnt2 [1]->4 [2]->6 [3]->8
+    for (auto &x : a) {
         cin >> x;
-        m[x]++;
+        ++mp[x];
+        fo(i, 4) cnt[i] += (mp[x] == 2 * i + 2);
     }
 
-    ll sq = 0, rr = 0;
-    for (auto it : m) {
-        sq += it.ss / 4;
-        rr += it.ss / 2;
-    }
-
-    ll q;
+    ll q, x;
+    char type;
     cin >> q;
     while (q--) {
-        char c;
-        ll tt;
-        cin >> c >> tt;
-        sq -= m[tt] / 4;
-        rr -= m[tt] / 2;
-        if (c == '+')
-            m[tt]++;
-        else
-            m[tt]--;
-        sq += m[tt] / 4;
-        rr += m[tt] / 2;
-        if (sq >= 1 && rr >= 4)
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
+        cin >> type >> x;
+        if (type == '+') {
+            ++mp[x];
+            fo(i, 4) cnt[i] += (mp[x] == 2 * i + 2);
+        } else {
+            --mp[x];
+            fo(i, 4) cnt[i] -= (mp[x] == 2 * i + 1);
+        }
+        (cnt[1] >= 2 || (cnt[1] >= 1 && cnt[0] >= 3) || (cnt[2] >= 1 && cnt[0] >= 2) || (cnt[3] >= 1)) ? yes() : no();
     }
 }
 
