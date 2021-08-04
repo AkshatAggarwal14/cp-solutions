@@ -121,56 +121,33 @@ T amin(T &a, T1 b) {
 }
 
 void Solution() {
-    //! M1
-
     ll n;
     cin >> n;
     vl a(n);
     map<ll, ll> cnt;
-    fo(i, n) cin >> a[i], ++cnt[a[i]];
+    set<ll> st;
+    fo(i, n) cin >> a[i], ++cnt[a[i]], st.insert(a[i]);
     // for each element from left that hasnt occured before, unique elements from right give the answer
+
+    // map<ll, ll> freq;
     set<ll> ok;
-    ll ans = 0, ctr = sz(cnt);
+    ll ans = 0;
     fo(i, n - 1) {
         cnt[a[i]]--;
-        if (cnt[a[i]] == 0) ctr--;
+        if (cnt[a[i]] == 0) st.erase(a[i]);
+
         //for just counting first time
         if (ok.count(a[i]))
             continue;
         ok.insert(a[i]);
-        ans += ctr;
+        ans += sz(st);
+
+        //! m2
+        // ++freq[a[i]];
+        // if (freq[a[i]] == 1)
+        // ans += sz(st);
     }
     print(ans);
-
-    //! M2
-
-    // ll n;
-    // cin >> n;
-    // vl a(n);
-    // map<ll, ll> cnt;
-    // set<ll> st;
-    // fo(i, n) cin >> a[i], ++cnt[a[i]], st.insert(a[i]);
-    // // for each element from left that hasnt occured before, unique elements from right give the answer
-    //
-    // // map<ll, ll> freq;
-    // set<ll> ok;
-    // ll ans = 0;
-    // fo(i, n - 1) {
-    // cnt[a[i]]--;
-    // if (cnt[a[i]] == 0) st.erase(a[i]);
-    //
-    // //for just counting first time
-    // if (ok.count(a[i]))
-    // continue;
-    // ok.insert(a[i]);
-    // ans += sz(st);
-    //
-    // //! m2
-    // // ++freq[a[i]];
-    // // if (freq[a[i]] == 1)
-    // // ans += sz(st);
-    // }
-    // print(ans);
 }
 
 int main() {
