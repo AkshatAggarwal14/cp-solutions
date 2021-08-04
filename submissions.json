@@ -1,4 +1,22 @@
 {
+  "CF124816096": {
+    "contest_id": 1187,
+    "language": "GNU C++17",
+    "path": "codeforces/1187/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Letters Shop",
+    "problem_url": "https://codeforces.com/contest/1187/problem/B",
+    "submission_id": "CF124816096",
+    "submission_url": "https://codeforces.com/contest/1187/submission/124816096",
+    "tags": [
+      "binary search",
+      "implementation",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Aug/04/2021 09:38"
+  },
   "CF124832145": {
     "contest_id": 1208,
     "language": "GNU C++17",
