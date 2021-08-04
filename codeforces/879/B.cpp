@@ -121,62 +121,34 @@ T amin(T &a, T1 b) {
 }
 
 void Solution() {
-    ll n, k;
+    ll n, k, temp, ans = 0;
     cin >> n >> k;
     vl a(n);
-    queue<ll> q;
-    fo(i, n) {
-        cin >> a[i];
-        q.push(a[i]);
-    }
-    if (k >= n - 1) {
+    fo(i, n) cin >> a[i];
+    if (k >= n - 1)
         cout << *max_element(all(a)) << ln;
-    } else {
-        fo(i, n) q.push(a[i]);
-        ll m = 2 * n;
-        map<ll, ll> mep;
-        ll curr = q.front();
-        q.pop();
-        while (m--) {
-            if (curr < q.front()) {
-                curr = q.front();
+    else {
+        deque<ll> q(all(a));
+        ll cnt = n + k, x = k;
+        while (q.size() && cnt--) {
+            int y = q.front();
+            q.pop_front();
+            while (q.size() && y > q.front() && x > 0) {
+                int val = q.front();
+                q.pop_front();
+                q.push_back(val);
+                x--;
             }
-            mep[curr]++;
-            if (mep[curr] >= k) {
-                print(curr);
+            if (!x) {
+                cout << y << '\n';
                 return;
             }
-            q.pop();
+            x = k - 1;
+            q.push_back(y);
+            // d(q);
         }
+        cout << *max_element(all(a)) << '\n';
     }
-    // ll n, k, temp, ans = 0;
-    // cin >> n >> k;
-    // vl a(n);
-    // fo(i, n) cin >> a[i];
-    // if (k >= n - 1)
-    // cout << *max_element(all(a)) << ln;
-    // else {
-    // deque<ll> q(all(a));
-    // ll cnt = n + k, x = k;
-    // while (q.size() && cnt--) {
-    // int y = q.front();
-    // q.pop_front();
-    // while (q.size() && y > q.front() && x > 0) {
-    // int val = q.front();
-    // q.pop_front();
-    // q.push_back(val);
-    // x--;
-    // }
-    // if (!x) {
-    // cout << y << '\n';
-    // return;
-    // }
-    // x = k - 1;
-    // q.push_back(y);
-    // // d(q);
-    // }
-    // cout << *max_element(all(a)) << '\n';
-    // }
 
     //read stuff at the bottom
 }
