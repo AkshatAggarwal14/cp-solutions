@@ -120,33 +120,41 @@ T amin(T &a, T1 b) {
     return a;
 }
 
-map<ll, pl> d;  //sum-a[i]-> seq number, i
+const ll maxn = 2e5 + 7;
 
-void Solution() {
-    ll t;
-    cin >> t;
+map<ll, pl> d;  //sum-a[i]-> seq number, i
+ll a[maxn];
+
+void add(int num) {
     ll n;
-    vl a;
-    for (ll j = 1; j <= t; ++j) {
-        cin >> n;
-        a.resize(n);
-        fo(i, n) cin >> a[i];
-        ll sum = accumulate(all(a), 0LL);
-        fo(i, n) {
-            ll x = sum - a[i];
-            if (d.find(x) != d.end()) {
-                yes();
-                cout << d[x].ff << ' ' << d[x].ss << '\n';
-                cout << j << ' ' << i + 1 << '\n';
-                return;
-            }
-        }
-        fo(i, n) {
-            ll x = sum - a[i];
-            d[x] = {j, i + 1};
+    cin >> n;
+    vl a(n);
+    fo(i, n) cin >> a[i];
+    ll sum = accumulate(all(a), 0LL);
+    fo(i, n) {
+        ll x = sum - a[i];
+        if (d.find(x) != d.end()) {
+            cout << "YES\n";
+            cout << d[x].ff << ' ' << d[x].ss << '\n';
+            cout << num << ' ' << i + 1 << '\n';
+            exit(0);
         }
     }
-    no();
+    fo(i, n) {
+        ll x = sum - a[i];
+        d[x] = {num, i + 1};
+    }
+}
+
+void Solution() {
+    int t;
+    cin >> t;
+
+    for (int i = 1; i <= t; ++i) {
+        add(i);
+    }
+    cout << "NO\n";
+
     //read stuff at the bottom
 }
 
