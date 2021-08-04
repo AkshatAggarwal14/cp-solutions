@@ -2,7 +2,7 @@
 // Contest: Codeforces - Educational Codeforces Round 67 (Rated for Div. 2)
 // URL: https://codeforces.com/contest/1187/problem/B
 // Author: Akshat Aggarwal , @master._.mind , NIT Hamirpur
-// Created at: 04/08/2021 09:33:09 (UTC +5:30)
+// Created at: 04/08/2021 09:08:22 (UTC +5:30)
 //
 // Powered by CP Editor (https://cpeditor.org)
 
@@ -121,21 +121,24 @@ T amin(T &a, T1 b) {
 }
 
 void Solution() {
-    //using map char-> vector
-    ll n, q;
+    ll n, m;
     str s, t;
-    cin >> n >> s >> q;
-    map<char, vl> mep;
-    fo(i, n) mep[s[i]].eb(i + 1);
-    while (q--) {
+    vvl pos(26);  //array of vectors to store positions of each letter a-z
+    cin >> n >> s;
+    fo(i, n) pos[s[i] - 'a'].eb(i + 1);
+    debug(pos);
+    cin >> m;
+    fo(i, m) {
         cin >> t;
-        map<ll, ll> cnt;
+        vl cnt(26);
+        for (auto &c : t)
+            ++cnt[c - 'a'];
         ll ans = -1;
-        fo(i, sz(t)) {
-            ++cnt[t[i]];
-            amax(ans, mep[t[i]][cnt[t[i]] - 1]);
-        }
-        print(ans);
+        fo(j, 26) if (cnt[j] > 0)
+            amax(ans, pos[j][cnt[j] - 1]);
+        //pos[j][cnt[j]-1] gives index of jth occurence of jth character in the input string t
+        // and answer is just the last letter we find in this way
+        cout << ans << '\n';
     }
 }
 
