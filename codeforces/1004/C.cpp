@@ -131,7 +131,7 @@ void Solution() {
     // for each element from left that hasnt occured before, unique elements from right give the answer
     set<ll> ok;
     ll ans = 0, ctr = sz(cnt);
-    fo(i, n) {
+    fo(i, n - 1) {
         cnt[a[i]]--;
         if (cnt[a[i]] == 0) ctr--;
         //for just counting first time
