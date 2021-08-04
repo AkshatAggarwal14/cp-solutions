@@ -128,24 +128,16 @@ void Solution() {
     set<ll> st;
     fo(i, n) cin >> a[i], ++cnt[a[i]], st.insert(a[i]);
     // for each element from left that hasnt occured before, unique elements from right give the answer
-
-    // map<ll, ll> freq;
-    set<ll> ok;
+    map<ll, ll> freq;
     ll ans = 0;
     fo(i, n - 1) {
         cnt[a[i]]--;
         if (cnt[a[i]] == 0) st.erase(a[i]);
 
         //for just counting first time
-        if (ok.count(a[i]))
-            continue;
-        ok.insert(a[i]);
-        ans += sz(st);
-
-        //! m2
-        // ++freq[a[i]];
-        // if (freq[a[i]] == 1)
-        // ans += sz(st);
+        ++freq[a[i]];
+        if (freq[a[i]] == 1)
+            ans += sz(st);
     }
     print(ans);
 }
