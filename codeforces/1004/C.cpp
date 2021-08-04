@@ -126,7 +126,7 @@ void Solution() {
     ll n;
     cin >> n;
     vl a(n);
-    unordered_map<ll, ll> cnt;
+    map<ll, ll> cnt;
     fo(i, n) cin >> a[i], ++cnt[a[i]];
     // for each element from left that hasnt occured before, unique elements from right give the answer
     set<ll> ok;
@@ -135,11 +135,9 @@ void Solution() {
         cnt[a[i]]--;
         if (cnt[a[i]] == 0) ctr--;
         //for just counting first time
-
         if (ok.count(a[i]))
             continue;
         ok.insert(a[i]);
-
         ans += ctr;
     }
     print(ans);
