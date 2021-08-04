@@ -1,4 +1,20 @@
 {
+  "CF124895916": {
+    "contest_id": 808,
+    "language": "GNU C++17",
+    "path": "codeforces/808/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Lucky Year",
+    "problem_url": "https://codeforces.com/contest/808/problem/A",
+    "submission_id": "CF124895916",
+    "submission_url": "https://codeforces.com/contest/808/submission/124895916",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Aug/05/2021 00:45"
+  },
   "CF124898666": {
     "contest_id": 808,
     "language": "GNU C++17",
