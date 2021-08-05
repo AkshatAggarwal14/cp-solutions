@@ -1,4 +1,17 @@
 {
+  "CF124989160": {
+    "contest_id": 985,
+    "language": "GNU C++17",
+    "path": "codeforces/985/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Switches and Lamps",
+    "problem_url": "https://codeforces.com/contest/985/problem/B",
+    "submission_id": "CF124989160",
+    "submission_url": "https://codeforces.com/contest/985/submission/124989160",
+    "tags": [],
+    "timestamp": "Aug/05/2021 23:48"
+  },
   "CF124989939": {
     "contest_id": 750,
     "language": "GNU C++17",
