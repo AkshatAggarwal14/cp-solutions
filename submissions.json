@@ -1,4 +1,17 @@
 {
+  "CF124987867": {
+    "contest_id": 1316,
+    "language": "GNU C++17",
+    "path": "codeforces/1316/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "String Modification",
+    "problem_url": "https://codeforces.com/contest/1316/problem/B",
+    "submission_id": "CF124987867",
+    "submission_url": "https://codeforces.com/contest/1316/submission/124987867",
+    "tags": [],
+    "timestamp": "Aug/05/2021 23:31"
+  },
   "CF124989160": {
     "contest_id": 985,
     "language": "GNU C++17",
