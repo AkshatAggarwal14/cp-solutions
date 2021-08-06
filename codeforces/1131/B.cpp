@@ -86,9 +86,7 @@ void Solution() {
     n = sz(a);
     ll ans = 1;
     rep(i, 1, n) {
-        // 2 1 ,4 1 --> 2>1 so no goal in between
         if (max(a[i - 1].ff, a[i - 1].ss) <= min(a[i].ff, a[i].ss)) {
-            //if equal it is counted in the next one
             if (a[i - 1].ff != a[i - 1].ss)
                 ++ans;
             ans += min(a[i].ff, a[i].ss) - max(a[i - 1].ff, a[i - 1].ss);
