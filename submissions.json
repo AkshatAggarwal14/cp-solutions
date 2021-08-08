@@ -1,4 +1,20 @@
 {
+  "CF125200248": {
+    "contest_id": 1036,
+    "language": "GNU C++17",
+    "path": "codeforces/1036/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Function Height",
+    "problem_url": "https://codeforces.com/contest/1036/problem/A",
+    "submission_id": "CF125200248",
+    "submission_url": "https://codeforces.com/contest/1036/submission/125200248",
+    "tags": [
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Aug/08/2021 14:35"
+  },
   "CF125315946": {
     "contest_id": 1485,
     "language": "GNU C++17",
