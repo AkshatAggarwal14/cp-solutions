@@ -1,4 +1,20 @@
 {
+  "CF125471728": {
+    "contest_id": 641,
+    "language": "GNU C++17",
+    "path": "codeforces/641/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Little Artem and Matrix",
+    "problem_url": "https://codeforces.com/contest/641/problem/B",
+    "submission_id": "CF125471728",
+    "submission_url": "https://codeforces.com/contest/641/submission/125471728",
+    "tags": [
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Aug/10/2021 16:28"
+  },
   "CF125478497": {
     "contest_id": 641,
     "language": "GNU C++17",
