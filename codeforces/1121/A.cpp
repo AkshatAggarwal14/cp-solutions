@@ -112,10 +112,16 @@ void Solution() {
     cin >> s;
     vi c(k);
     cin >> c;
+    // debug(p, s, c);
     map<int, set<int>> q;
-    fo(i, n) q[s[i]].insert(p[i]);
+    fo(i, n) {
+        q[s[i]].insert(p[i]);
+    }
     int ans(0);
-    fo(i, k) if (*q[s[c[i] - 1]].rbegin() != p[c[i] - 1]) ans++;
+    fo(i, k) {
+        c[i]--;
+        if (*q[s[c[i]]].rbegin() != p[c[i]]) ans++;
+    }
     print(ans);
 }
 // read stuff at the bottom
