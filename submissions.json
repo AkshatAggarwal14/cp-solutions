@@ -10322,6 +10322,24 @@
     ],
     "timestamp": "Aug/13/2021 21:00"
   },
+  "CF125935915": {
+    "contest_id": 1559,
+    "language": "GNU C++17",
+    "path": "codeforces/1559/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Mocha and Math",
+    "problem_url": "https://codeforces.com/contest/1559/problem/A",
+    "submission_id": "CF125935915",
+    "submission_url": "https://codeforces.com/contest/1559/submission/125935915",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Aug/15/2021 20:08"
+  },
   "CF125972771": {
     "contest_id": 1559,
     "language": "GNU C++17",
