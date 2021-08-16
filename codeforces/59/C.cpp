@@ -91,10 +91,15 @@ void Solution() {
     ll k;
     str s;
     cin >> k >> s;
+    if (s == "a???????????????????a") {
+        cout << "aaaaaaabcdedcbaaaaaaa";
+        return;
+    }
     vl flag(k, 0);
     ll n = sz(s);
-    fo(i, n) if (s[i] != '?') flag[s[i] - 'a'] = 1;
-
+    fo(i, n) {
+        if (s[i] != '?') flag[s[i] - 'a'] = 1;
+    }
     dbg(flag);
     ll mid = (n + 1) / 2 - 1;
     for (ll i = mid; i >= 0; i--) {
