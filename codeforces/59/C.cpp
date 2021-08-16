@@ -88,7 +88,6 @@ ostream &operator<<(ostream &ostream, const vector<T> &c) {
 }
 
 void Solution() {
-    // F**K
     ll k;
     str s;
     cin >> k >> s;
