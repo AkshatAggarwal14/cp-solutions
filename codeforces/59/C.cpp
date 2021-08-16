@@ -100,7 +100,7 @@ void Solution() {
     ll mid = (n + 1) / 2 - 1;
     for (ll i = mid; i >= 0; i--) {
         if (s[i] == '?' && s[n - 1 - i] == '?') {
-            for (ll j = k - 1; j >= 0; j--) {
+            for (ll j = k; j >= 0; j--) {
                 if (flag[j] == 0) {  //highest character not present
                     s[i] = char('a' + j);
                     s[n - 1 - i] = s[i];
