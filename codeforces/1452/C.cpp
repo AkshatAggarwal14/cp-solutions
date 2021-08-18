@@ -95,47 +95,28 @@ void print(T &&t, Args &&...args) {
     print(forward<Args>(args)...);
 }
 
-ll ans(str s, char x, char y) {
-    ll res = 0, c1 = 0;
-    fo(i, sz(s)) {
-        if (s[i] == x) {
-            c1++;
-        } else if (c1 > 0 && s[i] == y) {
-            c1--;
-            res++;
-        }
-    }
-    return res;
-}
-
 void Solution() {
-    //! m1
     str s;
     cin >> s;
-    print(ans(s, '(', ')') + ans(s, '[', ']'));
-
-    //!m2
-    // str s;
-    // cin >> s;
-    // ll n = sz(s);
-    // ll c1 = 0, c2 = 0, ans = 0;
-    // fo(i, n) {
-    //     if (s[i] == '(') {
-    //         c1++;
-    //     } else if (c1 > 0 && s[i] == ')') {
-    //         c1--;
-    //         ans++;
-    //     }
-    // }
-    // fo(i, n) {
-    //     if (s[i] == '[') {
-    //         c2++;
-    //     } else if (c2 > 0 && s[i] == ']') {
-    //         c2--;
-    //         ans++;
-    //     }
-    // }
-    // print(ans);
+    ll n = sz(s);
+    ll c1 = 0, c2 = 0, ans = 0;
+    fo(i, n) {
+        if (s[i] == '(') {
+            c1++;
+        } else if (c1 > 0 && s[i] == ')') {
+            c1--;
+            ans++;
+        }
+    }
+    fo(i, n) {
+        if (s[i] == '[') {
+            c2++;
+        } else if (c2 > 0 && s[i] == ']') {
+            c2--;
+            ans++;
+        }
+    }
+    print(ans);
 }
 //*read stuff at the bottom
 
