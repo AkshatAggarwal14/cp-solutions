@@ -1,4 +1,20 @@
 {
+  "CF126285215": {
+    "contest_id": 1560,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1560/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Who's Opposite?",
+    "problem_url": "https://codeforces.com/contest/1560/problem/B",
+    "submission_id": "CF126285215",
+    "submission_url": "https://codeforces.com/contest/1560/submission/126285215",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Aug/18/2021 20:12"
+  },
   "CF126327819": {
     "contest_id": 1560,
     "language": "GNU C++17 (64)",
