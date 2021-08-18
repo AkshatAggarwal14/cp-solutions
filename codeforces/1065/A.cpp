@@ -98,9 +98,8 @@ void print(T &&t, Args &&...args) {
 void Solution() {
     ll s, a, b, c;
     cin >> s >> a >> b >> c;
-    ull sum = (s / c);
-    sum += (s / (a * c)) * b;
-    cout << sum << "\n";
+    ull ans = (s / (a * c)) * 1ULL * (b) + s / c;
+    cout << ans << ln;
 }
 //*read stuff at the bottom
 
