@@ -1,4 +1,21 @@
 {
+  "CF126251221": {
+    "contest_id": 1065,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1065/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Vasya and Chocolate",
+    "problem_url": "https://codeforces.com/contest/1065/problem/A",
+    "submission_id": "CF126251221",
+    "submission_url": "https://codeforces.com/contest/1065/submission/126251221",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Aug/18/2021 15:08"
+  },
   "CF126254835": {
     "contest_id": 1093,
     "language": "GNU C++17 (64)",
