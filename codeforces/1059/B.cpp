@@ -96,7 +96,6 @@ void print(T &&t, Args &&...args) {
 }
 
 vector<vector<char>> vv, check;
-
 bool Check(ll i, ll j) {
     return (vv[i - 1][j - 1] == '#' && vv[i][j - 1] == '#' && vv[i + 1][j - 1] == '#' && vv[i + 1][j] == '#' && vv[i + 1][j + 1] == '#' && vv[i][j + 1] == '#' && vv[i - 1][j + 1] == '#' && vv[i - 1][j] == '#');
 }
@@ -118,9 +117,11 @@ void Solution() {
         }
     }
     // dbg(vv);
+    // vpl mark;
     rep(i, 1, n - 1) {
         rep(j, 1, m - 1) {
             if (Check(i, j)) {
+                // mark.eb(i, j);
                 Mark(i, j);
             }
         }
