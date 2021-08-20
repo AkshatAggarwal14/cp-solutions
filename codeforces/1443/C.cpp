@@ -6,8 +6,7 @@ using namespace std;
 #define dbg(...)
 #define debug(...)
 #endif
-#pragma GCC optimize("O3,unroll-loops")
-#pragma GCC target("avx,avx2,sse,sse2,sse3,sse4,popcnt,bmi,bmi2,lzcnt")
+
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
