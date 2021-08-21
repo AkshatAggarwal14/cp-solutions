@@ -1,4 +1,20 @@
 {
+  "AC25253041": {
+    "contest_id": "abc215",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc215/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "log2(N)",
+    "problem_url": "https://atcoder.jp/contests/abc215/tasks/abc215_b",
+    "submission_id": "AC25253041",
+    "submission_url": "https://atcoder.jp/contests/abc215/submissions/25253041",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Aug/22/2021 00:27"
+  },
   "AC25253071": {
     "contest_id": "abc215",
     "language": "C++ (GCC 9.2.1)",
