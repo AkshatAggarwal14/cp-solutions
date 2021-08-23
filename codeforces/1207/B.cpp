@@ -105,11 +105,11 @@ void Solution() {
     }
     fo(i, n - 1) {
         fo(j, m - 1) {
-            if (a[i][j] + a[i + 1][j] + a[i][j + 1] + a[i + 1][j + 1] == 4) {
-                mark.eb(i, j);
-                b[i][j] = b[i + 1][j] = b[i][j + 1] = b[i + 1][j + 1] = 1;
-            }
+            if (a[i][j] + a[i + 1][j] + a[i][j + 1] + a[i + 1][j + 1] == 4) mark.eb(i, j);
         }
+    }
+    for (auto &[i, j] : mark) {
+        b[i][j] = b[i + 1][j] = b[i][j + 1] = b[i + 1][j + 1] = 1;
     }
     fo(i, n) {
         fo(j, m) {
