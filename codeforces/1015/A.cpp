@@ -94,25 +94,6 @@ void print(T &&t, Args &&...args) {
 void Solution() {
     ll n, m;
     cin >> n >> m;
-    // vl a(m, 0);
-    // fo(i, n) {
-    //     ll l, r;
-    //     cin >> l >> r;
-    //     a[l - 1] += 1;
-    //     if (r <= m - 1) a[r] -= 1;
-    // }
-    // ll x = 0;
-    // fo(i, n) {
-    //     x += a[i];
-    //     a[i] = x;
-    // }
-    // vl ans;
-    // fo(i, m) if (a[i] == 0) ans.eb(i + 1);
-    // dbg(a);
-    // print(sz(ans));
-    // cout << ans << ln;
-
-    //! m2
     vector<bool> a(m, true);
     fo(i, n) {
         ll l, r;
