@@ -1,4 +1,22 @@
 {
+  "CF126764561": {
+    "contest_id": 749,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/749/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Parallelogram is Back",
+    "problem_url": "https://codeforces.com/contest/749/problem/B",
+    "submission_id": "CF126764561",
+    "submission_url": "https://codeforces.com/contest/749/submission/126764561",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "geometry",
+      "*1200"
+    ],
+    "timestamp": "Aug/23/2021 19:28"
+  },
   "CF126786641": {
     "contest_id": 1342,
     "language": "GNU C++17 (64)",
