@@ -1,4 +1,22 @@
 {
+  "CF126761273": {
+    "contest_id": 1207,
+    "language": "GNU C++17",
+    "path": "codeforces/1207/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Square Filling",
+    "problem_url": "https://codeforces.com/contest/1207/problem/B",
+    "submission_id": "CF126761273",
+    "submission_url": "https://codeforces.com/contest/1207/submission/126761273",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Aug/23/2021 18:45"
+  },
   "CF126762834": {
     "contest_id": 1305,
     "language": "GNU C++17",
