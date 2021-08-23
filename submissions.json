@@ -1,4 +1,20 @@
 {
+  "CF126787249": {
+    "contest_id": 1015,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1015/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Obtaining the String",
+    "problem_url": "https://codeforces.com/contest/1015/problem/B",
+    "submission_id": "CF126787249",
+    "submission_url": "https://codeforces.com/contest/1015/submission/126787249",
+    "tags": [
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Aug/24/2021 00:38"
+  },
   "CF126787651": {
     "contest_id": 1015,
     "language": "GNU C++17 (64)",
