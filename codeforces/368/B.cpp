@@ -92,19 +92,14 @@ void print(T &&t, Args &&...args) {
 }
 
 void Solution() {
-    //! m1 O(n)
     ll n, m;
     cin >> n >> m;
     vl a(n), b(n);
-    vector<bool> vis(100005, true);
     cin >> a;
-    ll cnt = 0;
+    set<ll> len;
     for (ll i = n - 1; i >= 0; --i) {
-        if (vis[a[i]]) {
-            vis[a[i]] = false;
-            cnt++;
-        }
-        b[i] = cnt;
+        len.insert(a[i]);
+        b[i] = sz(len);
     }
     dbg(b);
     ll q;
@@ -112,23 +107,6 @@ void Solution() {
         cin >> q;
         print(b[q - 1]);
     }
-
-    //! m2 O(nlogn)
-    // ll n, m;
-    // cin >> n >> m;
-    // vl a(n), b(n);
-    // cin >> a;
-    // set<ll> len;  //instead if set, bool array can be used to mark elements that have already occured
-    // for (ll i = n - 1; i >= 0; --i) {
-    //     len.insert(a[i]);
-    //     b[i] = sz(len);
-    // }
-    // dbg(b);
-    // ll q;
-    // fo(i, m) {
-    //     cin >> q;
-    //     print(b[q - 1]);
-    // }
 }
 //*read stuff at the bottom
 
