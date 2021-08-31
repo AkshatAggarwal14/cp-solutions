@@ -93,13 +93,13 @@ void print(T &&t, Args &&...args) {
 
 void Solution() {
     //! m1 O(n)
-    int n, m;
+    ll n, m;
     cin >> n >> m;
-    vector<int> a(n), b(n);
+    vl a(n), b(n);
     vector<bool> vis(100005, true);
     cin >> a;
-    int cnt = 0;
-    for (int i = n - 1; i >= 0; --i) {
+    ll cnt = 0;
+    for (ll i = n - 1; i >= 0; --i) {
         if (vis[a[i]]) {
             vis[a[i]] = false;
             cnt++;
@@ -107,8 +107,8 @@ void Solution() {
         b[i] = cnt;
     }
     dbg(b);
-    int q;
-    while (m--) {
+    ll q;
+    fo(i, m) {
         cin >> q;
         print(b[q - 1]);
     }
