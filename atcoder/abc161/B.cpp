@@ -96,22 +96,12 @@ void Solution() {
     cin >> n >> m;
     vl a(n);
     cin >> a;
+    sort(all(a), greater<ll>());
     ll sum = accumulate(all(a), 0LL);
-    // sum /= (4 * m);
-    ll cnt{};
-    fo(i, n) if (a[i] * 4 * m >= sum)++ cnt;
-    if (cnt >= m)
+    if (a[m - 1] * 4 * m >= sum)
         yes();
     else
         no();
-    //! m2
-    // sort(all(a), greater<ll>());
-    // ll sum = accumulate(all(a), 0LL);
-    // //the mth item must have more than sum/4m votes
-    // if (a[m - 1] * 4 * m >= sum)
-    //     yes();
-    // else
-    //     no();
 }
 //*read stuff at the bottom
 
