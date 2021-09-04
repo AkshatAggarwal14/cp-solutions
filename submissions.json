@@ -1,4 +1,20 @@
 {
+  "AC25552706": {
+    "contest_id": "abc097",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc097/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Exponential",
+    "problem_url": "https://atcoder.jp/contests/abc097/tasks/abc097_b",
+    "submission_id": "AC25552706",
+    "submission_url": "https://atcoder.jp/contests/abc097/submissions/25552706",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Sep/04/2021 15:13"
+  },
   "AC25553059": {
     "contest_id": "abc106",
     "language": "C++ (GCC 9.2.1)",
