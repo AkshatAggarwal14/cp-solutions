@@ -1,4 +1,20 @@
 {
+  "AC25616378": {
+    "contest_id": "arc065",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc065/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Daydream",
+    "problem_url": "https://atcoder.jp/contests/arc065/tasks/arc065_a",
+    "submission_id": "AC25616378",
+    "submission_url": "https://atcoder.jp/contests/arc065/submissions/25616378",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/04/2021 21:44"
+  },
   "AC25616461": {
     "contest_id": "abc049",
     "language": "C++ (GCC 9.2.1)",
