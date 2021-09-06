@@ -1,6 +1,5 @@
-#pragma GCC target("avx2")
-#pragma GCC optimization("O3")
-#pragma GCC optimization("unroll-loops")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("avx,avx2,fma")
 #include "bits/stdc++.h"
 using namespace std;
 
