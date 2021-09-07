@@ -93,27 +93,10 @@ void print(T &&t, Args &&...args) {
 
 vl ans = {1, 3, 40, 1260, 72576, 6652800, 889574400, 163459296000, 39520825344000, 12164510040883200};
 
-vl fact(21);
-void fill() {
-    fact[0] = 1;
-    rep(i, 1, 21) {
-        fact[i] = i * fact[i - 1];
-    }
-}
-
 void Solution() {
     ll n;
     cin >> n;
-    //! m1
-    // cout << ans[n / 2 - 1];
-
-    //! m2
-    // nCn/2 and circular permuts are nCn/2*(n/2-1)! <- part 1
-    // part 2 --> nCn/2*(n/2-1)!
-    // multiply and divide by 2 to not distinguish (x,y) and (y,x)
-    ll val = (fact[n] / (fact[n / 2] * fact[n / 2])) * fact[n / 2 - 1] * fact[n / 2 - 1];
-    val /= 2;
-    print(val);
+    cout << ans[n / 2 - 1];
 }
 //*read stuff at the bottom
 
@@ -123,8 +106,6 @@ int main() {
     freopen("output.txt", "w", stdout);
 #endif
     ios_base::sync_with_stdio(false), cin.tie(nullptr);
-
-    fill();
 
     ll tc = 1;
     //cin >> tc;
