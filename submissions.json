@@ -1,4 +1,23 @@
 {
+  "CF128293831": {
+    "contest_id": 572,
+    "language": "GNU C++17",
+    "path": "codeforces/572/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Order Book",
+    "problem_url": "https://codeforces.com/contest/572/problem/B",
+    "submission_id": "CF128293831",
+    "submission_url": "https://codeforces.com/contest/572/submission/128293831",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Sep/09/2021 01:08"
+  },
   "CF128374458": {
     "contest_id": 166,
     "language": "GNU C++17 (64)",
