@@ -104,27 +104,18 @@ void print(T &&t, Args &&...args) {
 
 void Solution() {
     //! m1 - ordered multiset
-    // ll n, m, num;
-    // cin >> n >> m;
-    // o_multiset<ll> vals;
-    // fo(i, n) {
-    //     cin >> num;
-    //     vals.insert(num);
-    // }
-    // fo(i, m) {
-    //     cin >> num;
-    //     cout << vals.order_of_key(num + 1) << " ";
-    // }
-    //! m2 - binary search
-    ll n, m;
+    ll n, m, num;
     cin >> n >> m;
-    vl a(n), b(m);
-    cin >> a >> b;
-    sort(all(a));
-    fo(i, m) {
-        ll cnt = lower_bound(all(a), b[i] + 1) - a.begin();
-        cout << cnt << " ";
+    o_multiset<ll> vals;
+    fo(i, n) {
+        cin >> num;
+        vals.insert(num);
     }
+    fo(i, m) {
+        cin >> num;
+        cout << vals.order_of_key(num + 1) << " ";
+    }
+    //! m2 - binary search
 }
 //*read stuff at the bottom
 
