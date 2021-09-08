@@ -1,6 +1,3 @@
-#pragma GCC target("avx2")
-#pragma GCC optimization("O3")
-#pragma GCC optimization("unroll-loops")
 #ifndef ONLINE_JUDGE
 #include "Akshat.hpp"
 #else
@@ -22,7 +19,13 @@ using o_set =
         rb_tree_tag,
         tree_order_statistics_node_update>;
 template <typename T>
-using o_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>;
+using o_multiset =
+    tree<
+        T,
+        null_type,
+        less_equal<T>,
+        rb_tree_tag,
+        tree_order_statistics_node_update>;
 //member functions :
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
@@ -103,7 +106,6 @@ void print(T &&t, Args &&...args) {
 }
 
 void Solution() {
-    //! m1 - ordered multiset
     ll n, m, num;
     cin >> n >> m;
     o_multiset<ll> vals;
@@ -115,7 +117,6 @@ void Solution() {
         cin >> num;
         cout << vals.order_of_key(num + 1) << " ";
     }
-    //! m2 - binary search
 }
 //*read stuff at the bottom
 
