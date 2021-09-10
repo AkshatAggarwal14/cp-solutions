@@ -1,4 +1,21 @@
 {
+  "CF128446680": {
+    "contest_id": 1146,
+    "language": "GNU C++17",
+    "path": "codeforces/1146/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Love \"A\"",
+    "problem_url": "https://codeforces.com/contest/1146/problem/A",
+    "submission_id": "CF128446680",
+    "submission_url": "https://codeforces.com/contest/1146/submission/128446680",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Sep/10/2021 23:54"
+  },
   "CF128447571": {
     "contest_id": 1146,
     "language": "GNU C++17",
