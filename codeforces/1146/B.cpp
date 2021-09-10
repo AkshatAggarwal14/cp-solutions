@@ -97,16 +97,11 @@ void Solution() {
     str s;
     cin >> s;
     deque<char> q1, q2;
-    fo(i, sz(s)) {
-        if (s[i] != 'a') q1.push_back(s[i]);
-        // dbg(q1);
-    }
+    fo(i, sz(s)) if (s[i] != 'a') q1.push_back(s[i]);
     if (sz(q1) == 0) return void(print(s));
-    dbg(q1);
     for (ll i = sz(s) - 1; i >= 0 && s[i] != 'a'; --i) {
         q2.push_front(s[i]);
         q1.pop_back();
-        dbg(q1, q2);
         if (q1 == q2) return void(print(s.substr(0, i)));
     }
     print(":(");
