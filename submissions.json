@@ -1,4 +1,21 @@
 {
+  "CF128447571": {
+    "contest_id": 1146,
+    "language": "GNU C++17",
+    "path": "codeforces/1146/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Hate \"A\"",
+    "problem_url": "https://codeforces.com/contest/1146/problem/B",
+    "submission_id": "CF128447571",
+    "submission_url": "https://codeforces.com/contest/1146/submission/128447571",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Sep/11/2021 00:10"
+  },
   "CF128450127": {
     "contest_id": 1428,
     "language": "GNU C++17",
