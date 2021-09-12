@@ -97,32 +97,24 @@ void Solution() {
     ll n, m;
     cin >> n >> m;
     // here n=1
-    vl a(m);
-    cin >> a;
+    vl si(m);
+    cin >> si;
     o_multiset<ll> st;
+    map<ll, ll> cnt;
     ll ans = 0;
     fo(i, m) {
-        st.insert(a[i]);
-        ll inc = st.order_of_key(a[i]);
+        st.insert(si[i]);
+        ll inc = st.order_of_key(si[i] + 1) - 1;
+        // if multiple
+        if (cnt.count(si[i]))
+            inc = st.order_of_key(si[i]);
+        else
+            cnt[si[i]] = 1;
         ans += inc;
+        dbg(st, inc);
     }
     print(ans);
-}
-
-void solve() {
-    ll n, m;
-    cin >> n >> m;
-    // here n=1
-    vl a(m);
-    dbg(a);
-    ll ans = 0;
-    fo(i, m) {
-        cin >> a[i];
-        fo(j, i) {
-            ans += (a[j] < a[i]);
-        }
-    }
-    print(ans);
+    dbg('\n');
 }
 
 int main() {
@@ -135,7 +127,7 @@ int main() {
     ll tc = 1;
     cin >> tc;
     while (tc--) {
-        solve();
+        Solution();
     }
 
     cerr << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
