@@ -46,9 +46,10 @@ vector<pair<ll, ll>> divisors(ll n) {
 
 void Solution(ll _i) {
     // cout << "Case #" << _i << ": ";
+    // find konse smallest sq ka divisor h
     ll n;
     cin >> n;
-    vector<pair<ll, ll>> div = divisors(n);  // {pf, cnt}
+    vector<pair<ll, ll>> div = divisors(n);
     dbg(div);
     // we can multiply all required at once and then sqrt again and again
     ll mini = 1, res = 0;
@@ -59,7 +60,6 @@ void Solution(ll _i) {
         res = max(res, nextPowerOf2(y));
     }
 
-    // If all y have same value i.e. == res
     if (sz(vals) == 1 && *vals.begin() == res) {
         ll temp = n;
         while (temp % mini == 0)
