@@ -45,21 +45,6 @@ void Solution(ll _i) {
     dbg(seat_no, seat, prev, rem);
 }
 
-void Solve() {
-    string use = "-fedabc";
-    ll seat_no;
-    char seat;
-    cin >> seat_no >> seat;
-    ll prev = (seat_no / 4);  // previous block of 4
-    if (4 * prev == seat_no) prev--;
-    ll ans = 16 * prev;
-    //2 * (6 serving + 1 moving in block + 1 moving to next block)
-    ll rem = seat_no - prev * 4;
-    if (rem == 2 || rem == 4) ans += 7;  //6 serving + 1 moving
-    ans += ll(use.find(seat));
-    cout << ans << '\n';
-}
-
 int main() {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
@@ -68,6 +53,6 @@ int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     ll tc = 1;
     //cin >> tc;
-    for (ll i = 1; i <= tc; ++i) Solve();
+    for (ll i = 1; i <= tc; ++i) Solution(i);
     return 0;
 }
