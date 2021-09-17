@@ -12229,6 +12229,23 @@
     ],
     "timestamp": "Sep/17/2021 17:06"
   },
+  "CF129103120": {
+    "contest_id": 725,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/725/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Food on the Plane",
+    "problem_url": "https://codeforces.com/contest/725/problem/B",
+    "submission_id": "CF129103120",
+    "submission_url": "https://codeforces.com/contest/725/submission/129103120",
+    "tags": [
+      "implementation",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Sep/18/2021 00:23"
+  },
   "CF129104043": {
     "contest_id": 725,
     "language": "GNU C++17 (64)",
