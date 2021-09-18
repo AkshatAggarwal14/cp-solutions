@@ -16,9 +16,7 @@ using v = vector<T>;
 #define sz(x) ((int)(x).size())
 using ll = int;
 
-//! reference important here as it doesnt create multiple copies so saves time
-bool check(const map<int, int> &s, int c) {
-    // check if first element is 1, last is n and number of distinct elements in map is n
+bool check(const map<int, int> &s, const int &c) {
     if (s.begin()->first == 1 && s.begin()->second == 1 && s.rbegin()->first == sz(s) && s.rbegin()->second == 1 && c == sz(s)) return true;
     return false;
 }
@@ -29,13 +27,13 @@ void Solution() {
     v<int> arr(n);
     map<int, int> pref, suff;
     int cnt = 0;
-    for (int i = 0; i < n; ++i) cin >> arr[i], ++suff[arr[i]];  // elements first added to suffix map
-    v<pair<int, int>> ans;                                      //to store ans
+    for (int i = 0; i < n; ++i) cin >> arr[i], ++suff[arr[i]];
+    v<pair<int, int>> ans;
     for (int i = 0; i < n; ++i) {
-        ++pref[arr[i]];  //added to pref
-        --suff[arr[i]];  //removed from suff
+        ++pref[arr[i]];
+        --suff[arr[i]];
         if (suff[arr[i]] == 0) suff.erase(arr[i]);
-        ++cnt;  //to check if maps make a permutation
+        ++cnt;
         if (check(pref, cnt) && check(suff, n - cnt))
             ans.emplace_back(sz(pref), sz(suff));
     }
