@@ -16,8 +16,10 @@ using v = vector<T>;
 #define sz(x) ((int)(x).size())
 using ll = int;
 
-bool check(const map<int, int> &s, const int &c) {
-    if (s.begin()->first == 1 && s.begin()->second == 1 && s.rbegin()->first == sz(s) && s.rbegin()->second == 1 && c == sz(s)) return true;
+bool check(const map<int, int> &s, int c) {
+    auto p1 = s.begin();
+    auto p2 = s.rbegin();
+    if (p1->first == 1 && p1->second == 1 && sz(s) == p2->first && p2->second == 1 && c == sz(s)) return true;
     return false;
 }
 
@@ -34,6 +36,7 @@ void Solution() {
         --suff[arr[i]];
         if (suff[arr[i]] == 0) suff.erase(arr[i]);
         ++cnt;
+        dbg(pref, suff);
         if (check(pref, cnt) && check(suff, n - cnt))
             ans.emplace_back(sz(pref), sz(suff));
     }
