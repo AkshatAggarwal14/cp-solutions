@@ -1,4 +1,20 @@
 {
+  "AC25996545": {
+    "contest_id": "arc126",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc126/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Make 10",
+    "problem_url": "https://atcoder.jp/contests/arc126/tasks/arc126_a",
+    "submission_id": "AC25996545",
+    "submission_url": "https://atcoder.jp/contests/arc126/submissions/25996545",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/19/2021 20:32"
+  },
   "AC26089231": {
     "contest_id": "agc012",
     "language": "C++ (GCC 9.2.1)",
