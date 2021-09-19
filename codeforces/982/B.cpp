@@ -57,6 +57,7 @@ bool amax(T& a, U&& b) {
 
 void Solution(ll _i) {
     // cout << "Case #" << _i << ": ";
+    cerr << "\nCase #" << _i << ":\n";
     ll n, num;
     cin >> n;
     set<pair<ll, ll>> All;
@@ -66,15 +67,15 @@ void Solution(ll _i) {
     set<pair<ll, ll>> Intro;
     fo(i, sz(s)) {
         if (s[i] == '0') {  //introvert chooses min width empty seat
-            auto it = All.begin();
-            cout << (*it).second << " ";
-            Intro.insert(*it);  //! insert before erasing
-            All.erase(*it);
+            auto it = *All.begin();
+            cout << it.second << " ";
+            All.erase(it);
+            Intro.insert(it);
         } else {  //extrovert chooses max width introvert filled seat
             // assert(Intro.empty() == false);
-            auto it = Intro.rbegin();
-            cout << (*it).second << " ";
-            Intro.erase(*it);
+            auto it = *Intro.rbegin();
+            cout << it.second << " ";
+            Intro.erase(it);
         }
     }
 }
