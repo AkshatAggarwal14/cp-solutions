@@ -82,8 +82,9 @@ void Solution() {
     ll n;
     str s;
     cin >> n >> s;
-    s = "0" + s + "0";
-    if (s.find("11") != -1 || s.find("000") != -1)
+    if (n == 1 && s[0] == '1')
+        cout << "Yes";
+    else if (s.find("11") != -1 || s.find("000") != -1 || (n == 1 && s[0] == '0') || (s.rfind("00") == n - 2) || (s.find("00") == 0))
         cout << "No";
     else
         cout << "Yes";
