@@ -62,11 +62,11 @@ void Solution(ll _i) {
     cin >> n;
     set<pair<ll, ll>> All;
     fo(i, n) cin >> num, All.insert({num, i + 1});
-    str s;
-    cin >> s;
+    char c;
     set<pair<ll, ll>> Intro;
-    fo(i, sz(s)) {
-        if (s[i] == '0') {  //introvert chooses min width empty seat
+    fo(i, 2 * n) {
+        cin >> c;
+        if (c == '0') {  //introvert chooses min width empty seat
             auto it = *All.begin();
             cout << it.second << " ";
             All.erase(it);
@@ -74,7 +74,7 @@ void Solution(ll _i) {
         } else {  //extrovert chooses max width introvert filled seat
             // assert(Intro.empty() == false);
             auto it = *Intro.rbegin();
-            cout << it.second << " ";
+            cout << (it).second << " ";
             Intro.erase(it);
         }
     }
