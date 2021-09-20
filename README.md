@@ -645,19 +645,19 @@ A repository to keep track of problem solving practice, containing solutions fro
 448 | [A - Valeriy and Deque](https://codeforces.com/contest/1179/problem/A) | [GNU C++17 (64)](./codeforces/1179/A.cpp) | `data structures` `implementation` `*1500` | Sep/20/2021 17:29 | 
 447 | [C - Polycarp Restores Permutation](https://codeforces.com/contest/1141/problem/C) | [GNU C++17 (64)](./codeforces/1141/C.cpp) | `math` `*1500` | Sep/20/2021 15:41 | 
 446 | [D2 - Seating Arrangements (hard version) ](https://codeforces.com/contest/1566/problem/D2) | [GNU C++17 (64)](./codeforces/1566/D2.cpp) | `data structures` `greedy` `implementation` `sortings` `two pointers` `*1600` | Sep/20/2021 13:35 | 
-445 | [A - Make 10](https://atcoder.jp/contests/arc126/tasks/arc126_a) | [C++ (GCC 9.2.1)](./atcoder/arc126/A.cpp) | `AtCoder` `*300` | Sep/19/2021 20:32 | 
-444 | [A - Countdown](https://codeforces.com/contest/1573/problem/A) | [GNU C++17 (64)](./codeforces/1573/A.cpp) | `greedy` `*800` | Sep/18/2021 20:32 | 
-443 | [C - Neo-lexicographic Ordering](https://atcoder.jp/contests/abc219/tasks/abc219_c) | [C++ (GCC 9.2.1)](./atcoder/abc219/C.cpp) | `AtCoder` `*300` | Sep/18/2021 17:47 | 
-442 | [B - Maritozzo](https://atcoder.jp/contests/abc219/tasks/abc219_b) | [C++ (GCC 9.2.1)](./atcoder/abc219/B.cpp) | `AtCoder` `*200` | Sep/18/2021 17:38 | 
-441 | [A - AtCoder Quiz 2](https://atcoder.jp/contests/abc219/tasks/abc219_a) | [C++ (GCC 9.2.1)](./atcoder/abc219/A.cpp) | `AtCoder` `*100` | Sep/18/2021 17:35 | 
-440 | [A - Multiples of Length](https://codeforces.com/contest/1396/problem/A) | [GNU C++17 (64)](./codeforces/1396/A.cpp) | `constructive algorithms` `greedy` `number theory` `*1600` | Sep/17/2021 17:06 | 
-439 | [B - Math](https://codeforces.com/contest/1062/problem/B) | [GNU C++17 (64)](./codeforces/1062/B.cpp) | `greedy` `math` `number theory` `*1500` | Sep/16/2021 22:10 | 
-438 | [B - Trouble Sort](https://codeforces.com/contest/1365/problem/B) | [GNU C++17 (64)](./codeforces/1365/B.cpp) | `constructive algorithms` `implementation` `*1300` | Sep/15/2021 23:30 | 
-437 | [A - Two Substrings](https://codeforces.com/contest/550/problem/A) | [GNU C++17 (64)](./codeforces/550/A.cpp) | `brute force` `dp` `greedy` `implementation` `strings` `*1500` | Sep/15/2021 23:21 | 
-436 | [A - Serval and Bus](https://codeforces.com/contest/1153/problem/A) | [GNU C++17 (64)](./codeforces/1153/A.cpp) | `brute force` `math` `*1000` | Sep/14/2021 15:18 | 
-435 | [A - A Prank](https://codeforces.com/contest/1062/problem/A) | [GNU C++17 (64)](./codeforces/1062/A.cpp) | `greedy` `implementation` `*1300` | Sep/13/2021 23:03 | 
-434 | [A - Matrix Game](https://codeforces.com/contest/1365/problem/A) | [GNU C++17](./codeforces/1365/A.cpp) | `games` `greedy` `implementation` `*1100` | Sep/13/2021 22:46 | 
-433 | [D1 - Seating Arrangements (easy version) ](https://codeforces.com/contest/1566/problem/D1) | [GNU C++17](./codeforces/1566/D1.cpp) | `data structures` `greedy` `sortings` `*1100` | Sep/13/2021 12:21 | 
+445 | [D1 - Seating Arrangements (easy version) ](https://codeforces.com/contest/1566/problem/D1) | [GNU C++17 (64)](./codeforces/1566/D1.cpp) | `data structures` `greedy` `sortings` `*1100` | Sep/20/2021 13:23 | 
+444 | [A - Make 10](https://atcoder.jp/contests/arc126/tasks/arc126_a) | [C++ (GCC 9.2.1)](./atcoder/arc126/A.cpp) | `AtCoder` `*300` | Sep/19/2021 20:32 | 
+443 | [A - Countdown](https://codeforces.com/contest/1573/problem/A) | [GNU C++17 (64)](./codeforces/1573/A.cpp) | `greedy` `*800` | Sep/18/2021 20:32 | 
+442 | [C - Neo-lexicographic Ordering](https://atcoder.jp/contests/abc219/tasks/abc219_c) | [C++ (GCC 9.2.1)](./atcoder/abc219/C.cpp) | `AtCoder` `*300` | Sep/18/2021 17:47 | 
+441 | [B - Maritozzo](https://atcoder.jp/contests/abc219/tasks/abc219_b) | [C++ (GCC 9.2.1)](./atcoder/abc219/B.cpp) | `AtCoder` `*200` | Sep/18/2021 17:38 | 
+440 | [A - AtCoder Quiz 2](https://atcoder.jp/contests/abc219/tasks/abc219_a) | [C++ (GCC 9.2.1)](./atcoder/abc219/A.cpp) | `AtCoder` `*100` | Sep/18/2021 17:35 | 
+439 | [A - Multiples of Length](https://codeforces.com/contest/1396/problem/A) | [GNU C++17 (64)](./codeforces/1396/A.cpp) | `constructive algorithms` `greedy` `number theory` `*1600` | Sep/17/2021 17:06 | 
+438 | [B - Math](https://codeforces.com/contest/1062/problem/B) | [GNU C++17 (64)](./codeforces/1062/B.cpp) | `greedy` `math` `number theory` `*1500` | Sep/16/2021 22:10 | 
+437 | [B - Trouble Sort](https://codeforces.com/contest/1365/problem/B) | [GNU C++17 (64)](./codeforces/1365/B.cpp) | `constructive algorithms` `implementation` `*1300` | Sep/15/2021 23:30 | 
+436 | [A - Two Substrings](https://codeforces.com/contest/550/problem/A) | [GNU C++17 (64)](./codeforces/550/A.cpp) | `brute force` `dp` `greedy` `implementation` `strings` `*1500` | Sep/15/2021 23:21 | 
+435 | [A - Serval and Bus](https://codeforces.com/contest/1153/problem/A) | [GNU C++17 (64)](./codeforces/1153/A.cpp) | `brute force` `math` `*1000` | Sep/14/2021 15:18 | 
+434 | [A - A Prank](https://codeforces.com/contest/1062/problem/A) | [GNU C++17 (64)](./codeforces/1062/A.cpp) | `greedy` `implementation` `*1300` | Sep/13/2021 23:03 | 
+433 | [A - Matrix Game](https://codeforces.com/contest/1365/problem/A) | [GNU C++17](./codeforces/1365/A.cpp) | `games` `greedy` `implementation` `*1100` | Sep/13/2021 22:46 | 
 432 | [C - MAX-MEX Cut](https://codeforces.com/contest/1566/problem/C) | [GNU C++17](./codeforces/1566/C.cpp) | `bitmasks` `constructive algorithms` `dp` `greedy` `*1000` | Sep/12/2021 20:39 | 
 431 | [C - Shapes](https://atcoder.jp/contests/abc218/tasks/abc218_c) | [C++ (GCC 9.2.1)](./atcoder/abc218/C.cpp) | `AtCoder` `*300` | Sep/11/2021 19:38 | 
 430 | [D - Rectangles](https://atcoder.jp/contests/abc218/tasks/abc218_d) | [C++ (GCC 9.2.1)](./atcoder/abc218/D.cpp) | `AtCoder` `*400` | Sep/11/2021 18:57 | 
