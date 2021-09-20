@@ -78,29 +78,54 @@ bool amax(T& a, U&& b) {
 
 // ---------------------------------<Solve>-------------------------------
 
-vpl ans;
-map<char, set<ll>> m1, m2;
-
-void calc(char c1, char c2) {
-    while (sz(m1[c1]) > 0 && sz(m2[c2]) > 0) {
-        ll i = *(m1[c1]).begin();
-        ll j = *(m2[c2]).begin();
-        ans.emplace_back(i + 1, j + 1);
-        m1[c1].erase(i);
-        m2[c2].erase(j);
-    }
-}
-
 void Solution() {
     ll n;
     cin >> n;
     str s1, s2;
     cin >> s1 >> s2;
+    map<char, set<ll>> m1, m2;
     fo(i, n) m1[s1[i]].insert(i), m2[s2[i]].insert(i);
-    for (char c = 'a'; c <= 'z'; ++c) calc(c, c);
-    for (char c = 'a'; c <= 'z'; ++c) calc('?', c);
-    for (char c = 'a'; c <= 'z'; ++c) calc(c, '?');
-    calc('?', '?');
+    vpl ans;
+    // for all equal characters
+    for (char c = 'a'; c <= 'z'; ++c) {
+        while (sz(m1[c]) > 0 && sz(m2[c]) > 0) {
+            ll i = *(m1[c]).begin();
+            ll j = *(m2[c]).begin();
+            ans.emplace_back(i + 1, j + 1);
+            m1[c].erase(i);
+            m2[c].erase(j);
+        }
+    }
+    // for ? char
+    for (char c = 'a'; c <= 'z'; ++c) {
+        while (sz(m1['?']) > 0 && sz(m2[c]) > 0) {
+            ll i = *(m1['?']).begin();
+            ll j = *(m2[c]).begin();
+            ans.emplace_back(i + 1, j + 1);
+            m1['?'].erase(i);
+            m2[c].erase(j);
+        }
+    }
+
+    // for char ?
+    for (char c = 'a'; c <= 'z'; ++c) {
+        while (sz(m1[c]) > 0 && sz(m2['?']) > 0) {
+            ll i = *(m1[c]).begin();
+            ll j = *(m2['?']).begin();
+            ans.emplace_back(i + 1, j + 1);
+            m1[c].erase(i);
+            m2['?'].erase(j);
+        }
+    }
+
+    // for ? ?
+    while (sz(m1['?']) > 0 && sz(m2['?']) > 0) {
+        ll i = *(m1['?']).begin();
+        ll j = *(m2['?']).begin();
+        ans.emplace_back(i + 1, j + 1);
+        m1['?'].erase(i);
+        m2['?'].erase(j);
+    }
     cout << sz(ans) << '\n';
     for (auto [x, y] : ans) cout << x << " " << y << '\n';
 }
