@@ -12245,6 +12245,22 @@
     ],
     "timestamp": "Sep/18/2021 20:32"
   },
+  "CF129322095": {
+    "contest_id": 1141,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1141/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Polycarp Restores Permutation",
+    "problem_url": "https://codeforces.com/contest/1141/problem/C",
+    "submission_id": "CF129322095",
+    "submission_url": "https://codeforces.com/contest/1141/submission/129322095",
+    "tags": [
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Sep/20/2021 15:41"
+  },
   "CF129329350": {
     "contest_id": 1179,
     "language": "GNU C++17 (64)",
