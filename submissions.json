@@ -12245,6 +12245,24 @@
     ],
     "timestamp": "Sep/18/2021 20:32"
   },
+  "CF129380934": {
+    "contest_id": 1574,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1574/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Combinatorics Homework",
+    "problem_url": "https://codeforces.com/contest/1574/problem/B",
+    "submission_id": "CF129380934",
+    "submission_url": "https://codeforces.com/contest/1574/submission/129380934",
+    "tags": [
+      "combinatorics",
+      "greedy",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Sep/20/2021 21:00"
+  },
   "CF129386402": {
     "contest_id": 1574,
     "language": "GNU C++17 (64)",

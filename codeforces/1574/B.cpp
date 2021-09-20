@@ -84,7 +84,6 @@ void Solution() {
     cin >> a[0] >> a[1] >> a[2] >> m;
     sort(all(a));
     ll max_adj = (a[2] - 1) + (a[1] - 1) + (a[0] - 1);
-    // first put a[2] then alternate with other 2
     ll min_adj = max(a[2] - 1 - a[0] - a[1], 0LL);
     dbg(min_adj, max_adj);
     if (m >= min_adj && m <= max_adj)
