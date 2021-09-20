@@ -8,10 +8,10 @@ using namespace std;
 #endif
 
 // ----------------------------<optimizations>----------------------------
-
+/*
 #pragma GCC optimize("Ofast,unroll-loops")
 #pragma GCC target("avx,avx2,fma")
-
+*/
 // ---------------------------</optimizations>----------------------------
 
 // ---------------------------------<PBDS>--------------------------------
@@ -90,10 +90,9 @@ void Solution() {
         mid[i] = s;
     }
     dbg(mid);
-    // mid is 0, p2-p1, p3-p1, p4-p1, ...
     ll mini = -(*min_element(all(mid))) + 1;
-    fo(i, n) mid[i] += mini;
-    set<ll> st(all(mid));
+    set<ll> st;
+    fo(i, n) mid[i] += mini, st.insert(mid[i]);
     if (sz(st) == n && *st.begin() == 1 && *st.rbegin() == n) {
         fo(i, n) cout << mid[i] << " ";
     } else
