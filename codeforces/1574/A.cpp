@@ -106,21 +106,6 @@ void Solution() {
             ctr++;
         }
     } while (next_permutation(all(s)));
-
-    //!m2
-    // ((())), (())(), ()()() <- 3
-}
-
-void solve() {
-    ll n;
-    cin >> n;
-    rep(i, 1, n + 1) {
-        rep(j, 1, i + 1) cout << '(';
-        rep(j, 1, i + 1) cout << ')';
-        rep(j, 1, n - i + 1) cout << '(';
-        rep(j, 1, n - i + 1) cout << ')';
-        cout << '\n';
-    }
 }
 
 // --------------------------------</Solve>-------------------------------
@@ -134,8 +119,7 @@ int main() {
     ll tc = 1;
     cin >> tc;
     while (tc--) {
-        solve();
-        // Solution();
+        Solution();
     }
 #ifndef ONLINE_JUDGE
     cerr << fixed << setprecision(4) << (double)clock() / CLOCKS_PER_SEC << " secs" << endl;
