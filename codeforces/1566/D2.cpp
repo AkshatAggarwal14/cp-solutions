@@ -84,27 +84,26 @@ void Solution() {
     vector<int> v(n * m);
     for (auto& x : v) cin >> x;
 
-    vector<int> Sorted(v);
-    sort(all(Sorted));
+    vector<int> s(v);
+    sort(all(s));
     vector<int> pos(n * m);
     vector<vector<int>> sit(n, vector<int>(m, -1));  //initially all -1
     for (int i = 0; i < n * m; ++i) {
-        pos[i] = i;  //stores position in sorted vector
+        pos[i] = i;
     }
-    dbg(Sorted);
-    dbg(pos);
+    debug(s);
+    debug(pos);
     int ans = 0;
     for (int i = 0; i < n * m; i++) {
-        int l = lower_bound(all(Sorted), v[i]) - Sorted.begin();  // numbers smaller than this
+        int l = lower_bound(all(s), v[i]) - s.begin();
         int val = pos[l];
-        dbg(val, l);
         int row = val / m;
         int col = val % m;
         for (int j = 0; j < col; j++) {
-            if (sit[row][j] != -1 && sit[row][j] != v[i]) ans++;  // ans += numbers already present in the given row before col
+            if (sit[row][j] != -1 && sit[row][j] != v[i]) ans++;
         }
         sit[row][col] = v[i];
-        pos[l]++;  //!<- increases position for the same element, thus important
+        pos[l]++;
     }
     cout << ans << "\n";
 }
