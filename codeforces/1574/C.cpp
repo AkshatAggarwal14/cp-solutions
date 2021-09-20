@@ -91,12 +91,9 @@ void Solution() {
         ll x, y;
         cin >> x >> y;
         ll i = lower_bound(all(v), x) - v.begin();
-        // just check 2 options, nearest v[i] and nearest sum - v[i]
-        ll coins = LLONG_MAX;
-        if (i < n - 1)
-            coins = max(y - (sum - v[i]), 0LL) + max(x - (v[i]), 0LL);
-        if (i > 0)
-            amin(coins, max(y - (sum - v[i - 1]), 0LL) + max(x - (v[i - 1]), 0LL));
+        // just check 2 options
+        ll coins = max(y - (sum - v[i]), 0LL) + max(x - (v[i]), 0LL);
+        if (i > 0) amin(coins, max(y - (sum - v[i - 1]), 0LL) + max(x - (v[i - 1]), 0LL));
         cout << coins << '\n';
     }
 }
