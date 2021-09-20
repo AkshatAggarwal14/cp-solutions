@@ -84,6 +84,7 @@ void Solution() {
     deque<int> a(n);
     fo(i, n) cin >> a[i];
     // if max reaches position 1 then others will cycle around from 2nd pos to n-1th
+    set<deque<int>> st;
     V<P<int>> same;
     int ctr = 0;
     ll maxi = *max_element(all(a));
