@@ -78,11 +78,15 @@ bool amax(T& a, U&& b) {
 
 // ---------------------------------<Solve>-------------------------------
 
-ll x, y, a, b;
 void Solution() {
+    ll x, y, a, b;
     cin >> x >> y >> a >> b;
     if (x > y) swap(x, y);
-    cout << a * (y - x) + min(b * x, (a * 2 * x)) << '\n';
+    // smaller - x, greater - y
+    // a wale steps = greater - smaller
+    ll cost = a * (y - x);
+    cost += min(b * x, (a * 2 * x));
+    cout << cost << '\n';
 }
 
 // --------------------------------</Solve>-------------------------------
