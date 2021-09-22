@@ -1,4 +1,21 @@
 {
+  "CF129591944": {
+    "contest_id": 1206,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1206/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Choose Two Numbers",
+    "problem_url": "https://codeforces.com/contest/1206/problem/A",
+    "submission_id": "CF129591944",
+    "submission_url": "https://codeforces.com/contest/1206/submission/129591944",
+    "tags": [
+      "math",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Sep/22/2021 19:23"
+  },
   "CF129592106": {
     "contest_id": 1206,
     "language": "GNU C++17 (64)",

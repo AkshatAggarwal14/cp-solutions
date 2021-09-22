@@ -87,7 +87,15 @@ void Solution() {
     cin >> m;
     vl b(m);
     fo(i, m) cin >> b[i];
-    cout << *max_element(all(a)) << " " << *max_element(all(b));
+    fo(i, n) {
+        fo(j, m) {
+            ll sum = a[i] + b[j];
+            if (find(all(a), sum) == a.end() && find(all(b), sum) == b.end()) {
+                cout << a[i] << " " << b[j];
+                return;
+            }
+        }
+    }
 }
 
 // --------------------------------</Solve>-------------------------------
