@@ -84,51 +84,51 @@ void Solution() {
     vvl matrix(n, vl(n));
     fo(i, n) fo(j, n) cin >> matrix[i][j];
 
-    //! M1 - (xy)(xz)/(yz) =x*x
-    // now as n>=3
-    ll a1 = sqrt((matrix[0][1] * matrix[0][2]) / matrix[1][2]);
-    cout << a1 << " ";
-    rep(i, 1, n) cout << matrix[0][i] / a1 << " ";
+    //! M1 - brute
+    vl f_row(matrix[0].begin() + 1, matrix[0].end());
+    ll gcd_ = f_row[0];
+    for (auto x : f_row) {
+        gcd_ = gcd(gcd_, x);
+    }
+    dbg(gcd_);
+    // let a1 = divisors of gcd_
+    vl divi;
+    for (ll i = 1; i * i <= gcd_; ++i) {
+        if (gcd_ % i == 0) {
+            divi.push_back(i);
+            if (i != gcd_ / i) divi.push_back(gcd_ / i);
+        }
+    }
+    sort(all(divi));
+    dbg(divi);
+    for (auto a1 : divi) {
+        vl test(n);
+        vvl ans(n, vl(n));
+        test[0] = a1;
+        for (ll i = 1; i < n; ++i) {
+            test[i] = matrix[0][i] / a1;
+        }
+        // test is the array
+        fo(i, n) {
+            fo(j, n) {
+                if (i != j)
+                    ans[i][j] = test[i] * test[j];
+                else
+                    ans[i][j] = 0;
+            }
+        }
+        dbg(ans);
+        if (ans == matrix) {
+            fo(i, n) cout << test[i] << " ";
+            return;
+        }
+    }
 
-    //! M2 - brute
-    // vl f_row(matrix[0].begin() + 1, matrix[0].end());
-    // ll gcd_ = f_row[0];
-    // for (auto x : f_row) {
-    //     gcd_ = gcd(gcd_, x);
-    // }
-    // dbg(gcd_);
-    // // let a1 = divisors of gcd_
-    // vl divi;
-    // for (ll i = 1; i * i <= gcd_; ++i) {
-    //     if (gcd_ % i == 0) {
-    //         divi.push_back(i);
-    //         if (i != gcd_ / i) divi.push_back(gcd_ / i);
-    //     }
-    // }
-    // sort(all(divi));
-    // dbg(divi);
-    // for (auto a1 : divi) {
-    //     vl test(n);
-    //     vvl ans(n, vl(n));
-    //     test[0] = a1;
-    //     for (ll i = 1; i < n; ++i) {
-    //         test[i] = matrix[0][i] / a1;
-    //     }
-    //     // test is the array
-    //     fo(i, n) {
-    //         fo(j, n) {
-    //             if (i != j)
-    //                 ans[i][j] = test[i] * test[j];
-    //             else
-    //                 ans[i][j] = 0;
-    //         }
-    //     }
-    //     dbg(ans);
-    //     if (ans == matrix) {
-    //         fo(i, n) cout << test[i] << " ";
-    //         return;
-    //     }
-    // }
+    //! M2 - (xy)(xz)/(yz) =x*x
+    // now as n>=3
+    // ll a1 = sqrt((matrix[0][1] * matrix[0][2]) / matrix[1][2]);
+    // cout << a1 << " ";
+    // rep(i, 1, n) cout << matrix[0][i] / a1 << " ";
 }
 
 // --------------------------------</Solve>-------------------------------
