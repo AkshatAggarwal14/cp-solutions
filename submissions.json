@@ -1,4 +1,21 @@
 {
+  "CF129679125": {
+    "contest_id": 1220,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1220/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Multiplication Table",
+    "problem_url": "https://codeforces.com/contest/1220/problem/B",
+    "submission_id": "CF129679125",
+    "submission_url": "https://codeforces.com/contest/1220/submission/129679125",
+    "tags": [
+      "math",
+      "number theory",
+      "*1300"
+    ],
+    "timestamp": "Sep/23/2021 19:19"
+  },
   "CF129695139": {
     "contest_id": 279,
     "language": "GNU C++17 (64)",
