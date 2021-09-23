@@ -78,50 +78,39 @@ bool amax(T& a, U&& b) {
 
 // ---------------------------------<Solve>-------------------------------
 
-// /*** @brief Nth lucky number */
-// ll NthLuckyNumber(ll n) {
-//     string res = "";
-//     while (n >= 1) {
-//         if (n & 1) {  // If n is odd, append 4 and move to parent
-//             res.push_back('4');
-//             n = (n - 1) / 2;
-//         } else {  // If n is even, append 7 and move to parent
-//             res.push_back('7');
-//             n = (n - 2) / 2;
-//         }
-//     }
-//     // Reverse res and return.
-//     reverse(all(res));
-//     // converting string to number using a stringstream
-//     stringstream ok(res);
-//     ll ret = 0;
-//     ok >> ret;
-//     return ret;
-// }
-// vl lucky;
-// void fill() {
-//     ll i = 1;
-//     while (true) {
-//         if (NthLuckyNumber(i - 1) > mod)
-//             return;
-//         lucky.push_back(NthLuckyNumber(i));
-//         i++;
-//     }
-// }
-
+/*** @brief Nth lucky number */
+ll NthLuckyNumber(ll n) {
+    string res = "";
+    while (n >= 1) {
+        if (n & 1) {  // If n is odd, append 4 and move to parent
+            res.push_back('4');
+            n = (n - 1) / 2;
+        } else {  // If n is even, append 7 and move to parent
+            res.push_back('7');
+            n = (n - 2) / 2;
+        }
+    }
+    // Reverse res and return.
+    reverse(all(res));
+    // converting string to number using a stringstream
+    stringstream ok(res);
+    ll ret = 0;
+    ok >> ret;
+    return ret;
+}
 vl lucky;
-void fill(ll num, ll digits) {
-    if (digits == 10) return;
-    lucky.push_back(num * 10 + 4);
-    fill(num * 10 + 4, digits + 1);
-    lucky.push_back(num * 10 + 7);
-    fill(num * 10 + 7, digits + 1);
+void fill() {
+    ll i = 1;
+    while (true) {
+        if (NthLuckyNumber(i - 1) > mod)
+            return;
+        lucky.push_back(NthLuckyNumber(i));
+        i++;
+    }
 }
 
 void Solution() {
-    fill(0, 0);
     dbg(lucky);
-    sort(all(lucky));
     ll l, r, sum{};
     cin >> l >> r;
     while (l <= r) {
@@ -143,7 +132,7 @@ int main() {
 #endif
     cin.tie(nullptr)->sync_with_stdio(false);
     ll tc = 1;
-    // fill();
+    fill();
     //cin >> tc;
     while (tc--) {
         Solution();
