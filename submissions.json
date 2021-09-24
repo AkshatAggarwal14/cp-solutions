@@ -1,4 +1,21 @@
 {
+  "CF129745965": {
+    "contest_id": 1288,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1288/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Two Arrays",
+    "problem_url": "https://codeforces.com/contest/1288/problem/C",
+    "submission_id": "CF129745965",
+    "submission_url": "https://codeforces.com/contest/1288/submission/129745965",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "*1600"
+    ],
+    "timestamp": "Sep/24/2021 15:29"
+  },
   "CF129747217": {
     "contest_id": 1391,
     "language": "GNU C++17 (64)",
