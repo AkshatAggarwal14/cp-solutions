@@ -1,4 +1,20 @@
 {
+  "CF129799431": {
+    "contest_id": 958,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/958/A1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A1",
+    "problem_name": "Death Stars (easy)",
+    "problem_url": "https://codeforces.com/contest/958/problem/A1",
+    "submission_id": "CF129799431",
+    "submission_url": "https://codeforces.com/contest/958/submission/129799431",
+    "tags": [
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Sep/25/2021 02:13"
+  },
   "CF129807849": {
     "contest_id": 958,
     "language": "GNU C++17 (64)",

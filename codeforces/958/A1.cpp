@@ -44,20 +44,26 @@ vector<vector<char>> flip_horizontal(vector<vector<char>> grid) {
 
 void Solution() {
     cin >> n;
-    vector<vector<char>> m1(n, vector<char>(n)), m2(n, vector<char>(n));
+    vector<vector<char>> m1(n, vector<char>(n));
+    vector<vector<char>> m2(n, vector<char>(n));
     fo(i, n) fo(j, n) cin >> m1[i][j];
     fo(i, n) fo(j, n) cin >> m2[i][j];
-    vector<vector<vector<char>>> vv, choices;
+    vector<vector<vector<char>>> vv;
     vv.push_back(m2);
-    fo(i, 3) {
-        rotate_grid(m2);
-        vv.push_back(m2);
-    }
+    rotate_grid(m2);
+    vv.push_back(m2);
+    rotate_grid(m2);
+    vv.push_back(m2);
+    rotate_grid(m2);
+    vv.push_back(m2);
+    vector<vector<vector<char>>> choices;
     for (vector<vector<char>> &V : vv) {
         choices.push_back(V);
-        choices.push_back(flip_vertical(V));
-        choices.push_back(flip_horizontal(V));
-        choices.push_back(flip_horizontal(flip_vertical(V)));
+        vector<vector<char>> v = flip_vertical(V);
+        vector<vector<char>> h = flip_horizontal(V);
+        choices.push_back(v);
+        choices.push_back(h);
+        choices.push_back(flip_vertical(h));
     }
     for (vector<vector<char>> &X : choices) {
         if (X == m1) {
