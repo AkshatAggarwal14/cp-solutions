@@ -39,7 +39,7 @@ void Solution() {
             ll j = i;
             ll len = 1;
             vis[i] = true;
-            while (p[j] != i) {    //go to next one until reach 1st again
+            while (p[j] != i) {    //go to next one
                 vis[p[j]] = true;  //mark it as visited
                 j = p[j];
                 len++;
