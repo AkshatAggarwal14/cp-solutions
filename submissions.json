@@ -1,4 +1,22 @@
 {
+  "CF129869588": {
+    "contest_id": 884,
+    "language": "GNU C++17",
+    "path": "codeforces/884/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Bertown Subway",
+    "problem_url": "https://codeforces.com/contest/884/problem/C",
+    "submission_id": "CF129869588",
+    "submission_url": "https://codeforces.com/contest/884/submission/129869588",
+    "tags": [
+      "dfs and similar",
+      "greedy",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Sep/25/2021 22:00"
+  },
   "CF129869862": {
     "contest_id": 884,
     "language": "GNU C++17",
