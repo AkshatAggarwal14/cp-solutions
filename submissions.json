@@ -1,4 +1,22 @@
 {
+  "CF129995855": {
+    "contest_id": 1283,
+    "language": "GNU C++17",
+    "path": "codeforces/1283/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Friends and Gifts",
+    "problem_url": "https://codeforces.com/contest/1283/problem/C",
+    "submission_id": "CF129995855",
+    "submission_url": "https://codeforces.com/contest/1283/submission/129995855",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Sep/27/2021 17:22"
+  },
   "CF129999127": {
     "contest_id": 1003,
     "language": "GNU C++17",
