@@ -31,12 +31,15 @@ void Solution() {
             n -= (1LL << i) * dec;
             ans += dec;
         }
-        if (!n) return ans;
-        return -1LL;
+        if (!n)
+            cout << ans << '\n';
+        else
+            cout << -1 << '\n';
     };
     while (q--) {
-        cin >> num;
-        cout << calc(num) << '\n';
+        ll Q;
+        cin >> Q;
+        calc(Q);
     }
 }
 
