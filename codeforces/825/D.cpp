@@ -30,10 +30,11 @@ void Solution() {
             else if (!pos.empty())
                 s[pos.back()] = c, pos.pop_back();
             else
-                goto finish;
+                break;
         }
+        if (pos.empty()) break;
     }
-finish:
+    fo(i, sz(s)) if (s[i] == '?') s[i] = 'a';
     cout << s << '\n';
 }
 
