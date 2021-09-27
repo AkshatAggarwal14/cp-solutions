@@ -1,4 +1,22 @@
 {
+  "CF129991271": {
+    "contest_id": 709,
+    "language": "GNU C++17",
+    "path": "codeforces/709/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Checkpoints",
+    "problem_url": "https://codeforces.com/contest/709/problem/B",
+    "submission_id": "CF129991271",
+    "submission_url": "https://codeforces.com/contest/709/submission/129991271",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Sep/27/2021 16:26"
+  },
   "CF129995855": {
     "contest_id": 1283,
     "language": "GNU C++17",
