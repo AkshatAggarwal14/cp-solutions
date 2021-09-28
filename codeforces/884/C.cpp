@@ -11,7 +11,7 @@ void dfs(ll x) {
     vis[x] = true;
     len++;
     for (auto node : adj[x]) {
-        if (vis[node]) return;  // as only conncected once
+        if (vis[node]) continue;
         dfs(node);
     }
 }
@@ -28,15 +28,12 @@ void Solution() {
         if (len) lens.push_back(len);
     }
     sort(lens.begin(), lens.end());
-    ll sz = lens.size();
-    if (sz > 1) {
-        ll t = lens[sz - 1] + lens[sz - 2];
-        lens.pop_back(), lens.pop_back();
-        lens.push_back(t);
-        sz--;
-    }
-    ll ans = 0;
-    for (ll i = 0; i < sz; ++i) ans += lens[i] * lens[i];
+    ll ans;
+    if ((ll)lens.size() > 1) {
+        ans = static_cast<ll>(pow((lens[(ll)lens.size() - 2] + lens.back()), 2));
+        for (ll i = 0; i < (ll)lens.size() - 2; i++) ans += lens[i] * lens[i];
+    } else
+        ans = lens[0] * lens[0];
     cout << ans << '\n';
 }
 
