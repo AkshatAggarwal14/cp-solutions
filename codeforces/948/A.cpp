@@ -26,6 +26,13 @@ void Solution() {
         return !(vv[x][y + 1] == 'W' || vv[x + 1][y] == 'W' || vv[x - 1][y] == 'W' || vv[x][y - 1] == 'W');
     };
 
+    auto Set = [&](ll x, ll y) {
+        if (vv[x][y + 1] != 'S') vv[x][y + 1] = 'D';
+        if (vv[x][y - 1] != 'S') vv[x][y - 1] = 'D';
+        if (vv[x + 1][y] != 'S') vv[x + 1][y] = 'D';
+        if (vv[x - 1][y] != 'S') vv[x - 1][y] = 'D';
+    };
+
     bool check = true;
     for (ll i = 1; i <= n; ++i) {
         for (ll j = 1; j <= m; ++j) {
@@ -36,10 +43,16 @@ void Solution() {
     }
 
     if (check) {
+        for (ll i = 1; i <= n; ++i) {
+            for (ll j = 1; j <= m; ++j) {
+                if (vv[i][j] == 'S') {
+                    Set(i, j);
+                }
+            }
+        }
         cout << "Yes\n";
         for (ll i = 1; i <= n; ++i) {
             for (ll j = 1; j <= m; ++j) {
-                if (vv[i][j] == '.') vv[i][j] = 'D';  // set every . to D
                 cout << vv[i][j];
             }
             cout << '\n';
