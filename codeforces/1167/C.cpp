@@ -14,18 +14,23 @@ void Solution() {
         ll k;
         cin >> k;
         temp.resize(k);
-        for (ll j = 0; j < k; ++j)
+        for (ll j = 0; j < k; ++j) {
             cin >> temp[j];
-
-        // For k numbers make edges between adjacent <- to reduce number of edge
+        }
+        // For k numbers make edges between adjacent and first and last
         for (ll j = 1; j < k; ++j) {
             if (temp[j] != temp[j - 1]) {
                 adj[temp[j]].push_back(temp[j - 1]);
                 adj[temp[j - 1]].push_back(temp[j]);
             }
         }
+        if (k > 2 && temp[k - 1] != temp[0]) {
+            adj[temp[k - 1]].push_back(temp[0]);
+            adj[temp[0]].push_back(temp[k - 1]);
+        }
         temp.clear();
     }
+
     ll component_no = 0;
     function<ll(ll)> dfs = [&](ll parent) {
         if (color[parent]) return 0LL;
@@ -41,8 +46,10 @@ void Solution() {
             sz[component_no] = dfs(i);  // size of a component is given by dfs
         }
     }
-    for (ll i = 1; i <= n; ++i)
+
+    for (ll i = 1; i <= n; ++i) {
         cout << sz[color[i]] << ' ';  // size of color
+    }
 }
 
 int main() {
