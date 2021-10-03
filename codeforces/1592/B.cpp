@@ -104,32 +104,16 @@ void Solution() {
         if (a[L] != sorted[L] && L < x && n - L - 1 < x) {
             cout << "NO\n";
             return;
+        } else {
+            L -= 1;
         }
-        L--;
         if (a[R] != sorted[R] && R < x && n - R - 1 < x) {
             cout << "NO\n";
             return;
-        }
-        R++;
-        if (n - L - 1 >= 0 && R >= x) break;
-    }
-    cout << "YES\n";
-}
-
-//! BETTER approach
-void solve() {
-    ll n, x;
-    cin >> n >> x;
-    vl a(n);
-    fo(i, n) cin >> a[i];
-    vl v(a);
-    sort(all(v));
-    if (v == a) return void(cout << "YES\n");
-    fo(i, n) {
-        if (a[i] != v[i]) {
-            if (i + x >= n and i - x < 0) {
-                return void(cout << "NO\n");
-            }
+        } else
+            R += 1;
+        if (n - L - 1 >= 0 && R >= x) {
+            break;
         }
     }
     cout << "YES\n";
@@ -149,7 +133,7 @@ int main() {
     ll tc = 1;
     cin >> tc;
     while (tc--) {
-        solve();
+        Solution();
     }
 #ifndef ONLINE_JUDGE
     cerr << fixed << setprecision(4) << (double)clock() / CLOCKS_PER_SEC << " secs" << endl;
