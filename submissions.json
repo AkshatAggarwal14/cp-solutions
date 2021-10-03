@@ -1,4 +1,22 @@
 {
+  "CF130733450": {
+    "contest_id": 902,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/902/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Coloring a Tree",
+    "problem_url": "https://codeforces.com/contest/902/problem/B",
+    "submission_id": "CF130733450",
+    "submission_url": "https://codeforces.com/contest/902/submission/130733450",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "greedy",
+      "*1200"
+    ],
+    "timestamp": "Oct/04/2021 00:19"
+  },
   "CF130736479": {
     "contest_id": 1057,
     "language": "GNU C++17 (64)",
