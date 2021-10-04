@@ -1,4 +1,17 @@
 {
+  "CF130816533": {
+    "contest_id": 1020,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1020/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Badge",
+    "problem_url": "https://codeforces.com/contest/1020/problem/B",
+    "submission_id": "CF130816533",
+    "submission_url": "https://codeforces.com/contest/1020/submission/130816533",
+    "tags": [],
+    "timestamp": "Oct/04/2021 20:35"
+  },
   "CF130818589": {
     "contest_id": 727,
     "language": "GNU C++17 (64)",
