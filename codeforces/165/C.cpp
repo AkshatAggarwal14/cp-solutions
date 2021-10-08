@@ -27,31 +27,13 @@ void Solution() {
     cout << ans << '\n';
 }
 
-void Better() {
-    ll k, cnt = 0;
-    cin >> k;
-    string s;
-    cin >> s;
-    vector<ll> sum(s.length() + 1, 0);
-    for (int i = 1; i <= s.length(); ++i) {
-        sum[i] = sum[i - 1] + (s[i - 1] == '1');
-    }
-    for (int i = 0; i < s.length(); ++i) {
-        ll t = sum[i] + k;
-        ll it1 = lower_bound(sum.begin() + i + 1, sum.end(), t) - begin(sum);
-        ll it2 = upper_bound(sum.begin() + i + 1, sum.end(), t) - begin(sum);
-        cnt += (it2 - it1);
-    }
-    cout << cnt;
-}
-
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    Better();
+    Solution();
     cerr << fixed << setprecision(4) << (double)clock() / CLOCKS_PER_SEC << " secs" << endl;
     return 0;
 }
