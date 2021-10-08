@@ -3,36 +3,28 @@
 using namespace std;
 using ll = int64_t;
 
-template <bool b>
-auto binsearch(auto l, auto r, const auto& pred) {
-    --l, ++r;
-    for (decltype(l) m; m = midpoint(l, r), r > l + 1;) (pred(m) ? l : r) = m;
-    return (b ? l : r);
-}
-
-// returns first i in [l, r], p(i) false, and if none found, returns r + 1
-auto find_first_false(auto l, auto r, const auto& p) {
-    return binsearch<false>(l, r, p);
-}
-
-// returns last i in [l, r], p(i) true, and if none found, returns l - 1
-auto find_last_true(auto l, auto r, const auto& p) {
-    return binsearch<true>(l, r, p);
+ll k;
+ll time_taken(ll v) {
+    ll cnt = 0, den = 1;
+    while (v / den != 0) {
+        cnt += (v / den);
+        den = den * k;
+    }
+    return cnt;
 }
 
 void Solution() {
-    ll n, k;
+    ll n;
     cin >> n >> k;
-    // if v increases he can definitely write more than n lines.
-    // find first false where v does not lead to < n lines
-    cout << find_first_false(1LL, n * k, [&](ll v) -> bool {
-        ll cnt = 0, den = 1;
-        while (v / den) {
-            cnt += (v / den);
-            den *= k;
-        }
-        return (cnt < n);
-    });
+    ll l = 1, r = 1e12;
+    while (r >= l) {
+        ll m = l + (r - l) / 2;
+        if (time_taken(m) >= n)
+            r = m - 1;
+        else
+            l = m + 1;
+    }
+    cout << r + 1 << '\n';
 }
 
 int main() {
