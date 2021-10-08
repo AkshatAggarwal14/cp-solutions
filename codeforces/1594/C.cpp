@@ -84,16 +84,38 @@ void Solution() {
     str s;
     cin >> n >> c >> s;
     vl pos;
-    ll id = -1;
     fo(i, sz(s)) {
-        if (s[i] != c)
+        if (s[i] != c) {
             pos.push_back(i + 1);
-        else if (i >= n / 2)
-            id = i + 1;
+        }
     }
-    if (pos.empty()) return void(cout << 0 << '\n');
-    if (id != -1) return void(cout << "1\n" && cout << id << "\n");
-    cout << "2\n" && cout << n - 1 << ' ' << n << '\n';
+    if (s[n - 1] == c) {
+        if (!pos.empty()) {
+            cout << 1 << '\n'
+                 << n << '\n';
+            return;
+        } else {
+            cout << 0 << '\n';
+            return;
+        }
+    } else {
+        if (s[n - 2] == c) {
+            cout << 1 << '\n'
+                 << n - 1 << '\n';
+            return;
+        } else {
+            for (ll i = n / 2; i < n; ++i) {
+                if (s[i] == c) {
+                    cout << 1 << '\n'
+                         << i + 1 << '\n';
+                    return;
+                }
+            }
+            cout << 2 << '\n';
+            cout << n - 1 << ' ' << n << '\n';
+            return;
+        }
+    }
 }
 
 // --------------------------------</Solve>-------------------------------
