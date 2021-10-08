@@ -1,4 +1,20 @@
 {
+  "CF131172380": {
+    "contest_id": 1594,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1594/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Consecutive Sum Riddle",
+    "problem_url": "https://codeforces.com/contest/1594/problem/A",
+    "submission_id": "CF131172380",
+    "submission_url": "https://codeforces.com/contest/1594/submission/131172380",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Oct/08/2021 20:39"
+  },
   "CF131177388": {
     "contest_id": 1594,
     "language": "GNU C++17 (64)",
