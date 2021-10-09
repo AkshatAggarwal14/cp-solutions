@@ -1,4 +1,25 @@
 {
+  "CF131361056": {
+    "contest_id": 1560,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1560/F1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F1",
+    "problem_name": "Nearest Beautiful Number (easy version)",
+    "problem_url": "https://codeforces.com/contest/1560/problem/F1",
+    "submission_id": "CF131361056",
+    "submission_url": "https://codeforces.com/contest/1560/submission/131361056",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "brute force",
+      "constructive algorithms",
+      "dfs and similar",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Oct/10/2021 01:02"
+  },
   "CF131398458": {
     "contest_id": 1598,
     "language": "GNU C++17 (64)",
