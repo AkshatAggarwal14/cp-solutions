@@ -1,4 +1,17 @@
 {
+  "CF131495118": {
+    "contest_id": 1272,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1272/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Nearest Opposite Parity",
+    "problem_url": "https://codeforces.com/contest/1272/problem/E",
+    "submission_id": "CF131495118",
+    "submission_url": "https://codeforces.com/contest/1272/submission/131495118",
+    "tags": [],
+    "timestamp": "Oct/11/2021 00:41"
+  },
   "CF131495289": {
     "contest_id": 1272,
     "language": "GNU C++17 (64)",
