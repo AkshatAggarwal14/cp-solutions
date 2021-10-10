@@ -82,10 +82,10 @@ void Solution() {
     ll n;
     str s1, s2;
     cin >> n >> s1 >> s2;
-    if ((s1[0] == '1') || (s2[n - 1] == '1')) return void(cout << "NO\n");
     fo(i, n) {
         if (s1[i] == s2[i] && s1[i] == '1') {
-            return void(cout << "NO\n");
+            cout << "NO\n";
+            return;
         }
     }
     cout << "YES\n";
