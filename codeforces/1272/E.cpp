@@ -2,6 +2,7 @@
 #include "bits/stdc++.h"
 using namespace std;
 using ll = int64_t;
+const ll inf = 1e18;
 
 void Solution() {
     ll n;
@@ -16,11 +17,9 @@ void Solution() {
             odd.emplace(i), d_odd[i] = 0;
         else
             even.emplace(i), d_even[i] = 0;
-        // opposite as we inverse the graph to run bfs from other points
         if (i - a[i] >= 0) adj[i - a[i]].push_back(i);
         if (i + a[i] <= n - 1) adj[i + a[i]].push_back(i);
     }
-    // for even elements
     while (!odd.empty()) {
         ll parent = odd.front();
         odd.pop();
@@ -31,7 +30,6 @@ void Solution() {
             }
         }
     }
-    // for odd elements
     while (!even.empty()) {
         ll parent = even.front();
         even.pop();
