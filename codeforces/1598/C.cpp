@@ -99,26 +99,6 @@ void Solution() {
     cout << ans << '\n';
 }
 
-void solve() {
-    ll n, num, s = 0;
-    cin >> n;
-    map<ll, ll> cnt;
-    fo(i, n) {
-        cin >> num;
-        s += num;
-        cnt[num * n]++;
-    }
-    ll ans = 0;
-    for (auto& [a, b] : cnt) {
-        ll tem = 2 * s - a;
-        if (a == tem)
-            ans += cnt[a] * (cnt[a] - 1);
-        else
-            ans += cnt[a] * cnt[tem];
-    }
-    cout << ans / 2 << '\n';
-}
-
 // --------------------------------</Solve>-------------------------------
 
 int main() {
@@ -133,7 +113,7 @@ int main() {
     ll tc = 1;
     cin >> tc;
     while (tc--) {
-        solve();
+        Solution();
     }
 #ifndef ONLINE_JUDGE
     cerr << fixed << setprecision(4) << (double)clock() / CLOCKS_PER_SEC << " secs" << endl;
