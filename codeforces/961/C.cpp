@@ -116,9 +116,15 @@ void Solution() {
     fo(i, 4) {
         fo(j, 4) {
             if (i != j) {
-                ll temp = 0;
-                fo(k, 4) temp += recolor[k][!(k == i || k == j)];  // 0 at i or j
-                amin(ans, temp);
+                ll temp1 = recolor[i][0] + recolor[j][0];
+                fo(k, 4) {
+                    fo(l, 4) {
+                        if (k != i && k != j && l != i && l != j && k != l) {
+                            ll temp2 = recolor[k][1] + recolor[l][1];
+                            amin(ans, temp1 + temp2);
+                        }
+                    }
+                }
             }
         }
     }
