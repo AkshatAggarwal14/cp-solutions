@@ -91,7 +91,11 @@ bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 void Solution() {
     str s;
     cin >> s;
+    V<ll> cnt(10, 0);
+    fo(i, sz(s))++ cnt[s[i] - '0'];
     ll ans = LLONG_MAX;
+    // 25 50 75 00 0
+    str s1 = s;
     reverse(all(s));
     V<str> vv = {"52", "05", "57", "00"};
     for (str &x : vv) {
@@ -103,6 +107,7 @@ void Solution() {
         }
         if (ctr >= 2) amin(ans, ctr - 2);
     }
+    if (ans == LLONG_MAX) return void(cout << sz(s) - 1 << '\n');
     cout << ans << '\n';
 }
 
@@ -138,7 +143,7 @@ int32_t main() {
     init();
 #endif
     ll tc = 1; cin >> tc; while (tc--)
-    Easier();
+    Solution();
     cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
