@@ -115,23 +115,6 @@ void Solution() {
     }
 }
 
-void Better() {
-    ll a, b, c;
-    cin >> a >> b >> c;
-    if (a <= max(b, c))
-        cout << max(b, c) - a + 1ll << ' ';
-    else
-        cout << "0 ";
-    if (b <= max(a, c))
-        cout << max(a, c) - b + 1ll << ' ';
-    else
-        cout << "0 ";
-    if (c <= max(a, b))
-        cout << max(a, b) - c + 1ll << '\n';
-    else
-        cout << "0\n";
-}
-
 // --------------------------------</Solve>-------------------------------
 
 // clang-format off
@@ -145,7 +128,7 @@ int32_t main() {
     init();
 #endif
     ll tc = 1; cin >> tc; while (tc--)
-    Better();
+    Solution();
     cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
