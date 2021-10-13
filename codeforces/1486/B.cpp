@@ -11,7 +11,6 @@ using ll = int64_t;
 
 ll median(vector<ll> x) {
     sort(x.begin(), x.end());
-    //point with the smallest summary distance is between left and right median.
     return x[sz(x) / 2] - x[(sz(x) - 1) / 2] + 1;
 }
 
