@@ -138,7 +138,7 @@ int32_t main() {
     init();
 #endif
     ll tc = 1; cin >> tc; while (tc--)
-    Solution();
+    Easier();
     cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
