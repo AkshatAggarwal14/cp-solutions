@@ -1,4 +1,23 @@
 {
+  "CF131708657": {
+    "contest_id": 1486,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1486/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Eastern Exhibition",
+    "problem_url": "https://codeforces.com/contest/1486/problem/B",
+    "submission_id": "CF131708657",
+    "submission_url": "https://codeforces.com/contest/1486/submission/131708657",
+    "tags": [
+      "binary search",
+      "geometry",
+      "shortest paths",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Oct/13/2021 12:44"
+  },
   "CF131747229": {
     "contest_id": 908,
     "language": "GNU C++17 (64)",
