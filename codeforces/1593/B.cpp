@@ -111,24 +111,6 @@ void Solution() {
     cout << ans << '\n';
 }
 
-void Easier() {
-    str s;
-    cin >> s;
-    ll n = s.length();
-    ll ans = inf;
-    // Brute over 2 digits
-    fo(i, n) {
-        for (ll j = i + 1; j < n; j++) {
-            ll val = 10 * (s[i] - '0') + (s[j] - '0');
-            if (val % 25 == 0) {
-                ll left = i + 2;
-                amin(ans, n - left);
-            }
-        }
-    }
-    cout << ans << '\n';
-}
-
 // --------------------------------</Solve>-------------------------------
 
 // clang-format off
