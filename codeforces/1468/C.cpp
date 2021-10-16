@@ -15,9 +15,6 @@ struct cmp3 {
     }
 };
 
-template <class T>
-using pq = priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, T>;
-
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifndef ONLINE_JUDGE
@@ -28,18 +25,10 @@ int main() {
     ll q;
     cin >> q;
     // money, index
-    pq<cmp2> p2;  //idx
-    pq<cmp3> p3;  //money
+    priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, cmp2> p2;  //idx
+    priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, cmp3> p3;  //money
     vector<ll> vis{-1};
     ll type, m;
-
-    auto go = [&](pq<auto> &P) -> void {
-        while (vis[P.top().second]) P.pop();
-        vis[P.top().second] = 1;
-        cout << P.top().second << ' ';
-        P.pop();
-    };
-
     while (q--) {
         cin >> type;
         if (type == 1) {
@@ -48,9 +37,15 @@ int main() {
             p3.emplace(m, sz(vis));
             vis.push_back(0);
         } else if (type == 2) {
-            go(p2);
+            while (vis[p2.top().second]) p2.pop();
+            vis[p2.top().second] = 1;
+            cout << p2.top().second << ' ';
+            p2.pop();
         } else {
-            go(p3);
+            while (vis[p3.top().second]) p3.pop();
+            vis[p3.top().second] = 1;
+            cout << p3.top().second << ' ';
+            p3.pop();
         }
     }
 
