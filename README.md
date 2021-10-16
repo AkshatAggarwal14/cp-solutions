@@ -517,7 +517,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 568 | [C - Doukasen](https://atcoder.jp/contests/abc223/tasks/abc223_c) | [C++ (GCC 9.2.1)](./atcoder/abc223/C.cpp) | `AtCoder` `*300` | Oct/17/2021 17:57 | 
 567 | [B - String Shifting](https://atcoder.jp/contests/abc223/tasks/abc223_b) | [C++ (GCC 9.2.1)](./atcoder/abc223/B.cpp) | `AtCoder` `*200` | Oct/17/2021 17:37 | 
 566 | [A - Exact Price](https://atcoder.jp/contests/abc223/tasks/abc223_a) | [C++ (GCC 9.2.1)](./atcoder/abc223/A.cpp) | `AtCoder` `*100` | Oct/17/2021 17:32 | 
-565 | [C - Berpizza](https://codeforces.com/contest/1468/problem/C) | [GNU C++20 (64)](./codeforces/1468/C.cpp) | `data structures` `implementation` `*1400` | Oct/16/2021 20:21 | 
+565 | [C - Berpizza](https://codeforces.com/contest/1468/problem/C) | [GNU C++20 (64)](./codeforces/1468/C.cpp) | `data structures` `implementation` `*1400` | Oct/16/2021 20:30 | 
 564 | [J - Robot Factory](https://codeforces.com/contest/1600/problem/J) | [GNU C++20 (64)](./codeforces/1600/J.cpp) | `bitmasks` `dfs and similar` `*1400` | Oct/16/2021 15:33 | 
 563 | [B - Teams Forming](https://codeforces.com/contest/1092/problem/B) | [GNU C++17 (64)](./codeforces/1092/B.cpp) | `sortings` `*800` | Oct/15/2021 01:01 | 
 562 | [D - Anti-Sudoku](https://codeforces.com/contest/1335/problem/D) | [GNU C++17 (64)](./codeforces/1335/D.cpp) | `constructive algorithms` `implementation` `*1300` | Oct/15/2021 00:45 | 
