@@ -15,13 +15,7 @@ struct cmp3 {
     }
 };
 
-int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
+void Solution() {
     ll q;
     cin >> q;
     // money, index
@@ -48,6 +42,15 @@ int main() {
             p3.pop();
         }
     }
+}
 
+// clang-format off
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    Solution();
     return 0;
 }
