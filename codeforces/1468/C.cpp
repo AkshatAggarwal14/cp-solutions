@@ -4,7 +4,7 @@ using ll = int64_t;
 using pl = pair<ll, ll>;
 template <class T>
 using pq = priority_queue<pl, vector<pl>, T>;
-auto sz = [](const auto &container) -> ll { return container.size(); };
+auto sz = [](const auto &container) { return container.size(); };
 
 struct cmp2 {
     bool operator()(const pl &a, const pl &b) const {

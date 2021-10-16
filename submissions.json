@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF132140682": {
+    "contest_id": 1468,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1468/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Berpizza",
+    "problem_url": "https://codeforces.com/contest/1468/problem/C",
+    "submission_id": "CF132140682",
+    "submission_url": "https://codeforces.com/contest/1468/submission/132140682",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Oct/16/2021 20:29"
+  },
   "CF132140734": {
     "contest_id": 1468,
     "language": "GNU C++20 (64)",
