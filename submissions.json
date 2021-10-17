@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF132271762": {
+    "contest_id": 171,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/171/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Star",
+    "problem_url": "https://codeforces.com/contest/171/problem/B",
+    "submission_id": "CF132271762",
+    "submission_url": "https://codeforces.com/contest/171/submission/132271762",
+    "tags": [
+      "*special problem",
+      "combinatorics",
+      "*1300"
+    ],
+    "timestamp": "Oct/17/2021 21:11"
+  },
   "CF132272339": {
     "contest_id": 171,
     "language": "GNU C++20 (64)",
