@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF132388792": {
+    "contest_id": 73,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/73/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "The Elder Trolls IV: Oblivon",
+    "problem_url": "https://codeforces.com/contest/73/problem/A",
+    "submission_id": "CF132388792",
+    "submission_url": "https://codeforces.com/contest/73/submission/132388792",
+    "tags": [
+      "greedy",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Oct/19/2021 03:20"
+  },
   "CF132424581": {
     "contest_id": 1284,
     "language": "GNU C++20 (64)",
