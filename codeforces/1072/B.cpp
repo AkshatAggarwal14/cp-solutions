@@ -89,6 +89,11 @@ bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 // clang-format on
 
 void Solution() {
+    // for (ll i = 0; i <= 3; ++i) {
+    //     for (ll j = i; j <= 3; ++j) {
+    //         cout << '(' << i << ',' << j << ")=[" << (i | j) << "," << (i & j) << "]\n";
+    //     }
+    // }
     ll n;
     cin >> n;
     vector<ll> a(n - 1), b(n - 1);
@@ -101,17 +106,17 @@ void Solution() {
             for (ll j = 0; j <= 3; ++j) {
                 if ((i | j) == a[k] && (i & j) == b[k]) {
                     flag = true;
-                    choose[k].emplace_back(i, j);  // storing choices for a[i] & b[i]
+                    choose[k].emplace_back(i, j);
                 }
             }
         }
-        if (!flag) {  // can be no for a certain a[i] & b[i] if doesnt exist
+        if (!flag) {
             cout << "NO\n";
             return;
         }
     }
     dbg(choose);
-    for (auto &[x, y] : choose[0]) {  // checking for each pair for 1st
+    for (auto &[x, y] : choose[0]) {
         vector<ll> ans;
         ans.push_back(x);
         ans.push_back(y);
@@ -120,11 +125,11 @@ void Solution() {
             bool flag = false;
             for (auto &[x, y] : choose[i]) {
                 if (x == ans[i]) {
-                    ans.push_back(y);  // if matches with last y then push
+                    ans.push_back(y);
                     flag = true;
                 }
             }
-            if (!flag) break;  // if none then break, ans doesnt exist
+            if (!flag) break;
         }
         dbg(ans);
         if (sz(ans) == n) {
