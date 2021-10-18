@@ -18,7 +18,6 @@ void Solution() {
         cout << d[0] * d[1] * d[2];
         return;
     }
-    // this will handle remaining too
     ll c1, c2, c3;
     c1 = min(d[0] - 1, k / 3);
     k -= c1;
