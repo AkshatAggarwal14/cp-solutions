@@ -22,11 +22,11 @@ void Solution() {
             for (ll j = 0; j <= 3; ++j) {
                 if ((i | j) == a[k] && (i & j) == b[k]) {
                     flag = true;
-                    choose[k].emplace_back(i, j);  // storing choices for t[i] & t[i+1]
+                    choose[k].emplace_back(i, j);  // storing choices for a[i] & b[i]
                 }
             }
         }
-        if (!flag) {  // can be no for a certain t[i] & t[i+1] if doesnt exist
+        if (!flag) {  // can be no for a certain a[i] & b[i] if doesnt exist
             cout << "NO\n";
             return;
         }
