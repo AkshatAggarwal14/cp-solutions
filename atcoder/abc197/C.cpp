@@ -77,8 +77,7 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     // ll tc; cin >> tc; while (tc--)
-    // Contest();
-    Upsolve();
+    Contest();
     cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
