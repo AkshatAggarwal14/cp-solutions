@@ -10,14 +10,14 @@ using ll = int64_t;
 auto sz = [](const auto& container) -> ll { return container.size(); };
 
 vector<vector<ll>> ans;
-void backtrack(vector<ll> a, ll sum) {
-    if (sum == 0) {
+void backtrack(vector<ll> a, ll n) {
+    if (n == 0) {
         ans.push_back(a);
         return;
     }
-    for (ll ele = 1; ele <= sum; ++ele) {
-        a.push_back(ele);
-        backtrack(a, sum - ele);
+    for (ll i = 1; i <= n; ++i) {
+        a.push_back(i);
+        backtrack(a, n - i);
         a.pop_back();
     }
 }
