@@ -64,27 +64,6 @@ void Solution() {
     cout << res << '\n';
 }
 
-void BEST() {
-    ll n;
-    cin >> n;
-    vector<ll> a(n);
-    for (ll i = 0; i < n; ++i) cin >> a[i];
-    ll ans = LLONG_MAX;
-    for (ll mask = 0; mask < (1LL << n); mask++) {
-        ll ored = 0, xored = 0;
-        for (ll i = 0; i < n; i++) {
-            if (mask & (1LL << i)) {
-                xored ^= ored;
-                ored = 0;
-            }
-            ored |= a[i];
-        }
-        xored ^= ored;
-        ans = min(ans, xored);
-    }
-    cout << ans;
-}
-
 // clang-format off
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
@@ -94,7 +73,7 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     // ll tc; cin >> tc; while (tc--)
-    BEST();
+    Solution();
     cerr << "Time:" << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
