@@ -10,8 +10,6 @@ using ll = int64_t;
 auto sz = [](const auto &container) -> ll { return container.size(); };
 
 void Solution() {
-    // https://math.stackexchange.com/questions/1267646/finding-vertices-of-regular-polygon
-    // matrix exponentation and recentering shit
     ll n;
     cin >> n;
     double x0, y0, x2, y2;
