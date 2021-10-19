@@ -1,4 +1,20 @@
 {
+  "AC26692703": {
+    "contest_id": "abc197",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc197/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Rotate",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/abc197_a",
+    "submission_id": "AC26692703",
+    "submission_url": "https://atcoder.jp/contests/abc197/submissions/26692703",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Oct/19/2021 22:24"
+  },
   "AC26692748": {
     "contest_id": "abc197",
     "language": "C++ (GCC 9.2.1)",
