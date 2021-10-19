@@ -4,7 +4,7 @@
 #else
 #include "bits/stdc++.h"
 using namespace std;
-#define dbg(...)
+#define dbg(...) 42
 #endif
 using ll = int64_t;
 auto sz = [](const auto& container) -> ll { return container.size(); };
@@ -18,7 +18,7 @@ void findNumbers(vector<ll>& ar, ll sum, vector<vector<ll>>& res, vector<ll>& r,
         r.push_back(ar[i]);
         findNumbers(ar, sum - ar[i], res, r, i);
         i++;
-        r.pop_back();  // backtrack shit
+        r.pop_back();
     }
 }
 
@@ -36,6 +36,7 @@ void Solution() {
     cin >> n;
     vector<ll> a(n);
     for (ll i = 0; i < n; ++i) cin >> a[i];
+    vector<ll> use(n, 1);  // n parts of 1 element each
     // calculates XOR for given 'use' vector
     auto calc = [&](vector<ll> A) {
         ll XOR = 0, i = 0, j = 0;
@@ -52,7 +53,7 @@ void Solution() {
     };
     vector<ll> num;
     for (ll i = 1; i <= n; ++i) num.push_back(i);
-    vector<vector<ll>> ans = combinationSum(num, n);  // generate all combos with given sum
+    vector<vector<ll>> ans = combinationSum(num, n);
     ll res = LLONG_MAX;
     dbg(sz(ans));
     for (auto& vv : ans) {
