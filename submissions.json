@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF132492603": {
+    "contest_id": 60,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/60/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Serial Time!",
+    "problem_url": "https://codeforces.com/contest/60/problem/B",
+    "submission_id": "CF132492603",
+    "submission_url": "https://codeforces.com/contest/60/submission/132492603",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "*1400"
+    ],
+    "timestamp": "Oct/20/2021 10:39"
+  },
   "CF132510949": {
     "contest_id": 1461,
     "language": "GNU C++20 (64)",
