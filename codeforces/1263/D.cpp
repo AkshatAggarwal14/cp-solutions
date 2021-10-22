@@ -11,8 +11,6 @@ auto sz = [](const auto &container) -> ll { return container.size(); };
 
 void Solution() {
     //! number of connected components from graph of index to characters
-    // 'a' --> n
-    // 'b' --> n + 1
 
     ll n;
     cin >> n;
