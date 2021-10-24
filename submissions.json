@@ -1,4 +1,20 @@
 {
+  "AC26795830": {
+    "contest_id": "zone2021",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/zone2021/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Sign of Friendship",
+    "problem_url": "https://atcoder.jp/contests/zone2021/tasks/zone2021_b",
+    "submission_id": "AC26795830",
+    "submission_url": "https://atcoder.jp/contests/zone2021/submissions/26795830",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Oct/24/2021 12:40"
+  },
   "AC26818273": {
     "contest_id": "abc169",
     "language": "C++ (GCC 9.2.1)",
