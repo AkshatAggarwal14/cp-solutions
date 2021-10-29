@@ -100,13 +100,6 @@ void Solution() {
     cout << s << '\n';
 }
 
-void best() {
-    string s;
-    cin >> s;
-    s.front() = s.back();
-    cout << s << '\n';
-}
-
 // --------------------------------</Solve>-------------------------------
 
 // clang-format off
@@ -121,7 +114,7 @@ int32_t main() {
     init();
 #endif
     ll tc = 1; cin >> tc; while (tc--)
-    best();
+    Solution();
     cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
