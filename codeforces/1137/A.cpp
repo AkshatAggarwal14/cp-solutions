@@ -8,6 +8,9 @@ using namespace std;
 #endif
 auto sz = [](const auto &container) -> int { return int(container.size()); };
 
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
