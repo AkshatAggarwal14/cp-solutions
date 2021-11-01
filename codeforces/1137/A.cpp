@@ -6,6 +6,7 @@
 using namespace std;
 #define dbg(...)
 #endif
+using ll = int64_t;
 auto sz = [](const auto &container) -> int { return int(container.size()); };
 
 #pragma GCC optimize("O3,unroll-loops")
@@ -36,9 +37,9 @@ void Solution() {
     }
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
-            int a = int(rows[i].order_of_key(grid[i][j]));
-            int b = int(cols[j].order_of_key(grid[i][j]));
-            cout << max(a, b) + max(sz(rows[i]) - a, sz(cols[j]) - b) << ' ';
+            int a = rows[i].order_of_key(grid[i][j]);
+            int b = cols[j].order_of_key(grid[i][j]);
+            cout << max(a, b) * 1LL + max(sz(rows[i]) - a, sz(cols[j]) - b) * 1LL << ' ';
         }
         cout << '\n';
     }
