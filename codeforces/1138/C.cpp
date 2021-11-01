@@ -35,10 +35,7 @@ void Solution() {
         for (int j = 0; j < m; ++j) {
             int a = int(rows[i].order_of_key(grid[i][j]));
             int b = int(cols[j].order_of_key(grid[i][j]));
-            int ans = 0;
-            ans += max(a, b);                              // 0 indexed position in respective row+col
-            ans += max(sz(rows[i]) - a, sz(cols[j]) - b);  // number of elements between the position and max.
-            cout << ans << ' ';
+            cout << max(a, b) + max(sz(rows[i]) - a, sz(cols[j]) - b) << ' ';
         }
         cout << '\n';
     }
