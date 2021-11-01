@@ -7,7 +7,7 @@ using namespace std;
 #define dbg(...)
 #endif
 using ll = int64_t;
-auto sz = [](const auto &container) -> int { return int(container.size()); };
+auto sz = [](const auto &container) -> ll { return container.size(); };
 
 #pragma GCC optimize("O3,unroll-loops")
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
