@@ -634,25 +634,24 @@ void flush() { output->flush(); }
  * - Iterator first, Iterator last
  * - Iterator first, int count
  ******************************************************************************/
-using ll = int64_t;
 
 void Solution() {
-    ll n, m;
+    int n, m;
     read(n, m);
-    vector<vector<ll>> grid(n, vector<ll>(m));
-    vector<o_set<ll>> rows(n), cols(m);
-    for (ll i = 0; i < n; ++i) {
-        for (ll j = 0; j < m; ++j) {
+    vector<vector<int>> grid(n, vector<int>(m));
+    vector<o_set<int>> rows(n), cols(m);
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
             read(grid[i][j]);
             rows[i].insert(grid[i][j]);
             cols[j].insert(grid[i][j]);
         }
     }
-    for (ll i = 0; i < n; ++i) {
-        for (ll j = 0; j < m; ++j) {
-            ll a = rows[i].order_of_key(grid[i][j]);
-            ll b = cols[j].order_of_key(grid[i][j]);
-            ll ans = 0;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            int a = int(rows[i].order_of_key(grid[i][j]));
+            int b = int(cols[j].order_of_key(grid[i][j]));
+            int ans = 0;
             ans += max(a, b);                              // 0 indexed position in respective row+col
             ans += max(sz(rows[i]) - a, sz(cols[j]) - b);  // number of elements between the position and max.
             write(ans, ' ');
