@@ -24,31 +24,28 @@ void fill() {
 }
 
 void Solution() {
+    /*for (ll i = 1; i < 1000; ++i) {
+        ll it = *ranges::lower_bound(pr, i);
+        if (it >= i && 2 * it <= 3 * i)
+            continue;
+        else
+            cout << i << ' ' << it << ' ' << 3 * i / 2 << '\n';
+    }*/
     ll n;
     cin >> n;
     vector<array<ll, 2>> edges;
     for (ll i = 1; i < n; ++i) edges.push_back({i, i + 1});
-    edges.push_back({n, 1});  // each node has degree 2 rn
+    edges.push_back({n, 1});
     for (ll i = 1; i <= n - n / 2; ++i) {
-        if (lp[sz(edges)] == sz(edges)) {  // if size is prime, break and print
+        if (lp[sz(edges)] == sz(edges)) {
             cout << sz(edges) << '\n';
             for (auto &x : edges) cout << x[0] << ' ' << x[1] << '\n';
             return;
         }
-        edges.push_back({i, i + n / 2});  // adding 1 degree to 1 -> n/2, 2 -> n/2+1
+        edges.push_back({i, i + n / 2});
     }
     dbg(edges);
 }
-//! there is a prime between n and 3n/2
-/*
-for (ll i = 1; i < 1000; ++i) {
-    ll it = *ranges::lower_bound(pr, i);
-    if (it >= i && 2 * it <= 3 * i)
-        continue;
-    else
-        cout << i << ' ' << it << ' ' << 3 * i / 2 << '\n';
-}
-*/
 
 // clang-format off
 int main() {
