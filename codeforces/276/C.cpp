@@ -17,11 +17,14 @@ void Solution() {
     vector<ll> cnt(n + 1, 0);
     while (q--) {
         cin >> u >> v;
-        ++cnt[u - 1];
-        --cnt[v];
+        u--, v--;
+        ++cnt[u];
+        --cnt[v + 1];
     }
     for (ll i = 1; i <= n; ++i) cnt[i] += cnt[i - 1];
-    ranges::sort(cnt, greater<ll>()), ranges::sort(a, greater<ll>());
+    dbg(cnt);
+    ranges::sort(cnt, greater<ll>());
+    ranges::sort(a, greater<ll>());
     ll sum = 0;
     for (ll i = 0; i < n; ++i) sum += a[i] * cnt[i];
     cout << sum << '\n';
