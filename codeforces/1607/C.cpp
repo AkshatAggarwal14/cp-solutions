@@ -20,6 +20,7 @@ void Solution() {
     cout << ans << '\n';
 }
 
+// clang-format off
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifdef LOCAL
