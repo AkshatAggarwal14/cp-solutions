@@ -102,6 +102,7 @@ void Solution() {
 
 // --------------------------------</Solve>-------------------------------
 
+// clang-format off
 int32_t main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifdef LOCAL
