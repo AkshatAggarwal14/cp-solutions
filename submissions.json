@@ -15058,6 +15058,25 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF134225391": {
+    "contest_id": 1517,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1517/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Fillomino 2",
+    "problem_url": "https://codeforces.com/contest/1517/problem/C",
+    "submission_id": "CF134225391",
+    "submission_url": "https://codeforces.com/contest/1517/submission/134225391",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "greedy",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Nov/03/2021 19:22"
+  },
   "CF134338928": {
     "contest_id": 1194,
     "language": "GNU C++20 (64)",
