@@ -23,7 +23,7 @@ void Solution() {
         ll sx = i, sy = i;
         while (cnt--) {
             if (sy - 1 >= 0 && vv[sx][sy - 1] == 0)
-                sy--;  // go left is possible, else down until cnt == 0
+                sy--;
             else if (sx + 1 < n && vv[sx + 1][sy] == 0)
                 sx++;
             vv[sx][sy] = a[i];
