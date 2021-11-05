@@ -15058,6 +15058,22 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF134360968": {
+    "contest_id": 1607,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1607/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Odd Grasshopper",
+    "problem_url": "https://codeforces.com/contest/1607/problem/B",
+    "submission_id": "CF134360968",
+    "submission_url": "https://codeforces.com/contest/1607/submission/134360968",
+    "tags": [
+      "math",
+      "*900"
+    ],
+    "timestamp": "Nov/05/2021 09:43"
+  },
   "CF134360985": {
     "contest_id": 1607,
     "language": "GNU C++20 (64)",
