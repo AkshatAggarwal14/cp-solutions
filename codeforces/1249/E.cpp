@@ -8,7 +8,6 @@ using namespace std;
 #endif
 using ll = int64_t;
 auto sz = [](const auto &container) -> ll { return container.size(); };
-#define all(x) (x).begin(), (x).end()
 template <class T, class U = T>
 bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
 template <class T, class U = T>
