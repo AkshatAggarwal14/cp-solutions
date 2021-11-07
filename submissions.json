@@ -1,4 +1,20 @@
 {
+  "AC27089421": {
+    "contest_id": "abc226",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc226/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Martial artist",
+    "problem_url": "https://atcoder.jp/contests/abc226/tasks/abc226_c",
+    "submission_id": "AC27089421",
+    "submission_url": "https://atcoder.jp/contests/abc226/submissions/27089421",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Nov/07/2021 17:50"
+  },
   "AC27090251": {
     "contest_id": "abc226",
     "language": "C++ (GCC 9.2.1)",

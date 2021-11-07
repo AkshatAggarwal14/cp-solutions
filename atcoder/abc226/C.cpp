@@ -15,18 +15,21 @@ template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 void Solution() {
-    ll n, k, num;
+    ll n, k;
     cin >> n;
     vector<ll> T(n), vis(n, 0);
+    set<ll> tolearn;
     vector<vector<ll>> a(n);
     for (ll i = 0; i < n; ++i) {
-        cin >> T[i] >> k;
-        for (ll j = 0; j < k; ++j) cin >> num, a[i].push_back(num - 1);
+        cin >> T[i];
+        cin >> k;
+        a[i].resize(k);
+        for (ll j = 0; j < k; ++j) cin >> a[i][j], --a[i][j];
     }
     ll ans = 0;
     function<void(ll)> dfs = [&](ll parent) -> void {
         if (vis[parent]) return;
-        vis[parent] = 1;
+        vis[parent] = true;
         ans += T[parent];
         for (auto child : a[parent]) {
             if (vis[child]) continue;
