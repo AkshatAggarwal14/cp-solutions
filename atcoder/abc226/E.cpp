@@ -16,7 +16,7 @@ bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 const ll N = 200010;
 vector<ll> graph[N];
-// vector<ll> cycles[N];
+vector<ll> cycles[N];
 ll color[N];
 ll par[N];
 ll mark[N];
@@ -44,6 +44,11 @@ void dfs_cycle(ll u, ll p) {
     color[u] = 2;
 }
 
+void addEdge(ll u, ll v) {
+    graph[u].push_back(v);
+    graph[v].push_back(u);
+}
+
 ll power(ll x, ll y, ll p) {
     ll res = 1;
     x %= p;
@@ -61,20 +66,22 @@ void Solution() {
     for (ll i = 0; i < m; ++i) {
         ll u, v;
         cin >> u >> v;
-        graph[u].push_back(v);
-        graph[v].push_back(u);
+        addEdge(u, v);
     }
     for (ll i = 1; i <= n; ++i) {
         if (color[i] == 2) continue;  // visited
         ll siz = cyclenumber;
         dfs_cycle(i, 0);
         siz = cyclenumber - siz;
-        if (siz != 1) {  // if not a cycle or more than 1 cycle in a component
+        if (siz != 1) {
             return void(cout << 0 << '\n');
         }
     }
-    // for (ll i = 1; i <= m; i++)
-    //     if (mark[i] != 0) cycles[mark[i]].push_back(i);  // find all cycles
+    for (ll i = 1; i <= m; i++)
+        if (mark[i] != 0) cycles[mark[i]].push_back(i);
+    for (ll i = 1; i <= cyclenumber; ++i) {
+        dbg(cycles[i]);
+    }
     cout << power(2, cyclenumber, 998244353LL) << '\n';
 }
 
