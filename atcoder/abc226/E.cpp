@@ -69,8 +69,9 @@ void Solution() {
         ll siz = cyclenumber;
         dfs_cycle(i, 0);
         siz = cyclenumber - siz;
-        // if component not a cycle or more than 1 cycle in a component
-        if (siz != 1) return void(cout << 0 << '\n');
+        if (siz != 1) {  // if not a cycle or more than 1 cycle in a component
+            return void(cout << 0 << '\n');
+        }
     }
     // for (ll i = 1; i <= m; i++)
     //     if (mark[i] != 0) cycles[mark[i]].push_back(i);  // find all cycles
