@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF134639293": {
+    "contest_id": 987,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/987/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Fair",
+    "problem_url": "https://codeforces.com/contest/987/problem/D",
+    "submission_id": "CF134639293",
+    "submission_url": "https://codeforces.com/contest/987/submission/134639293",
+    "tags": [
+      "graphs",
+      "shortest paths",
+      "*1600"
+    ],
+    "timestamp": "Nov/08/2021 13:19"
+  },
   "CF134640562": {
     "contest_id": 987,
     "language": "GNU C++20 (64)",
