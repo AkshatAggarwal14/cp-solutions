@@ -15058,6 +15058,23 @@
     ],
     "timestamp": "Oct/16/2021 20:21"
   },
+  "CF135176501": {
+    "contest_id": 1605,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1605/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "A.M. Deviation",
+    "problem_url": "https://codeforces.com/contest/1605/problem/A",
+    "submission_id": "CF135176501",
+    "submission_url": "https://codeforces.com/contest/1605/submission/135176501",
+    "tags": [
+      "math",
+      "number theory",
+      "*800"
+    ],
+    "timestamp": "Nov/12/2021 22:51"
+  },
   "CF135177461": {
     "contest_id": 1605,
     "language": "GNU C++20 (64)",
