@@ -15,7 +15,6 @@ template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 void Solution() {
-    // unequal indexes in sorted - observation
     ll n;
     string s, s1;
     cin >> n >> s;
