@@ -1,4 +1,20 @@
 {
+  "AC27260779": {
+    "contest_id": "abc227",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc227/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "KEYENCE building",
+    "problem_url": "https://atcoder.jp/contests/abc227/tasks/abc227_b",
+    "submission_id": "AC27260779",
+    "submission_url": "https://atcoder.jp/contests/abc227/submissions/27260779",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Nov/14/2021 16:45"
+  },
   "AC27260907": {
     "contest_id": "abc227",
     "language": "C++ (GCC 9.2.1)",
