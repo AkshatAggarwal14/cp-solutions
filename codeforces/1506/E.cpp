@@ -1,7 +1,14 @@
+#ifdef LOCAL
 // https://github.com/AkshatAggarwal14/Competetive-Programming
+#include "Akshat.hpp"
+#else
 #include "bits/stdc++.h"
 using namespace std;
+#define dbg(...)
+#endif
 using ll = int64_t;
+auto sz = [](const auto &container) -> ll { return container.size(); };
+#define all(x) (x).begin(), (x).end()
 
 void Solution() {
     ll n;
@@ -9,20 +16,18 @@ void Solution() {
     vector<ll> in(n);
     set<ll> st1, st2;
     for (ll i = 1; i <= n; ++i) st1.insert(i);
-    for (auto &x : in) cin >> x, st1.erase(x);  // st1, st2 contains elements not in input
+    for (auto &x : in) cin >> x, st1.erase(x);
     st2 = st1;
     vector<ll> res1(n, -1), res2;
     res1[0] = in[0];
     for (ll i = 1; i < n; ++i)
-        if (in[i] != in[i - 1]) res1[i] = in[i];  // marking the known elements(where in[] changes)
+        if (in[i] != in[i - 1]) res1[i] = in[i];
     res2 = res1;
-    // for res1, each unknown is just first element from set after which its removed
     for (auto &x : res1) {
         if (x != -1) continue;
         x = *st1.begin();
         st1.erase(x);
     }
-    // for res2, each unknown is, the numbers in st2, just smaller than in[i]
     for (int i = -1; auto &x : res2) {
         ++i;
         if (x != -1) continue;
