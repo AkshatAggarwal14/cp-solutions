@@ -17,13 +17,20 @@ bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 void Solution() {
     ll n, L, a, t, l;
     cin >> n >> L >> a;
-    ll prev = 0, ans = 0;
-    for (ll i = 0; i < n; ++i) {
+    if (n == 0) return void(cout << L / a);
+    vector<pair<ll, ll>> q(n);
+    for (auto &x : q) {
         cin >> t >> l;
-        ans += (t - prev) / a;
-        prev = t + l;
+        x = {t, t + l};
     }
-    ans += (L - prev) / a;
+    ranges::sort(q);
+    ll s = q[0].first;
+    ll ans = s / a;
+    for (ll i = 1; i < sz(q); ++i) {
+        ll dis = q[i].first - q[i - 1].second;
+        ans += dis / a;
+    }
+    ans += (L - q[n - 1].second) / a;
     cout << ans << '\n';
 }
 
