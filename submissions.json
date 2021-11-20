@@ -1,4 +1,20 @@
 {
+  "AC27410312": {
+    "contest_id": "abc228",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc228/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Takahashi's Secret",
+    "problem_url": "https://atcoder.jp/contests/abc228/tasks/abc228_b",
+    "submission_id": "AC27410312",
+    "submission_url": "https://atcoder.jp/contests/abc228/submissions/27410312",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Nov/20/2021 23:47"
+  },
   "AC27514364": {
     "contest_id": "abc229",
     "language": "C++ (GCC 9.2.1)",
