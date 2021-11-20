@@ -1,4 +1,20 @@
 {
+  "AC27410242": {
+    "contest_id": "abc228",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc228/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "On and Off",
+    "problem_url": "https://atcoder.jp/contests/abc228/tasks/abc228_a",
+    "submission_id": "AC27410242",
+    "submission_url": "https://atcoder.jp/contests/abc228/submissions/27410242",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Nov/20/2021 23:40"
+  },
   "AC27410312": {
     "contest_id": "abc228",
     "language": "C++ (GCC 9.2.1)",
