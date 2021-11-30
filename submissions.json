@@ -1,4 +1,20 @@
 {
+  "AC27599230": {
+    "contest_id": "abc228",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc228/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Linear Probing",
+    "problem_url": "https://atcoder.jp/contests/abc228/tasks/abc228_d",
+    "submission_id": "AC27599230",
+    "submission_url": "https://atcoder.jp/contests/abc228/submissions/27599230",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Nov/30/2021 10:30"
+  },
   "AC27599501": {
     "contest_id": "abc228",
     "language": "C++ (GCC 9.2.1)",
