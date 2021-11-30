@@ -7,12 +7,7 @@ using namespace std;
 #define dbg(...)
 #endif
 using ll = int64_t;
-auto sz = [](const auto &container) -> ll { return container.size(); };
 #define all(x) (x).begin(), (x).end()
-template <class T, class U = T>
-bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
-template <class T, class U = T>
-bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -29,7 +24,7 @@ void Solution() {
     ll n, k;
     cin >> n >> k, --k;
     vector<ll> p(n);
-    for (ll &x : p) {
+    for (ll& x : p) {
         ll a, b, c;
         cin >> a >> b >> c;
         x = a + b + c;
@@ -37,24 +32,6 @@ void Solution() {
     vector<ll> q = p;
     sort(all(q), greater<>());
     for (ll x : p) cout << (x + 300 >= q[k] ? "Yes\n" : "No\n");
-}
-
-void Mine() {
-    ll n, k, temp;
-    cin >> n >> k;
-    vector<ll> p(n);
-    o_multiset<ll> points;
-    for (ll i = 0; i < n; ++i) {
-        ll sum = 0;
-        for (ll j = 0; j < 3; ++j) cin >> temp, sum += temp;
-        p[i] = sum, points.insert(sum);
-    }
-    for (ll i = 0; i < n; ++i) {
-        ll score = p[i] + 300;
-        ll ppl_less_equal = points.order_of_key(score + 1);
-        ll rank = n - ppl_less_equal + 1;
-        cout << (rank <= k ? "Yes\n" : "No\n");
-    }
 }
 
 // clang-format off
@@ -66,6 +43,6 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     // ll tc; cin >> tc; while (tc--)
-    Mine();
+    Solution();
     return 0;
 }
