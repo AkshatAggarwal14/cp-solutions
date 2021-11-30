@@ -41,7 +41,7 @@ void Solution() {
 
 void Mine() {
     ll n, k, temp;
-    cin >> n >> k, --k;
+    cin >> n >> k;
     vector<ll> p(n);
     o_multiset<ll> points;
     for (ll i = 0; i < n; ++i) {
@@ -49,8 +49,12 @@ void Mine() {
         for (ll j = 0; j < 3; ++j) cin >> temp, sum += temp;
         p[i] = sum, points.insert(sum);
     }
-    for (ll i = 0; i < n; ++i)
-        cout << (n - (ll)points.order_of_key(p[i] + 301LL) <= k ? "Yes\n" : "No\n");
+    for (ll i = 0; i < n; ++i) {
+        ll score = p[i] + 300;
+        ll ppl_less_equal = points.order_of_key(score + 1);
+        ll rank = n - ppl_less_equal + 1;
+        cout << (rank <= k ? "Yes\n" : "No\n");
+    }
 }
 
 // clang-format off
