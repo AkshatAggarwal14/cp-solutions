@@ -31,6 +31,7 @@ auto find_last_true(auto l, auto r, const auto &p) {
     return binsearch<true>(l, r, p);
 }
 
+const ll INF = 2e9;
 void Solution() {
     ll n, h;
     cin >> n >> h;
