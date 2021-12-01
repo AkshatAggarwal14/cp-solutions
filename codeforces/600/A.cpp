@@ -15,7 +15,7 @@ template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 // splits a std::string into vector<string> at a delimiter
-vector<string> split(const string &s, const string &delims = " ") {
+vector<string> split(const string &s, const string &delims = ";, ") {
     vector<string> res;
     string token = "";
     ll n = s.size();
@@ -53,13 +53,24 @@ void Solution() {
             s2 += ',';
         }
     }
+    if (s2 == ",") {
+        if (s1.back() == ',') s1.pop_back();
+        string res1 = "";
+        for (char &c : s1)
+            if (c != '\0') res1 += c;
+        cout << (s1 == "" ? "-" : "\"" + res1 + "\"") << '\n';
+        cout << "\"\"" << '\n';
+        return;
+    }
+    if (s1.back() == ',') s1.pop_back();
+    if (s2.back() == ',') s2.pop_back();
     string res1 = "", res2 = "";
     for (char &c : s1)
         if (c != '\0') res1 += c;
     for (char &c : s2)
         if (c != '\0') res2 += c;
-    cout << (res1.length() == 0 ? "-" : "\"" + res1.substr(0, res1.length() - 1) + "\"") << '\n';
-    cout << (res2.length() == 0 ? "-" : "\"" + res2.substr(0, res2.length() - 1) + "\"") << '\n';
+    cout << (s1 == "" ? "-" : "\"" + res1 + "\"") << '\n';
+    cout << (s2 == "" ? "-" : "\"" + res2 + "\"") << '\n';
 }
 
 // clang-format off
