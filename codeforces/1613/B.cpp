@@ -19,7 +19,7 @@ void Solution() {
     cin >> n;
     vector<ll> a(n);
     for (ll &x : a) cin >> x;
-    ll Y = *min_element(all(a));  // 0 ... min - 1 <- not present in A
+    ll Y = *min_element(all(a));
     vector<ll> vals;
     for (ll i = 0; i < n; ++i) {
         if (sz(vals) == n / 2) break;
