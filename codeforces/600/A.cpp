@@ -44,11 +44,15 @@ void Solution() {
             if (!(c >= '0' && c <= '9')) return false;
         return true;
     };
-    auto add = [&](const string &what, string &to) -> void {
-        if (what != "") to.append(what);
-        to += ',';
-    };
-    for (auto &tok : ans) valid(tok) ? add(tok, s1) : add(tok, s2);
+    for (const auto &tok : ans) {
+        if (valid(tok)) {
+            if (tok != "") s1.append(tok);
+            s1 += ',';
+        } else {
+            if (tok != "") s2.append(tok);
+            s2 += ',';
+        }
+    }
     string res1 = "", res2 = "";
     for (char &c : s1)
         if (c != '\0') res1 += c;
