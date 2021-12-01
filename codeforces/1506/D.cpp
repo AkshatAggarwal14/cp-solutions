@@ -28,7 +28,7 @@ template <class key, class value, class cmp = std::less<key>>
 using o_map = __gnu_pbds::tree<key, value, cmp, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
 // make pair with count of contiguous..
-vector<ll> compress(priority_queue<ll> &pq) {
+vector<ll> compress(priority_queue<ll> pq) {
     vector<ll> res;
     ll cnt = 0, last = pq.top();
     while (!pq.empty()) {
