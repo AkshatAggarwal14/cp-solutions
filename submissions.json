@@ -1,4 +1,21 @@
 {
+  "CF137712267": {
+    "contest_id": 1613,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1613/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Crazy Robot",
+    "problem_url": "https://codeforces.com/contest/1613/problem/E",
+    "submission_id": "CF137712267",
+    "submission_url": "https://codeforces.com/contest/1613/submission/137712267",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*2000"
+    ],
+    "timestamp": "Dec/01/2021 22:48"
+  },
   "CF137712435": {
     "contest_id": 1613,
     "language": "GNU C++20 (64)",

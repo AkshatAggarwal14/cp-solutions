@@ -27,6 +27,7 @@ void Solution() {
             }
         }
     }
+    vector<vector<int>> done(n, vector<int>(m, 0));
     queue<pair<ll, ll>> bfs;
     bfs.push({lx, ly});
     while (!bfs.empty()) {
