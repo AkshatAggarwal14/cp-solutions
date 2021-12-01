@@ -27,34 +27,41 @@ using o_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_sta
 template <class key, class value, class cmp = std::less<key>>
 using o_map = __gnu_pbds::tree<key, value, cmp, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
-// make pair with count of contiguous..
-vector<ll> compress(priority_queue<ll> pq) {
-    vector<ll> res;
-    ll cnt = 0, last = pq.top();
-    while (!pq.empty()) {
-        if (pq.top() == last) {
-            cnt++;
-        } else {
-            res.push_back(cnt);
-            last = pq.top(), cnt = 1;
-        }
-        pq.pop();
+void Solution() {
+    ll n, num;
+    cin >> n;
+    map<ll, ll> cnt;  // only count of distinct nums is important
+    for (ll i = 0; i < n; ++i) {
+        cin >> num;
+        ++cnt[num];
     }
-    if (cnt) res.push_back(cnt);
-    return res;
+    multiset<ll> vals;
+    for (auto &[x, y] : cnt) vals.insert(y);  // count of distinct
+    while (sz(vals) > 1) {
+        ll f = *vals.begin();
+        ll b = *vals.rbegin();
+        vals.erase(vals.lower_bound(f));
+        vals.erase(vals.lower_bound(b));
+        f -= 1, b -= 1;  // 2 distinct nums
+        if (f) vals.insert(f);
+        if (b) vals.insert(b);
+    }
+    if (vals.empty()) return void(cout << 0 << '\n');
+    cout << *vals.begin() << '\n';
 }
+
+//--------------------------------------------------------------------
 
 void Faster() {
     ll n, num;
     cin >> n;
-    priority_queue<ll> pq1;
+    map<ll, ll> cnt;  // only count of distinct nums is important
     for (ll i = 0; i < n; ++i) {
         cin >> num;
-        pq1.push(num);
+        ++cnt[num];
     }
-    vector<ll> cnt = compress(pq1);
     priority_queue<ll> pq;
-    for (auto val : cnt) pq.push(val);
+    for (auto val : cnt) pq.push(val.second);
     while (sz(pq) > 1) {
         ll p1 = pq.top();
         pq.pop();
