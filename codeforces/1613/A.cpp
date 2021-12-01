@@ -23,6 +23,7 @@ void Solution() {
     s1.append(string(zeroes1, '0'));
     s2.append(string(zeroes2, '0'));
     p1 -= zeroes1, p2 -= zeroes2;
+    dbg(s1, s2, p1, p2);
     if (s1 == s2) {
         if (p1 == p2) return void(cout << "=\n");
         if (p1 < p2) return void(cout << "<\n");
@@ -31,10 +32,10 @@ void Solution() {
     if (s1 < s2) {
         if (p1 <= p2) return void(cout << "<\n");
         return void(cout << ">\n");
+    } else {
+        if (p2 <= p1) return void(cout << ">\n");
+        return void(cout << "<\n");
     }
-    // s1 > s2
-    if (p2 <= p1) return void(cout << ">\n");
-    return void(cout << "<\n");
 }
 
 // clang-format off
