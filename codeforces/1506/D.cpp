@@ -28,31 +28,33 @@ template <class key, class value, class cmp = std::less<key>>
 using o_map = __gnu_pbds::tree<key, value, cmp, __gnu_pbds::rb_tree_tag, __gnu_pbds::tree_order_statistics_node_update>;
 
 // make pair with count of contiguous..
-vector<pair<ll, ll>> compress(const vector<ll> &t) {
-    if (t.empty()) return {};
-    vector<pair<ll, ll>> res;
-    ll cnt = 0, last = t[0];
-    for (ll i = 0; i < sz(t); ++i) {
-        if (t[i] == last) {
+vector<ll> compress(priority_queue<ll> &pq) {
+    vector<ll> res;
+    ll cnt = 0, last = pq.top();
+    while (!pq.empty()) {
+        if (pq.top() == last) {
             cnt++;
         } else {
-            res.push_back({last, cnt});
-            last = t[i], cnt = 1;
+            res.push_back(cnt);
+            last = pq.top(), cnt = 1;
         }
+        pq.pop();
     }
-    if (cnt) res.push_back({last, cnt});
+    if (cnt) res.push_back(cnt);
     return res;
 }
 
 void Faster() {
-    ll n;
+    ll n, num;
     cin >> n;
-    vector<ll> v(n);
-    for (ll &x : v) cin >> x;
-    sort(all(v));
-    vector<pair<ll, ll>> cnt = compress(v);
+    priority_queue<ll> pq1;
+    for (ll i = 0; i < n; ++i) {
+        cin >> num;
+        pq1.push(num);
+    }
+    vector<ll> cnt = compress(pq1);
     priority_queue<ll> pq;
-    for (auto val : cnt) pq.push(val.second);
+    for (auto val : cnt) pq.push(val);
     while (sz(pq) > 1) {
         ll p1 = pq.top();
         pq.pop();
