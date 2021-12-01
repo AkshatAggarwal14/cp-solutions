@@ -38,12 +38,12 @@ void Solution() {
             if (nX < 0 || nY < 0 || nX >= n || nY >= m) continue;
             if (grid[nX][nY] != '.') continue;
             // now check every cell
-            ll blocked = 0;
+            ll allowed = 0;
             for (ll kk = 0; kk < 4; ++kk) {
                 ll nnX = nX + dx[kk], nnY = nY + dy[kk];
-                if (nnX < 0 || nnX >= n || nnY < 0 || nnY >= m || grid[nnX][nnY] != '.') blocked++;
+                if (nnX >= 0 && nnX < n && nnY >= 0 && nnY < m && grid[nnX][nnY] == '.') allowed++;
             }
-            if (blocked >= 3) {
+            if (allowed <= 1) {
                 grid[nX][nY] = '+';
                 bfs.push({nX, nY});
             }
