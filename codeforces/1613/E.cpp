@@ -15,7 +15,7 @@ template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 ll dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
-void Solution() {
+void BFS() {
     ll n, m, lx = 0, ly = 0;
     cin >> n >> m;
     vector<vector<char>> grid(n, vector<char>(m, '.'));
@@ -27,7 +27,6 @@ void Solution() {
             }
         }
     }
-    vector<vector<int>> done(n, vector<int>(m, 0));
     queue<pair<ll, ll>> bfs;
     bfs.push({lx, ly});
     while (!bfs.empty()) {
@@ -39,17 +38,60 @@ void Solution() {
             if (nX < 0 || nY < 0 || nX >= n || nY >= m) continue;
             if (grid[nX][nY] != '.') continue;
             // now check every cell
-            ll allowed = 0;
+            ll blocked = 0;
             for (ll kk = 0; kk < 4; ++kk) {
                 ll nnX = nX + dx[kk], nnY = nY + dy[kk];
-                if (nnX >= 0 && nnX < n && nnY >= 0 && nnY < m && grid[nnX][nnY] == '.') allowed++;
+                if (nnX < 0 || nnX >= n || nnY < 0 || nnY >= m || grid[nnX][nnY] != '.') blocked++;
             }
-            if (allowed <= 1) {
+            if (blocked >= 3) {
                 grid[nX][nY] = '+';
-                if (allowed == 1) {
-                    bfs.push({nX, nY});
-                }
+                bfs.push({nX, nY});
             }
+        }
+    }
+    for (ll i = 0; i < n; ++i) {
+        for (ll j = 0; j < m; ++j) cout << grid[i][j];
+        cout << '\n';
+    }
+}
+
+void DFS() {
+    ll n, m, lx = 0, ly = 0;
+    cin >> n >> m;
+    vector<vector<char>> grid(n, vector<char>(m, '.'));
+    for (ll i = 0; i < n; ++i) {
+        for (ll j = 0; j < m; ++j) {
+            cin >> grid[i][j];
+            if (grid[i][j] == 'L') {
+                lx = i, ly = j;
+            }
+        }
+    }
+    auto valid = [&](ll x, ll y) {
+        if (x < 0 || x >= n || y < 0 || y >= m) return false;
+        if (grid[x][y] != '.') return false;
+        return true;
+    };
+    function<void(ll, ll)> dfs = [&](ll X, ll Y) {
+        if (grid[X][Y] == '+' || grid[X][Y] == 'L') return;
+        grid[X][Y] = '+';  // visited
+        for (ll k = 0; k < 4; ++k) {
+            ll nx = X + dx[k], ny = Y + dy[k];
+            if (valid(nx, ny)) {
+                ll blocked = 0;
+                for (ll kk = 0; kk < 4; ++kk)
+                    if (!valid(nx + dx[kk], ny + dy[kk])) blocked++;
+                if (blocked >= 3) dfs(nx, ny);
+            }
+        }
+    };
+    for (ll k = 0; k < 4; ++k) {
+        ll nx = lx + dx[k], ny = ly + dy[k];
+        if (valid(nx, ny)) {
+            ll blocked = 0;
+            for (ll kk = 0; kk < 4; ++kk)
+                if (!valid(nx + dx[kk], ny + dy[kk])) blocked++;
+            if (blocked >= 3) dfs(nx, ny);
         }
     }
     for (ll i = 0; i < n; ++i) {
@@ -67,6 +109,7 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     ll tc; cin >> tc; while (tc--)
-    Solution();
+    BFS();
+    // DFS();
     return 0;
 }

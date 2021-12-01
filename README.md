@@ -402,7 +402,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 614 | [B - World Cup](https://codeforces.com/contest/996/problem/B) | [GNU C++20 (64)](./codeforces/996/B.cpp) | `binary search` `math` `*1300` | Dec/02/2021 12:16 | 
 613 | [A - Long Comparison](https://codeforces.com/contest/1613/problem/A) | [GNU C++20 (64)](./codeforces/1613/A.cpp) | `implementation` `math` `*900` | Dec/01/2021 23:40 | 
 612 | [B - Absent Remainder](https://codeforces.com/contest/1613/problem/B) | [GNU C++20 (64)](./codeforces/1613/B.cpp) | `greedy` `implementation` `sortings` `*1000` | Dec/01/2021 23:40 | 
-611 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++20 (64)](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/01/2021 22:51 | 
+611 | [E - Crazy Robot](https://codeforces.com/contest/1613/problem/E) | [GNU C++20 (64)](./codeforces/1613/E.cpp) | `dfs and similar` `graphs` `*2000` | Dec/01/2021 23:40 | 
 610 | [C - Intense Heat](https://codeforces.com/contest/1003/problem/C) | [GNU C++20 (64)](./codeforces/1003/C.cpp) | `brute force` `implementation` `math` `*1300` | Dec/01/2021 16:36 | 
 609 | [B - TMT Document](https://codeforces.com/contest/1509/problem/B) | [GNU C++20 (64)](./codeforces/1509/B.cpp) | `greedy` `*1100` | Dec/01/2021 15:45 | 
 608 | [D - Epic Transformation](https://codeforces.com/contest/1506/problem/D) | [GNU C++20 (64)](./codeforces/1506/D.cpp) | `constructive algorithms` `data structures` `greedy` `*1400` | Dec/01/2021 13:36 | 
