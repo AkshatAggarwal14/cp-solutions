@@ -109,7 +109,7 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     ll tc; cin >> tc; while (tc--)
-    BFS();
-    // DFS();
+    // BFS();
+    DFS();
     return 0;
 }
