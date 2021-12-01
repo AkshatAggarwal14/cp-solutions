@@ -1,4 +1,20 @@
 {
+  "CF137717492": {
+    "contest_id": 1613,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1613/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Poisoned Dagger",
+    "problem_url": "https://codeforces.com/contest/1613/problem/C",
+    "submission_id": "CF137717492",
+    "submission_url": "https://codeforces.com/contest/1613/submission/137717492",
+    "tags": [
+      "binary search",
+      "*1200"
+    ],
+    "timestamp": "Dec/01/2021 23:40"
+  },
   "CF137762814": {
     "contest_id": 279,
     "language": "GNU C++20 (64)",
