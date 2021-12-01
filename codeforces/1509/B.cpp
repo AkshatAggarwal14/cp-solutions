@@ -21,14 +21,25 @@ void Solution() {
     ll T = count(all(s), 'T'), M = count(all(s), 'M');
     if (2 * M != T) return void(cout << "NO\n");
     set<ll> firstT, lastT, m;
-    for (ll i = 0; i < n; ++i)
-        (s[i] == 'T' ? ((sz(firstT) == T / 2) ? lastT : firstT) : m).insert(i);
-    while (!firstT.empty() && !lastT.empty() && !m.empty()) {
+    for (ll i = 0; i < n; ++i) {
+        if (s[i] == 'T') {
+            if (sz(firstT) == T / 2)
+                lastT.insert(i);
+            else
+                firstT.insert(i);
+        } else {
+            m.insert(i);
+        }
+    }
+    while (true) {
+        if (firstT.empty() || lastT.empty() || m.empty()) break;
         auto i1 = firstT.begin();          // first possible T
         auto i2 = m.begin();               // first possible M
         auto i3 = lastT.lower_bound(*i2);  // first possible T after M
         if (i2 != m.end() && *i2 > *i1 && *i3 > *i2) {
-            firstT.erase(*i1), m.erase(*i2), lastT.erase(*i3);
+            firstT.erase(*i1);
+            m.erase(*i2);
+            lastT.erase(*i3);
         } else {
             return void(cout << "NO\n");
         }
