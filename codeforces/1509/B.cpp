@@ -21,8 +21,8 @@ void Solution() {
     ll T = count(all(s), 'T'), M = count(all(s), 'M');
     if (2 * M != T) return void(cout << "NO\n");
     set<ll> firstT, lastT, m;
-    for (ll i = 0; i < n; ++i) {
-        if (s[i] == 'T') {
+    for (ll i = 0; char &c : s) {
+        if (c == 'T') {
             if (sz(firstT) == T / 2)
                 lastT.insert(i);
             else
@@ -30,12 +30,15 @@ void Solution() {
         } else {
             m.insert(i);
         }
+        ++i;
     }
+    dbg(firstT, m, lastT);
     while (true) {
         if (firstT.empty() || lastT.empty() || m.empty()) break;
-        auto i1 = firstT.begin();          // first possible T
-        auto i2 = m.begin();               // first possible M
-        auto i3 = lastT.lower_bound(*i2);  // first possible T after M
+        auto i1 = firstT.begin();
+        auto i2 = m.begin();
+        auto i3 = lastT.lower_bound(*i2);
+        dbg(*i1, *i2, *i3);
         if (i2 != m.end() && *i2 > *i1 && *i3 > *i2) {
             firstT.erase(*i1);
             m.erase(*i2);
