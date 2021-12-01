@@ -46,7 +46,9 @@ void Solution() {
             }
             if (allowed <= 1) {
                 grid[nX][nY] = '+';
-                bfs.push({nX, nY});
+                if (allowed == 1) {
+                    bfs.push({nX, nY});
+                }
             }
         }
     }
