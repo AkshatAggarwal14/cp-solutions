@@ -20,6 +20,7 @@ void Solution() {
     vector<ll> a(n), pref(n + 1, 0);
     for (ll &x : a) cin >> x;
     partial_sum(all(a), 1 + pref.begin());
+    dbg(pref);
     ll ans = 0;
     for (ll i = 1; i <= n; ++i)
         amax(ans, distance(pref.begin() + i, --upper_bound(all(pref), pref[i - 1] + t) + 1));
