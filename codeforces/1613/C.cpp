@@ -26,23 +26,14 @@ auto find_first_false(auto l, auto r, const auto &p) {
     return binsearch<false>(l, r, p);
 }
 
-// returns last i in [l, r], p(i) true, and if none found, returns l - 1
-auto find_last_true(auto l, auto r, const auto &p) {
-    return binsearch<true>(l, r, p);
-}
-
-const ll INF = 2e9;
 void Solution() {
     ll n, h;
     cin >> n >> h;
     vector<ll> a(n);
     for (ll &x : a) cin >> x;
-    vector<ll> diff(n - 1);
-    for (ll i = 1; i < n; ++i) diff[i - 1] = a[i] - a[i - 1];
-    dbg(diff);
     cout << find_first_false(1LL, h - 1, [&](ll k) {
         ll damage = k;  // last second
-        for (ll i = 0; i < n - 1; ++i) damage += min(diff[i], k);
+        for (ll i = 1; i < n; ++i) damage += min(a[i] - a[i - 1], k);
         return damage < h;
     }) << '\n';
 }
