@@ -26,19 +26,19 @@ void Solution() {
 }
 
 template <bool b>
-inline ll binsearch(ll l, ll r, const auto &pred) {
+ll binsearch(ll l, ll r, const auto &pred) {
     --l, ++r;
     for (ll m; m = (l + r) / 2, r > l + 1;) (pred(m) ? l : r) = m;
     return (b ? l : r);
 }
 
 // returns first i in [l, r], p(i) false, and if none found, returns r + 1
-inline ll find_first_false(ll l, ll r, const auto &p) {
+ll find_first_false(ll l, ll r, const auto &p) {
     return binsearch<false>(l, r, p);
 }
 
 // returns last i in [l, r], p(i) true, and if none found, returns l - 1
-inline ll find_last_true(ll l, ll r, const auto &p) {
+ll find_last_true(ll l, ll r, const auto &p) {
     return binsearch<true>(l, r, p);
 }
 
