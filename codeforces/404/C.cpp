@@ -14,27 +14,6 @@ bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
 template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
-//--------------------------------------------------------------------------------
-
-void Better() {
-    ll n, k, d;
-    cin >> n >> k;
-    vector<vector<ll>> a(n + 1);
-    for (ll i = 1; i <= n; i++) cin >> d, a[d].push_back(i);
-    bool flag = (sz(a[0]) == 1);
-    flag &= (sz(a[1]) <= k);
-    for (ll i = 1; i < n; i++)
-        flag &= sz(a[i]) * (k - 1) >= sz(a[i + 1]);
-    if (!flag) return void(cout << "-1\n");
-    cout << n - 1 << '\n';  // tree
-    for (ll i = 0; i <= n - 1; i++) {
-        for (ll j = 0; j < sz(a[i + 1]); j++) {
-            // connect child to j of parent.-> % -> equally
-            cout << a[i][j % sz(a[i])] << ' ' << a[i + 1][j] << '\n';
-        }
-    }
-}
-
 void Solution() {
     ll n, k, p = 1;
     cin >> n >> k;
@@ -71,6 +50,25 @@ void Solution() {
     if (*ranges::max_element(deg) > k || edges.empty()) return void(cout << "-1\n");
     cout << sz(edges) << '\n';
     for (auto &[x, y] : edges) cout << x + 1 << ' ' << y + 1 << '\n';
+}
+
+void Better() {
+    ll n, k, d;
+    cin >> n >> k;
+    vector<vector<ll>> a(n + 1);
+    for (ll i = 1; i <= n; i++) cin >> d, a[d].push_back(i);
+    bool flag = (sz(a[0]) == 1);
+    flag &= (sz(a[1]) <= k);
+    for (ll i = 1; i < n; i++)
+        flag &= sz(a[i]) * (k - 1) >= sz(a[i + 1]);
+    if (!flag) return void(cout << "-1\n");
+    cout << n - 1 << '\n';  // tree
+    for (ll i = 0; i <= n - 1; i++) {
+        for (ll j = 0; j < sz(a[i + 1]); j++) {
+            // connect child to j of parent.-> % -> equally
+            cout << a[i][j % sz(a[i])] << ' ' << a[i + 1][j] << '\n';
+        }
+    }
 }
 
 // clang-format off
