@@ -32,7 +32,7 @@ auto find_last_true(auto l, auto r, const auto &p) {
 }
 
 ll query(ll l, ll r) {
-    if (l >= r) return -1;  // never equal
+    if (l >= r) return -1;
     cout << "? " << l << ' ' << r << endl;
     ll res;
     cin >> res;
@@ -45,19 +45,12 @@ void Solution() {
     ll n;
     cin >> n;
     ll smax = query(1, n), ans = -1;
-    if (query(1, smax) != smax) {
-        /*
-                        idx: smax, smax+1, smax+2,.., ... n
-                        val: smax, ... ,.. ,..max, ... ,...
-            query(smax,idx): !=     !=   !=   [==] <- all equal after this
-        */
+    if (smax == 1 || query(1, smax) != smax) {
+        // if 0 or q[0, smax] is smaller than smax
+        // it is the first index after smax then returns same res for query
         ans = find_first_false(smax, n, [&](ll m) { return (query(smax, m) != smax); });
     } else {
-        /*
-                        idx: 1, 2, 3, ..., ..., smax
-                        val: ...,... max,..,...,..smax
-            query(smax,idx): ==  ==  [==]   != <- .. all not equal after this
-        */
+        // it is the largest index less than smax, where res is same as query
         ans = find_last_true(1LL, smax, [&](ll m) { return (query(m, smax) == smax); });
     }
     cout << "! " << ans << endl;
