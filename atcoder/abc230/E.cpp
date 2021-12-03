@@ -48,7 +48,7 @@ void BS() {
         valid.push_back(i);
         if (i != n / i) valid.push_back(n / i);  // all possible n/i
     }
-    // sort(all(valid)); <- not needed
+    sort(all(valid));
     ll ans = 0;
     for (ll &v : valid) {
         ll i1 = find_first_false(1LL, n, [&](ll m) { return n / m > v; });
