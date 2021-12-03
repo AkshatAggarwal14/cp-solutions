@@ -45,12 +45,9 @@ void Solution() {
     ll n;
     cin >> n;
     ll smax = query(0, n - 1), ans = -1;
-    if (smax == 0 || query(0, smax) != smax) {
-        // if 0 or q[0, smax] is smaller than smax
-        // it is the first index after smax then returns same res for query
+    if (smax == 0 || query(0, smax) != smax) {  // find in interval after smax
         ans = find_first_false(smax, n - 2, [&](ll m) { return (query(smax, m) != smax); }) + 1;
     } else {
-        // it is the largest index less than smax, where res is same as query
         ans = find_last_true(1LL, smax, [&](ll m) { return (query(m, smax) == smax); }) + 1;
     }
     cout << "! " << ans << endl;
