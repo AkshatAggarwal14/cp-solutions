@@ -26,15 +26,21 @@ void Solution() {
 }
 
 template <bool b>
-ll binsearch(ll l, ll r, const auto &pred) {
+inline ll binsearch(ll l, ll r, const auto &pred) {
     --l, ++r;
     for (ll m; m = (l + r) / 2, r > l + 1;) (pred(m) ? l : r) = m;
     return (b ? l : r);
 }
+
 // returns first i in [l, r], p(i) false, and if none found, returns r + 1
-ll find_first_false(ll l, ll r, const auto &p) { return binsearch<false>(l, r, p); }
+inline ll find_first_false(ll l, ll r, const auto &p) {
+    return binsearch<false>(l, r, p);
+}
+
 // returns last i in [l, r], p(i) true, and if none found, returns l - 1
-ll find_last_true(ll l, ll r, const auto &p) { return binsearch<true>(l, r, p); }
+inline ll find_last_true(ll l, ll r, const auto &p) {
+    return binsearch<true>(l, r, p);
+}
 
 // https://codeforces.com/contest/1263/problem/C
 void BS() {
@@ -44,11 +50,10 @@ void BS() {
     ll n;
     cin >> n;
     vector<ll> valid;  // contains all possible n/i
-    for (ll i = 1; i * i <= n; ++i) {
-        valid.push_back(i);
-        if (i != n / i) valid.push_back(n / i);  // all possible n/i
-    }
+    for (ll i = 1; i * i <= n; ++i)
+        valid.push_back(i), valid.push_back(n / i);  // all possible n/i
     sort(all(valid));
+    valid.resize(unique(all(valid)) - valid.begin());
     ll ans = 0;
     for (ll &v : valid) {
         ll i1 = find_first_false(1LL, n, [&](ll m) { return n / m > v; });
