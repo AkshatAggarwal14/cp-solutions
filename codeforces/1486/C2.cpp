@@ -49,14 +49,14 @@ void Solution() {
         /*
                         idx: smax, smax+1, smax+2,.., ... n
                         val: smax, ... ,.. ,..max, ... ,...
-            query(smax,idx): !=     !=   !=   [==] <- all equal after this
+            query(smax,idx): !=     !=         = <- all equal after this
         */
         ans = find_first_false(smax, n, [&](ll m) { return (query(smax, m) != smax); });
     } else {
         /*
                         idx: 1, 2, 3, ..., ..., smax
-                        val: ...,... max,..,...,..smax
-            query(smax,idx): ==  ==  [==]   != <- .. all not equal after this
+                        val: ...,..max,..,...,..smax
+            query(smax,idx): == == != <- .. all not equal after this
         */
         ans = find_last_true(1LL, smax, [&](ll m) { return (query(m, smax) == smax); });
     }
