@@ -42,7 +42,6 @@ ll find_last_true(ll l, ll r, const auto &p) {
     return binsearch<true>(l, r, p);
 }
 
-// https://codeforces.com/contest/1263/problem/C
 void BS() {
     // for n = 5, n/i -> 5 2 1 1 1
     // looks like finding first and last occurence and adding
@@ -50,11 +49,12 @@ void BS() {
     ll n;
     cin >> n;
     vector<ll> valid;  // contains all possible n/i
-    for (ll i = 1; i * i <= n; ++i)
-        valid.push_back(i), valid.push_back(n / i);  // all possible n/i
-    sort(all(valid));
-    valid.resize(unique(all(valid)) - valid.begin());
+    for (ll i = 1; i * i <= n; ++i) {
+        valid.push_back(i);
+        if (i != n / i) valid.push_back(n / i);
+    }
     ll ans = 0;
+    sort(all(valid));
     for (ll &v : valid) {
         ll i1 = find_first_false(1LL, n, [&](ll m) { return n / m > v; });
         ll i2 = find_last_true(1LL, n, [&](ll m) { return n / m >= v; });
