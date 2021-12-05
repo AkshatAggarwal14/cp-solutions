@@ -32,13 +32,17 @@ void Solution() {
     vis[sx][sy] = true;
     while (!bfs.empty()) {
         if (sum == 0) break;
-        ll X = bfs.front().first, Y = bfs.front().second;
-        bfs.pop(), vis[X][Y] = 2;  // marked
+        ll X = bfs.front().first;
+        ll Y = bfs.front().second;
+        dbg(sum, bfs);
+        bfs.pop();
+        vis[X][Y] = 2;
         --sum;
         for (ll K = 0; K < 4; ++K) {
             ll nx = X + dx[K], ny = Y + dy[K];
-            if (nx < 0 || nx >= n || ny < 0 || ny >= m || vis[nx][ny] || grid[nx][ny] != '.') continue;
-            bfs.push({nx, ny}), vis[nx][ny] = 1;  // visited -> so doesnt get pushed again
+            if (nx < 0 || nx >= n || ny < 0 || ny >= m || vis[nx][ny] != 0 || grid[nx][ny] != '.') continue;
+            bfs.push({nx, ny});
+            vis[nx][ny] = 1;
         }
     }
     for (ll i = 0; i < n; ++i)
