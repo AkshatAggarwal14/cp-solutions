@@ -1,4 +1,20 @@
 {
+  "CF138082850": {
+    "contest_id": 377,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/377/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Maze",
+    "problem_url": "https://codeforces.com/contest/377/problem/A",
+    "submission_id": "CF138082850",
+    "submission_url": "https://codeforces.com/contest/377/submission/138082850",
+    "tags": [
+      "dfs and similar",
+      "*1600"
+    ],
+    "timestamp": "Dec/05/2021 15:27"
+  },
   "CF138094033": {
     "contest_id": 1353,
     "language": "GNU C++20 (64)",
