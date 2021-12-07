@@ -38,8 +38,12 @@ void Solution() {
     vector<ll> idx(n);
     for (ll &i : idx) cin >> i;
     cout << find_last_true(1LL, n, [&](ll M) {  // bin search
-        string s(t);
-        for (ll i = 0; i < M; ++i) s[idx[i] - 1] = '.';  // marked blocked
+        string s = "";
+        vector<bool> mark(sz(t), true);
+        for (ll i = 0; i < M; ++i) mark[idx[i] - 1] = false;
+        for (ll i = 0; i < n; ++i)
+            if (mark[i]) s += t[i];  // build string after M moves.
+
         // check subsequence, as if subsequence then he can continue himself.
         ll pos = 0;
         for (ll i = 0; i < sz(s); ++i)
