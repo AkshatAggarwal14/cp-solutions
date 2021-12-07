@@ -28,9 +28,9 @@ void Solution() {
         /*
         3 cases: 
         
-        1. Either d[i][j] remains same                      // i -> j
-        2. d[i][u] + d[u][v] + d[v][j] is less than d[i][j] // i -> u -> v -> j
-        3. d[i][v] + d[u][v] + d[u][j] is less than d[i][j] // i -> v -> u -> j
+        1. Either d[i][j] remains same
+        2. d[i][u] + d[u][v] + d[v][j] is less than d[i][j]
+        3. d[i][v] + d[u][v] + d[u][j] is less than d[i][j]
         */
         for (ll i = 0; i < n; ++i)
             for (ll j = 0; j < n; ++j)
