@@ -14,12 +14,12 @@ bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
 template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
-const ll N = 1000;
+const ll N = 1005;
 const ll MOD = 1e9 + 7;
 ll M(ll x) { return ((x % MOD) + MOD) % MOD; }
 ll add(ll x, ll y) { return (M(x) + M(y)) % MOD; }
 ll mul(ll x, ll y) { return (M(x) * M(y)) % MOD; }
-array<ll, N + 1> fact;
+ll fact[N];
 ll modpow(ll x, ll y, ll m) {
     if (y == 0) return 1 % m;
     ll u = modpow(x, y / 2, m);
@@ -33,7 +33,7 @@ ll modpow(ll x, ll y, ll m) {
 ll inv(ll a, ll m = MOD) { return modpow(a, m - 2, m); }  //Fermats little theorem
 void init() {
     fact[0] = 1;
-    for (ll i = 1; i <= N; i++) fact[i] = (fact[i - 1] * i) % MOD;
+    for (ll i = 1; i < N; i++) fact[i] = (fact[i - 1] * i) % MOD;
 }
 ll C(ll a, ll b) {
     if (a < b) return 0;
