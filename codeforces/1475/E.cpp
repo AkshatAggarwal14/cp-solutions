@@ -14,7 +14,7 @@ bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
 template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
-const ll N = 1005;
+const ll N = 10000;
 const ll MOD = 1e9 + 7;
 ll M(ll x) { return ((x % MOD) + MOD) % MOD; }
 ll add(ll x, ll y) { return (M(x) + M(y)) % MOD; }
