@@ -28,7 +28,7 @@ void Solution() {
         for (ll k = 0; k < 4; ++k) {
             ll nx = x + dx[k], ny = y + dy[k];
             if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-            if (grid[nx][ny] == '*') continue;     //blocked
+            if (grid[nx][ny] == '*') continue;     //visited
             if (which_cc[nx][ny] != -1) continue;  //visited
             dfs(nx, ny);
         }
