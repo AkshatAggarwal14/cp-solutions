@@ -24,7 +24,7 @@ void Solution() {
         rec(num * 10 + y, digs + 1);
     };
     for (x = 0; x <= 9; ++x)
-        for (y = x + 1; y <= 9; ++y) rec(0, 0);
+        for (y = 0; y <= 9; ++y) rec(0, 0);
     vals.insert(1000000000);
     ll n;
     cin >> n;
