@@ -39,16 +39,26 @@ struct graph {
         d[node] = 1;
         for (ll &child : adj[node]) {
             if (d[child] != -1) {
-                if (child != parent) flag = false;  //! CYCLE
+                if (child != parent) flag = false;
                 continue;
             }
             d[child] = 1;
             dfs(child, node);
         }
     }
+    friend ostream &operator<<(ostream &out, graph &obj) {
+        for (ll i = 0; i < (ll)obj.adj.size(); ++i) {
+            out << i << " -> {";
+            for (ll j = 0; j < (ll)obj.adj[i].size(); ++j) {
+                out << obj.adj[i][j];
+                if (j != (ll)obj.adj[i].size() - 1) out << ", ";
+            }
+            out << "}\n";
+        }
+        return out;
+    }
 };
 
-// deg > 2 or cycle
 void Solution() {
     ll n, m;
     cin >> n >> m;
