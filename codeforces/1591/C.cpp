@@ -14,6 +14,23 @@ bool amin(T &a, U &&b) { return b < a ? a = std::forward<U>(b), true : false; }
 template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
+// make pair with count of contiguous..
+vector<pair<ll, ll>> compress(const vector<ll> &t) {
+    if (t.empty()) return {};
+    vector<pair<ll, ll>> res;
+    ll cnt = 0, last = t[0];
+    for (ll i = 0; i < sz(t); ++i) {
+        if (t[i] == last) {
+            cnt++;
+        } else {
+            res.push_back({last, cnt});
+            last = t[i], cnt = 1;
+        }
+    }
+    if (cnt) res.push_back({last, cnt});
+    return res;
+}
+
 void Solution() {
     ll n, k, num;
     cin >> n >> k;
@@ -24,58 +41,32 @@ void Solution() {
     }
     sort(all(pos));
     sort(all(neg));
-    // calculate for pos and negative seperately.
-    // go reverse, handle last k, then 2nd last group of k...
-    ll ans1 = 0, ans2 = 0, max1 = 0, max2 = 0;
-
-    //? handling positives
+    ll ans1 = 0, ans2 = 0, l1 = 0, l2 = 0;
     for (ll i = sz(pos) - 1; i >= 0; i -= k) {
         ll s = 0;
-        for (ll j = i; j >= i - k && j >= 0; --j) amax(s, pos[j]);
+        for (ll j = i; j >= i - k && j >= 0; --j) {
+            amax(s, pos[j]);
+        }
         if (i == sz(pos) - 1) {
-            ans1 += s;  // go to first group from end only once
-            max1 = s;   // max element in first group from end.
-        } else {
-            ans1 += 2 * s;  // go to others twice
-        }
+            ans1 += s;
+            l1 = s;
+        } else
+            ans1 += 2 * s;
     }
-
-    //? handling negatives
-    for (ll i = sz(neg) - 1; i >= 0; i -= k) {  //! O(n/k * k)
+    dbg(ans1, l1);
+    for (ll i = sz(neg) - 1; i >= 0; i -= k) {
         ll s = 0;
-        for (ll j = i; j >= i - k && j >= 0; --j) amax(s, neg[j]);
-        if (i == sz(neg) - 1) {
-            ans2 += s;  // go to first group from end only once
-            max2 = s;
-        } else {
-            ans2 += 2 * s;  // go to others twice
+        for (ll j = i; j >= i - k && j >= 0; --j) {
+            amax(s, neg[j]);
         }
+        if (i == sz(neg) - 1) {
+            ans2 += s;
+            l2 = s;
+        } else
+            ans2 += 2 * s;
     }
-
-    cout << ans1 + ans2 + min(max1, max2) << '\n';  // have to come back -> max1 or max2
-}
-
-// ----------------------------------------------------------------------------------------
-void Better() {
-    ll n, k, num;
-    cin >> n >> k;
-    vector<ll> pos, neg;
-    for (ll i = 0; i < n; ++i) {
-        cin >> num;
-        ((num >= 0) ? pos : neg).push_back(abs(num));
-    }
-    sort(all(pos), greater<ll>());
-    sort(all(neg), greater<ll>());
-    // calculate for pos and negative seperately.
-    // go reverse, handle last k, then 2nd last group of k...
-    ll ans = 0;
-    //? handling positives
-    for (ll i = 0; i < sz(pos); i += k) ans += 2 * pos[i];  // all double
-    if (sz(pos)) ans -= pos[0];                             // last once
-    //? handling negatives
-    for (ll i = 0; i < sz(neg); i += k) ans += 2 * neg[i];                          // all double
-    if (sz(neg)) ans -= neg[0];                                                     // last once
-    cout << ans + min((sz(pos) ? pos[0] : 0LL), (sz(neg) ? neg[0] : 0LL)) << '\n';  // have to come back -> max1 or max2
+    dbg(ans2, l2);
+    cout << ans1 + ans2 + min(l1, l2) << '\n';
 }
 
 // clang-format off
@@ -87,7 +78,6 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     ll tc; cin >> tc; while (tc--)
-    Better();
-    // Solution();
+    Solution();
     return 0;
 }
