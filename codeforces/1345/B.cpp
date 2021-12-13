@@ -39,10 +39,12 @@ void Solution() {
     ll n;
     cin >> n;
     ll ans = 0;
-    while (n >= 2) {  // as 2 is minimum needed for constructing
-        ll last = find_last_true(0LL, ll(1e9), [&](ll m) { return ((m * (m + 1)) / 2) * 3 - m <= n; });
-        last = ((last * (last + 1)) / 2) * 3 - last;  // size of largest <= n
-        n -= last, ans++;
+    while (n >= 2) {
+        ll last = find_last_true(0LL, ll(1e9), [&](ll m) {
+            return ((m * (m + 1)) / 2) * 3 - m <= n;
+        });
+        n -= ((last * (last + 1)) / 2) * 3 - last;
+        ans++;
     }
     cout << ans << '\n';
 }
