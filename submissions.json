@@ -1,4 +1,23 @@
 {
+  "CF138968647": {
+    "contest_id": 1538,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1538/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Number of Pairs",
+    "problem_url": "https://codeforces.com/contest/1538/problem/C",
+    "submission_id": "CF138968647",
+    "submission_url": "https://codeforces.com/contest/1538/submission/138968647",
+    "tags": [
+      "binary search",
+      "data structures",
+      "math",
+      "two pointers",
+      "*1300"
+    ],
+    "timestamp": "Dec/13/2021 15:23"
+  },
   "CF138970821": {
     "contest_id": 1077,
     "language": "GNU C++20 (64)",
