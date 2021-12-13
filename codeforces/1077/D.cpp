@@ -37,7 +37,7 @@ void Solution() {
     vector<ll> a(n);
     map<ll, ll> cnt;
     for (ll &x : a) cin >> x, ++cnt[x];
-    // exaclty k elements, we can cut x times, x is the needed number of occurences
+    // exaclty k elements, we can cut x times.
     ll max_cut = find_last_true(1LL, n, [&](ll X) -> bool {
         ll length = 0;
         for (auto &[x, y] : cnt) length += y / X;
