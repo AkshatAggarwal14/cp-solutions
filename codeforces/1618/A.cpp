@@ -43,13 +43,6 @@ void Solution() {
     } while (next_permutation(all(a)));
 }
 
-// ---------------------------------------------------------------------------
-void Better() {
-    vector<ll> a(7);
-    for (ll &x : a) cin >> x;
-    cout << a[0] << ' ' << a[1] << ' ' << a[6] - a[0] - a[1] << '\n';
-}
-
 // clang-format off
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
@@ -59,6 +52,6 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     ll tc; cin >> tc; while (tc--)
-    Better();
+    Solution();
     return 0;
 }
