@@ -1,4 +1,24 @@
 {
+  "CF139150860": {
+    "contest_id": 1462,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1462/E1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E1",
+    "problem_name": "Close Tuples (easy version)",
+    "problem_url": "https://codeforces.com/contest/1462/problem/E1",
+    "submission_id": "CF139150860",
+    "submission_url": "https://codeforces.com/contest/1462/submission/139150860",
+    "tags": [
+      "binary search",
+      "combinatorics",
+      "math",
+      "sortings",
+      "two pointers",
+      "*1500"
+    ],
+    "timestamp": "Dec/14/2021 19:02"
+  },
   "CF139153598": {
     "contest_id": 1462,
     "language": "GNU C++20 (64)",

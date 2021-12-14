@@ -20,11 +20,12 @@ void Solution() {
     vector<ll> a(n), cnt(n + 3, 0);  //n+3 to handle cases
     for (ll &x : a) cin >> x, ++cnt[x];
     ll ans = 0;
-    auto C = [&](const ll &N, const int &R) -> ll {
-        if (cnt[N] < R) return 0LL;
-        if (R == 1) return cnt[N];                          // C(N, 1)
-        if (R == 2) return (cnt[N] * (cnt[N] - 1)) / 2;     // C(N, 2)
-        return (cnt[N] * (cnt[N] - 1) * (cnt[N] - 2)) / 6;  // C(N, 3)
+    auto C = [&](ll N, ll R) -> ll {
+        N = cnt[N];  //!
+        if (N < R) return 0LL;
+        if (R == 1) return N;                  // C(N, 1)
+        if (R == 2) return (N * (N - 1)) / 2;  // C(N, 2)
+        return (N * (N - 1) * (N - 2)) / 6;    // C(N, 3)
     };
     for (ll i = 1; i <= n; ++i) {
         ans += C(i, 2) * C(i + 2, 1);                // i, i, i + 2
@@ -41,7 +42,7 @@ void Map() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    map<ll, ll> cnt;  //! if ai was till 1e9
+    map<ll, ll> cnt;  // if ai was till 1e9
     for (ll &x : a) cin >> x, ++cnt[x];
     ll ans = 0;
     auto C = [&](const ll &N, const int &R) -> ll {
@@ -71,6 +72,7 @@ int main() {
 #endif
     cout << fixed << setprecision(12);
     ll tc; cin >> tc; while (tc--)
-    Solution();
+    Map();
+    // Solution();
     return 0;
 }
