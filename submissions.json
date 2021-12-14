@@ -16461,6 +16461,27 @@
     ],
     "timestamp": "Dec/14/2021 20:13"
   },
+  "CF139318825": {
+    "contest_id": 1618,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1618/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Reverse",
+    "problem_url": "https://codeforces.com/contest/1618/problem/F",
+    "submission_id": "CF139318825",
+    "submission_url": "https://codeforces.com/contest/1618/submission/139318825",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "dfs and similar",
+      "implementation",
+      "math",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Dec/14/2021 23:24"
+  },
   "CF139351825": {
     "contest_id": 159,
     "language": "GNU C++20 (64)",

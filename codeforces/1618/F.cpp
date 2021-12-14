@@ -39,18 +39,25 @@ ll reversed(ll n) {
 
 ll x, y;
 set<ll> vals;
+
 void recurse(ll cx) {
     if (cx > (ll)6e18) return;
     if (vals.count(cx) || vals.count(y)) return;
     vals.insert(cx);
-    recurse(reversed(cx));
-    recurse(reversed(cx * 2 + 1));
+    ll nx = reversed(cx);
+    recurse(nx);
+    cx = cx * 2 + 1;
+    nx = reversed(cx);
+    recurse(nx);
 }
 
 void Solution() {
     cin >> x >> y;
     recurse(x);
-    cout << ((vals.count(y)) ? "YES\n" : "NO\n");
+    if (vals.count(y))
+        cout << "YES\n";
+    else
+        cout << "NO\n";
 }
 
 // clang-format off
