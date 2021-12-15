@@ -16461,6 +16461,26 @@
     ],
     "timestamp": "Dec/14/2021 20:13"
   },
+  "CF139351825": {
+    "contest_id": 159,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/159/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "String Manipulation 1.0",
+    "problem_url": "https://codeforces.com/contest/159/problem/C",
+    "submission_id": "CF139351825",
+    "submission_url": "https://codeforces.com/contest/159/submission/139351825",
+    "tags": [
+      "*special problem",
+      "binary search",
+      "brute force",
+      "data structures",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Dec/15/2021 10:17"
+  },
   "CF139366391": {
     "contest_id": 1618,
     "language": "GNU C++20 (64)",
