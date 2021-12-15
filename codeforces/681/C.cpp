@@ -21,12 +21,13 @@ void Solution() {
     ll num;
     vector<string> res;
     multiset<ll> vals;
+
     auto insert = [&](ll N) {
         vals.insert(N);
         res.push_back("insert " + to_string(N));
     };
     auto removeMin = [&]() {
-        if (vals.empty()) insert(0);
+        if (vals.empty()) insert(1);
         assert(!vals.empty());
         vals.erase(vals.lower_bound(*vals.begin()));
         res.push_back("removeMin");
