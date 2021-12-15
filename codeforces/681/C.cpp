@@ -20,21 +20,20 @@ void Solution() {
     string op;
     ll num;
     vector<string> res;
-    priority_queue<ll, vector<ll>, greater<ll>> pq;
-
+    multiset<ll> vals;
     auto insert = [&](ll N) {
-        pq.push(N);
+        vals.insert(N);
         res.push_back("insert " + to_string(N));
     };
     auto removeMin = [&]() {
-        if (pq.empty()) insert(0);  // insert something
-        assert(!pq.empty());
-        pq.pop();
+        if (vals.empty()) insert(0);
+        assert(!vals.empty());
+        vals.erase(vals.lower_bound(*vals.begin()));
         res.push_back("removeMin");
     };
     auto getMin = [&](ll N) {
-        while (!pq.empty() && pq.top() < N) removeMin();
-        if (pq.empty() || pq.top() > N) insert(N);
+        while (!vals.empty() && *vals.begin() < N) removeMin();
+        if (vals.empty() || *vals.begin() > N) insert(N);
         res.push_back("getMin " + to_string(N));
     };
 
