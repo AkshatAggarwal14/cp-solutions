@@ -20,19 +20,18 @@ void Solution() {
     string op;
     cin >> n;
     stack<ll> multiplier;
-    multiplier.push(1);  // for first element.
+    multiplier.push(1);
     ll ans = 0;
     while (n--) {
         cin >> op;
         if (op == "for") {
             cin >> num;
-            num *= multiplier.top();
-            amin(num, INF);  // to limit overflow.
+            num = min(INF, multiplier.top() * num);
             multiplier.push(num);
         } else if (op == "end") {
-            multiplier.pop();  // remove topmost multiplier.
+            multiplier.pop();
         } else {
-            ans += multiplier.top();  // top contains product of all for's
+            ans += multiplier.top();
             if (ans >= INF) return void(cout << "OVERFLOW!!!\n");
         }
     }
