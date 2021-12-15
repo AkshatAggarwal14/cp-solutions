@@ -21,6 +21,7 @@ void Solution() {
     set<ll> vals;
     for (ll i = 0; i < q; ++i) MEX[i % x].insert(i), vals.insert(i);
     vals.insert(q);
+    dbg(MEX);
     while (q--) {
         ll num;
         cin >> num;
