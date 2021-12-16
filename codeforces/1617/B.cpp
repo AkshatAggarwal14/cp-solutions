@@ -17,11 +17,10 @@ bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 void Solution() {
     ll n;
     cin >> n;
-    --n;
-    for (ll i = 2; i <= 100; i++)
-        if (gcd(n - i, i) == 1)
-            return void(cout << i << ' ' << n - i << ' ' << 1 << '\n');
-    assert(false);
+    if (n % 2 == 0) return void(cout << (n - 1) / 2 << ' ' << (n - 1) / 2 + 1 << ' ' << 1 << '\n');
+    for (ll i = 4; i < n; i++)
+        if (gcd(n - i, i - 1) == 1)
+            return void(cout << i - 1 << " " << n - i << " " << 1 << '\n');
 }
 
 // clang-format off
