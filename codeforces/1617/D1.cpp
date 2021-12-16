@@ -15,7 +15,7 @@ template <class T, class U = T>
 bool amax(T &a, U &&b) { return a < b ? a = std::forward<U>(b), true : false; }
 
 ll query(ll a, ll b, ll c) {
-    cout << "? " << a << ' ' << b << ' ' << c << endl;
+    cout << "? " << a + 1 << ' ' << b + 1 << ' ' << c + 1 << endl;
     ll res;
     cin >> res;
     if (res == -1) exit(0);
@@ -25,32 +25,33 @@ ll query(ll a, ll b, ll c) {
 void Solution() {
     ll n;
     cin >> n;
-    ll impostor = -1, crewmate = -1, prev = -1, now = -1;
-    for (ll i = 1; i <= n - 2; ++i) {
-        now = query(i, i + 1, i + 2);
-        if (i == 1) {
-            prev = now;
-            continue;
+    vector<ll> queries(n);
+    for (ll i = 0; i < n; ++i) queries[i] = query(i, (i + 1) % n, (i + 2) % n);
+    ll a = 0, b = 0, c = 0, d = 0;
+    for (ll i = 0; i < n; ++i) {
+        ll nxt = (i + 1) % n;
+        if (queries[i] ^ queries[nxt]) {  // 1 of a or b is impostor
+            a = (i + 1) % n;
+            b = (i + 2) % n;
         }
-        if (prev == 1 && now == 0) {
-            impostor = i - 1;
-            crewmate = i + 2;
-            break;
-        } else if (prev == 0 && now == 1) {
-            crewmate = i - 1;
-            impostor = i + 2;
-            break;
-        }
-        prev = now;
     }
-    vector<ll> ans;
-    ans.push_back(impostor);
-    for (ll i = 1; i <= n; ++i) {
-        if (i == crewmate || i == impostor) continue;
-        if (query(impostor, crewmate, i)) ans.push_back(i);
+    vector<ll> mark(n);  // 1 -> impostor
+    for (ll i = 0; i < n; ++i) {
+        if (i == a or i == b) continue;
+        mark[i] = query(a, b, i);  // if i is impostor, ans[i] = 1, else 0
     }
-    cout << "! " << sz(ans) << ' ';
-    for (ll &x : ans) cout << x << ' ';
+    for (ll i = 0; i < n; ++i) {
+        if (i == a or i == b) continue;
+        if (mark[i] == 1) c = i;  // impostor
+        if (mark[i] == 0) d = i;  // crewmate
+    }
+    mark[a] = query(c, d, a);  // determine a,b using c,d
+    mark[b] = query(c, d, b);
+    vector<ll> res;
+    for (ll i = 0; i < n; ++i)
+        if (mark[i]) res.push_back(i + 1);  // push impostors in vector
+    cout << "! " << sz(res) << ' ';
+    for (ll &i : res) cout << i << ' ';
     cout << endl;
 }
 
