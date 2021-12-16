@@ -19,7 +19,7 @@ ll query(ll a, ll b, ll c) {
     ll res;
     cin >> res;
     if (res == -1) exit(0);
-    return res ^ 1;  // 1 -> impostor
+    return res ^ 1;
 }
 
 void Solution() {
@@ -32,11 +32,11 @@ void Solution() {
             prev = now;
             continue;
         }
-        if (prev == 1 && now == 0) {  // ICIC, IICC
+        if (prev == 1 && now == 0) {
             impostor = i - 1;
             crewmate = i + 2;
             break;
-        } else if (prev == 0 && now == 1) {  // CICI, CCII
+        } else if (prev == 0 && now == 1) {
             crewmate = i - 1;
             impostor = i + 2;
             break;
