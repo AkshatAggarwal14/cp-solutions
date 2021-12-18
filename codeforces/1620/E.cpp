@@ -31,7 +31,6 @@ void Solution() {
     vector<int> res;
     reverse(all(A));  // reverse queries
     /*
-    https://codeforces.com/blog/entry/98001?#comment-868680
     Cause when there is a type 2 query, you have to evaluate the past queries
     But if you are iterating in reverse, you can evaluate the past queries easily 
     */
