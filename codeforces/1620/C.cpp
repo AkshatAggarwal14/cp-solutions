@@ -32,15 +32,6 @@ vector<pair<T, ll>> compress(const T_iterable &items) {
     return encoded;
 }
 
-/*
-6 3 20
-**a***
-X = 20
---X, X = 19
-bases = {7, 10}
-B = {9, 1}
-*/
-
 void Solution() {
     ll N, K, X;
     string S;
