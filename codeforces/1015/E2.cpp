@@ -23,7 +23,6 @@ void Solution() {
         for (auto &y : x) cin >> y;
     auto stars = [&](ll X, ll Y) -> ll {
         ll cnt = 1;
-        //! checking all conditions in same for loop decreases execution time drastically as loop is stopped as soon as one condition fails
         for (; X - cnt >= 0 &&
                X + cnt < n &&
                Y - cnt >= 0 &&
@@ -40,7 +39,7 @@ void Solution() {
         for (ll j = 0; j < m; ++j) {
             if (grid[i][j] == '*') {
                 ll s = stars(i, j);
-                if (s) {  // if size of star is > 0, add it and mark
+                if (s) {
                     mark[i][j] = true;
                     for (ll cnt = 1; cnt <= s; ++cnt) {
                         mark[i + cnt][j] = true;
