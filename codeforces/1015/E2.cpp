@@ -1,7 +1,7 @@
 // https://github.com/AkshatAggarwal14/Competetive-Programming
 #include "bits/stdc++.h"
 using namespace std;
-using ll = int;
+using ll = int64_t;
 auto sz = [](const auto &container) -> ll { return container.size(); };
 
 int main() {
