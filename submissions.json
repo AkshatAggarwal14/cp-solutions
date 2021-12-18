@@ -16461,6 +16461,26 @@
     ],
     "timestamp": "Dec/14/2021 20:13"
   },
+  "CF139833291": {
+    "contest_id": 1620,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1620/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "BA-String",
+    "problem_url": "https://codeforces.com/contest/1620/problem/C",
+    "submission_id": "CF139833291",
+    "submission_url": "https://codeforces.com/contest/1620/submission/139833291",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Dec/19/2021 00:48"
+  },
   "CF140017854": {
     "contest_id": 1619,
     "language": "GNU C++20 (64)",
