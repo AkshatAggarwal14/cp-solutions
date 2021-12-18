@@ -18,16 +18,20 @@ void Solution() {
     ll w, h;
     cin >> w >> h;
     ll ans = 0;
-    for (int i = 0; i < 4; i++) {
-        int k;
+    for (ll i = 0; i < 2; ++i) {
+        ll k;
         cin >> k;
-        vector<ll> v(k);
-        for (int j = 0; j < k; j++) cin >> v[j];
-        sort(v.begin(), v.end());
-        if (i < 2)
-            ans = max(ans, h * (v[k - 1] - v[0]));  // are = base * height
-        else
-            ans = max(ans, w * (v[k - 1] - v[0]));
+        vector<ll> x(k);
+        for (ll j = 0; j < k; ++j) cin >> x[j];
+        ans = max(ans, (x.back() - x.front()) * h);  // area = base * height
+    }
+    swap(w, h);
+    for (ll i = 0; i < 2; ++i) {
+        ll k;
+        cin >> k;
+        vector<ll> x(k);
+        for (ll j = 0; j < k; ++j) cin >> x[j];
+        ans = max(ans, (x.back() - x.front()) * h);
     }
     cout << ans << '\n';
 }
