@@ -23,9 +23,19 @@ void brute() {
     ll n;
     cin >> n;
     set<ll> st;
-    for (ll i = 1; i * i <= n; ++i) st.insert(i * i);
-    for (ll i = 1; i * i * i <= n; ++i) st.insert(i * i * i);
+    for (ll i = 1; i * i <= n; ++i) {
+        st.insert(i * i);
+    }
+    for (ll i = 1; i * i * i <= n; ++i) {
+        st.insert(i * i * i);
+    }
     cout << sz(st) << '\n';
+    // for (ll i = 1; i <= n; ++i) {
+    //     ll sq = sqrt(i);
+    //     ll cb = cbrt(i);
+    //     if (sq * sq == i || cb * cb * cb == i) ans++;
+    // }
+    // cout << ans << '\n';
 }
 
 int main() {
