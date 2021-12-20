@@ -23,7 +23,7 @@ void Solution() {
     string b = "";
     ll pos = 0;
     for (ll i = 0; i < sz(a); ++i) {
-        if (s[pos] < a[i]) {  // if smaller take 2 digits at a time
+        if (s[pos] < a[i]) {
             if (pos >= sz(s)) return void(cout << "-1\n");
             if (pos + 1 >= sz(s)) return void(cout << "-1\n");
             ll num = (s[pos] - '0') + (s[pos + 1] - '0') * 10;
@@ -31,7 +31,7 @@ void Solution() {
             if (!(num >= 0 && num <= 9)) return void(cout << "-1\n");
             b += (char(num) + '0');
             pos += 2;
-        } else {  // else go through digits one by one
+        } else {
             if (pos >= sz(s)) return void(cout << "-1\n");
             ll num = (s[pos] - '0');
             num -= (a[i] - '0');
@@ -40,8 +40,10 @@ void Solution() {
             pos++;
         }
     }
-    while (pos < sz(s)) b += s[pos++];     // add remaining digits of s
-    while (b.back() == '0') b.pop_back();  // remove all zeroes from front
+    while (pos < sz(s)) {
+        b += s[pos++];
+    }
+    while (b.back() == '0') b.pop_back();
     reverse(all(b));
     cout << b << '\n';
 }
