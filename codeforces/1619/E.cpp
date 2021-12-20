@@ -20,17 +20,17 @@ void Solution() {
     cin >> n;
     vector<ll> a(n), cnt(n + 1, 0);
     for (ll &x : a) cin >> x, ++cnt[x];
-    priority_queue<ll> q;
+    priority_queue<int> q;
     vector<ll> ans(n + 1, -1);
     ll offset = 0;
     for (ll i = 0; i <= n; ++i) {
         ans[i] = offset + cnt[i];
-        if (cnt[i] == 0) {            // if current element not present
-            if (q.empty()) break;     // -1 on this and afterwards
-            offset += (i - q.top());  // need larger element where element not present
+        if (cnt[i] == 0) {
+            if (q.empty()) break;
+            offset += (i - q.top());
             q.pop();
         }
-        while (cnt[i] > 1) q.push(i), --cnt[i];  // all occurences except previous 1 needed
+        while (cnt[i] > 1) q.push(i), --cnt[i];
     }
     for (ll &x : ans) cout << x << ' ';
     cout << '\n';
