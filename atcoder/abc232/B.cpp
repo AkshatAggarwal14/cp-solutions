@@ -19,7 +19,9 @@ void Solution() {
     string s, t;
     cin >> s >> t;
     set<int> st;
-    for (int i = 0; i < sz(s); ++i) st.insert(((t[i] - s[i]) % 26 + 26) % 26);
+    for (int i = 0; i < sz(s); ++i) {
+        st.insert(((t[i] - s[i]) % 26 + 26) % 26);
+    }
     cout << ((sz(st) == 1) ? "Yes\n" : "No\n");
 }
 
