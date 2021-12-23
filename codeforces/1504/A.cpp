@@ -1,88 +1,44 @@
-#include <bits/stdc++.h>
+#ifdef LOCAL
+// https://github.com/AkshatAggarwal14/Competetive-Programming
+#include "Akshat.hpp"
+#else
+#include "bits/stdc++.h"
 using namespace std;
-#define ll long long
-bool check(string s)
-{
-    string str=s;
-    reverse(str.begin(),str.end());
-    if(s!=str)
-    {
-        return true;
-    }
-    return false;
+#define dbg(...)
+#endif
+using ll = int64_t;
+auto sz = [](const auto &container) -> ll { return ll(container.size()); };
+#define all(x) (x).begin(), (x).end()
+template <class T, class U = T>
+bool amin(T &a, U &&b) { return b < a && (a = std::forward<U>(b), true); }
+template <class T, class U = T>
+bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
+const int MOD = 1e9 + 7;
+
+void Solution() {
+    auto check = [](string S) {
+        string T(S);
+        reverse(all(T));
+        return (S == T);
+    };
+    string s;
+    cin >> s;
+    if (!check('a' + s)) return void(cout << "YES\na" + s << '\n');
+    if (!check(s + 'a')) return void(cout << "YES\n" + s + 'a' << '\n');
+    cout << "NO\n";
 }
-int main()
-{
-    int t;
-    cin>>t;
-    while(t--)
-    {
-       string s;
-       cin>>s;
-       string str=s;
-       string sr=s;
-       ll n=s.size();
-       ll count=0;
-       int flag=1;
-       for(int i=0;i<n;i++)
-       {
-           if(s[i]=='a')
-           {
-               count++;
-           }
-       }
-       if(count==n)
-       {
-           flag=0;
-       }
-       else if(count%2==0)
-       {
-           str=str+'a';
-           if(!check(str))
-           {
-                sr='a'+sr;
-                if(!check(sr))
-                {
-                    flag=0;
-                }
-                else
-                {
-                    s='a'+s;
-                }
-           }
-           else
-           {
-               s=s+'a';
-           }
-       }
-       else if(count%2!=0)
-       {
-            str+='a';
-            if(check(str))
-            {
-                s+='a';
-            }
-            else
-            {
-                sr='a'+sr;
-                if(!check(sr))
-                {
-                    flag=0;
-                }
-                else
-                {
-                    s='a'+s;
-                }
-            }
-       }
-       if(flag)
-       {
-           cout<<"YES"<<'\n';
-           cout<<s<<'\n';
-       }
-       else
-       {
-           cout<<"NO"<<'\n';
-       }
+
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+#ifdef LOCAL
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    cout << fixed << setprecision(12);
+    int tc = 1;
+    cin >> tc;
+    while (tc--) {
+        Solution();
     }
+    return 0;
 }
