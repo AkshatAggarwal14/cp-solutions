@@ -61,36 +61,24 @@ vector<pair<T, ll>> compress(const T_iterable &items) {
     return encoded;
 }
 
-/*
-10 24 40 80
-2*5, 2^3*3, 2^3*5, 2^4*5
-
-2: 1 3 3 4
-3: 1 0 0 0
-5: 0 1 1 1
-
-So each number is divisible by a pf, then A * B is divisble by atleast the second smallest power
-if n - 1 numbers are divisible by a pf, then A * B is divisible by atleast the smallest power.
-*/
-
 void Solution() {
     ll n;
     cin >> n;
     vector<ll> A(n);
-    map<ll, priority_queue<ll, vector<ll>, greater<ll>>> pq;  // primes, {powers}
+    map<ll, multiset<ll>> mp;
     for (auto &a : A) {
         cin >> a;
-        auto C = compress<ll>(prime_factorisation(a));  // compressed
-        for (auto &[x, y] : C) pq[x].push(y);           // {num, freq} pushed
+        auto C = compress<ll>(prime_factorisation(a));
+        for (auto &[x, y] : C) mp[x].insert(y);
     }
-    ll res = 1;
-    for (auto &[x, y] : pq) {
-        // pop smallest if sz == n
-        if (sz(y) == n) y.pop();
-        // multiply smallest for sz == n - 1
-        if (sz(y) == n - 1) res *= static_cast<ll>(pow(x, y.top()));
+    ll p = 1;
+    for (auto &[x, y] : mp) {
+        if (sz(y) == n)
+            p *= static_cast<ll>(pow(x, *next(y.begin())));
+        else if (sz(y) == n - 1)
+            p *= static_cast<ll>(pow(x, *y.begin()));
     }
-    cout << res << '\n';
+    cout << p << '\n';
 }
 
 int main() {
