@@ -93,25 +93,6 @@ void Solution() {
     cout << res << '\n';
 }
 
-//! -----------------------------------------------------------------------------
-
-void Shorter() {
-    // lcm and gcd distribute over each other:
-    // gcd(lcm(a1, a2), lcm(a1, a3) ... lcm(a1, an)) = lcm(a1, gcd(a2, a3 ... an)) and
-    // lcm(gcd(a1, a2), gcd(a1, a3) ... gcd(a1, an)) = gcd(a1, lcm(a2, a3 ... an))
-    // ans = gcd(lcm(a1, gcd(a2 .. an)), lcm(a2, gcd(a3 .. an)) ....) or
-    // ans = gcd(lcm(gcd(a1 .. a1), a2), lcm(gcd(a1 .. a2), a3) ...)
-    ll n, x;
-    cin >> n;
-    ll ans = 0, pref = 0;
-    for (ll i = 0; i < n; i++) {
-        cin >> x;
-        ans = gcd(ans, lcm(pref, x));
-        pref = gcd(x, pref);  // gcd of prefix
-    }
-    cout << ans << '\n';
-}
-
 int main() {
     fill();
     cin.tie(nullptr)->sync_with_stdio(false);
@@ -123,8 +104,7 @@ int main() {
     int tc = 1;
     // cin >> tc;
     while (tc--) {
-        // Solution();
-        Shorter();
+        Solution();
     }
     return 0;
 }
