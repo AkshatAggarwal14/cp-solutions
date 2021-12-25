@@ -6,7 +6,7 @@
 using namespace std;
 #define dbg(...)
 #endif
-using ll = long long;
+using ll = int64_t;
 auto sz = [](const auto &container) -> ll { return ll(container.size()); };
 #define all(x) (x).begin(), (x).end()
 template <class T, class U = T>
@@ -16,9 +16,9 @@ bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
 const int MOD = 1e9 + 7;
 
 void Solution() {
-    ll x, y;
+    int x, y;
     cin >> x >> y;
-    cout << max((y - x + 9) / 10, 0LL) << '\n';
+    cout << max((y - x + 9) / 10, 0) << '\n';
 }
 
 int main() {

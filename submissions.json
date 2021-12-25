@@ -1,4 +1,20 @@
 {
+  "AC28114720": {
+    "contest_id": "abc233",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc233/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "10yen Stamp",
+    "problem_url": "https://atcoder.jp/contests/abc233/tasks/abc233_a",
+    "submission_id": "AC28114720",
+    "submission_url": "https://atcoder.jp/contests/abc233/submissions/28114720",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Dec/25/2021 17:34"
+  },
   "AC28117655": {
     "contest_id": "abc233",
     "language": "C++ (GCC 9.2.1)",
