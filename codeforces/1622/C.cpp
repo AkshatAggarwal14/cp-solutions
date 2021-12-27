@@ -23,12 +23,11 @@ void Solution() {
     sort(all(a));
     partial_sum(all(a), pref.begin());
     ll steps = LLONG_MAX;
-    for (ll i = 0; i < n; ++i) {
+    for (ll i = n - 1; i >= 0; --i) {
         ll sum_before = pref[i] - a[0];  // sum of elements before & including i except a[0]
-        ll left_sum = k - sum_before;    // sum of remaining elements so total <= k
-        // to_make is the minimum value of n - i elements needed so sum <= k
+        ll left_sum = k - sum_before;    // sum left so total <= k
         ll to_make = min(a[0], ll(floor(double(left_sum) / double((n - i)))));
-        // STEPS = reduce minimum element to some value + set other n - i - 1 to that value = n
+        // reduce minimum element to some value and set all n - i - 1 to that value = number of step
         amin(steps, (a[0] - to_make) + (n - i - 1));
     }
     cout << steps << '\n';
