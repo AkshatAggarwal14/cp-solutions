@@ -24,12 +24,12 @@ void Solution() {
     for (ll &A : a) cin >> A;
     cin >> s;
     for (ll i = 0; i < n; i++) ((s[i] == '1' ? like : dislike)).push_back({a[i], i});
-    sort(all(like));
-    sort(all(dislike));
+    sort(all(like), greater<>());
+    sort(all(dislike), greater<>());
     vector<ll> ans(n);
-    ll num = 1;
-    for (auto &[x, y] : dislike) ans[y] = num++;
-    for (auto &[x, y] : like) ans[y] = num++;
+    ll num = n;
+    for (auto &[x, y] : like) ans[y] = num--;
+    for (auto &[x, y] : dislike) ans[y] = num--;
     for (auto &x : ans) cout << x << ' ';
     cout << '\n';
 }
