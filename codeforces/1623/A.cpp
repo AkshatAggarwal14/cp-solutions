@@ -24,8 +24,12 @@ void Solution() {
         if ((rb == rd || cb == cd)) break;
         if (rb + dr == 0 || rb + dr == n + 1) dr = -dr;
         if (cb + dc == 0 || cb + dc == m + 1) dc = -dc;
-        rb += dr, cb += dc;
-        ++steps;
+        rb += dr;
+        cb += dc;
+        dbg(rb, cb);
+        assert(rb >= 1 && rb <= n);
+        assert(cb >= 1 && cb <= m);
+        steps++;
     }
     cout << steps << '\n';
 }
