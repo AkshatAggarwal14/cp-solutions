@@ -1,4 +1,20 @@
 {
+  "CF140875595": {
+    "contest_id": 235,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/235/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "LCM Challenge",
+    "problem_url": "https://codeforces.com/contest/235/problem/A",
+    "submission_id": "CF140875595",
+    "submission_url": "https://codeforces.com/contest/235/submission/140875595",
+    "tags": [
+      "number theory",
+      "*1600"
+    ],
+    "timestamp": "Dec/28/2021 14:31"
+  },
   "CF140897643": {
     "contest_id": 235,
     "language": "GNU C++20 (64)",

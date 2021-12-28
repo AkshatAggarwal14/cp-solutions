@@ -20,17 +20,17 @@ void Solution() {
     cin >> n;
     auto solve = [&](const auto &self, ll N) {
         if (N <= 2) return N;
-        if (N & 1) return (N * (N - 1) * (N - 2));  // if odd then all coprime
+        if (N & 1) return (N * (N - 1) * (N - 2));
         ll P = N * (N - 1);
         ll num = N - 2;
         while (num > 0) {
-            if (gcd(P, num) == 1) {  // if even find largest prime with max 2
+            if (gcd(N, num) == 1 && gcd(N - 1, num) == 1) {
                 P *= num;
                 break;
             }
             --num;
         }
-        return max(P, self(self, N - 1));  // or solve for smaller odd
+        return max(P, self(self, N - 1));
     };
     cout << solve(solve, n) << '\n';
 }
