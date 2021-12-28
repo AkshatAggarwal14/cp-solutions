@@ -41,7 +41,7 @@ void init() {
     fact[0] = inv[0] = invf[0] = fact[1] = inv[1] = invf[1] = 1;
     for (ll i = 2; i <= N; i++) {
         fact[i] = mul(fact[i - 1], i);
-        inv[i] = M(-mul((MOD / i), inv[MOD % i]));
+        inv[i] = add(MOD, -mul((MOD / i), inv[MOD % i]));
         invf[i] = mul(invf[i - 1], inv[i]);
     }
 }
