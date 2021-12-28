@@ -61,7 +61,6 @@ vector<pair<T, ll>> compress(const T_iterable &items) {
 // let d1 = p1^a1               d1 mod p1 === 0
 // d2 = N/d1                    d2 mod p1 !== 0
 // d1 + d2 is not divisible by any prime factor of N
-// gcd(p1^a1, p2^a2*p3...) === 1
 
 void Solution() {
     ll n;
