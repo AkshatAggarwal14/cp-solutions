@@ -1,4 +1,21 @@
 {
+  "CF140897701": {
+    "contest_id": 236,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/236/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "LCM Challenge",
+    "problem_url": "https://codeforces.com/contest/236/problem/C",
+    "submission_id": "CF140897701",
+    "submission_url": "https://codeforces.com/contest/236/submission/140897701",
+    "tags": [
+      "greedy",
+      "number theory",
+      "*1600"
+    ],
+    "timestamp": "Dec/28/2021 18:20"
+  },
   "CF140917008": {
     "contest_id": 1623,
     "language": "GNU C++20 (64)",
