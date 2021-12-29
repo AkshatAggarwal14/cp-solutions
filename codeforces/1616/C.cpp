@@ -27,7 +27,7 @@ void Solution() {
     for (ll i = 0; i < sz(a) - 1; i++) {
         for (ll j = i + 1; j < sz(a); j++) {
             /* TO NOT DEAL WITH DOUBLE, MULTIPLY EVERYTHING BY J - I */
-            ll delta = a[j] - a[i];  // real delta is (a[j] - a[i])/(j - i)
+            ll delta = a[j] - a[i];
             ll cnt = 0;
             for (ll k = 0; k < sz(a); k++) {
                 if (k == i) continue;
