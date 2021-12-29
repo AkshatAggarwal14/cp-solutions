@@ -26,7 +26,7 @@ void Solution() {
         if (s[i] == s[i - 1] && flag) break;
         if (s[i] <= s[i - 1]) {
             flag = false;
-            ans += s[i];
+            ans.push_back(s[i]);
         } else {
             break;
         }
