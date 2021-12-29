@@ -19,15 +19,19 @@ void Solution() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    vector<ll> cnt(101, 0);
+    map<ll, ll> mp;
+    ll c0 = 0;
     for (auto &A : a) {
         cin >> A;
-        if (A == 0) continue;
-        ++cnt[abs(A)];
+        if (A == 0)
+            c0++;
+        else
+            ++mp[abs(A)];
     }
     ll ans = 0;
-    for (ll i = 1; i <= 100; ++i) ans += min(2LL, cnt[i]);
-    cout << ans + !!(count(all(a), 0LL)) << '\n';
+    for (auto &[x, y] : mp) ans += min(2LL, y);
+    if (c0 != 0) ans++;
+    cout << ans << '\n';
 }
 
 int main() {
