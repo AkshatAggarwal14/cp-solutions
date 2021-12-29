@@ -15,29 +15,30 @@ template <class T, class U = T>
 constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
 const ll MOD = 1e9 + 7;
 
-// https://stackoverflow.com/questions/31750842/find-minimum-cost-to-convert-array-to-arithmetic-progression
-void Solution() {
-    ll n;
-    cin >> n;
-    vector<ll> a(n);
-    for (ll &A : a) cin >> A;
-    // make AP, observation for 3 elements.
-    if (sz(a) <= 2) return void(cout << "0\n");
-    ll ans = sz(a);
-    for (ll i = 0; i < sz(a) - 1; i++) {
-        for (ll j = i + 1; j < sz(a); j++) {
-            /* TO NOT DEAL WITH DOUBLE, MULTIPLY EVERYTHING BY J - I */
-            ll delta = a[j] - a[i];
-            ll cnt = 0;
-            for (ll k = 0; k < sz(a); k++) {
+int costAP(const vector<int> &arr) {
+    if (arr.size() < 3) return 0;
+    int minCost = arr.size();
+    for (int i = 0; i < arr.size() - 1; i++) {
+        for (int j = i + 1; j < arr.size(); j++) {
+            double delta = double(arr[j] - arr[i]) / double(j - i);
+            int cost = 0;
+            for (int k = 0; k < arr.size(); k++) {
                 if (k == i) continue;
-                // a[k] + delta * (distance b/w i and k) == a[i] for AP
-                if (a[k] * (j - i) + delta * (i - k) != a[i] * (j - i)) cnt++;
+                if ((arr[k] + delta * (i - k)) != arr[i]) cost++;
             }
-            amin(ans, cnt);
+            if (cost < minCost) minCost = cost;
         }
     }
-    cout << ans << '\n';
+    return minCost;
+}
+
+void Solution() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    for (int &A : a) cin >> A;
+    // make AP
+    cout << costAP(a) << '\n';
 }
 
 int main() {
