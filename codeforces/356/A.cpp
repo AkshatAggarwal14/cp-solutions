@@ -18,19 +18,19 @@ const ll MOD = 1e9 + 7;
 void Solution() {
     ll n, m, l, r, x;
     cin >> n >> m;
-    set<ll> alive;
+    set<ll> st;
     vector<ll> ans(n, -1);
-    for (ll i = 1; i <= n; ++i) alive.insert(i);  // will always decrease and thus fast
+    for (ll i = 1; i <= n; ++i) st.insert(i);
     for (ll i = 0; i < m; ++i) {
         cin >> l >> r >> x;
-        auto it = alive.lower_bound(l);
-        while (it != alive.end() && *it <= r) {
-            ans[*it - 1] = x;  // losers gets winner's number
-            alive.erase(*it);
-            it = alive.lower_bound(l);
+        auto it = st.lower_bound(l);
+        while (it != st.end() && *it <= r) {
+            ans[*it - 1] = x;
+            st.erase(*it);
+            it = st.lower_bound(l);
         }
-        alive.insert(x);
-        ans[x - 1] = 0;  // winner gets 0
+        st.insert(x);
+        ans[x - 1] = 0;
     }
     for (auto &X : ans) cout << X << ' ';
 }
