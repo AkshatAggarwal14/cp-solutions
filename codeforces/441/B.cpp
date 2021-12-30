@@ -22,14 +22,14 @@ void Solution() {
     for (ll i = 0; i < n; ++i) cin >> a >> b, cnt[a] += b;
     ll ans = 0;
     for (ll i = 1; i <= 3001; ++i) {
-        // previous day
-        ll used = min(cnt[i - 1], v);
+        ll prev = cnt[i - 1];
+        ll used = min(prev, v);
         ans += used;
         cnt[i - 1] -= used;
-        // this day
-        used = min(cnt[i], v - used);
-        ans += used;
+        ll left = cnt[i];
+        used = min(left, v - used);
         cnt[i] -= used;
+        ans += used;
     }
     cout << ans << '\n';
 }
