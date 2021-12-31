@@ -1,4 +1,20 @@
 {
+  "AC28254568": {
+    "contest_id": "abc208",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc208/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Factorial Yen Coin",
+    "problem_url": "https://atcoder.jp/contests/abc208/tasks/abc208_b",
+    "submission_id": "AC28254568",
+    "submission_url": "https://atcoder.jp/contests/abc208/submissions/28254568",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Dec/31/2021 11:27"
+  },
   "AC28254721": {
     "contest_id": "abc208",
     "language": "C++ (GCC 9.2.1)",
