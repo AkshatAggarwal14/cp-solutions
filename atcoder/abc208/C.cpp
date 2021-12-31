@@ -21,8 +21,7 @@ void Solution() {
     vector<pair<ll, ll>> v(n);
     vector<ll> ans(n, k / n);  // ans for all is atleast k/n
     for (ll i = 0; i < n; ++i) cin >> v[i].first, v[i].second = i;
-    // sort(all(v));
-    nth_element(v.begin(), v.begin() + (k % n), v.end());
+    sort(all(v));
     for (ll i = 0; i < k % n; ++i) ++ans[v[i].second];  // smallest wale index
     for (ll &x : ans) cout << x << '\n';
 }
