@@ -59,19 +59,17 @@ vector<ll> compress(const vector<ll> &items) {
 // N = p1^a1 * p2^a2 ..
 // N1 * N2 = perfect square if and only if, ai in both are odd or even for same pi
 // the sum of ai must be even
-
-// evens can be ignored, odd wale must be equal
 void Solution() {
     ll n, k, temp;
     cin >> n >> k;
+    vector<vector<ll>> a(n);
     set<vector<ll>> st;
     ll ans = 1;
-    vector<ll> A;
-    for (ll i = 0; i < n; ++i) {
+    for (auto &A : a) {
         cin >> temp;
-        A = compress(prime_factorisation(temp));  // pi^ai -> odd ai's
+        A = compress(prime_factorisation(temp));
         if (st.contains(A)) {
-            st.clear();  // start a new segment
+            st.clear();
             ++ans;
         }
         st.insert(A);
