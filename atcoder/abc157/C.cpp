@@ -26,10 +26,17 @@ void Solution() {
         if (ans[s] != '.' and c != ans[s]) return void(cout << "-1\n");
         ans[s] = c;
     }
-    if (ans[0] == '0' and sz(ans) > 1) return void(cout << "-1\n");
-    if (ans[0] == '.' and sz(ans) > 1) ans[0] = '1';
-    for_each(all(ans), [&](char &C) {if(C=='.')C='0'; });
-    cout << ans << '\n';
+    dbg(ans);
+    for (ll i = 0; i <= 999; ++i) {
+        string S = to_string(i);
+        if (sz(S) != N) continue;
+        if (sz(S) > N) break;
+        bool flag = true;
+        for (ll j = 0; j < sz(S); ++j)
+            if (ans[j] != '.' and S[j] != ans[j]) flag = false;
+        if (flag) return void(cout << i << '\n');
+    }
+    cout << "-1\n";
 }
 
 int main() {

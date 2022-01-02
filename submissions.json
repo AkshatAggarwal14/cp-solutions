@@ -1,4 +1,20 @@
 {
+  "AC28300779": {
+    "contest_id": "abc157",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc157/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Guess The Number",
+    "problem_url": "https://atcoder.jp/contests/abc157/tasks/abc157_c",
+    "submission_id": "AC28300779",
+    "submission_url": "https://atcoder.jp/contests/abc157/submissions/28300779",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/03/2022 00:30"
+  },
   "AC28300831": {
     "contest_id": "abc157",
     "language": "C++ (GCC 9.2.1)",
