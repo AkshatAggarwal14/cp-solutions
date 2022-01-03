@@ -7,30 +7,28 @@ template <class T, class U = T>
 constexpr bool amin(T &a, U &&b) { return b < a && (a = std::forward<U>(b), true); }
 template <class T, class U = T>
 constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
-const ll INF = LLONG_MAX;
+const ll MOD = 1e9 + 7;
 
 void Solution() {
     ll n, l, r, c;
     cin >> n;
-    ll L = INF, R = -1;  // make minimum L and maximum R
-    // minimum cost for L, R and both together(in same index)
-    ll cL = INF, cR = INF, cLR = INF;
+    map<ll, set<pair<ll, ll>>> mp;  // {L or R, {cost, index}}
+    ll d = -1, cc = -1;
     for (ll i = 0; i < n; ++i) {
+        // minimum L and maximum R
         cin >> l >> r >> c;
-        if (l < L) {
-            cL = cLR = INF;
-            L = l;
-        }
-        if (r > R) {
-            cR = cLR = INF;
-            R = r;
-        }
-        // Different index
-        if (l == L) amin(cL, c);
-        if (r == R) amin(cR, c);
         // if L and R for ans have same index
-        if (l == L && r == R) amin(cLR, c);
-        cout << min(cL + cR, cLR) << '\n';  // minimum of same index and different index
+        if (r - l + 1 > d) d = r - l + 1, cc = c;
+        if (r - l + 1 == d) amin(cc, c);
+        // if L and R have different index
+        mp[l].insert({c, i});
+        mp[r].insert({c, i});
+        auto front = *(mp.begin()->second).begin();  // smallest L wale set ka 1st element
+        auto back = *(mp.rbegin()->second).begin();  // largest R wale set ka 1st element
+        ll ans = front.first;
+        if (front.second != back.second) ans += back.first;  // if different index, add both cost
+        if ((mp.rbegin()->first - mp.begin()->first + 1) <= d) amin(ans, cc);
+        cout << ans << '\n';
     }
 }
 
