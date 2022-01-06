@@ -1,4 +1,22 @@
 {
+  "CF141842555": {
+    "contest_id": 1621,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1621/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Hidden Permutations",
+    "problem_url": "https://codeforces.com/contest/1621/problem/C",
+    "submission_id": "CF141842555",
+    "submission_url": "https://codeforces.com/contest/1621/submission/141842555",
+    "tags": [
+      "dfs and similar",
+      "interactive",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Jan/06/2022 21:54"
+  },
   "CF141890319": {
     "contest_id": 12,
     "language": "GNU C++20 (64)",
