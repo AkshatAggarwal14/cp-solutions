@@ -21,34 +21,25 @@ void Solution() {
     vector<ll> a(n);
     for (ll &A : a) cin >> A;
     sort(all(a));
-    set<ll> put;
+    multiset<ll> have, dont;
     for (ll i = 0; i < n; ++i) {
-        ll t = a[i];
+        if (a[i] >= 1 && a[i] <= n && !have.count(a[i])) {
+            have.insert(a[i]);
+        } else {
+            dont.insert(a[i]);
+        }
+    }
+    while (!dont.empty()) {
+        ll t = *dont.begin();
         while (t) {
-            if (t >= 1 && t <= n && !put.count(t)) {
-                put.insert(t);
+            if (t >= 1 && t <= n && !have.count(t)) {
+                have.insert(t);
                 break;
             }
             t /= 2;
         }
         if (t == 0) return void(cout << "NO\n");
-    }
-    cout << "YES\n";
-}
-
-void Better() {
-    ll n;
-    cin >> n;
-    vector<ll> a(n);
-    vector<ll> cnt(n + 1);
-    for (ll &A : a) {
-        cin >> A;
-        while (A > n) A /= 2;
-        ++cnt[A];
-    }
-    for (ll i = n; i >= 1; --i) {
-        if (cnt[i] == 0) return void(cout << "NO\n");
-        cnt[i / 2] += (cnt[i] - 1);  // use 1, add rest
+        dont.erase(dont.lower_bound(t));
     }
     cout << "YES\n";
 }
@@ -64,7 +55,6 @@ int main() {
     cin >> tc;
     while (tc--) {
         Solution();
-        // Better();
     }
     return 0;
 }
