@@ -20,7 +20,9 @@ void Solution() {
     cin >> n;
     vector<ll> a(n);
     for (ll &A : a) cin >> A;
-    cout << *max_element(all(a)) - *min_element(all(a)) << '\n';
+    ll mx = *max_element(all(a)), ans = 0;
+    for (ll i = 0; i < n; ++i) amax(ans, mx - a[i]);
+    cout << ans << '\n';
 }
 
 int main() {
