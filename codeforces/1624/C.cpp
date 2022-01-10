@@ -36,13 +36,11 @@ void Solution() {
     cout << "YES\n";
 }
 
-//! -----------------------------------------------------------------------------
-
 void Better() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    vector<ll> cnt(n + 1, 0);
+    vector<ll> cnt(n + 1);
     for (ll &A : a) {
         cin >> A;
         while (A > n) A /= 2;
@@ -65,8 +63,8 @@ int main() {
     int tc = 1;
     cin >> tc;
     while (tc--) {
-        // Solution();
-        Better();
+        Solution();
+        // Better();
     }
     return 0;
 }
