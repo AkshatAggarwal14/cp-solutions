@@ -19,7 +19,7 @@ void Solution() {
     ll a, b, c;
     cin >> a >> b >> c;
     // a + c  = 2b
-    if (((2 * b - c) % a == 0 && (2 * b - c) / a > 0) or (((2 * b - a) % c == 0 && (2 * b - a) / c > 0)) or ((a + c) % (2 * b) == 0 && (a + c) / (2 * b) > 0)) {
+    if (((2 * b - c) % a == 0 && (2 * b - c) / a > 0) || (((2 * b - a) % c == 0 && (2 * b - a) / c > 0)) || ((a + c) % (2 * b) == 0 && (a + c) / (2 * b) > 0)) {
         cout << "YES\n";
     } else
         cout << "NO\n";
