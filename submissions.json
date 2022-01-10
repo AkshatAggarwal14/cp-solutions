@@ -1,4 +1,23 @@
 {
+  "CF142278174": {
+    "contest_id": 1624,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1624/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Palindromes Coloring",
+    "problem_url": "https://codeforces.com/contest/1624/problem/D",
+    "submission_id": "CF142278174",
+    "submission_url": "https://codeforces.com/contest/1624/submission/142278174",
+    "tags": [
+      "binary search",
+      "greedy",
+      "sortings",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Jan/10/2022 22:00"
+  },
   "CF142293109": {
     "contest_id": 1624,
     "language": "GNU C++20 (64)",
