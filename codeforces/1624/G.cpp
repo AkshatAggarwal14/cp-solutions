@@ -6,7 +6,7 @@
 using namespace std;
 #define dbg(...)
 #endif
-using ll = int64_t;
+using ll = int;
 constexpr auto sz = [](const auto &container) -> ll { return ll(container.size()); };
 #define all(x) (x).begin(), (x).end()
 template <class T, class U = T>
