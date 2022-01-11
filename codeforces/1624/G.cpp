@@ -6,7 +6,7 @@
 using namespace std;
 #define dbg(...)
 #endif
-using ll = int;
+using ll = int64_t;
 constexpr auto sz = [](const auto &container) -> ll { return ll(container.size()); };
 #define all(x) (x).begin(), (x).end()
 template <class T, class U = T>
@@ -27,18 +27,16 @@ void Solution() {
         g.clear(), g.resize(n);
         for (auto &[u, v, w] : Edges) g[u].push_back(v), g[v].push_back(u);
         fill(all(vis), false);
-        // queue<ll> bfs;
-        vector<ll> bfs;
-        ll curr = 0;
-        bfs.push_back(0);
+        queue<ll> bfs;
+        bfs.push(0);
         vis[0] = true;
-        while (curr < sz(bfs)) {
-            ll node = bfs[curr];
-            curr++;
+        while (!bfs.empty()) {
+            ll node = bfs.front();
+            bfs.pop();
             for (ll &child : g[node]) {
                 if (vis[child]) continue;
                 vis[child] = true;
-                bfs.push_back(child);
+                bfs.push(child);
             }
         }
         return (count(all(vis), true) == n);
@@ -50,11 +48,11 @@ void Solution() {
         vector<array<ll, 3>> n_edges;
         // remove edges with w & (1LL << bit)
         for (auto &[u, v, w] : edges)
-            if (!(w & (1 << bit))) n_edges.push_back({u, v, w});
+            if (!(w & (1LL << bit))) n_edges.push_back({u, v, w});
         if (connected(n_edges)) {
             edges = n_edges;  // removed
         } else {
-            ans |= (1 << bit);
+            ans |= (1LL << bit);
         }
     }
     cout << ans << '\n';
