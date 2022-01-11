@@ -21,24 +21,24 @@ void Solution() {
     vector<array<ll, 3>> edges(m);
     for (auto &[u, v, w] : edges) cin >> u >> v >> w, --u, --v;
     vector<bool> vis(n, false);
-    vector<basic_string<ll>> g(n);
+    vector<vector<ll>> g(n);
     // to check connected
-    auto connected = [&](const vector<array<ll, 3>> &Edges) -> bool {
-        for (auto &x : g) x.clear();
+    auto connected = [&](vector<array<ll, 3>> &Edges) -> bool {
+        g.clear(), g.resize(n);
         for (auto &[u, v, w] : Edges) g[u].push_back(v), g[v].push_back(u);
         fill(all(vis), false);
         // queue<ll> bfs;
-        vector<ll> bfs(n, -1);
-        ll curr = 0, end = 0;
-        bfs[end++] = 0;
+        vector<ll> bfs;
+        ll curr = 0;
+        bfs.push_back(0);
         vis[0] = true;
-        while (curr < end) {
-            ll node = bfs[curr++];
+        while (curr < sz(bfs)) {
+            ll node = bfs[curr];
+            curr++;
             for (ll &child : g[node]) {
                 if (vis[child]) continue;
                 vis[child] = true;
-                bfs[end++] = child;
-                // bfs.push_back(child);
+                bfs.push_back(child);
             }
         }
         return (count(all(vis), true) == n);
