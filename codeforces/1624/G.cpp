@@ -21,7 +21,7 @@ void Solution() {
     vector<array<ll, 3>> edges(m);
     for (auto &[u, v, w] : edges) cin >> u >> v >> w, --u, --v;
     vector<bool> vis(n, false);
-    vector<vector<ll>> g(n);
+    vector<basic_string<ll>> g(n);
     // to check connected
     vector<ll> bfs(n, -1);  // FASTER
     auto connected = [&](const vector<array<ll, 3>> &Edges) -> bool {
