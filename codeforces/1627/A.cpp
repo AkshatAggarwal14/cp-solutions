@@ -15,12 +15,6 @@ template <class T, class U = T>
 constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
 const ll MOD = 1e9 + 7;
 
-/*
-if All white then -1, as need 1 B for operation
-if cell B, ans 0
-if both row and col white ans = 2
-else ans = 1
-*/
 void Solution() {
     ll n, m, r, c;
     cin >> n >> m >> r >> c;
