@@ -15,8 +15,7 @@ template <class T, class U = T>
 constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
 const ll MOD = 1e9 + 7;
 
-//! DFS doesnt work because the vis can be visited in smaller time from some other node!
-void BFS() {
+void Solution() {
     map<ll, ll> operations;
     ll a, n;
     cin >> a >> n;
@@ -31,8 +30,10 @@ void BFS() {
             bfs.push(n1), operations[n1] = operations[node] + 1;
         string S = to_string(node);
         if (S.back() != '0' && sz(S) >= 2) {
-            rotate(S.begin(), S.begin() + (sz(S) - 1), S.end());
-            ll n2 = stoll(S);
+            string S_ = "";
+            S_ += S.back();
+            S_ += S.substr(0, sz(S) - 1);
+            ll n2 = stoll(S_);
             if (!operations.count(n2) && sz(to_string(n2)) <= sz(to_string(n)))
                 bfs.push(n2), operations[n2] = operations[node] + 1;
         }
@@ -51,7 +52,7 @@ int main() {
     int tc = 1;
     // cin >> tc;
     while (tc--) {
-        BFS();
+        Solution();
     }
     return 0;
 }
