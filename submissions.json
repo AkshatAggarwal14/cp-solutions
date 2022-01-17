@@ -1,4 +1,22 @@
 {
+  "CF143059457": {
+    "contest_id": 753,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/753/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Interactive Bulls and Cows (Easy)",
+    "problem_url": "https://codeforces.com/contest/753/problem/B",
+    "submission_id": "CF143059457",
+    "submission_url": "https://codeforces.com/contest/753/submission/143059457",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Jan/17/2022 10:27"
+  },
   "CF149542477": {
     "contest_id": 1354,
     "language": "GNU C++17",
