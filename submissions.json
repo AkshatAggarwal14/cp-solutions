@@ -17908,6 +17908,26 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF143681138": {
+    "contest_id": 1629,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1629/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Meximum Array",
+    "problem_url": "https://codeforces.com/contest/1629/problem/C",
+    "submission_id": "CF143681138",
+    "submission_url": "https://codeforces.com/contest/1629/submission/143681138",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy",
+      "math",
+      "two pointers",
+      "*1400"
+    ],
+    "timestamp": "Jan/22/2022 21:22"
+  },
   "CF143688535": {
     "contest_id": 1629,
     "language": "GNU C++20 (64)",
