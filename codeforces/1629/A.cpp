@@ -22,7 +22,7 @@ void Solution() {
     for (ll &A : a) cin >> A;
     for (ll &B : b) cin >> B;
     vector<bool> mark(n, false);
-    for (ll _ = 0; _ < n; _++) {
+    for (ll _ = 0; _ < n * n; _++) {
         for (ll i = 0; i < n; ++i) {
             if (mark[i]) continue;
             if (a[i] <= k) {
