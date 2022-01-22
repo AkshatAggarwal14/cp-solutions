@@ -28,33 +28,41 @@ void Solution() {
     cin >> n;
     vector<string> a(n);
     for (auto &x : a) cin >> x;
-    for (auto &s : a) {
-        // if palindrome then YES
+    for (ll i = 0; i < n; ++i) {
+        s = a[i];
         if (isPalindrome(s))
             return void(cout << "YES\n");
         else {
             if (sz(s) == 1) {
-                // single char means YES
                 return void(cout << "YES\n");
             } else if (sz(s) == 2) {
-                // s[1] | s[0] s[1] <- no need to check as single char means YES
+                // 3 4 5
+                // s[1] | s[0] s[1]
                 string s1 = "";
                 s1 += s[1];
+                // if (st.contains(s1)) return void(cout << "YES\n");
+
+                // rev s
                 s1 += s[0];
                 if (st.contains(s1)) return void(cout << "YES\n");
-                // s[1] s[0] x | s[0] s[1]
+
+                // rev x s
                 for (char ch = 'a'; ch <= 'z'; ++ch) {
                     string t = s1;
                     t += ch;
                     if (st.contains(t)) return void(cout << "YES\n");
                 }
             } else if (sz(s) == 3) {
-                // s[2] | s[0] s[1] s[2] <- no need to check as single char means YES
+                // 4 5 6
+                // s[2] | s[0] s[1] s[2]
                 string s1 = "";
                 s1 += s[2];
+                // if (s[0] == s[1])
+                // if (st.contains(s1)) return void(cout << "YES\n");
+                // s[2] s[1] | s[0] s[1] s[2]
                 s1 += s[1];
                 if (st.contains(s1)) return void(cout << "YES\n");
-                // s[2] s[1] s[0] | s[0] s[1] s[2]
+
                 s1 += s[0];
                 if (st.contains(s1)) return void(cout << "YES\n");
             }
