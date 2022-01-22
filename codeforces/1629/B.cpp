@@ -22,6 +22,7 @@ void Solution() {
     ll evens = (r / 2 - (l - 1) / 2);
     ll odds = (r - l + 1) - evens;
     // in 1 op we can combine an even and an odd
+    dbg(evens, odds, r, l);
     if (odds <= k) {
         cout << "YES\n";
     } else {
