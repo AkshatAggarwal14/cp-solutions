@@ -17908,6 +17908,24 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF143733878": {
+    "contest_id": 1629,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1629/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Download More RAM",
+    "problem_url": "https://codeforces.com/contest/1629/problem/A",
+    "submission_id": "CF143733878",
+    "submission_url": "https://codeforces.com/contest/1629/submission/143733878",
+    "tags": [
+      "brute force",
+      "greedy",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Jan/23/2022 10:09"
+  },
   "CF143733943": {
     "contest_id": 1629,
     "language": "GNU C++20 (64)",
