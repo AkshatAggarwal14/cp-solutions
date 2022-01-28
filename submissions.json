@@ -17908,6 +17908,22 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF144275564": {
+    "contest_id": 1631,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1631/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Min Max Swap",
+    "problem_url": "https://codeforces.com/contest/1631/problem/A",
+    "submission_id": "CF144275564",
+    "submission_url": "https://codeforces.com/contest/1631/submission/144275564",
+    "tags": [
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Jan/28/2022 08:46"
+  },
   "CF144275584": {
     "contest_id": 1631,
     "language": "GNU C++20 (64)",
