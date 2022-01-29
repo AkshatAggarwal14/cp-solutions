@@ -31,7 +31,10 @@ vector<pair<ll, ll>> merge(vector<pair<ll, ll>> &intervals) {
 void Solution() {
 	ll n, l, w; cin >> n >> l >> w;
 	vector<pair<ll, ll>> a;
-	for (ll i = 0, x; i < n; ++i) cin >> x, a.emplace_back(x, x + w);
+	for (ll i = 0, x; i < n; ++i) {
+		cin >> x;
+		a.emplace_back(x, min(x + w, l));
+	}
 	a = merge(a);
 	a.emplace_back(l , l);
 	ll ans = 0;
@@ -40,6 +43,7 @@ void Solution() {
 		ans += (len + w - 1) / w;
 	}
 	cout << ans << '\n';
+	debug(a);
 }
 
 int main() {

@@ -1,4 +1,20 @@
 {
+  "AC28862570": {
+    "contest_id": "arc134",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc134/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Bridge and Sheets",
+    "problem_url": "https://atcoder.jp/contests/arc134/tasks/arc134_a",
+    "submission_id": "AC28862570",
+    "submission_url": "https://atcoder.jp/contests/arc134/submissions/28862570",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/29/2022 17:52"
+  },
   "AC28863164": {
     "contest_id": "arc134",
     "language": "C++ (GCC 9.2.1)",
