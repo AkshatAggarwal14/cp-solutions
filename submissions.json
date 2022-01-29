@@ -1,4 +1,20 @@
 {
+  "AC28878242": {
+    "contest_id": "arc134",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc134/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Reserve or Reverse",
+    "problem_url": "https://atcoder.jp/contests/arc134/tasks/arc134_b",
+    "submission_id": "AC28878242",
+    "submission_url": "https://atcoder.jp/contests/arc134/submissions/28878242",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jan/29/2022 19:31"
+  },
   "AC28904208": {
     "contest_id": "abc237",
     "language": "C++ (GCC 9.2.1)",
