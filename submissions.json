@@ -1,4 +1,20 @@
 {
+  "AC28917694": {
+    "contest_id": "abc237",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc237/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "kasaka",
+    "problem_url": "https://atcoder.jp/contests/abc237/tasks/abc237_c",
+    "submission_id": "AC28917694",
+    "submission_url": "https://atcoder.jp/contests/abc237/submissions/28917694",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/30/2022 17:49"
+  },
   "AC28922653": {
     "contest_id": "abc237",
     "language": "C++ (GCC 9.2.1)",
