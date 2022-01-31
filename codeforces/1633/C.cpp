@@ -23,6 +23,8 @@ void Solution() {
         ll armour = k - weapon;
         ll attack = dc + w * weapon;
         ll defense = hc + armour * a;
+
+        // hM, dM
         // moves req to kill
         ll kill_character = ((defense + dm - 1) / dm);
         ll kill_monster = ((hm + attack - 1) / attack);
