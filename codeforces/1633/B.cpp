@@ -18,10 +18,19 @@ const ll MOD = 1e9 + 7;
 void Solution() {
     string s;
     cin >> s;
-    ll c0 = count(all(s), '0');
-    ll c1 = count(all(s), '1');
-    if (c0 == c1) return void(cout << c0 - 1 << '\n');
-    cout << min(c0, c1) << '\n';
+    function<ll(string)> solve = [&](string S) {
+        ll c0 = count(all(S), '0');
+        ll c1 = count(all(S), '1');
+        if (c0 == 0 || c1 == 0 || S == "01" || S == "10") return 0LL;
+        if (c0 == c1) {
+            string s1 = S.substr(1);
+            string s2 = S.substr(0, sz(S) - 1);
+            return max(solve(s1), solve(s2));
+        } else {
+            return min(c0, c1);
+        }
+    };
+    cout << solve(s) << '\n';
 }
 
 int main() {
