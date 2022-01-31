@@ -16,13 +16,33 @@ constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true
 const ll MOD = 1e9 + 7;
 
 void Solution() {
-    ll n;
-    cin >> n;
-    if (n % 7 == 0) return void(cout << n << '\n');
-    // just need to modify last digit as in every 10 there is 1 divisible by 7
-    n -= n % 10;
-    while (n % 7 != 0) ++n;
-    cout << n << '\n';
+    string s;
+    cin >> s;
+    ll ans = 10;
+    for (ll i = 10; i <= 999; ++i) {
+        if (i % 7 == 0) {
+            string n = to_string(i);
+            if (sz(n) == sz(s)) {
+                ll cnt = 0;
+                for (ll j = 0; j < sz(s); ++j) {
+                    cnt += (s[j] != n[j]);
+                }
+                amin(ans, cnt);
+            }
+        }
+    }
+    for (ll i = 10; i <= 999; ++i) {
+        if (i % 7 == 0) {
+            string n = to_string(i);
+            if (sz(n) == sz(s)) {
+                ll cnt = 0;
+                for (ll j = 0; j < sz(s); ++j) {
+                    cnt += (s[j] != n[j]);
+                }
+                if (cnt == ans) return void(cout << n << '\n');
+            }
+        }
+    }
 }
 
 int main() {
