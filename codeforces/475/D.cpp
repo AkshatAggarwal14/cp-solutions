@@ -1,3 +1,6 @@
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+
 #ifdef LOCAL
 // https://github.com/AkshatAggarwal14/Competetive-Programming
 #include "Akshat.hpp"
