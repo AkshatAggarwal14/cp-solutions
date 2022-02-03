@@ -15,7 +15,6 @@ template <class T, class U = T>
 constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true); }
 const ll MOD = 1e9 + 7;
 
-//! 2n - 1 queries
 void Solution() {
     ll n;
     cin >> n;
@@ -65,14 +64,6 @@ void Solution() {
     for (ll i = 1; i <= n; ++i) cout << ans[i] << ' ';
     cout << endl;
 }
-
-/*
-    ! can be done in n queries.
-    2 2 2 2 1
-    p[id] + 2 = p[n] + 1 -> p[id] = p[n] - 1
-    3 3 3 3 1 -> p[id] = p[n] - 2
-    k k k k 1 -> p[id] = p[n] - (k - 1), here if id was 0, i.e. we know this value doesnt exist, then p[n] = k - 1, now use this to find all previous queries.
-*/
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
