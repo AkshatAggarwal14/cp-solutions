@@ -40,10 +40,9 @@ void Solution() {
     string s;
     cin >> s;
     vector<string> v(split(s, ","));
-    stack<pair<string, ll>> st;  // use as stack
+    stack<pair<string, ll>> st;
     for (ll i = sz(v) - 2; i >= 0; i -= 2)
         st.push({v[i], stoll(v[i + 1])});
-    dbg(st);
     // calculate
     ll res = 0;
     auto dfs = [&](const auto &self, ll curr_depth) -> void {
