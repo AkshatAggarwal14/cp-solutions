@@ -40,14 +40,14 @@ void Solution() {
     string s;
     cin >> s;
     vector<string> v(split(s, ","));
-    stack<pair<string, ll>> st;
+    vector<pair<string, ll>> st;  // use as stack
     for (ll i = sz(v) - 2; i >= 0; i -= 2)
-        st.push({v[i], stoll(v[i + 1])});
+        st.push_back({v[i], stoll(v[i + 1])});
     // calculate
     ll res = 0;
     auto dfs = [&](const auto &self, ll curr_depth) -> void {
-        auto parent = st.top();
-        st.pop();
+        auto parent = st.back();
+        st.pop_back();
         ans[curr_depth].push_back(parent.first);
         amax(res, curr_depth);
         while (parent.second--) {
