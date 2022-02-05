@@ -16,27 +16,25 @@ constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true
 const ll MOD = 1e9 + 7;
 
 void Solution() {
+    // x&y + x|y = x+y
+    // a + x|y = s
     ll AND, SUM;
     cin >> AND >> SUM;
-    // K has the bits which are set in either X or Y but not both
-    ll K = SUM - 2 * AND;  // as AND bits are set in both X and Y
-    if (K < 0) return void(cout << "No\n");
-    bool check = (AND & K) == 0;  // no common bit
-    cout << (check ? "Yes" : "No") << '\n';
-
-    // // x&y + x|y = x+y
-    // // a + x|y = s
-    // ll AND, SUM;
-    // cin >> AND >> SUM;
-    // ll OR = SUM - AND;
-    // if (OR < 0) return void(cout << "No\n");
-    // // if bit set in AND but not in OR, then it is not possible
-    // for (ll i = 0; i <= 60; ++i) {
-    //     bool set_AND = (AND & (1LL << i));
-    //     bool set_OR = (OR & (1LL << i));
-    //     if (set_AND && !set_OR) return void(cout << "No" << '\n');
-    // }
-    // cout << "Yes\n";
+    ll OR = SUM - AND;
+    if (OR < 0) return void(cout << "No\n");
+    // if bit set in AND but not in OR, then it is not possible
+    dbg(bitset<60>(AND).to_string());
+    dbg(bitset<60>(OR).to_string());
+    for (ll i = 0; i <= 60; ++i) {
+        ll mask = (1LL << i);
+        bool set_AND = (AND & mask);
+        bool set_OR = (OR & mask);
+        if (set_AND && !set_OR) {
+            cout << "No" << '\n';
+            return;
+        }
+    }
+    cout << "Yes\n";
 }
 
 int main() {
