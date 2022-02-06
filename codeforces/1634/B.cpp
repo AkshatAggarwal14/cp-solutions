@@ -21,11 +21,18 @@ void Solution() {
     vector<ll> a(n);
     for (ll &A : a) cin >> A;
     // alice x, bob x + 3
-    x %= 2, y %= 2;
+    x %= 2;
+    y %= 2;
     ll alice = x;
-    for (ll i = 0; i < n; ++i)
-        if (a[i] % 2 != 0) alice = !alice;
-    cout << ((alice == y) ? "Alice\n" : "Bob\n");
+    for (ll i = 0; i < n; ++i) {
+        if (a[i] % 2 != 0) {
+            alice = !alice;
+        }
+    }
+    if (alice == y)
+        cout << "Alice\n";
+    else
+        cout << "Bob\n";
 }
 
 int main() {
