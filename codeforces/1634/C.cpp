@@ -16,27 +16,54 @@ constexpr bool amax(T &a, U &&b) { return a < b && (a = std::forward<U>(b), true
 const ll MOD = 1e9 + 7;
 
 // Al + ... + Ar = (r - l + 1) * (A_l + A_r) / 2
-// al + ar will be 2a + ... something
-// and 2 will cancel out as even common difference
 void Solution() {
     ll n, k;
     cin >> n >> k;
-    if (n % 2 == 0) {
-        vector<vector<ll>> ans(n, vector<ll>(k));
-        for (ll j = 0, cnt = 1; j < k; ++j)
-            for (ll i = 0; i < n; ++i)
-                ans[i][j] = cnt++;
-        cout << "YES\n";
-        for (ll i = 0; i < n; ++i)
-            for (ll j = 0; j < k; ++j) cout << ans[i][j] << " \n"[j == k - 1];
-        return;
-    }
     if (k == 1) {
         cout << "YES\n";
         for (ll i = 1; i <= n; ++i) cout << i << '\n';
         return;
+    } else if (k % 2 == 0) {
+        // r - l + 1 is even here
+        if (n % 2 == 0) {
+            set<ll> vals;
+            for (ll i = 1; i <= n * k; ++i) vals.insert(i);
+            vector<vector<ll>> ans(n, vector<ll>(k));
+            for (ll i = 0; i < n; ++i) {
+                ans[i][0] = *vals.begin();
+                vals.erase(ans[i][0]);
+                for (ll j = 1; j < k; ++j) {
+                    ans[i][j] = 2 + ans[i][j - 1];
+                    vals.erase(ans[i][j]);
+                }
+            }
+            cout << "YES\n";
+            for (auto &x : ans) {
+                for (auto &y : x) cout << y << ' ';
+                cout << '\n';
+            }
+        } else {
+            cout << "NO\n";
+            // n odd, k even
+        }
+    } else {
+        if (n % 2 == 0) {
+            ll cnt = 1;
+            vector<vector<ll>> ans(n, vector<ll>(k));
+            for (ll j = 0; j < k; ++j) {
+                for (ll i = 0; i < n; ++i) {
+                    ans[i][j] = cnt++;
+                }
+            }
+            cout << "YES\n";
+            for (auto &x : ans) {
+                for (auto &y : x) cout << y << ' ';
+                cout << '\n';
+            }
+        } else {
+            cout << "NO\n";
+        }
     }
-    cout << "NO\n";
 }
 
 int main() {
