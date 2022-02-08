@@ -18116,6 +18116,24 @@
     ],
     "timestamp": "Feb/03/2022 10:21"
   },
+  "CF145691763": {
+    "contest_id": 816,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/816/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Karen and Coffee",
+    "problem_url": "https://codeforces.com/contest/816/problem/B",
+    "submission_id": "CF145691763",
+    "submission_url": "https://codeforces.com/contest/816/submission/145691763",
+    "tags": [
+      "binary search",
+      "data structures",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Feb/09/2022 02:14"
+  },
   "CF145756133": {
     "contest_id": 696,
     "language": "GNU C++20 (64)",
