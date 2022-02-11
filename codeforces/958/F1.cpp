@@ -22,12 +22,15 @@ void Solution() {
     for (ll &A : a) cin >> A;
     for (ll &c : col) cin >> c;
     vector<ll> what;
-    for (ll i = 1; i <= m; ++i)
+    for (ll i = 1; i <= m; ++i) {
         while (col[i - 1]--) what.push_back(i);
+    }
     ll len = sz(what);
+    dbg(what);
     for (ll i = 0; i <= n - len; ++i) {
         vector<ll> sub(a.begin() + i, a.begin() + i + len);
         sort(all(sub));
+        dbg(sub);
         if (sub == what) return void(cout << "YES\n");
     }
     cout << "NO\n";
