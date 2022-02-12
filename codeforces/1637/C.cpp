@@ -22,7 +22,7 @@ void Solution() {
     for (ll &A : a) cin >> A;
     set<ll> odds;
     ll operations = 0;
-    for (ll _ = 0; _ < 3; ++_) {
+    for (ll _ = 0; _ < 10; ++_) {
         odds.clear();
         for (ll i = 1; i < n - 1; ++i)
             if (a[i] & 1) odds.insert(i);
@@ -37,12 +37,13 @@ void Solution() {
             }
         }
         reverse(all(a));
-        if (odds.empty()) break;
     }
+    dbg(a, odds);
     for (ll i = 1; i < n - 1; ++i) {
         if (a[i] & 1) return void(cout << "-1\n");
         operations += a[i] / 2;
     }
+    dbg(a, odds);
     cout << operations << '\n';
 }
 
