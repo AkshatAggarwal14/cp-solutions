@@ -28,6 +28,8 @@ pair<ll, ll> findClosest(const vector<ll> &x, ll target) {
         }
     }
     return {x[lo], x[hi]};
+    // if (target - x[lo] <= x[hi] - target) return x[lo];
+    // return x[hi];
 }
 
 // make almost equal, for each r, choose smallest g >= r, then b is lowerbound mean
@@ -38,7 +40,12 @@ void Solution() {
     for (ll &R : rr) cin >> R;
     for (ll &G : gg) cin >> G;
     for (ll &B : bb) cin >> B;
-    sort(all(rr)), sort(all(gg)), sort(all(bb));
+    sort(all(rr));
+    rr.resize(unique(all(rr)) - rr.begin());
+    sort(all(gg));
+    gg.resize(unique(all(gg)) - gg.begin());
+    sort(all(bb));
+    bb.resize(unique(all(bb)) - bb.begin());
     auto val = [&](ll x, ll y, ll z) {
         return (x - y) * (x - y) + (y - z) * (y - z) + (z - x) * (z - x);
     };
@@ -49,8 +56,8 @@ void Solution() {
             ll R = a[i];
             auto G = findClosest(b, R);
             ll G1 = G.first, G2 = G.second;
-            auto B = findClosest(c, R + G1);
-            auto B_ = findClosest(c, R + G2);
+            auto B = findClosest(c, R + G.first);
+            auto B_ = findClosest(c, R + G.second);
             ll B1 = B.first, B2 = B.second, B3 = B_.first, B4 = B_.second;
             amin(res, val(R, G1, B1 / 2));
             amin(res, val(R, G2, B1 / 2));
