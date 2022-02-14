@@ -18,9 +18,13 @@ const ll MOD = 1e9 + 7;
 void Solution() {
     ll n, p;
     cin >> n >> p;
-    for (ll dist = 1, cnt = 0; dist <= n && cnt < 2 * n + p; ++dist)
-        for (ll i = 0; i < n && cnt < 2 * n + p; ++i, ++cnt)
-            cout << i + 1 << ' ' << (dist + i) % n + 1 << '\n';
+    vector<array<ll, 2>> edges;
+    for (ll dist = 1; dist <= n && sz(edges) < 2 * n + p; ++dist) {
+        for (ll i = 0; i < n && sz(edges) < 2 * n + p; ++i) {
+            edges.push_back({i, (dist + i) % n});
+        }
+    }
+    for (auto &[x, y] : edges) cout << x + 1 << ' ' << y + 1 << '\n';
 }
 
 int main() {
