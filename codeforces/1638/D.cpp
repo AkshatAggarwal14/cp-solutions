@@ -31,7 +31,7 @@ int main() {
         ans.push_back({i, j, *st.begin()});  // push in ans
         for (int dx = 0; dx <= 1; ++dx)
             for (int dy = 0; dy <= 1; ++dy)
-                if (grid[i + dx][j + dy] != SPECIAL)  //!
+                if (grid[i + dx][j + dy] != SPECIAL)
                     bfs.emplace(i + dx, j + dy), grid[i + dx][j + dy] = SPECIAL;
     };
 
@@ -41,7 +41,7 @@ int main() {
     while (!bfs.empty()) {
         auto [i, j] = bfs.front();
         bfs.pop();
-        for (int dx = -1; dx <= 0; ++dx)  // all 2x2 squares containing i, j
+        for (int dx = -1; dx <= 0; ++dx)
             for (int dy = -1; dy <= 0; ++dy)
                 insert(i + dx, j + dy);
     }
