@@ -42,33 +42,7 @@ struct DSU {
 };
 
 void Solution() {
-    //! DSU
-    /*
-    instead of removing elements go in reverse order and add elements, join using DSU, and find max answer along the process.
-    */
-    int n;
-    cin >> n;
-    vector<int> a(n), p(n);
-    for (int &A : a) cin >> A;
-    for (int &P : p) cin >> P, --P;
-    reverse(all(p));
-    DSU dsu(n);
-    ll ans = 0;
-    set<int> in;
-    vector<ll> out;
-    for (int i = 0; i < n; ++i) {
-        out.push_back(ans);
-        if (in.count(p[i] - 1)) dsu.join(p[i], p[i] - 1);
-        if (in.count(p[i] + 1)) dsu.join(p[i], p[i] + 1);
-        dsu.sum[dsu.root(p[i])] += a[p[i]];
-        ans = max(ans, dsu.sum[dsu.root(p[i])]);
-        in.insert(p[i]);
-    }
-    reverse(all(out));
-    for (ll &x : out) cout << x << '\n';
-
     //! Set
-    /*
     int n;
     cin >> n;
     vector<int> arr(n + 1), p(n + 1);
@@ -93,6 +67,33 @@ void Solution() {
         dead.insert(x);
         cout << (*s.rbegin()) << '\n';
     }
+
+    //! DSU
+    /*
+    int n;
+    cin >> n;
+    vector<int> a(n), p(n);
+    for (int &A : a) cin >> A;
+    for (int &P : p) cin >> P, --P;
+    DSU dsu(n);
+    ll ans = 0;
+    reverse(all(p));
+    set<int> in;
+    vector<ll> out;
+    for (int i = 0; i < n; ++i) {
+        out.push_back(ans);
+        if (in.count(p[i] - 1)) {
+            dsu.join(p[i], p[i] - 1);
+        }
+        if (in.count(p[i] + 1)) {
+            dsu.join(p[i], p[i] + 1);
+        }
+        dsu.sum[dsu.root(p[i])] += a[p[i]];
+        ans = max(ans, dsu.sum[dsu.root(p[i])]);
+        in.insert(p[i]);
+    }
+    reverse(all(out));
+    for (ll &x : out) cout << x << '\n';
     */
 }
 
