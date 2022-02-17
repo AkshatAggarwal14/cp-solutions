@@ -42,34 +42,7 @@ struct DSU {
 };
 
 void Solution() {
-    //! Set
-    int n;
-    cin >> n;
-    vector<int> arr(n + 1), p(n + 1);
-    vector<ll> pre(n + 1);
-    multiset<ll> s;
-    for (int i = 1; i <= n; i++) cin >> arr[i];
-    for (int i = 1; i <= n; i++) cin >> p[i];
-    for (int i = 1; i <= n; i++) pre[i] = pre[i - 1] + arr[i];
-    set<int> dead;
-    dead.insert(0);
-    dead.insert(n + 1);
-    s.insert(pre[n]);
-    for (int i = 1; i <= n; i++) {
-        int x = p[i];
-        auto it = dead.upper_bound(x);
-        int ub = *it;
-        --it;
-        int lb = *it;
-        s.erase(s.find(pre[ub - 1] - pre[lb]));
-        s.insert(pre[ub - 1] - pre[x]);
-        s.insert(pre[x - 1] - pre[lb]);
-        dead.insert(x);
-        cout << (*s.rbegin()) << '\n';
-    }
-
-    //! DSU
-    /*
+    // 722C
     int n;
     cin >> n;
     vector<int> a(n), p(n);
@@ -94,7 +67,6 @@ void Solution() {
     }
     reverse(all(out));
     for (ll &x : out) cout << x << '\n';
-    */
 }
 
 int main() {
