@@ -16,20 +16,22 @@ void Solution() {
     cin >> n >> q;
     vector<ll> x(n);
     for (ll &X : x) cin >> X;
-    vector<vector<ll>> g(n), ans(n, vector<ll>(20));
+    vector<vector<ll>> g(n);
     for (ll i = 0, u, v; i < n - 1; ++i) {
         cin >> u >> v, --u, --v;
         g[u].push_back(v);
         g[v].push_back(u);
     }
+    vector<multiset<ll>> ans(n);  // 20 atmax in each
+
     auto add = [&](ll index, ll value) {
         if (sz(ans[index]) < 20) {
-            ans[index].push_back(value);
+            ans[index].insert(value);
         } else {
-            sort(all(ans[index]), greater<ll>());
-            if (ans[index].back() < value) {
-                ans[index].pop_back();
-                ans[index].push_back(value);
+            auto it = ans[index].begin();
+            if (value > *it) {
+                ans[index].erase(it);
+                ans[index].insert(value);
             }
         }
     };
@@ -44,11 +46,13 @@ void Solution() {
         }
     };
     dfs(dfs, 0);
-    for (ll i = 0; i < n; ++i) sort(all(ans[i]), greater<ll>());
+
     while (q--) {
         ll v, k;
         cin >> v >> k, --v, --k;
-        cout << ans[v][k] << '\n';
+        auto it = ans[v].begin();
+        for (ll i = 0; i < sz(ans[v]) - 1 - k; ++i) it = next(it);
+        cout << *it << '\n';
     }
 }
 
