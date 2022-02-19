@@ -22,36 +22,38 @@ void Solution() {
         g[u].push_back(v);
         g[v].push_back(u);
     }
-    vector<multiset<ll>> ans(n);  // 20 atmax in each
+    vector<multiset<ll>> vals(n);  // 20 atmax in each
 
-    auto add = [&](ll index, ll value) {
-        if (sz(ans[index]) < 20) {
-            ans[index].insert(value);
-        } else {
-            auto it = ans[index].begin();
-            if (value > *it) {
-                ans[index].erase(it);
-                ans[index].insert(value);
+    auto add = [&](ll id, ll value) {
+        if (sz(vals[id]) < 20)
+            vals[id].insert(value);
+        else {
+            ll mini = *vals[id].begin();
+            if (value > mini) {
+                vals[id].erase(mini);
+                vals[id].insert(value);
             }
         }
     };
 
-    // add children's ans to parents + add parent itself
     auto dfs = [&](const auto &self, ll node, ll parent = -1) -> void {
         add(node, x[node]);
         for (ll &child : g[node]) {
             if (child == parent) continue;
             self(self, child, node);
-            for (auto &&res : ans[child]) add(node, res);
+            for (auto &&res : vals[child]) {
+                add(node, res);
+            }
         }
     };
     dfs(dfs, 0);
+    dbg(vals);
 
     while (q--) {
         ll v, k;
         cin >> v >> k, --v, --k;
-        auto it = ans[v].begin();
-        for (ll i = 0; i < sz(ans[v]) - 1 - k; ++i) it = next(it);
+        auto it = vals[v].begin();
+        for (ll i = 0; i < sz(vals[v]) - 1 - k; ++i) it = next(it);
         cout << *it << '\n';
     }
 }
