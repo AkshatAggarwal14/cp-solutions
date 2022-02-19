@@ -22,30 +22,28 @@ void Solution() {
         g[u].push_back(v);
         g[v].push_back(u);
     }
-
-    auto put = [&](ll value, ll in_index) {
-        if (sz(ans[in_index]) < 20) {
-            ans[in_index].push_back(value);
+    auto add = [&](ll index, ll value) {
+        if (sz(ans[index]) < 20) {
+            ans[index].push_back(value);
         } else {
-            ll mini = *min_element(all(ans[in_index]));
+            ll mini = *min_element(all(ans[index]));
             if (mini < value) {
-                ans[in_index].erase(find(all(ans[in_index]), mini));
-                ans[in_index].push_back(value);
+                ans[index].erase(find(all(ans[index]), mini));
+                ans[index].push_back(value);
             }
         }
     };
 
     // add children's ans to parents + add parent itself
     auto dfs = [&](const auto &self, ll node, ll parent = -1) -> void {
-        put(x[node], node);
+        add(node, x[node]);
         for (ll &child : g[node]) {
             if (child == parent) continue;
             self(self, child, node);
-            for (const auto &i : ans[child]) put(i, node);
+            for (auto &&res : ans[child]) add(node, res);
         }
     };
     dfs(dfs, 0);
-
     for (ll i = 0; i < n; ++i) sort(all(ans[i]), greater<ll>());
     while (q--) {
         ll v, k;
