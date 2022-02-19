@@ -26,9 +26,9 @@ void Solution() {
         if (sz(ans[index]) < 20) {
             ans[index].push_back(value);
         } else {
-            ll mini = *min_element(all(ans[index]));
-            if (mini < value) {
-                ans[index].erase(find(all(ans[index]), mini));
+            sort(all(ans[index]), greater<ll>());
+            if (ans[index].back() < value) {
+                ans[index].pop_back();
                 ans[index].push_back(value);
             }
         }
