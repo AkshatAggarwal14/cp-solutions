@@ -16,7 +16,7 @@ void Solution() {
     cin >> n >> q;
     vector<ll> x(n);
     for (ll &X : x) cin >> X;
-    vector<vector<ll>> g(n), ans(n);
+    vector<vector<ll>> g(n), ans(n, vector<ll>(20));
     for (ll i = 0, u, v; i < n - 1; ++i) {
         cin >> u >> v, --u, --v;
         g[u].push_back(v);
