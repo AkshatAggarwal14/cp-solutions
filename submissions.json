@@ -1,4 +1,20 @@
 {
+  "AC29535547": {
+    "contest_id": "abc240",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc240/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Ranges on Tree",
+    "problem_url": "https://atcoder.jp/contests/abc240/tasks/abc240_e",
+    "submission_id": "AC29535547",
+    "submission_url": "https://atcoder.jp/contests/abc240/submissions/29535547",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Feb/20/2022 18:29"
+  },
   "AC29661576": {
     "contest_id": "abc241",
     "language": "C++ (GCC 9.2.1)",
