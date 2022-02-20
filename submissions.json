@@ -18116,6 +18116,23 @@
     ],
     "timestamp": "Feb/03/2022 10:21"
   },
+  "CF147089066": {
+    "contest_id": 1635,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1635/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Differential Sorting",
+    "problem_url": "https://codeforces.com/contest/1635/problem/C",
+    "submission_id": "CF147089066",
+    "submission_url": "https://codeforces.com/contest/1635/submission/147089066",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*1200"
+    ],
+    "timestamp": "Feb/20/2022 21:41"
+  },
   "CF147091044": {
     "contest_id": 1635,
     "language": "GNU C++20 (64)",
