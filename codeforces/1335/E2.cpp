@@ -16,8 +16,6 @@ const int MOD = 1e9 + 7;
 const int N = 200;
 
 void Solution() {
-    // use int to avoid MLE
-    // For some a_i, find max number of a_j's present between when you take 1 a_i from left and 1 from right
     int n;
     cin >> n;
     vector<int> a(n);
