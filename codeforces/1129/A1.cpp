@@ -22,11 +22,17 @@ void Solution() {
         g[u].insert(v);
         ++un_delivered;
     }
+    dbg(g);
 
-    auto farthest = [&](ll from, const multiset<ll> &G) -> ll {
+    auto farthest = [&](ll from, multiset<ll> &G) -> ll {
         ll max_dist = 0, ans = -1;
         for (const auto &toffee : G) {
-            ll dist = (toffee - from + n) % n;
+            ll dist = -1;
+            if (toffee > from) {
+                dist = toffee - from;
+            } else {
+                dist = (toffee + n - from);
+            }
             if (dist > max_dist) {
                 max_dist = dist;
                 ans = toffee;
@@ -43,16 +49,18 @@ void Solution() {
         while (cnt > 0) {
             index %= n;
             ll which_toffee_farthest = farthest(index, n_g[index]);
-            if (which_toffee_farthest != -1)  // no more toffee at this station?
+            if (which_toffee_farthest != -1) {
                 n_g[index].erase(n_g[index].find(which_toffee_farthest));
-            on_train.insert(which_toffee_farthest);  // insert farthest from this station
-            cnt -= on_train.count(index);            // drop all for this station
+            }
+            on_train.insert(which_toffee_farthest);
+            cnt -= on_train.count(index);
             on_train.erase(index);
-            ++steps, ++index;
+            steps++;
+            ++index;
         }
-        return steps - 1;
+        return steps;
     };
-    for (ll i = 0; i < n; ++i) cout << simulate(i) << ' ';
+    for (ll i = 0; i < n; ++i) cout << simulate(i) - 1 << ' ';
     cout << '\n';
 }
 
