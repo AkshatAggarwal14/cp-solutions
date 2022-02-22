@@ -14,22 +14,20 @@ const ll INF = 1e18;
 void Solution() {
     ll n, x;
     cin >> n >> x;
-    vector<ll> a(n);
-    for (ll &A : a) cin >> A;
-    vector<ll> mx(n + 1, -INF);
+    vector<ll> arr(n);
+    for (ll &A : arr) cin >> A;
+    vector<ll> maxi(n + 1, -INF);
     for (ll i = 0; i < n; i++) {
         ll sum = 0;
         for (ll j = i; j < n; j++) {
-            sum += a[j];
-            mx[j - i + 1] = max(mx[j - i + 1], sum);
+            sum += arr[j];
+            maxi[j - i + 1] = max(maxi[j - i + 1], sum);
         }
     }
-    // mx[i] contains maximum sum of subarray of length i
-    for (ll k = 0; k <= n; k++) {
+    for (ll i = 0; i <= n; i++) {
         ll ans = 0;
-        // for each subarray + x * min(k, subarray_len)
-        for (ll i = 1; i <= n; i++)
-            ans = max(ans, mx[i] + (min(k, i) * x));
+        for (ll j = 1; j <= n; j++)
+            ans = max(ans, maxi[j] + (min(i, j) * x));
         cout << ans << ' ';
     }
     cout << '\n';

@@ -1446,6 +1446,25 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF147341265": {
+    "contest_id": 1644,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1644/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Increase Subarray Sums",
+    "problem_url": "https://codeforces.com/contest/1644/problem/C",
+    "submission_id": "CF147341265",
+    "submission_url": "https://codeforces.com/contest/1644/submission/147341265",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Feb/22/2022 21:47"
+  },
   "CF147354365": {
     "contest_id": 1644,
     "language": "GNU C++20 (64)",
