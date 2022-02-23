@@ -1446,6 +1446,22 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF147402856": {
+    "contest_id": 1645,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1645/A.kt",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Spy Detected!",
+    "problem_url": "https://codeforces.com/contest/1645/problem/A",
+    "submission_id": "CF147402856",
+    "submission_url": "https://codeforces.com/contest/1645/submission/147402856",
+    "tags": [
+      "*special problem",
+      "implementation"
+    ],
+    "timestamp": "Feb/23/2022 13:13"
+  },
   "CF147404078": {
     "contest_id": 1645,
     "language": "Kotlin 1.4",
