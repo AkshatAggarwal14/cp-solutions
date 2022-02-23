@@ -1446,6 +1446,22 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF147404884": {
+    "contest_id": 1645,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1645/C.kt",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Teams Forming",
+    "problem_url": "https://codeforces.com/contest/1645/problem/C",
+    "submission_id": "CF147404884",
+    "submission_url": "https://codeforces.com/contest/1645/submission/147404884",
+    "tags": [
+      "*special problem",
+      "sortings"
+    ],
+    "timestamp": "Feb/23/2022 13:39"
+  },
   "CF147407037": {
     "contest_id": 1645,
     "language": "Kotlin 1.4",
