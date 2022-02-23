@@ -1446,6 +1446,22 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF147415725": {
+    "contest_id": 1642,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1642/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Hard Way",
+    "problem_url": "https://codeforces.com/contest/1642/problem/A",
+    "submission_id": "CF147415725",
+    "submission_url": "https://codeforces.com/contest/1642/submission/147415725",
+    "tags": [
+      "geometry",
+      "*800"
+    ],
+    "timestamp": "Feb/23/2022 15:48"
+  },
   "CF147423764": {
     "contest_id": 1642,
     "language": "GNU C++20 (64)",
