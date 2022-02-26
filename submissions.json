@@ -1446,6 +1446,23 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF147805951": {
+    "contest_id": 1645,
+    "language": "Kotlin 1.4",
+    "path": "codeforces/1645/E.kt",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Powers Of Two",
+    "problem_url": "https://codeforces.com/contest/1645/problem/E",
+    "submission_id": "CF147805951",
+    "submission_url": "https://codeforces.com/contest/1645/submission/147805951",
+    "tags": [
+      "*special problem",
+      "bitmasks",
+      "greedy"
+    ],
+    "timestamp": "Feb/27/2022 01:33"
+  },
   "CF147808002": {
     "contest_id": 1645,
     "language": "Kotlin 1.4",
