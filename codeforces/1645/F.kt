@@ -32,7 +32,7 @@ fun main() {
         }
         sb.appendLine(ans)
     }
-    print(sb)
+    println(sb)
 }
 
 private const val SPACE_INT = ' '.toInt()
