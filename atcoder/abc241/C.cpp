@@ -12,6 +12,7 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e18;
 
 ll dx[8] = {-1, -1, -1, 0, 1, 1, 1, 0}, dy[8] = {-1, 0, 1, 1, 1, 0, -1, -1};
+
 void Solution() {
     ll n;
     cin >> n;
@@ -23,16 +24,18 @@ void Solution() {
                 ll nx = i + 5 * dx[dir], ny = j + 5 * dy[dir];
                 if (nx >= n || ny >= n || nx < 0 || ny < 0) continue;
                 ll cnt = 0;
-                for (ll k = 0; k <= 5; ++k) {
-                    cnt += (grid[i + k * dx[dir]][j + k * dy[dir]] == '#');
-                    if (cnt >= 4) return void(cout << "Yes\n");
-                }
+                cnt += (grid[i][j] == '#');
+                cnt += (grid[i + dx[dir]][j + dy[dir]] == '#');
+                cnt += (grid[i + 2 * dx[dir]][j + 2 * dy[dir]] == '#');
+                cnt += (grid[i + 3 * dx[dir]][j + 3 * dy[dir]] == '#');
+                cnt += (grid[i + 4 * dx[dir]][j + 4 * dy[dir]] == '#');
+                cnt += (grid[i + 5 * dx[dir]][j + 5 * dy[dir]] == '#');
+                if (cnt >= 4) return void(cout << "Yes\n");
             }
         }
     }
     cout << "No\n";
 }
-
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifdef LOCAL
