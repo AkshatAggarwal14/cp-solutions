@@ -1,7 +1,6 @@
 #![allow(dead_code, unused_macros, unused_imports)]
 import java.io.BufferedReader
-
-//import kotlin.math.*
+import kotlin.math.*
 
 fun main() {
     val br = System.`in`.bufferedReader()
