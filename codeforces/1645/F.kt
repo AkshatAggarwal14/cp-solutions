@@ -2,6 +2,7 @@
 import java.io.BufferedReader
 import kotlin.math.*
 
+public const val N = 5
 
 fun main() {
     val br = System.`in`.bufferedReader()
@@ -10,10 +11,12 @@ fun main() {
 //    t = br.readInt()
     repeat(t) {
         var n = br.readInt()
-        var a = IntArray(n) { br.readInt() }
+        var a = ArrayList<Int>()
+        repeat(n) {
+            a.add(br.readInt())
+        }
         var ans = 0
-        // shuffle and sort array
-        a.shuffle()
+        // sort array
         a.sort()
         var prev = 0
         for (i in 0 until n) {
