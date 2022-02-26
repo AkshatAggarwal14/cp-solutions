@@ -38,7 +38,12 @@ void Solution() {
         } else if (type == 2) {
             ll x, k;
             cin >> x >> k, --k;
-            ll id = (st.order_of_key(x + 1) - 1) - k;
+            /*
+            Among the elements of A that are less than or equal to x, print the k-th largest value. (k is no more than 5)
+            If there are less than k elements of A that are less than or equal to x, then print -1.
+            */
+            ll lesser = st.order_of_key(x + 1) - 1;
+            ll id = lesser - k;
             if (id < 0)
                 cout << "-1\n";
             else
@@ -46,6 +51,10 @@ void Solution() {
         } else {
             ll x, k;
             cin >> x >> k, --k;
+            /*
+            Among the elements of A that are greater than or equal to x, print the k-th smallest value. (k is no more than 5)
+            If there are less than k elements of A that are greater than or equal to x, then print -1.
+            */
             ll id = st.order_of_key(x) + k;
             if (id >= sz(st))
                 cout << "-1\n";
