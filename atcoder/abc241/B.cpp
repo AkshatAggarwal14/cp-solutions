@@ -15,15 +15,21 @@ void Solution() {
     ll n, m;
     cin >> n >> m;
     map<ll, ll> mp;
-    for (ll i = 0, x; i < n; ++i) cin >> x, mp[x]++;
+    for (ll i = 0, x; i < n; ++i) {
+        cin >> x;
+        mp[x]++;
+    }
     vector<ll> b(m);
     for (ll &B : b) cin >> B;
     for (ll i = 0; i < m; ++i) {
         if (!mp.count(b[i]))
             return void(cout << "No\n");
         else {
-            --mp[b[i]];
-            if (mp[b[i]] == 0) mp.erase(b[i]);
+            if (mp[b[i]] == 1) {
+                mp.erase(b[i]);
+            } else {
+                --mp[b[i]];
+            }
         }
     }
     cout << "Yes\n";
