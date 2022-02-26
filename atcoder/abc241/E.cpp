@@ -26,30 +26,32 @@ void Solution() {
         curr += a[X % n];
         curr %= n;
         X += a[X % n];
+        // dbg(prev, curr);
     }
     ll cycle_len = vis[prev] - vis[curr] + 1;
+    // dbg(curr, prev, cycle_len, vis);
     ll steps_before = vis[curr];
     dbg(steps_before);
     ll ans = 0;
-    if (k >= steps_before) {  // solve for inside cycle
+    if (k >= steps_before) {
         dbg(k, steps_before);
-        ll sum_cycle = 0;
+        ll ss = 0;
         for (ll i = 0; i < n; ++i) {
-            if (vis[i] <= vis[prev] && vis[i] >= vis[curr]) sum_cycle += a[i];
+            if (vis[i] <= vis[prev] && vis[i] >= vis[curr]) ss += a[i];
         }
         k -= steps_before;
         ll left = k;
         ll total = left / cycle_len;
         ll steps_to_do = left % cycle_len;
         dbg(total, steps_to_do, left, cycle_len, curr, prev);
-        ans += sum_cycle * total;     // for complete cycles
-        for (ll i = 0; i < n; ++i) {  //  left over inside cycle
+        ans += ss * total;
+        for (ll i = 0; i < n; ++i) {
             if (vis[i] < vis[curr] + steps_to_do && vis[i] >= vis[curr]) ans += a[i];
         }
         dbg(ans);
     }
     dbg(k, vis);
-    for (ll i = 0; i < n; ++i) {  // leftover before cycle
+    for (ll i = 0; i < n; ++i) {
         if (vis[i] <= min(k - 1, vis[curr] - 1) && vis[i] >= 0) ans += a[i];
     }
     cout << ans << '\n';
