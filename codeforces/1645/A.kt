@@ -23,7 +23,7 @@ fun main() {
             }
         }
         var idx = -1
-        for (i in 0 until n) {
+        for (i in 0..n - 1) {
             if (a[i] == ans)
                 idx = i + 1
         }
