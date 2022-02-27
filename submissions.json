@@ -1,4 +1,20 @@
 {
+  "AC29734909": {
+    "contest_id": "abc241",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc241/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Skate",
+    "problem_url": "https://atcoder.jp/contests/abc241/tasks/abc241_f",
+    "submission_id": "AC29734909",
+    "submission_url": "https://atcoder.jp/contests/abc241/submissions/29734909",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Feb/27/2022 13:40"
+  },
   "AC29735038": {
     "contest_id": "abc241",
     "language": "C++ (GCC 9.2.1)",
