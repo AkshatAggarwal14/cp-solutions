@@ -43,15 +43,13 @@ void Solution() {
     ll ans = 0;
     string s(toBinary(n));
     for (ll i = l; i <= r; ++i) {
-        // ll lsb = -1;
-        // for (ll j = 0; j <= 49; ++j)
-        //     if (i & (1LL << j)) {
-        //         lsb = j;
-        //         break;
-        //     }
-        // if (lsb != -1) ans += s[lsb] - '0';
-        ll lsb = (i & (~(i - 1)));
-        if (i != 0) ans += s[__lg(lsb)] - '0';
+        ll lsb = -1;
+        for (ll j = 0; j <= 49; ++j)
+            if (i & (1LL << j)) {
+                lsb = j;
+                break;
+            }
+        if (lsb != -1) ans += s[lsb] - '0';
     }
     cout << ans << '\n';
 }
