@@ -15,14 +15,18 @@ void Solution() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    for (ll &A : a) cin >> A;
+    for (ll i = 0; i < n; ++i) cin >> a[i];
     sort(all(a));
-    ll sumRed = 0, sumBlue = a[0];
-    ll i = 1, j = n - 1;
+    ll sum1 = a[n - 1], sum2 = a[0] + a[1];
+    if (sum1 > sum2) return void(cout << "YES\n");
+    ll i = 2, j = n - 2;
     while (i < j) {
-        sumRed += a[j--], sumBlue += a[i++];
-        if (sumRed > sumBlue) return void(cout << "YES\n");
+        if (sum1 > sum2) return void(cout << "YES\n");
+        sum1 += a[j];
+        sum2 += a[i];
+        ++i, --j;
     }
+    if (sum1 > sum2) return void(cout << "YES\n");
     cout << "NO\n";
 }
 
