@@ -14,7 +14,8 @@ const ll INF = 1e18;
 void Solution() {
     ll n, s;
     cin >> n >> s;
-    cout << s / (n * n) << '\n';
+    n *= n;
+    cout << s / n << '\n';
 }
 
 int main() {
