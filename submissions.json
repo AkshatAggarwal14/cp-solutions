@@ -1446,6 +1446,26 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF148386320": {
+    "contest_id": 1646,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1646/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Quality vs Quantity",
+    "problem_url": "https://codeforces.com/contest/1646/problem/B",
+    "submission_id": "CF148386320",
+    "submission_url": "https://codeforces.com/contest/1646/submission/148386320",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "two pointers",
+      "*800"
+    ],
+    "timestamp": "Mar/04/2022 23:58"
+  },
   "CF148386381": {
     "contest_id": 1646,
     "language": "GNU C++20 (64)",
