@@ -1446,6 +1446,25 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF148629506": {
+    "contest_id": 1649,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1649/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Integral Array",
+    "problem_url": "https://codeforces.com/contest/1649/problem/D",
+    "submission_id": "CF148629506",
+    "submission_url": "https://codeforces.com/contest/1649/submission/148629506",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "math",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "Mar/06/2022 22:22"
+  },
   "CF148663209": {
     "contest_id": 1513,
     "language": "GNU C++20 (64)",
