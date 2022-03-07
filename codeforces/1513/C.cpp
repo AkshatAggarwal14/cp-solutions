@@ -21,13 +21,12 @@ void Solution() {
     vector<ll> ans(10, 0);
     for (ll i = 0; i < 10; ++i) {
         for (ll j = 0; j < 10; ++j) {
-            ans[j] += cnt_digits[i] * dp[i][m][j] % MOD;
-            if (ans[j] > MOD) ans[j] -= MOD;
+            ans[j] = (ans[j] + cnt_digits[i] * dp[i][m][j]) % MOD;
         }
     }
     ll res = 0;
-    for (ll i = 0; i < 10; ++i) res += ans[i];
-    cout << res % MOD << '\n';
+    for (ll i = 0; i < 10; ++i) res = (res + ans[i]) % MOD;
+    cout << res << '\n';
 }
 
 int32_t main() {
