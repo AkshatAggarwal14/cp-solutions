@@ -35,22 +35,20 @@ int32_t main() {
     vector<ll> temp(10, 0);
     dp.resize(10, vector<vector<ll>>(M + 1, vector<ll>(10, 0)));
     // preprocess answer for 1, 2, 3, 4, 5,.. 9 for all 1 <= m <= 2e5, then use it to calculate total answer per digit in input
-    for (ll dig = 0; dig <= 9; ++dig) {
-        dp[dig][0][dig] = 1;  // on 0 moves, only the digit itself is set
-        for (ll move_no = 1; move_no <= M; ++move_no) {
+    for (ll digit = 0; digit <= 9; ++digit) {
+        dp[digit][0][digit] = 1;  // on 0 moves, only the digit itself is set
+        for (ll move_number = 1; move_number <= M; ++move_number) {
             for (ll i = 0; i <= 9; ++i) temp[i] = 0;
             for (ll i = 0; i <= 9; ++i) {
-                if (i == 9) {
-                    temp[1] += dp[dig][move_no - 1][9];
-                    temp[0] += dp[dig][move_no - 1][9];
-                    if (temp[1] > MOD) temp[1] -= MOD;
-                    if (temp[0] > MOD) temp[0] -= MOD;
-                } else {
-                    temp[i + 1] += dp[dig][move_no - 1][i];
-                    if (temp[i + 1] > MOD) temp[i + 1] -= MOD;
+                ll next = i + 1;
+                while (next) {
+                    ll last = next % 10;
+                    temp[last] += dp[digit][move_number - 1][i];
+                    if (temp[last] > MOD) temp[last] -= MOD;
+                    next /= 10;
                 }
             }
-            swap(temp, dp[dig][move_no]);  // update the next state from previous
+            swap(temp, dp[digit][move_number]);  // update the next state from previous
         }
     }
 
