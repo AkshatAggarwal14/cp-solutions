@@ -21,7 +21,7 @@ void Solution() {
     vector<ll> ans(10, 0);
     for (ll i = 0; i < 10; ++i) {
         for (ll j = 0; j < 10; ++j) {
-            ans[j] = (ans[j] + cnt_digits[i] * dp[i][m][j]) % MOD;
+            ans[j] = (ans[j] + (cnt_digits[i] % MOD) * (dp[i][m][j] % MOD)) % MOD;
         }
     }
     ll res = 0;
@@ -41,9 +41,8 @@ int32_t main() {
             for (ll i = 0; i <= 9; ++i) {
                 ll next = i + 1;
                 while (next) {
-                    ll last = next % 10;
-                    temp[last] += dp[digit][move_number - 1][i] % MOD;
-                    if (temp[last] > MOD) temp[last] -= MOD;
+                    temp[next % 10] += dp[digit][move_number - 1][i] % MOD;
+                    temp[next % 10] %= MOD;
                     next /= 10;
                 }
             }
