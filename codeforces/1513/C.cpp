@@ -39,14 +39,17 @@ int32_t main() {
         dp[dig][0][dig] = 1;  // on 0 moves, only the digit itself is set
         for (ll move_no = 1; move_no <= M; ++move_no) {
             for (ll i = 0; i <= 9; ++i) temp[i] = 0;
-            for (ll i = 0; i <= 8; ++i) {
-                temp[i + 1] += dp[dig][move_no - 1][i];
-                if (temp[i + 1] > MOD) temp[i + 1] -= MOD;
+            for (ll i = 0; i <= 9; ++i) {
+                if (i == 9) {
+                    temp[1] += dp[dig][move_no - 1][9];
+                    temp[0] += dp[dig][move_no - 1][9];
+                    if (temp[1] > MOD) temp[1] -= MOD;
+                    if (temp[0] > MOD) temp[0] -= MOD;
+                } else {
+                    temp[i + 1] += dp[dig][move_no - 1][i];
+                    if (temp[i + 1] > MOD) temp[i + 1] -= MOD;
+                }
             }
-            temp[1] += dp[dig][move_no - 1][9];
-            temp[0] += dp[dig][move_no - 1][9];
-            if (temp[1] > MOD) temp[1] -= MOD;
-            if (temp[0] > MOD) temp[0] -= MOD;
             swap(temp, dp[dig][move_no]);  // update the next state from previous
         }
     }
