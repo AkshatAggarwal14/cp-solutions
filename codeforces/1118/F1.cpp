@@ -29,11 +29,15 @@ void Solution() {
         for (auto &child : g[node]) {
             if (child == par) continue;
             self(self, child, node);
+            subtree_blue[node] += subtree_blue[child];
+            subtree_red[node] += subtree_red[child];
+        }
+        // post dfs area
+        for (auto &child : g[node]) {
+            if (child == par) continue;
             if ((subtree_blue[child] == blue && subtree_red[child] == 0) ||
                 (subtree_red[child] == red && subtree_blue[child] == 0))
                 ++ans;
-            subtree_blue[node] += subtree_blue[child];
-            subtree_red[node] += subtree_red[child];
         }
     };
     dfs(dfs, 0);
