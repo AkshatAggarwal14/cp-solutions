@@ -19,7 +19,7 @@ void Solution() {
     for (ll &B : b) cin >> B;
     ll a1 = INF, a2 = INF;
     ll b1 = INF, b2 = INF;
-    for (ll i = 0; i < n; i++) {
+    for (ll i = 1; i < n - 1; i++) {
         a1 = min(a1, abs(a[0] - b[i]));
         a2 = min(a2, abs(a[n - 1] - b[i]));
         b1 = min(b1, abs(b[0] - a[i]));
@@ -28,10 +28,18 @@ void Solution() {
     cout << min({
         abs(a[0] - b[0]) + abs(a[n - 1] - b[n - 1]),  // | |
         a1 + b1 + a2 + b2,                            // X X
-        a2 + b2 + abs(a[0] - b[0]),                   // | X
-        a1 + b1 + abs(a[n - 1] - b[n - 1]),           // X |
+
+        a2 + b2 + abs(a[0] - b[0]),                    // | X
+        abs(a[0] - b[0]) + abs(a[0] - b[n - 1]) + a2,  // ^
+        abs(a[0] - b[0]) + abs(b[0] - a[n - 1]) + b2,  // ^
+
+        a1 + b1 + abs(a[n - 1] - b[n - 1]),                    // X |
+        abs(a[n - 1] - b[n - 1]) + abs(a[0] - b[n - 1]) + b1,  // ^
+        abs(a[n - 1] - b[n - 1]) + abs(b[0] - a[n - 1]) + a1,  // ^
+
         abs(a[0] - b[n - 1]) + abs(b[0] - a[n - 1]),  // X
-        abs(a[0] - b[n - 1]) + a2 + b1,               //!
+
+        abs(a[0] - b[n - 1]) + a2 + b1,  //!
         abs(b[0] - a[n - 1]) + a1 + b2,
     });
     cout << '\n';

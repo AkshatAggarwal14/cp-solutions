@@ -1446,6 +1446,24 @@
     ],
     "timestamp": "Jan/17/2022 10:27"
   },
+  "CF149172337": {
+    "contest_id": 1651,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1651/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Fault-tolerant Network",
+    "problem_url": "https://codeforces.com/contest/1651/problem/C",
+    "submission_id": "CF149172337",
+    "submission_url": "https://codeforces.com/contest/1651/submission/149172337",
+    "tags": [
+      "brute force",
+      "data structures",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Mar/10/2022 22:17"
+  },
   "CF149173040": {
     "contest_id": 1651,
     "language": "GNU C++20 (64)",
