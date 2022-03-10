@@ -11,6 +11,43 @@ auto sz = [](const auto &container) -> ll { return ll(container.size()); };
 const ll MOD = 1e9 + 7;
 const ll INF = 1e18;
 
+template <class T, class U = function<T(const T &, const T &)>, class V = function<T()>>
+class Sparse_Table {
+    int N, K;
+    vector<int> LOG;
+    vector<vector<T>> st;
+    U op;
+    V id;
+
+   public:
+    Sparse_Table() = default;
+    Sparse_Table(const vector<T> &arr, const U &OP, const V &ID)
+        : N(int(arr.size())), K(__lg(N)), LOG(N + 1), st(N, vector<T>(K + 1)), op(OP), id(ID) {
+        LOG[1] = 0;
+        for (int i = 2; i <= N; i++) LOG[i] = LOG[i / 2] + 1;
+        for (int i = 0; i < N; i++)
+            st[i][0] = arr[i];
+        for (int j = 1; j <= K; j++)
+            for (int i = 0; i + (1 << j) <= N; i++)
+                st[i][j] = op(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+    }
+    T slow_query(int L, int R) {
+        T res = id();
+        for (int j = K; j >= 0; j--) {
+            if ((1 << j) <= R - L + 1) {
+                res = op(res, st[L][j]);
+                L += (1 << j);
+            }
+        }
+    }
+    T query(int L, int R) {
+        if (L > R) return id();
+        int j = LOG[R - L + 1];
+        T res = op(st[L][j], st[R - (1 << j) + 1][j]);
+        return res;
+    }
+};
+
 void Solution() {
     ll n;
     cin >> n;
@@ -25,8 +62,6 @@ void Solution() {
         max_power[si] = max(max_power[si], p);
     }
     for (ll i = n - 2; i >= 0; --i) max_power[i] = max(max_power[i], max_power[i + 1]);
-
-    /*
     Sparse_Table<ll> st(
         a,
         [](const ll &A, const ll &B) -> ll { return max(A, B); },
@@ -34,7 +69,6 @@ void Solution() {
     int index = 0;
     ll ans = 0;
     // dbg(max_p);
-
     while (index < n) {
         int L = index, R = int(n) - 1;
         --L, ++R;
@@ -52,25 +86,6 @@ void Solution() {
         index = L + 1;                                    // if found move to next segment
         ++ans;                                            // how many segments?
     }
-
-    cout << ans << '\n';
-    */
-    //! can be done directly as the each point is in exactly one segment so it will be O(N)
-    ll index = 0;
-    ll ans = 0;
-    // dbg(max_power);
-
-    while (index < n) {
-        ll L = index, x = -INF;
-        while (L < n && (max_power[L - index] >= max(x, a[L]))) {
-            x = max(x, a[L]);
-            ++L;
-        }
-        if (index == L) return void(cout << "-1\n");  // if none found
-        index = L;                                    // if found move to next segment
-        ++ans;                                        // how many segments?
-    }
-
     cout << ans << '\n';
 }
 
