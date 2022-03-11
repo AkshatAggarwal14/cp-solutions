@@ -11,22 +11,6 @@ auto sz = [](const auto &container) -> ll { return ll(container.size()); };
 const ll MOD = 1e9 + 7;
 const ll INF = 1e18;
 
-void BETTER() {
-    int n, m;
-    cin >> n >> m;
-    vector<string> grid(n);
-    for (int i = 0; i < n; i++)
-        cin >> grid[i];
-    for (int i = 1; i < n; i++) {
-        for (int j = 1; j < m; j++) {
-            int sum = 0;
-            sum += (grid[i - 1][j - 1] - '0') + (grid[i - 1][j] - '0') + (grid[i][j - 1] - '0') + (grid[i][j] - '0');
-            if (sum == 3) return void(cout << "NO\n");  // L shape
-        }
-    }
-    cout << "YES\n";
-}
-
 void Solution() {
     ll n, m;
     cin >> n >> m;
@@ -68,8 +52,7 @@ int main() {
     int tc = 1;
     cin >> tc;
     while (tc--) {
-        // Solution();
-        BETTER();
+        Solution();
     }
     return 0;
 }
