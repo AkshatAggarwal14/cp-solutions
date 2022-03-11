@@ -15,13 +15,14 @@ void Solution() {
     ll n;
     cin >> n;
     string s = "";
-    for (ll i = 0; i < (n / 3); ++i) s += "21";
-    if (n % 3 == 2) {
-        s = s + "2";
-    } else if (n % 3 == 1) {
-        s = "1" + s;
+    for(ll i=0;i<(n/3);++i)    s+="21";
+    if(n % 3 == 2){
+        s=s+"2";
+    }else if(n%3==1){
+        s = "1"+s;
     }
-    cout << s << '\n';
+    cout << s<< '\n';
+
 }
 
 int main() {
