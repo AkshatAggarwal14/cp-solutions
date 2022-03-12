@@ -1,4 +1,20 @@
 {
+  "AC30088915": {
+    "contest_id": "abc243",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc243/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Hit and Blow",
+    "problem_url": "https://atcoder.jp/contests/abc243/tasks/abc243_b",
+    "submission_id": "AC30088915",
+    "submission_url": "https://atcoder.jp/contests/abc243/submissions/30088915",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Mar/12/2022 22:48"
+  },
   "AC30089055": {
     "contest_id": "abc243",
     "language": "C++ (GCC 9.2.1)",
