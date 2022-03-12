@@ -1,4 +1,20 @@
 {
+  "AC30088824": {
+    "contest_id": "abc243",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc243/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Shampoo",
+    "problem_url": "https://atcoder.jp/contests/abc243/tasks/abc243_a",
+    "submission_id": "AC30088824",
+    "submission_url": "https://atcoder.jp/contests/abc243/submissions/30088824",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/12/2022 22:43"
+  },
   "AC30088915": {
     "contest_id": "abc243",
     "language": "C++ (GCC 9.2.1)",
