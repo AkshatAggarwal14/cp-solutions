@@ -1,4 +1,20 @@
 {
+  "AC30089627": {
+    "contest_id": "abc243",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc243/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Edge Deletion",
+    "problem_url": "https://atcoder.jp/contests/abc243/tasks/abc243_e",
+    "submission_id": "AC30089627",
+    "submission_url": "https://atcoder.jp/contests/abc243/submissions/30089627",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Mar/12/2022 23:48"
+  },
   "AC30311826": {
     "contest_id": "abc244",
     "language": "C++ (GCC 9.2.1)",
