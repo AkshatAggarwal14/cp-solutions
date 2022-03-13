@@ -13,7 +13,7 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-template <class T, class op, class id>
+template <class T, class op = function<T(const T &, const T &)>, class id = function<T()>>
 class SegTree {
    public:
     SegTree() = default;
@@ -100,9 +100,10 @@ void test() {
     cin >> n >> q;
     vector<int> cnt(n + 1, 0);
     for (int i = 0, num; i < n; ++i) cin >> num, ++cnt[num];
-    auto l1 = [](const int &A, const int &B) { return A + B; };
-    auto l2 = []() { return 0; };
-    SegTree<int, decltype(l1), decltype(l2)> st(cnt, l1, l2);
+    SegTree<int> st(
+        cnt,
+        [](const int &A, const int &B) { return A + B; },
+        []() { return 0; });
     while (q--) {
         int x;
         cin >> x;
