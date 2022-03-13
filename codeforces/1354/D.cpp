@@ -110,11 +110,11 @@ void test() {
         if (x > 0) {
             st.update(x, st.query(x) + 1);
         } else {
-            int last = st.kth_order(-x);
+            int last = st.kth_order(ll(-x));
+            assert(last != -1 && st.query(last) != 0);
             st.update(last, st.query(last) - 1);
         }
     }
-    // no answer
     if (!st.all_query()) return void(cout << "0\n");
     for (int i = 1; i <= n; ++i)
         if (st.query(i)) return void(cout << i << '\n');
