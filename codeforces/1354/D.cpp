@@ -62,11 +62,14 @@ class SegTree {
         calc(node);
     }
 
-    T _kth_order(int node, int node_lo, int node_hi, T k) {
-        if (node_lo == node_hi) return node_lo;
+    T _kth_order(int node, int node_lo, int node_hi, ll k) {
+        if (node_lo == node_hi)
+            return node_lo;
         int last_in_left = (node_lo + node_hi) >> 1;
-        if (tree[2 * node] >= k) return _kth_order(2 * node, node_lo, last_in_left, k);
-        return _kth_order(2 * node + 1, last_in_left + 1, node_hi, k - tree[2 * node]);
+        if (tree[2 * node] >= k)
+            return _kth_order(2 * node, node_lo, last_in_left, k);
+        else
+            return _kth_order(2 * node + 1, last_in_left + 1, node_hi, k - tree[2 * node]);
     }
 
     T all_query() { return tree[1]; }
@@ -82,7 +85,7 @@ class SegTree {
         assert(0 <= p && p < _n);
         _update(1, 0, size - 1, p, p, x);
     }
-    T kth_order(T k) {
+    T kth_order(ll k) {
         assert(k <= tree[1]);
         return _kth_order(1, 0, size - 1, k);
     }
@@ -110,7 +113,7 @@ void test() {
         if (x > 0) {
             st.update(x, st.query(x) + 1);
         } else {
-            int last = st.kth_order(ll(-x));
+            int last = st.kth_order(-x);
             assert(last != -1 && st.query(last) != 0);
             st.update(last, st.query(last) - 1);
         }
