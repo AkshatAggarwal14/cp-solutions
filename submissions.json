@@ -1,4 +1,23 @@
 {
+  "CF149557876": {
+    "contest_id": 1202,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1202/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Print a 1337-string...",
+    "problem_url": "https://codeforces.com/contest/1202/problem/D",
+    "submission_id": "CF149557876",
+    "submission_url": "https://codeforces.com/contest/1202/submission/149557876",
+    "tags": [
+      "combinatorics",
+      "constructive algorithms",
+      "math",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Mar/14/2022 00:51"
+  },
   "CF149688782": {
     "contest_id": 1633,
     "language": "GNU C++20 (64)",
