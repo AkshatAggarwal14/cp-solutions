@@ -9,24 +9,19 @@ using ll = long long;
 const ll N = 1005;
 const ll INF = 1e18;
 
-ll knapsack(ll W, vector<ll> wt, vector<ll> val) {
-    dbg(W, wt, val);
-    int n = int(wt.size());
-    assert(int(val.size()) == n);
-    vector<vector<ll>> dp(2, vector<ll>(W + 1, -1));
-    for (int i = 0; i <= n; ++i) {
-        for (int w = 0; w <= W; ++w) {
-            if (i == 0) {  //! as items can have weight 0, so cant initalise w to 0
-                dp[i % 2][w] = 0;
-            } else {
-                dp[i % 2][w] = dp[(i - 1) % 2][w];
-                if (wt[i - 1] <= w)
-                    dp[i % 2][w] = max(val[i - 1] + dp[(i - 1) % 2][w - wt[i - 1]], dp[i % 2][w]);
-            }
+ll knapsack(ll W, vector<ll> weight, vector<ll> value) {
+    // making and initializing dp array
+    ll n = ll(weight.size());
+    assert(ll(value.size()) == n);
+    vector<ll> dp(W + 1, 0);
+    for (ll i = 1; i < n + 1; i++) {
+        for (ll w = W; w >= 0; w--) {
+            // finding the maximum value
+            if (weight[i - 1] <= w)
+                dp[w] = max(dp[w], dp[w - weight[i - 1]] + value[i - 1]);
         }
-        dbg(i, dp);
     }
-    return dp[n % 2][W];
+    return dp[W];  // returning the maximum value of knapsack
 }
 
 int main() {
