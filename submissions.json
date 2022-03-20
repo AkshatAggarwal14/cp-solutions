@@ -1,4 +1,20 @@
 {
+  "AC30311877": {
+    "contest_id": "abc244",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc244/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Go Straight and Turn Right",
+    "problem_url": "https://atcoder.jp/contests/abc244/tasks/abc244_b",
+    "submission_id": "AC30311877",
+    "submission_url": "https://atcoder.jp/contests/abc244/submissions/30311877",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Mar/20/2022 21:53"
+  },
   "AC30311955": {
     "contest_id": "abc244",
     "language": "C++ (GCC 9.2.1)",
