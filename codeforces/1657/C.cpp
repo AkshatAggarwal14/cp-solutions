@@ -17,29 +17,43 @@ void test() {
     ll n;
     string s;
     cin >> n >> s;
-    ll moves = 0;
-    ll i = 0;
-    while (i < n - 1) {
-        if (s[i] == '(' and s[i + 1] == '(') moves++, i += 2;
-        if (s[i] == '(' and s[i + 1] == ')') moves++, i += 2;
-        if (s[i] == ')' and s[i + 1] == ')') moves++, i += 2;
-        if (s[i] == ')' and s[i + 1] == '(') {
-            ll j;
-            bool flag = false;
-            for (j = i + 1; j < n; j++) {
-                if (s[j] == ')') {
-                    flag = true;
-                    break;
+    ll ops = 0, left = n;
+    stack<char> st;
+    for (ll i = 0; i < n;) {
+        if (st.empty()) {
+            st.push(s[i]);
+            ++i;
+        } else {
+            if (s[i] == st.top()) {
+                left -= 2;
+                ops++;
+                st.pop();
+                ++i;
+            } else if (st.top() == '(' && s[i] == ')') {
+                st.pop();
+                left -= 2;
+                ops++;
+                ++i;
+            } else {
+                if (st.top() != ')') break;
+                // assert(s[i] == ')');
+                ll pos = -1;
+                for (ll j = i + 1; j < n; ++j) {
+                    if (s[j] == ')') {
+                        pos = j;
+                        break;
+                    }
                 }
+                dbg(i, pos);
+                if (pos == -1) break;
+                ops++;
+                left -= (pos - i + 2);
+                i = pos + 1;
+                st.pop();
             }
-            if (!flag) break;
-            i = j + 1;
-            moves++;
         }
     }
-    cout << moves << ' ';
-    ll rem = n - 1 - i + 1;
-    cout << rem << '\n';
+    cout << ops << ' ' << left << '\n';
 }
 
 int32_t main() {
