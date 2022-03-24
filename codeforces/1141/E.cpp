@@ -14,39 +14,26 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
-    ll H, n, sum = 0;
+    ll n, H;
     cin >> H >> n;
-    vector<ll> h(n);
-    for (ll &hh : h) cin >> hh;
-    for (ll i = 0; i < n; ++i) {
-        sum += h[i];
-        if (H + sum <= 0) return void(cout << i + 1 << '\n');
+    vector<ll> d(n);
+    ll sum = 0, most_neg = 0;
+    for (ll i = 0; i < n; i++) {
+        cin >> d[i];
+        sum += d[i];
+        most_neg = min(most_neg, sum);
     }
-    if (sum >= 0) return void(cout << "-1\n");
-    ll L = 1, R = INF;
-    R /= (max(1LL, abs(sum) - 1));
-    R += N;
-    auto can = [&](ll times) -> pair<bool, ll> {
-        ll temp = H + (times - 1) * sum;
-        for (ll i = 0; i < n; ++i) {
-            temp += h[i];
-            if (temp <= 0) return {true, i + 1};
-        }
-        return {false, -1};
-    };
-    --L, ++R;
-    ll ans_index = -INF;
-    while (R > L + 1) {
-        ll M = (R + L) / 2;
-        auto C = can(M);
-        if (C.first) {
-            ans_index = C.second + (M - 1) * n;
-            R = M;
-        } else {
-            L = M;
-        }
+    if (H + most_neg > 0 && sum >= 0)
+        cout << "-1\n";
+    else {
+        ll ans, steps;
+        steps = ll(max(0.0L, floor((-1.0L * ((H + most_neg)) / double(sum)))));
+        ans = steps * n;
+        H += steps * sum;
+        ll i = 0;
+        while (H > 0) ans++, H += d[(i++ % n)];
+        cout << ans;
     }
-    cout << ans_index << '\n';
 }
 
 int32_t main() {
