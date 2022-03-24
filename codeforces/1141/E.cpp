@@ -22,8 +22,10 @@ void test() {
         sum += h[i];
         if (H + sum <= 0) return void(cout << i + 1 << '\n');
     }
-
     if (sum >= 0) return void(cout << "-1\n");
+    ll L = 1, R = INF;
+    R /= (max(1LL, abs(sum) - 1));
+    R += N;
     auto can = [&](ll times) -> pair<bool, ll> {
         ll temp = H + (times - 1) * sum;
         for (ll i = 0; i < n; ++i) {
@@ -32,9 +34,6 @@ void test() {
         }
         return {false, -1};
     };
-    ll L = 1, R = 1;
-    while (!can(R).first) R *= 2;
-
     --L, ++R;
     ll ans_index = -INF;
     while (R > L + 1) {

@@ -1,4 +1,20 @@
 {
+  "CF150718346": {
+    "contest_id": 1141,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1141/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Superhero Battle",
+    "problem_url": "https://codeforces.com/contest/1141/problem/E",
+    "submission_id": "CF150718346",
+    "submission_url": "https://codeforces.com/contest/1141/submission/150718346",
+    "tags": [
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Mar/24/2022 19:00"
+  },
   "CF150718634": {
     "contest_id": 1141,
     "language": "GNU C++20 (64)",
