@@ -15,23 +15,6 @@ const ll MOD = 1e9 + 7;  // 998244353
 const int N = 1e6 + 10;
 const int M = 1e3 + 5;
 
-void easy() {
-    string s;
-    cin >> s;
-    ll n = sz(s);
-    set<char> st;
-    ll ans = 0;
-    for (ll i = 0; i < n; ++i) {
-        if (st.count(s[i])) {
-            ans += 2;
-            st.clear();
-        } else {
-            st.insert(s[i]);
-        }
-    }
-    cout << n - ans << '\n';
-}
-
 void test() {
     string s;
     cin >> s;
@@ -65,7 +48,7 @@ int32_t main() {
     int tc = 1;
     cin >> tc;
     for (int tt = 1; tt <= tc; ++tt) {
-        easy();
+        test();
     }
     return 0;
 }
