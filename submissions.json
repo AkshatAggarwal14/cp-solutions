@@ -1,4 +1,20 @@
 {
+  "CF151518937": {
+    "contest_id": 1660,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1660/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Vlad and Candies",
+    "problem_url": "https://codeforces.com/contest/1660/problem/B",
+    "submission_id": "CF151518937",
+    "submission_url": "https://codeforces.com/contest/1660/submission/151518937",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Mar/31/2022 20:13"
+  },
   "CF151573862": {
     "contest_id": 1660,
     "language": "GNU C++20 (64)",
