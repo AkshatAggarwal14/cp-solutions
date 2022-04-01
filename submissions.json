@@ -1,4 +1,20 @@
 {
+  "CF152349574": {
+    "contest_id": 1663,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1663/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "P\u014dja Verdon",
+    "problem_url": "https://codeforces.com/contest/1663/problem/C",
+    "submission_id": "CF152349574",
+    "submission_url": "https://codeforces.com/contest/1663/submission/152349574",
+    "tags": [
+      "implementation",
+      "math"
+    ],
+    "timestamp": "Apr/01/2022 20:38"
+  },
   "CF152382963": {
     "contest_id": 1663,
     "language": "Text",
