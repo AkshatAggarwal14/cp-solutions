@@ -16,29 +16,22 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     ll n, k, x;
     cin >> n >> k >> x;
-    vector<pair<ll, ll>> a(n);
-    ll cnt = 0, sum = 0;
-    for (ll i = 0; i < n; ++i) {
-        cin >> a[i].first;
-        sum += a[i].first;
-
-        a[i].second = a[i].first / x;
-        a[i].first = a[i].first % x;
-        cnt += a[i].second;
-    }
-    ll cost = 0;
-    if (k > cnt) {
+    vector<ll> a(n);
+    ll sum = 0;
+    for (ll &A : a) cin >> A, sum += A;
+    ll cnt = 0;
+    for (ll &A : a) cnt += A / x;
+    sort(all(a), [&](const ll &A, const ll &B) { return A % x > B % x; });
+    if (k >= cnt) {
         k -= cnt;
-        sort(a.rbegin(), a.rend());
-        for (ll i = 0; i < n; ++i, --k) {
-            if (k <= 0) {
-                cost += a[i].first;
-            }
+        ll ans = 0;
+        for (ll i = k; i < n; ++i) {
+            ans += (a[i] % x);
         }
+        cout << ans << '\n';
     } else {
-        cost = sum - k * x;
+        cout << sum - k * x << '\n';
     }
-    cout << cost << '\n';
 }
 
 int32_t main() {

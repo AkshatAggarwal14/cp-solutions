@@ -1,4 +1,20 @@
 {
+  "AC30648633": {
+    "contest_id": "abc246",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc246/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Coupon",
+    "problem_url": "https://atcoder.jp/contests/abc246/tasks/abc246_c",
+    "submission_id": "AC30648633",
+    "submission_url": "https://atcoder.jp/contests/abc246/submissions/30648633",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/02/2022 18:07"
+  },
   "AC30648944": {
     "contest_id": "abc246",
     "language": "C++ (GCC 9.2.1)",
