@@ -1,4 +1,20 @@
 {
+  "AC30652326": {
+    "contest_id": "abc246",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc246/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "2-variable Function",
+    "problem_url": "https://atcoder.jp/contests/abc246/tasks/abc246_d",
+    "submission_id": "AC30652326",
+    "submission_url": "https://atcoder.jp/contests/abc246/submissions/30652326",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Apr/02/2022 18:16"
+  },
   "AC31003808": {
     "contest_id": "abc248",
     "language": "C++ (GCC 9.2.1)",
