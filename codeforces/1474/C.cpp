@@ -15,27 +15,25 @@ const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
     // 1474C
-    // Has to include last in step 1, try to simulate with every element with last one.
+    // Has to include last in step 1
     ll n;
     cin >> n;
     vector<ll> a(2 * n);
     for (ll &A : a) cin >> A;
     sort(all(a));
     map<ll, ll> mp;
-    vector<pair<ll, ll>> pairs;
-
-    auto remove = [&](ll element) {
-        --mp[element];
-        if (mp[element] == 0) mp.erase(element);
-    };
-
+    vector<pair<ll, ll>> ans;
     for (ll k = 0; k < 2 * n - 1; ++k) {
-        mp.clear(), pairs.clear();
+        mp.clear();
+        ans.clear();
         for (ll i = 0; i < 2 * n; ++i) ++mp[a[i]];
         ll e1 = a[k];
         ll e2 = a.back();
-        remove(e1), remove(e2);
-        pairs.push_back({e2, e1});
+        --mp[e1];
+        --mp[e2];
+        if (mp[e1] == 0) mp.erase(e1);
+        if (mp[e2] == 0) mp.erase(e2);
+        ans.push_back({e2, e1});
         bool flag = true;
         while (!mp.empty()) {
             ll last = (*mp.rbegin()).first;
@@ -43,14 +41,17 @@ void test() {
                 flag = false;
                 break;
             }
-            pairs.push_back({e2 - last, last});
-            remove(last), remove(e2 - last);
+            ans.push_back({e2 - last, last});
+            --mp[e2 - last];
+            --mp[last];
+            if (mp[last] == 0) mp.erase(last);
+            if (mp[e2 - last] == 0) mp.erase(e2 - last);
             e2 = last;
         }
         if (flag) {
             cout << "YES\n";
-            cout << pairs[0].first + pairs[0].second << '\n';
-            for (auto &[x, y] : pairs) cout << x << ' ' << y << '\n';
+            cout << ans[0].first + ans[0].second << '\n';
+            for (auto &[x, y] : ans) cout << x << ' ' << y << '\n';
             return;
         }
     }
