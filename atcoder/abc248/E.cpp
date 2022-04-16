@@ -27,8 +27,12 @@ void test() {
             ll A = a[j].second - a[i].second;
             ll B = a[i].first - a[j].first;
             ll C = a[i].second * a[j].first - a[i].first * a[j].second;
-            ll G = gcd(abs(A), gcd(abs(B), abs(C)));
-            A /= G, B /= G, C /= G;
+            ll G = gcd(A, B);
+            G = gcd(G, C);
+            if (G < 0) G *= -1;
+            A /= G;
+            B /= G;
+            C /= G;
             if (used.count({A, B, C})) continue;
             used.insert({A, B, C});
             ll cnt = 2;
