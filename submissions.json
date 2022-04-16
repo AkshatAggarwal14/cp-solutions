@@ -1,4 +1,20 @@
 {
+  "AC31020840": {
+    "contest_id": "abc248",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc248/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Dice Sum",
+    "problem_url": "https://atcoder.jp/contests/abc248/tasks/abc248_c",
+    "submission_id": "AC31020840",
+    "submission_url": "https://atcoder.jp/contests/abc248/submissions/31020840",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Apr/16/2022 17:52"
+  },
   "AC31040993": {
     "contest_id": "abc248",
     "language": "C++ (GCC 9.2.1)",
