@@ -31,9 +31,11 @@ void test() {
             A /= G, B /= G, C /= G;
             if (used.count({A, B, C})) continue;
             used.insert({A, B, C});
-            ll cnt = 0;
-            for (ll K = 0; K < n; ++K)
-                cnt += (A * a[K].first + B * a[K].second + C == 0);
+            ll cnt = 2;
+            for (ll K = 0; K < n; ++K) {
+                if (K == i || K == j) continue;
+                if (A * a[K].first + B * a[K].second + C == 0) ++cnt;
+            }
             if (cnt >= k) ++ans;
         }
     }
