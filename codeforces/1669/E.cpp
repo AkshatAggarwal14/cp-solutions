@@ -20,22 +20,16 @@ void test() {
     map<string, ll> cnt;
     for (ll i = 0; i < n; ++i) cin >> a[i], ++cnt[a[i]];
     ll ans = 0;
-    string t;
     for (ll i = 0; i < n; ++i) {
         string &s = a[i];
         if (cnt.count(s)) {
-            for (char c = 'a'; c <= 'z'; ++c) {
-                if (c != s[0]) {
-                    t = "";
-                    t += c;
-                    t += s[1];
-                    if (cnt.count(t)) ans += cnt[s] * cnt[t];
-                }
-                if (c != s[1]) {
-                    t = "";
-                    t += s[0];
-                    t += c;
-                    if (cnt.count(t)) ans += cnt[s] * cnt[t];
+            for (char c1 = 'a'; c1 <= 'z'; ++c1) {
+                for (char c2 = 'a'; c2 <= 'z'; ++c2) {
+                    string t = "";
+                    t += c1;
+                    t += c2;
+                    if (cnt.count(t) && ((s[0] == c1) ^ (s[1] == c2)))
+                        ans += cnt[s] * cnt[t];
                 }
             }
             cnt.erase(s);
