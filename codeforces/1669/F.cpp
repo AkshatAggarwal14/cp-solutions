@@ -18,24 +18,29 @@ void test() {
     cin >> n;
     vector<ll> a(n);
     vector<ll> pref(n, 0), suff(n, 0);
-    for (ll &A : a) cin >> A;
+    for (ll i = 0; i < n; ++i) {
+        cin >> a[i];
+    }
     pref[0] = a[0], suff[n - 1] = a[n - 1];
     for (ll i = 1; i < n; ++i) pref[i] = pref[i - 1] + a[i];
     for (ll i = n - 2; i >= 0; --i) suff[i] = suff[i + 1] + a[i];
+
     ll ans = 0;
     for (ll i = 0; i < n; ++i) {
-        ll front = pref[i];
+        ll aage = pref[i];
         ll L = i + 1, R = n - 1;
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
-            if (suff[M] >= front) {
+            if (suff[M] >= aage) {
                 L = M;
             } else {
                 R = M;
             }
         }
-        if (suff[L] == pref[i] && i < L) ans = max(ans, (i + 1) + (n - L));
+        if (suff[L] == pref[i] && i < L) {
+            ans = max(ans, (i + 1) + (n - L));
+        }
     }
     cout << ans << '\n';
 }
