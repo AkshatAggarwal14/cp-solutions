@@ -17,22 +17,27 @@ void test() {
     ll n;
     string s;
     cin >> n >> s;
-    if ((n == 1 && s != "W") || (s == string(n, 'R')) || (s == string(n, 'B')))
-        return void(cout << "NO\n");
-    ll cnt = 0, runB = 0, runR = 0;
-    for (ll i = 0; i < n; ++i) {
-        if (s[i] == 'W') {
-            if (cnt != 0)
-                if (runB == cnt || runR == cnt) return void(cout << "NO\n");
-            cnt = runB = runR = 0;
-        } else if (s[i] == 'R') {
-            ++cnt, ++runR;
-        } else {
-            ++cnt, ++runB;
+    if (n == 1 && s != "W") return void(cout << "NO\n");
+    for (ll iter = 0; iter < 2; ++iter) {
+        if (iter == 1) {
+            s = 'W' + s + 'W';
+            n = sz(s);
+        }
+        ll cnt = 0, runB = 0, runR = 0;
+        for (ll i = 0; i < n; ++i) {
+            if (s[i] == 'W') {
+                if (cnt != 0)
+                    if (runB == cnt || runR == cnt) return void(cout << "NO\n");
+                cnt = runB = runR = 0;
+            } else if (s[i] == 'R') {
+                ++cnt;
+                ++runR;
+            } else {
+                ++cnt;
+                ++runB;
+            }
         }
     }
-    if (cnt != 0)
-        if (runB == cnt || runR == cnt) return void(cout << "NO\n");
     cout << "YES\n";
 }
 
