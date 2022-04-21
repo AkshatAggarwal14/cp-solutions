@@ -17,31 +17,28 @@ void test() {
     ll n;
     cin >> n;
     vector<string> a(n);
-    vector<vector<ll>> cnt(26, vector<ll>(26, 0));
-
-    auto count = [&](string s) -> ll & { return cnt[s[0] - 'a'][s[1] - 'a']; };
-
-    for (ll i = 0; i < n; ++i) cin >> a[i], ++count(a[i]);
+    map<string, ll> cnt;
+    for (ll i = 0; i < n; ++i) cin >> a[i], ++cnt[a[i]];
     ll ans = 0;
     string t;
     for (ll i = 0; i < n; ++i) {
         string &s = a[i];
-        if (count(s)) {
+        if (cnt.count(s)) {
             for (char c = 'a'; c <= 'z'; ++c) {
                 if (c != s[0]) {
                     t = "";
                     t += c;
                     t += s[1];
-                    if (count(t)) ans += count(s) * count(t);
+                    if (cnt.count(t)) ans += cnt[s] * cnt[t];
                 }
                 if (c != s[1]) {
                     t = "";
                     t += s[0];
                     t += c;
-                    if (count(t)) ans += count(s) * count(t);
+                    if (cnt.count(t)) ans += cnt[s] * cnt[t];
                 }
             }
-            count(s) = 0;
+            cnt.erase(s);
         }
     }
     cout << ans << '\n';
