@@ -18,12 +18,13 @@ void test() {
     cin >> n;
     vector<ll> a(n);
     for (ll &A : a) cin >> A;
+    ll p1 = a[0] % 2, p2 = a[1] % 2;
     bool flag = true;
     for (ll i = 0; i < n; ++i) {
         if (i & 1) {
-            if (a[i] % 2 != a[1] % 2) flag = false;
+            if (a[i] % 2 != p2) flag = false;
         } else {
-            if (a[i] % 2 != a[0] % 2) flag = false;
+            if (a[i] % 2 != p1) flag = false;
         }
     }
     cout << ((flag) ? "YES" : "NO") << '\n';
