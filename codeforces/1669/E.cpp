@@ -18,24 +18,27 @@ void test() {
     cin >> n;
     vector<string> a(n);
     map<string, ll> cnt;
-    for (ll i = 0; i < n; ++i) cin >> a[i], ++cnt[a[i]];
+    for (ll i = 0; i < n; ++i) {
+        cin >> a[i];
+        ++cnt[a[i]];
+    }
+    set<string> used;
     ll ans = 0;
     for (ll i = 0; i < n; ++i) {
         string &s = a[i];
-        if (cnt.count(s)) {
-            for (char c1 = 'a'; c1 <= 'z'; ++c1) {
-                for (char c2 = 'a'; c2 <= 'z'; ++c2) {
-                    string t = "";
-                    t += c1;
-                    t += c2;
-                    if (cnt.count(t) && ((s[0] == c1) ^ (s[1] == c2)))
-                        ans += cnt[s] * cnt[t];
-                }
+        if (used.count(a[i])) continue;
+        used.insert(a[i]);
+        for (char c1 = 'a'; c1 <= 'z'; ++c1) {
+            for (char c2 = 'a'; c2 <= 'z'; ++c2) {
+                string t = "";
+                t += c1;
+                t += c2;
+                if (cnt.count(t))
+                    if ((s[0] == c1) ^ (s[1] == c2)) ans += cnt[s] * cnt[t];
             }
-            cnt.erase(s);
         }
     }
-    cout << ans << '\n';
+    cout << ans / 2 << '\n';
 }
 
 int32_t main() {
