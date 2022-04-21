@@ -26,6 +26,7 @@ void test() {
     } else {
         cout << 1;
     }
+
     cout << '\n';
 }
 
