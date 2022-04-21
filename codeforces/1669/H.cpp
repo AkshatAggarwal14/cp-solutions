@@ -25,11 +25,12 @@ void test() {
             if (!(bit & a[i])) ++cnt[j];
         }
     }
+    dbg(cnt);
     ll num = 0;
     for (ll i = 30; i >= 0; --i) {
         if (k >= cnt[i]) {
             k -= cnt[i];
-            num |= (1LL << i);
+            num += (1LL << i);
         }
     }
     cout << num << '\n';
