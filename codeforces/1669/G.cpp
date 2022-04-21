@@ -20,26 +20,33 @@ void test() {
     for (auto &x : grid) cin >> x;
     auto simulate = [&](ll I, ll J) {
         for (ll i = I; i < n - 1; ++i) {
-            if (grid[i + 1][J] == '*' || grid[i + 1][J] == 'o') break;
-            if (grid[i][J] == '*' && grid[i + 1][J] == '.')
-                swap(grid[i][J], grid[i + 1][J]);
+            if (grid[i + 1][J] == '*' || grid[i + 1][J] == 'o') {
+                break;
+            } else {
+                if (grid[i][J] == '*' && grid[i + 1][J] == '.') {
+                    grid[i][J] = '.';
+                    grid[i + 1][J] = '*';
+                }
+            }
         }
     };
 
-    for (ll i = n - 2; i >= 0; --i)
-        for (ll j = m - 1; j >= 0; --j)
+    for (ll i = n - 2; i >= 0; --i) {
+        for (ll j = m - 1; j >= 0; --j) {
             if (grid[i][j] == '*') simulate(i, j);
+        }
+    }
 
     for (ll i = 0; i < n; ++i) {
-        for (ll j = 0; j < m; ++j)
+        for (ll j = 0; j < m; ++j) {
             cout << grid[i][j];
+        }
         cout << '\n';
     }
     cout << '\n';
 }
 
-int32_t
-main() {
+int32_t main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifdef LOCAL
     [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
