@@ -13,30 +13,31 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-template <typename T, typename T_iterable>
-vector<pair<T, ll>> compress(const T_iterable &items) {
-    if (items.empty()) return {};
-    vector<pair<T, ll>> encoded;
-    ll count = 0;
-    T last = items[0];
-    for (const T &item : items) {
-        if (item == last) {
-            count++;
-        } else {
-            if (count) encoded.push_back({last, count});
-            last = item, count = 1;
+// splits a std::string into vector<string> at a delimiter
+vector<string> split(const string &s, const string &delims = " ") {
+    vector<string> res;
+    string token = "";
+    ll n = s.size();
+    for (ll i = 0; i < n; ++i) {
+        while (delims.find(s[i]) != string::npos) {
+            res.push_back(token);
+            token = "";
+            ++i;
         }
+        token += s[i];
     }
-    if (count) encoded.push_back({last, count});
-    return encoded;
+    if (token != "") res.push_back(token);
+    return res;
 }
 
 void test() {
     string s;
     cin >> s;
-    auto C = compress<char>(s);
-    for (auto &[x, y] : C)
-        if (y == 1) return void(cout << "NO\n");
+    auto C1 = split(s, "a");
+    auto C2 = split(s, "b");
+    dbg(C1, C2);
+    if (find(all(C1), "b") != C1.end() || find(all(C2), "a") != C2.end())
+        return void(cout << "NO\n");
     cout << "YES\n";
 }
 
