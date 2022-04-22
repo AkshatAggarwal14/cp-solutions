@@ -14,15 +14,24 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
+    map<ll, ll> cnt;
     ll n;
     cin >> n;
     vector<ll> a(n);
     for (ll &A : a) cin >> A;
+    vector<vector<ll>> segs;
+    segs.emplace_back();
+    segs.back().emplace_back(a[0]);
+    for (ll i = 1; i < n; ++i) {
+        if (a[i] != segs.back().back() + 1) segs.emplace_back();
+        segs.back().emplace_back(a[i]);
+    }
     vector<ll> d;
-    for (ll i = 1; i < n; ++i)
-        if (a[i] - a[i - 1] > 1) d.push_back(a[i] - a[i - 1]);
-    if (sz(d) == 0) return void(cout << "YES\n");
-    if (sz(d) >= 3) return void(cout << "NO\n");
+    if (sz(segs) == 1) return void(cout << "YES\n");
+    if (sz(segs) >= 4) return void(cout << "NO\n");
+    for (ll i = 1; i < sz(segs); ++i)
+        d.push_back(segs[i].front() - segs[i - 1].back());
+    dbg(segs, d);
     if (sz(d) == 1) {
         if (d[0] <= 3) return void(cout << "YES\n");
     } else if (sz(d) == 2) {
