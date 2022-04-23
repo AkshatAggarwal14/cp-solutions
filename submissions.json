@@ -1,4 +1,20 @@
 {
+  "AC31211079": {
+    "contest_id": "abc249",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc249/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Jogging",
+    "problem_url": "https://atcoder.jp/contests/abc249/tasks/abc249_a",
+    "submission_id": "AC31211079",
+    "submission_url": "https://atcoder.jp/contests/abc249/submissions/31211079",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Apr/23/2022 19:17"
+  },
   "CF102986918": {
     "contest_id": 59,
     "language": "GNU C++17",
