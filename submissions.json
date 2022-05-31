@@ -30497,5 +30497,23 @@
       "*1100"
     ],
     "timestamp": "May/25/2022 23:29"
+  },
+  "CF159089068": {
+    "contest_id": 1691,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1691/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Sum of Substrings",
+    "problem_url": "https://codeforces.com/contest/1691/problem/C",
+    "submission_id": "CF159089068",
+    "submission_url": "https://codeforces.com/contest/1691/submission/159089068",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "strings"
+    ],
+    "timestamp": "May/31/2022 23:51"
   }
 }
