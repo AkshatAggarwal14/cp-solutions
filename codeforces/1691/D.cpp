@@ -64,18 +64,6 @@ vector<ll> prev_greater(vector<ll> &a) {
     return res;
 }
 
-/*
-    let i be index of maximum element in [j, k]
-    S(j, k) > a[i]
-    S(j, i - 1) + S(i, i) + S(i + 1, k) > a[i]
-    S(j, i - 1) + S(i + 1, k) > 0
-    Maximum(S(j, i - 1)) + Maximum(S(i + 1, k)) > 0
-
-    Find j, k using prev_greater[i] + 1, next_greater[i] - 1
-    Now to find Maximum(S(j, i - 1)) we need Maximum(S(j, n)) - suff[i]
-    Now to find Maximum(S(i + 1, k)) we need Maximum(S(0, k)) - pref[i]
-*/
-
 void test() {
     ll n;
     cin >> n;
@@ -88,7 +76,7 @@ void test() {
     Sparse_Table<ll> Smax(suff, [](const ll &i, const ll &j) { return max(i, j); });
     for (ll i = 0; i < n; ++i) {
         ll leftID = prev_g[i] + 1, rightID = next_g[i] - 1;
-        // check if max in left + max in right > 0
+        // check left or right > a[i]
         ll maxLeft = Smax.query(leftID, i) - suff[i],
            maxRight = Pmax.query(i + 1, rightID + 1) - pref[i + 1];
         if (maxLeft + maxRight > 0) {
