@@ -13,40 +13,36 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// just use SegTree:
-// initialise with 1 if '0' or '1' and 2 if '?'
-// calculate by adding on '?' and taking left or right on '0' or '1'
-// Use Map for mapping of indexes of string to indexes in SegTree, and InvMap for the inverse mapping
-
 void test() {
     ll n;
     string s;
     cin >> n >> s;
     n = (1LL << n);
-    vector<ll> Map(n, 0), InvMap(n, 0);
-    iota(1 + all(Map), 1);
+    vector<ll> p(n, 0), pR(n, 0);
+    iota(1 + all(p), 1);
     // also reverse on each level
     ll len = n / 2, x = 1;
     while (len > 1) {
-        reverse(Map.begin() + x, Map.begin() + x + len);
+        reverse(p.begin() + x, p.begin() + x + len);
         x += len;
         len /= 2;
     }
-    reverse(all(Map));
-    Map.pop_back();
-    Map.insert(Map.begin(), 0);
+    reverse(all(p));
+    p.pop_back();
+    p.insert(p.begin(), 0);
     s = "." + s;
+    dbg(s, p);
 
-    for (ll i = 0; i < n; ++i) InvMap[Map[i]] = i;
+    for (ll i = 0; i < n; ++i) pR[p[i]] = i;
 
     vector<ll> SegTree(n, -1);
     auto calc = [&](ll i) {
         if (i >= n / 2) {
-            SegTree[i] = ((s[Map[i]] == '?') ? 2 : 1);
+            SegTree[i] = ((s[p[i]] == '?') ? 2 : 1);
         } else {
-            if (s[Map[i]] == '?') {
+            if (s[p[i]] == '?') {
                 SegTree[i] = SegTree[2 * i + 1] + SegTree[2 * i];
-            } else if (s[Map[i]] == '0') {
+            } else if (s[p[i]] == '0') {
                 SegTree[i] = (SegTree[2 * i]);
             } else {
                 SegTree[i] = (SegTree[2 * i + 1]);
@@ -54,14 +50,16 @@ void test() {
         }
     };
 
+    for (ll i = n / 2; i < n; ++i) calc(i);
+    for (ll i = n / 2 - 1; i >= 1; --i) calc(i);
+
     auto update = [&](ll id, char ch) {
-        ll i = InvMap[id];
-        s[id] = ch;
+        ll i = pR[id];
+        s[p[i]] = ch;
         for (ll j = i; j >= 1; j /= 2) calc(j);
     };
 
-    for (ll i = n - 1; i >= 1; --i) calc(i);
-
+    dbg(SegTree, s, p, pR);
     ll q;
     cin >> q;
     while (q--) {
@@ -69,6 +67,7 @@ void test() {
         char ch;
         cin >> id >> ch;
         update(id, ch);
+        dbg(SegTree, s);
         cout << SegTree[1] << '\n';
     }
 }
