@@ -13,71 +13,31 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// can use decltype while initialising to make a little bit faster
-template <class T, class op = function<T(const T &, const T &)>, class id = function<T()>>
-class SegTree {
+template <class T, class U = function<T(const T &, const T &)>>
+class Sparse_Table {
+    ll N, K;
+    vector<int> LOG;
+    vector<vector<T>> st;
+    U op;
+
    public:
-    SegTree() = default;
-    SegTree(ll n, op operation_, id identity_)
-        : SegTree(vector<T>(n, identity_()), operation_, identity_) {}
-    ll ceil_pow2(ll n) {
-        ll x = 0;
-        while ((1U << x) < (unsigned long long int)(n)) x++;
-        return x;
+    Sparse_Table() = default;
+    Sparse_Table(const vector<T> &arr, const U &OP)
+        : N(ll(arr.size())), K(ll(log2(N))), LOG(N + 1), st(N, vector<T>(K + 1)), op(OP) {
+        LOG[1] = 0;
+        for (ll i = 2; i <= N; i++) LOG[i] = LOG[i / 2] + 1;
+        for (ll i = 0; i < N; i++)
+            st[i][0] = arr[i];
+        for (ll j = 1; j <= K; j++)
+            for (ll i = 0; i + (1 << j) <= N; i++)
+                st[i][j] = op(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
     }
-    SegTree(const vector<T> &v, op operation_, id identity_)
-        : operation(operation_), initialize(identity_), _n(ll(v.size())) {
-        height = ceil_pow2(_n);
-        size = (1 << height);
-        tree.resize(2 * size, initialize());
-        for (ll i = 0; i < _n; i++) tree[size + i] = v[i];
-        for (ll i = size - 1; i >= 1; i--) {
-            calc(i);
-        }
+    T query(ll L, ll R) {
+        assert(L <= R);
+        ll j = LOG[R - L + 1];
+        T res = op(st[L][j], st[R - (1 << j) + 1][j]);
+        return res;
     }
-
-    T _query(ll node, ll node_lo, ll node_hi, ll q_lo, ll q_hi) {
-        // if range is completely inside [q_lo, q_hi], then just return its ans
-        if (q_lo <= node_lo && node_hi <= q_hi)
-            return tree[node];
-        if (node_hi < q_lo || q_hi < node_lo)
-            return initialize();  // if disjoint ignore
-        ll last_in_left = (node_lo + node_hi) / 2;
-        return operation(_query(2 * node, node_lo, last_in_left, q_lo, q_hi),
-                         _query(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi));
-    }
-
-    void _update(ll node, ll node_lo, ll node_hi, ll q_lo, ll q_hi, T value) {
-        // happens only once when leaf [id, id]
-        if (q_lo <= node_lo && node_hi <= q_hi) {
-            tree[node] = value;
-            return;
-        }
-        // in disjoint just return
-        if (node_hi < q_lo || q_hi < node_lo) return;
-        ll last_in_left = (node_lo + node_hi) / 2;
-        _update(2 * node, node_lo, last_in_left, q_lo, q_hi, value);
-        _update(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi, value);
-
-        // after updating now set, Post Call Area
-        calc(node);
-    }
-
-    T query(ll l, ll r) {
-        assert(0 <= l && l <= r && r < _n);
-        return _query(1, 0, size - 1, l, r);
-    }
-    void update(ll p, T x) {
-        assert(0 <= p && p < _n);
-        _update(1, 0, size - 1, p, p, x);
-    }
-
-   private:
-    vector<T> tree;
-    void calc(ll k) { tree[k] = operation(tree[2 * k], tree[2 * k + 1]); }
-    op operation;
-    id initialize;
-    ll _n, size, height;
 };
 
 // In difference array d[i] = A[i + 1] - A[i]
@@ -90,14 +50,8 @@ void test() {
     for (ll &A : a) cin >> A;
     if (n == 1) return void(cout << "1\n");
     vector<ll> d(n - 1);
-    for (ll i = 0; i < n - 1; ++i) d[i] = abs(a[i + 1] - a[i]);
-
-    SegTree<ll> GCD(
-        d,
-        [](const ll &i, const ll &j) {
-            return gcd(i, j);
-        },
-        []() { return 0LL; });
+    for (ll i = 0; i < n - 1; ++i) d[i] = a[i + 1] - a[i];
+    Sparse_Table<ll> GCD(d, [](const ll &i, const ll &j) { return gcd(i, j); });
     ll ans = 1;
     for (ll i = 0; i < n - 1; ++i) {
         ll L = i, R = n - 2;
