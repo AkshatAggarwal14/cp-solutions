@@ -51,7 +51,9 @@ void test() {
     if (n == 1) return void(cout << "1\n");
     vector<ll> d(n - 1);
     for (ll i = 0; i < n - 1; ++i) d[i] = a[i + 1] - a[i];
-    Sparse_Table<ll> GCD(d, [](const ll &i, const ll &j) { return gcd(i, j); });
+    Sparse_Table<ll> GCD(d, [](const ll &i, const ll &j) {
+        return gcd(abs(i), abs(j));
+    });
     ll ans = 1;
     for (ll i = 0; i < n - 1; ++i) {
         ll L = i, R = n - 2;
