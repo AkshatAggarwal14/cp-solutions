@@ -23,7 +23,7 @@ class Sparse_Table {
    public:
     Sparse_Table() = default;
     Sparse_Table(const vector<T> &arr, const U &OP)
-        : N(ll(arr.size())), K(ll(log2(N))), LOG(N + 1), st(N, vector<T>(K + 1)), op(OP) {
+        : N(ll(arr.size())), K(__lg(N)), LOG(N + 1), st(N, vector<T>(K + 1)), op(OP) {
         LOG[1] = 0;
         for (ll i = 2; i <= N; i++) LOG[i] = LOG[i / 2] + 1;
         for (ll i = 0; i < N; i++)
@@ -33,7 +33,7 @@ class Sparse_Table {
                 st[i][j] = op(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
     }
     T query(ll L, ll R) {
-        assert(L <= R);
+        assert(R >= L);
         ll j = LOG[R - L + 1];
         T res = op(st[L][j], st[R - (1 << j) + 1][j]);
         return res;
@@ -46,22 +46,17 @@ class Sparse_Table {
 void test() {
     ll n;
     cin >> n;
-    vector<ll> a(n);
+    vector<ll> a(n), d(n - 1);
     for (ll &A : a) cin >> A;
-    if (n == 1) return void(cout << "1\n");
-    vector<ll> d(n - 1);
     for (ll i = 0; i < n - 1; ++i) d[i] = a[i + 1] - a[i];
-    Sparse_Table<ll> GCD(d, [](const ll &i, const ll &j) {
-        return gcd(abs(i), abs(j));
-    });
+    Sparse_Table<ll> GCD(d, [](const ll &i, const ll &j) { return gcd(i, j); });
     ll ans = 1;
     for (ll i = 0; i < n - 1; ++i) {
         ll L = i, R = n - 2;
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
-            ll q = GCD.query(i, M);
-            if (q > 1) {
+            if (GCD.query(i, M) > 1) {
                 L = M;
             } else {
                 R = M;
