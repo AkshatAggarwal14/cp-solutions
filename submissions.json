@@ -4351,6 +4351,22 @@
     ],
     "timestamp": "Apr/23/2022 19:17"
   },
+  "AC32244749": {
+    "contest_id": "abc254",
+    "language": "PyPy3 (7.3.0)",
+    "path": "atcoder/abc254/A.py",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Last Two Digits",
+    "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_a",
+    "submission_id": "AC32244749",
+    "submission_url": "https://atcoder.jp/contests/abc254/submissions/32244749",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/04/2022 19:11"
+  },
   "AC32244892": {
     "contest_id": "abc254",
     "language": "PyPy3 (7.3.0)",
