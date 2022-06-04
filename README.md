@@ -12,9 +12,10 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1261 | [E - Small d and k](https://atcoder.jp/contests/abc254/tasks/abc254_e) | [C++ (GCC 9.2.1)](./atcoder/abc254/E.cpp) | `AtCoder` `*500` | Jun/04/2022 19:33 | 
-1260 | [D - Together Square](https://atcoder.jp/contests/abc254/tasks/abc254_d) | [C++ (GCC 9.2.1)](./atcoder/abc254/D.cpp) | `AtCoder` `*400` | Jun/04/2022 19:15 | 
-1259 | [C - K Swap](https://atcoder.jp/contests/abc254/tasks/abc254_c) | [C++ (GCC 9.2.1)](./atcoder/abc254/C.cpp) | `AtCoder` `*300` | Jun/04/2022 19:12 | 
+1262 | [E - Small d and k](https://atcoder.jp/contests/abc254/tasks/abc254_e) | [C++ (GCC 9.2.1)](./atcoder/abc254/E.cpp) | `AtCoder` `*500` | Jun/04/2022 19:33 | 
+1261 | [D - Together Square](https://atcoder.jp/contests/abc254/tasks/abc254_d) | [C++ (GCC 9.2.1)](./atcoder/abc254/D.cpp) | `AtCoder` `*400` | Jun/04/2022 19:15 | 
+1260 | [C - K Swap](https://atcoder.jp/contests/abc254/tasks/abc254_c) | [C++ (GCC 9.2.1)](./atcoder/abc254/C.cpp) | `AtCoder` `*300` | Jun/04/2022 19:12 | 
+1259 | [B - Practical Computing](https://atcoder.jp/contests/abc254/tasks/abc254_b) | [PyPy3 (7.3.0)](./atcoder/abc254/B.py) | `AtCoder` `*200` | Jun/04/2022 19:12 | 
 1258 | [D - Max GEQ Sum](https://codeforces.com/contest/1691/problem/D) | [GNU C++20 (64)](./codeforces/1691/D.cpp) | `binary search` `brute force` `constructive algorithms` `data structures` `divide and conquer` `implementation` `sortings` `two pointers` | Jun/01/2022 15:24 | 
 1257 | [C - Sum of Substrings](https://codeforces.com/contest/1691/problem/C) | [GNU C++20 (64)](./codeforces/1691/C.cpp) | `constructive algorithms` `greedy` `math` `strings` | May/31/2022 23:51 | 
 1256 | [B - Shoe Shuffling](https://codeforces.com/contest/1691/problem/B) | [GNU C++20 (64)](./codeforces/1691/B.cpp) | `graphs` `implementation` | May/31/2022 20:14 | 
