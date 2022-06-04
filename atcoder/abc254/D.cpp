@@ -1,73 +1,36 @@
-#ifdef LOCAL
-#include "Akshat.hpp"
-#else
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 using namespace std;
-#define dbg(...)
-#endif
 using ll = long long;
-auto sz = [](const auto &container) { return int(container.size()); };
-#define all(x) begin(x), end(x)
+const ll N = 2e5 + 5;
+ll prime[N] = {0};
+ll k[N] = {0};
 
-const ll INF = 1e18;
-const ll MOD = 1e9 + 7;  // 998244353
-const ll N = 2e5;
-
-array<ll, N + 1> spf;
-vector<ll> pr;
-void fill() {
-    for (ll i = 2; i <= N; ++i) {
-        if (spf[i] == 0) {
-            spf[i] = i;
-            pr.push_back(i);
-        }
-        for (ll j = 0; j < (ll)pr.size() && pr[j] <= spf[i] && i * pr[j] <= N; ++j)
-            spf[i * pr[j]] = pr[j];
+void Sieve() {
+    for (ll i = 1; i < N; i++) k[i] = i;
+    for (ll i = 2; i < N; i++) {
+        if (prime[i] == 0)
+            for (ll j = i; j < N; j += i) {
+                prime[j] = 1;
+                while (k[j] % (i * i) == 0)
+                    k[j] /= (i * i);
+            }
     }
 }
 
-// Returns a vector containing all the prime factors of n (25 --> 5, 5)
-vector<ll> prime_factorisation(ll n) {
-    vector<ll> ans;
-    while (n != 1) {
-        ll i = spf[n];
-        ll j = 0;
-        while (n % i == 0) {
-            n /= i;
-            j++;
-        }
-        if (j & 1) ans.push_back(i);
-    }
-    return ans;
-}
-
-void test() {
-    fill();
-
-    ll n;
-    cin >> n;
-    vector<vector<ll>> k(n + 1);
-    for (ll i = 1; i <= n; ++i) {
-        k[i] = prime_factorisation(i);
-    }
-    map<vector<ll>, ll> freq;
+ll countPairs(ll n) {
+    map<ll, ll> freq;
     for (ll i = 1; i <= n; i++) freq[k[i]]++;
     ll sum = 0;
-    for (auto i : freq) sum += ((i.second - 1) * i.second) / 2;
-    cout << n + 2 * sum << '\n';
+    for (auto i : freq) {
+        sum += ((i.second - 1) * i.second) / 2;
+    }
+    return sum;
 }
 
-int32_t main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
-#ifdef LOCAL
-    [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
-    [[maybe_unused]] FILE *out = freopen("output.txt", "w", stdout);
-#endif
-    cout << fixed << setprecision(12);
-    int tc = 1;
-    // cin >> tc;
-    for (int tt = 1; tt <= tc; ++tt) {
-        test();
-    }
+int main() {
+    ll n;
+    cin >> n;
+    Sieve();
+    cout << n + 2 * countPairs(n) << '\n';
     return 0;
 }
