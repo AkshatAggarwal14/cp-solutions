@@ -47,6 +47,7 @@ void test() {
             }
         }
         while (!vis_id.empty()) vis[vis_id.back()] = false, vis_id.pop_back();
+        while (!bfs.empty()) bfs.pop();
         cout << sum << '\n';
         sum = 0;
     }
