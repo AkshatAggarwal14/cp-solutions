@@ -20,11 +20,17 @@ void test() {
     for (auto &it : a) cin >> it;
     for (ll i = 0; i < k; ++i) {
         vector<ll> temp;
-        for (ll j = i; j < n; j += k) temp.push_back(a[j]);
+        for (ll j = i; j < n; j += k) {
+            temp.push_back(a[j]);
+        }
         sort(all(temp));
+        dbg(temp);
         ll idx = 0;
-        for (ll j = i; j < n; j += k) a[j] = temp[idx++];
+        for (ll j = i; j < n; j += k) {
+            a[j] = temp[idx++];
+        }
     }
+    dbg(a);
     cout << (is_sorted(all(a)) ? "Yes" : "No");
 }
 
