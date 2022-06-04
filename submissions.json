@@ -4351,6 +4351,22 @@
     ],
     "timestamp": "Apr/23/2022 19:17"
   },
+  "AC32229591": {
+    "contest_id": "abc254",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc254/E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "Small d and k",
+    "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_e",
+    "submission_id": "AC32229591",
+    "submission_url": "https://atcoder.jp/contests/abc254/submissions/32229591",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/04/2022 18:21"
+  },
   "AC32240392": {
     "contest_id": "abc254",
     "language": "C++ (GCC 9.2.1)",

@@ -22,16 +22,16 @@ void test() {
         g[a].push_back(b);
         g[b].push_back(a);
     }
-
     set<ll> vis;
     queue<pair<ll, ll>> bfs;
-    ll sum = 0, k, q, x;
+    ll sum = 0;
+    ll k;
+    ll q, x;
     cin >> q;
     while (q--) {
         cin >> x >> k, --x;
         sum = 0, vis.clear();
         while (!bfs.empty()) bfs.pop();
-
         bfs.push({x, 0});
         vis.insert(x);
         while (!bfs.empty()) {
@@ -45,7 +45,6 @@ void test() {
                 bfs.push({it, par.second + 1});
             }
         }
-
         cout << sum << '\n';
     }
 }
