@@ -46,16 +46,12 @@ void test() {
 
     ll n;
     cin >> n;
-    vector<ll> vis(n + 1, false);
     vector<vector<ll>> k(n + 1);
-    map<vector<ll>, ll> freq;
-    for (ll i = 1; i <= n; i++) {
-        if (!vis[i]) {
-            k[i] = prime_factorisation(i);
-            vis[i] = true;
-        }
-        ++freq[k[i]];
+    for (ll i = 1; i <= n; ++i) {
+        k[i] = prime_factorisation(i);
     }
+    map<vector<ll>, ll> freq;
+    for (ll i = 1; i <= n; i++) freq[k[i]]++;
     ll sum = 0;
     for (auto i : freq) sum += ((i.second - 1) * i.second) / 2;
     cout << n + 2 * sum << '\n';
