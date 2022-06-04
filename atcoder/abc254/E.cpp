@@ -23,33 +23,30 @@ void test() {
         g[b].push_back(a);
     }
 
-    vector<ll> vis(n, false);
+    set<ll> vis;
     queue<pair<ll, ll>> bfs;
-    vector<ll> vis_id;
     ll sum = 0, k, q, x;
     cin >> q;
     while (q--) {
         cin >> x >> k, --x;
+        sum = 0, vis.clear();
+        while (!bfs.empty()) bfs.pop();
 
         bfs.push({x, 0});
-        vis_id.push_back(x);
-        vis[x] = true;
+        vis.insert(x);
         while (!bfs.empty()) {
             auto par = bfs.front();
             bfs.pop();
             if (par.second > k) continue;
             sum += (par.first + 1);
             for (auto &it : g[par.first]) {
-                if (vis[it]) continue;
-                vis[it] = true;
-                vis_id.push_back(it);
+                if (vis.count(it)) continue;
+                vis.insert(it);
                 bfs.push({it, par.second + 1});
             }
         }
-        while (!vis_id.empty()) vis[vis_id.back()] = false, vis_id.pop_back();
-        while (!bfs.empty()) bfs.pop();
+
         cout << sum << '\n';
-        sum = 0;
     }
 }
 
