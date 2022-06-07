@@ -14,27 +14,28 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
-    ll n, k;
-    cin >> n >> k;
-    vector<ll> a(n);
-    ll ans = 0;
-    multiset<ll> s;
-    for (ll &i : a) {
-        cin >> i;
-        ans += (i / k);
-        i %= k;
-        if (i) s.insert(i);
-    }
-    while (!s.empty()) {
-        ll x = *s.begin();
-        s.erase(s.begin());
-        auto p = s.lower_bound(k - x);
-        if (p != s.end()) {
-            ++ans;
-            s.erase(p);
-        }
-    }
-    cout << ans << '\n';
+     ll n, k;
+   cin >> n >> k;
+   map<ll, vector<ll>> val;
+   vector<ll> a(n);
+   ll ans = 0;
+   multiset<ll> s;
+   for (ll &i : a) {
+      cin >> i;
+      ans += (i / k);
+      i %= k;
+      if (i) s.insert(i);  
+   }
+   while (!s.empty()) {
+      ll x = *s.begin();
+      s.erase(s.begin());
+      auto p = s.lower_bound(k - x);
+      if (p != s.end()) {
+         ++ans;
+         s.erase(p);
+      }
+   }
+   cout << ans << '\n';
 }
 
 int32_t main() {
