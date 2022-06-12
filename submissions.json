@@ -4559,6 +4559,22 @@
     ],
     "timestamp": "Jun/04/2022 19:33"
   },
+  "AC32443574": {
+    "contest_id": "abc255",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc255/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "You should output ARC, though this is ABC.",
+    "problem_url": "https://atcoder.jp/contests/abc255/tasks/abc255_a",
+    "submission_id": "AC32443574",
+    "submission_url": "https://atcoder.jp/contests/abc255/submissions/32443574",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/12/2022 21:53"
+  },
   "AC32443774": {
     "contest_id": "abc255",
     "language": "C++ (GCC 9.2.1)",
