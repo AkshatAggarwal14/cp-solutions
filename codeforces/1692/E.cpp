@@ -13,30 +13,32 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
+int lenOfLongSubarr(vector<int> &arr, int n, int k) {
+    unordered_map<int, int> um;
+    int sum = 0, maxLen = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (sum == k)
+            maxLen = i + 1;
+        if (um.find(sum) == um.end())
+            um[sum] = i;
+        if (um.find(sum - k) != um.end()) {
+            if (maxLen < (i - um[sum - k]))
+                maxLen = i - um[sum - k];
+        }
+    }
+    return maxLen;
+}
+
 void test() {
     int n, s;
     cin >> n >> s;
     vector<int> a(n);
     for (auto &it : a) cin >> it;
-    if (accumulate(all(a), 0) < s) return void(cout << "-1\n");
-    vector<int> pref(n + 1);
-    partial_sum(all(a), 1 + pref.begin());
-    auto get = [&](int i, int j) { return pref[j + 1] - pref[i]; };
-    int ans = INT_MAX;
-    for (int i = 0; i < n; ++i) {
-        int L = i, R = n - 1;
-        --L, ++R;
-        while (R > L + 1) {
-            int mid = (L + R) / 2;
-            if (get(i, mid) <= s) {
-                L = mid;
-            } else {
-                R = mid;
-            }
-        }
-        if (get(i, L) == s) ans = min(ans, n - (L - i + 1));
-    }
-    cout << ans << '\n';
+    if (accumulate(all(a), 0) < s)
+        cout << -1 << '\n';
+    else
+        cout << n - lenOfLongSubarr(a, n, s) << '\n';
 }
 
 int32_t main() {
