@@ -19,9 +19,10 @@ void test() {
     vector<int> a(n, 0);
     vector<int> cnt(10, 0);
     for (auto &it : a) cin >> it, it %= 10, ++cnt[it];
+    dbg(cnt);
     for (int i = 0; i < 10; ++i) {
-        for (int j = i; j < 10; ++j) {
-            for (int k = j; k < 10; ++k) {
+        for (int j = 0; j < 10; ++j) {
+            for (int k = 0; k < 10; ++k) {
                 if ((i + j + k) % 10 == 3) {
                     int x = cnt[i], y = cnt[j], z = cnt[k];
                     int res = 0;
@@ -29,6 +30,7 @@ void test() {
                     if (cnt[j] > 0) --cnt[j], ++res;
                     if (cnt[k] > 0) --cnt[k], ++res;
                     if (res == 3) {
+                        dbg(i, j, k);
                         cout << "YES\n";
                         return;
                     } else {
