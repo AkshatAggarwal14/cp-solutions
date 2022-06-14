@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1283 | [H - Queries for Number of Palindromes](https://codeforces.com/contest/245/problem/H) | [GNU C++20 (64)](./codeforces/245/H.cpp) | `dp` `hashing` `strings` `*1800` | Jun/14/2022 13:38 | 
+1284 | [H - Queries for Number of Palindromes](https://codeforces.com/contest/245/problem/H) | [GNU C++20 (64)](./codeforces/245/H.cpp) | `dp` `hashing` `strings` `*1800` | Jun/14/2022 13:38 | 
+1283 | [D - ±1 Operation 2](https://atcoder.jp/contests/abc255/tasks/abc255_d) | [C++ (GCC 9.2.1)](./atcoder/abc255/D.cpp) | `AtCoder` `*400` | Jun/14/2022 10:19 | 
 1282 | [D - Minimal Height Tree](https://codeforces.com/contest/1437/problem/D) | [GNU C++20 (64)](./codeforces/1437/D.cpp) | `graphs` `greedy` `shortest paths` `trees` `*1600` | Jun/09/2022 01:23 | 
 1281 | [C - Ice Skating](https://codeforces.com/contest/218/problem/C) | [GNU C++20 (64)](./codeforces/218/C.cpp) | `dfs and similar` `dsu` `graphs` `*1200` | Jun/08/2022 22:23 | 
 1280 | [A - Ice Skating](https://codeforces.com/contest/217/problem/A) | [GNU C++20 (64)](./codeforces/217/A.cpp) | `brute force` `dfs and similar` `dsu` `graphs` `*1200` | Jun/08/2022 22:22 | 
