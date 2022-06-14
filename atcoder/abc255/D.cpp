@@ -23,10 +23,34 @@ void test() {
     while (q--) {
         ll x;
         cin >> x;
-        ll R = lower_bound(all(a), x) - a.begin(), L = R - 1;
+        ll id1 = -1, id2 = -1;
+        // first index > x
+        ll L = 0, R = n - 1;
+        --L, ++R;
+        while (R > L + 1) {
+            ll mid = (L + R) / 2;
+            if (a[mid] > x) {
+                R = mid;
+                id1 = mid;
+            } else {
+                L = mid;
+            }
+        }
+        // last index < x
+        L = 0, R = n - 1;
+        --L, ++R;
+        while (R > L + 1) {
+            ll mid = (L + R) / 2;
+            if (a[mid] < x) {
+                L = mid;
+                id2 = mid;
+            } else {
+                R = mid;
+            }
+        }
         ll res = 0;
-        if (L != -1) res += (L + 1) * x - pref[L];
-        if (R != n + 1) res += (pref[n - 1] - ((R >= 1) ? pref[R - 1] : 0LL)) - (n - R) * x;
+        if (id2 != -1) res += (id2 + 1) * x - pref[id2];
+        if (id1 != -1) res += (pref[n - 1] - ((id1 >= 1) ? pref[id1 - 1] : 0LL)) - (n - id1) * x;
         cout << res << '\n';
     }
 }
