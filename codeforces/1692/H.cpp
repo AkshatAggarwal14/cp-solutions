@@ -18,26 +18,32 @@ void test() {
     cin >> n;
     vector<int> a(n);
     map<int, vector<int>> mp;
-    int ans = -1, mx = 0, l = -1, r = -1;
+    int ans = -1, mxcnt = 0, l = -1, r = -1;
     for (int i = 0; i < n; ++i) cin >> a[i], mp[a[i]].push_back(i);
     for (auto &[x, y] : mp) {
-        // {value, index}
-        // value of consecutive is 1s and gaps is -(size of gap) to find most dense area
-        vector<array<int, 2>> t;
+        vector<vector<int>> segs;
         for (int i = 0; i < sz(y); ++i) {
-            t.push_back({1, y[i]});
-            if (i + 1 < sz(y)) {
-                t.push_back({-(y[i + 1] - y[i] - 1), -1});
-            }
+            if (segs.empty() || segs.back().back() != y[i] - 1)
+                segs.emplace_back();
+            segs.back().emplace_back(y[i]);
         }
-        // Kadane's algorithm for each x
+        vector<int> id;
+        int gg = sz(segs[0]);
+        while (gg--) id.push_back(1);
+        for (int i = 1; i < sz(segs); ++i) {
+            id.push_back(-(segs[i].front() - segs[i - 1].back() - 1));
+            gg = sz(segs[i]);
+            while (gg--) id.push_back(1);
+        }
+        dbg(id, segs);
         int max_ending_here = 0;
         int max_so_far = 0;
         int _start = 0;
         int start = 0;
         int end = -1;
-        for (int i = 0; i < sz(t); i++) {
-            max_ending_here = max_ending_here + t[i][0];
+
+        for (int i = 0; i < sz(id); i++) {
+            max_ending_here = max_ending_here + id[i];
             if (max_ending_here < 0) {
                 max_ending_here = 0;
                 _start = i + 1;
@@ -48,10 +54,17 @@ void test() {
                 end = i;
             }
         }
-        if (max_so_far > mx) {
+        if (max_so_far > mxcnt) {
             ans = x;
-            mx = max_so_far;
-            l = t[start][1], r = t[end][1];
+            mxcnt = max_so_far;
+            dbg(id, start, end);
+            int beg = segs.front().front();
+            for (int i = 1; i <= start; ++i) beg += abs(id[i]);
+            l = beg;
+            for (int i = start + 1; i <= end; ++i) beg += abs(id[i]);
+            r = beg;
+            // l = mp[ans][start], r = l;
+            // for (int i = start; i < end; ++i) r += abs(id[i]);
         }
     }
     cout << ans << ' ' << l + 1 << ' ' << r + 1 << '\n';
