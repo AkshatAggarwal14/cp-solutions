@@ -31369,6 +31369,23 @@
     ],
     "timestamp": "Jun/14/2022 13:38"
   },
+  "CF160560033": {
+    "contest_id": 1692,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1692/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "The Clock",
+    "problem_url": "https://codeforces.com/contest/1692/problem/D",
+    "submission_id": "CF160560033",
+    "submission_url": "https://codeforces.com/contest/1692/submission/160560033",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "implementation"
+    ],
+    "timestamp": "Jun/14/2022 20:26"
+  },
   "CF160565316": {
     "contest_id": 1692,
     "language": "GNU C++20 (64)",
