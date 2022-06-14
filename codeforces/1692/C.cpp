@@ -17,12 +17,15 @@ void test() {
     vector<vector<char>> grid(8, vector<char>(8));
     for (auto &x : grid)
         for (auto &y : x) cin >> y;
-    for (ll i = 1; i < 7; ++i)
-        for (ll j = 1; j < 7; ++j)
-            if (grid[i][j] == '#')
-                if (grid[i - 1][j - 1] == '#' && grid[i + 1][j + 1] == '#' &&
-                    grid[i - 1][j + 1] == '#' && grid[i - 1][j + 1] == '#')
+    for (ll i = 1; i < 7; ++i) {
+        for (ll j = 1; j < 7; ++j) {
+            if (grid[i][j] == '#') {
+                if (grid[i - 1][j - 1] == '#' && grid[i + 1][j + 1] == '#' && grid[i - 1][j + 1] == '#' && grid[i - 1][j + 1] == '#') {
                     return void(cout << i + 1 << ' ' << j + 1 << '\n');
+                }
+            }
+        }
+    }
 }
 
 int32_t main() {
