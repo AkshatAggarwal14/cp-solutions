@@ -16,51 +16,14 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     ll q;
     cin >> q;
-    auto len_full_groups = [&](ll K) -> pair<ll, ll> {
-        // by last value in group
-        // 1 -> 1
-        // 2 -> 1, 12
-        // 3 -> 1, 12, 123
-        // 4 -> 1, 12, 123, 1234
-        // 10 -> 1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910
-        // [1 * (1 + log10(10)), 2 * (1 + log10(9)), 3 * (1 + log10(8)), 4 * (1 + log10(7)),...]
-        auto _sum = [&](ll s) { return (s * (s + 1)) / 2; };
-        auto sum = [&](ll l, ll r) {
-            if (l > r) swap(l, r);
-            ll S = _sum(r) - _sum(l - 1);
-            return S;
-        };
-        auto can = [&](ll x) -> ll {
-            ll nth = sz(to_string(x)) - 1;
-            ll digits = 0;
-            // now find 9 + 90 + 900.. sz(to_string(x)) - 1 terms
-            ll term = 9;
-            ll start = x;
-            for (ll i = 1; i <= nth; ++i) {
-                digits += (sum(start - term + 1, start)) * i;
-                // dbg(digits, start - term + 1, start);
-                start -= (term);
-                term *= 10;
-            }
-            // dbg(start);
-            return digits + (nth + 1) * sum(1, start);
-        };
-        ll L = 0, R = 1;
-        while (can(R) < INF) R *= 2;
-        --L, ++R;
-        ll ans = 0, len = 0;
-        while (R > L + 1) {
-            ll mid = (L + R) / 2;
-            ll val = can(mid);
-            if (val < K) {
-                L = mid;
-                ans = mid;
-                len = val;
-            } else {
-                R = mid;
-            }
+    auto len_full_groups = [&](ll K) {
+        ll index = 1, last = 1, sum = 0;
+        while (sum + index < K) {
+            sum += index;
+            ++last;
+            index += sz(to_string(last));
         }
-        return {ans, len};
+        return sum;
     };
     auto solve = [&](ll K) {
         auto can = [&](ll x) -> ll {
@@ -76,7 +39,7 @@ void test() {
             return digits + (x - last) * (nth + 1);
         };
 
-        ll L = 1, R = ll(1e18), ans = -1, can_ans = -1;
+        ll L = 1, R = ll(1e9), ans = -1, can_ans = -1;
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
@@ -96,11 +59,9 @@ void test() {
     while (q--) {
         ll k;
         cin >> k;
-        auto full_groups = len_full_groups(k);
-        dbg(full_groups);
+        ll full_groups = len_full_groups(k);  // find length of full groups by iterating
         // https://codeforces.com/contest/1177/problem/A <- leftover problem
-        ll left = k - full_groups.second;
-        dbg(left);
+        ll left = k - full_groups;
         cout << solve(left) << '\n';
     }
 }
