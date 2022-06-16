@@ -31565,6 +31565,23 @@
     ],
     "timestamp": "Jun/14/2022 23:22"
   },
+  "CF160825986": {
+    "contest_id": 1694,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1694/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Creep",
+    "problem_url": "https://codeforces.com/contest/1694/problem/A",
+    "submission_id": "CF160825986",
+    "submission_url": "https://codeforces.com/contest/1694/submission/160825986",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jun/16/2022 20:09"
+  },
   "CF160868519": {
     "contest_id": 1694,
     "language": "GNU C++20 (64)",
