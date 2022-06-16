@@ -17,6 +17,12 @@ void test() {
     ll q;
     cin >> q;
     auto len_full_groups = [&](ll K) -> pair<ll, ll> {
+        // by last value in group
+        // 1 -> 1
+        // 2 -> 1, 12
+        // 3 -> 1, 12, 123
+        // 4 -> 1, 12, 123, 1234
+        // 10 -> 1, 12, 123, 1234, 12345, 123456, 1234567, 12345678, 123456789, 12345678910
         // [1 * (1 + log10(10)), 2 * (1 + log10(9)), 3 * (1 + log10(8)), 4 * (1 + log10(7)),...]
         auto _sum = [&](ll s) { return (s * (s + 1)) / 2; };
         auto sum = [&](ll l, ll r) {
@@ -27,14 +33,16 @@ void test() {
         auto can = [&](ll x) -> ll {
             ll nth = sz(to_string(x)) - 1;
             ll digits = 0;
+            // now find 9 + 90 + 900.. sz(to_string(x)) - 1 terms
             ll term = 9;
             ll start = x;
-            // digits += num of digits * occurences for each num of digits
             for (ll i = 1; i <= nth; ++i) {
                 digits += (sum(start - term + 1, start)) * i;
+                // dbg(digits, start - term + 1, start);
                 start -= (term);
                 term *= 10;
             }
+            // dbg(start);
             return digits + (nth + 1) * sum(1, start);
         };
         ll L = 0, R = 1;
@@ -88,9 +96,11 @@ void test() {
     while (q--) {
         ll k;
         cin >> k;
-        auto full_groups = len_full_groups(k);  // calculate using binary search too
+        auto full_groups = len_full_groups(k);
+        dbg(full_groups);
         // https://codeforces.com/contest/1177/problem/A <- leftover problem
         ll left = k - full_groups.second;
+        dbg(left);
         cout << solve(left) << '\n';
     }
 }
