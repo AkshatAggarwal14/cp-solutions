@@ -4639,6 +4639,22 @@
     ],
     "timestamp": "Jun/14/2022 10:19"
   },
+  "AC32517075": {
+    "contest_id": "abc252",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc252/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "ASCII code",
+    "problem_url": "https://atcoder.jp/contests/abc252/tasks/abc252_a",
+    "submission_id": "AC32517075",
+    "submission_url": "https://atcoder.jp/contests/abc252/submissions/32517075",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/17/2022 15:02"
+  },
   "AC32517187": {
     "contest_id": "abc252",
     "language": "C++ (GCC 9.2.1)",
