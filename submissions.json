@@ -4639,6 +4639,22 @@
     ],
     "timestamp": "Jun/14/2022 10:19"
   },
+  "AC32518233": {
+    "contest_id": "abc252",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc252/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Bread",
+    "problem_url": "https://atcoder.jp/contests/abc252/tasks/abc252_f",
+    "submission_id": "AC32518233",
+    "submission_url": "https://atcoder.jp/contests/abc252/submissions/32518233",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/17/2022 16:25"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
