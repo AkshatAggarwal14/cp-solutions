@@ -27,23 +27,20 @@ void test() {
     vector<int> vis(n, false);
     ll ans = 0;
     vector<int> component;
-    // Sum of minimum values in each cycle [SCC]
     function<void(int)> dfs = [&](int node) {
         vis[node] = 1, component.push_back(node);
         for (const int &child : adj[node]) {
             if (vis[child] == 0) {
                 dfs(child);
-            } else if (vis[child] == 1) {  // cycle found
+            } else if (vis[child] == 1) {
                 ll mn = INF;
-                if (sz(component) > 1) {
-                    while (component.back() != child) {
-                        mn = min(mn, val[component.back()]);
-                        component.pop_back();
-                    }
-                    mn = min(mn, val[child]);
-                    component.clear();
-                    ans += mn;
+                while (component.back() != child) {
+                    mn = min(mn, val[component.back()]);
+                    component.pop_back();
                 }
+                mn = min(mn, val[child]);
+                component.clear();
+                ans += mn;
             }
         }
         vis[node] = 2;
