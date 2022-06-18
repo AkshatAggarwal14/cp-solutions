@@ -13,10 +13,6 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-enum states { NOT_VISITED,
-              VISITING,
-              VISITED };
-
 void test() {
     int n;
     cin >> n;
@@ -28,16 +24,16 @@ void test() {
         adj[i].push_back(u);
     }
     for (ll &i : val) cin >> i;
-    vector<states> vis(n, NOT_VISITED);
+    vector<int> vis(n, false);
     ll ans = 0;
     vector<int> component;
     // Sum of minimum values in each cycle [SCC]
     function<void(int)> dfs = [&](int node) {
-        vis[node] = VISITING, component.push_back(node);
+        vis[node] = 1, component.push_back(node);
         for (const int &child : adj[node]) {
-            if (vis[child] == NOT_VISITED) {
+            if (vis[child] == 0) {
                 dfs(child);
-            } else if (vis[child] == VISITING) {  // cycle found
+            } else if (vis[child] == 1) {  // cycle found
                 ll mn = INF;
                 if (sz(component) > 1) {
                     while (component.back() != child) {
@@ -50,10 +46,10 @@ void test() {
                 }
             }
         }
-        vis[node] = VISITED;
+        vis[node] = 2;
     };
     for (int i = 0; i < n; ++i) {
-        if (vis[i] == VISITED) continue;
+        if (vis[i]) continue;
         component.clear();
         dfs(i);
     }
