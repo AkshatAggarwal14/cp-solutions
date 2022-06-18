@@ -12,11 +12,12 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1307 | [F - Cumulative Cumulative Cumulative Sum](https://atcoder.jp/contests/abc256/tasks/abc256_f) | [C++ (GCC 9.2.1)](./atcoder/abc256/F.cpp) | `AtCoder` `*500` | Jun/18/2022 20:16 | 
 1306 | [F - Bread](https://atcoder.jp/contests/abc252/tasks/abc252_f) | [C++ (GCC 9.2.1)](./atcoder/abc252/F.cpp) | `AtCoder` `*500` | Jun/17/2022 16:25 | 
 1305 | [D - Distinct Trio](https://atcoder.jp/contests/abc252/tasks/abc252_d) | [C++ (GCC 9.2.1)](./atcoder/abc252/D.cpp) | `AtCoder` `*400` | Jun/17/2022 15:52 | 
 1304 | [C - Slot Strategy](https://atcoder.jp/contests/abc252/tasks/abc252_c) | [C++ (GCC 9.2.1)](./atcoder/abc252/C.cpp) | `AtCoder` `*300` | Jun/17/2022 15:11 | 
-1303 | [A - ASCII code](https://atcoder.jp/contests/abc252/tasks/abc252_a) | [C++ (GCC 9.2.1)](./atcoder/abc252/A.cpp) | `AtCoder` `*100` | Jun/17/2022 15:02 | 
-1302 | [B - Takahashi's Failure](https://atcoder.jp/contests/abc252/tasks/abc252_b) | [C++ (GCC 9.2.1)](./atcoder/abc252/B.cpp) | `AtCoder` `*200` | Jun/17/2022 15:02 | 
+1303 | [B - Takahashi's Failure](https://atcoder.jp/contests/abc252/tasks/abc252_b) | [C++ (GCC 9.2.1)](./atcoder/abc252/B.cpp) | `AtCoder` `*200` | Jun/17/2022 15:02 | 
+1302 | [A - ASCII code](https://atcoder.jp/contests/abc252/tasks/abc252_a) | [C++ (GCC 9.2.1)](./atcoder/abc252/A.cpp) | `AtCoder` `*100` | Jun/17/2022 15:02 | 
 1301 | [B - Paranoid String](https://codeforces.com/contest/1694/problem/B) | [GNU C++20 (64)](./codeforces/1694/B.cpp) | `constructive algorithms` `greedy` `*1200` | Jun/16/2022 23:07 | 
 1300 | [D - Fake Plastic Trees](https://codeforces.com/contest/1694/problem/D) | [GNU C++20 (64)](./codeforces/1694/D.cpp) | `dp` `greedy` `trees` `*1700` | Jun/16/2022 22:52 | 
 1299 | [C - Directional Increase](https://codeforces.com/contest/1694/problem/C) | [GNU C++20 (64)](./codeforces/1694/C.cpp) | `greedy` `*1300` | Jun/16/2022 21:23 | 

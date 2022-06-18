@@ -4735,6 +4735,22 @@
     ],
     "timestamp": "Jun/17/2022 16:25"
   },
+  "AC32575156": {
+    "contest_id": "abc256",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc256/F.cpp",
+    "platform": "AtCoder",
+    "problem_index": "F",
+    "problem_name": "Cumulative Cumulative Cumulative Sum",
+    "problem_url": "https://atcoder.jp/contests/abc256/tasks/abc256_f",
+    "submission_id": "AC32575156",
+    "submission_url": "https://atcoder.jp/contests/abc256/submissions/32575156",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jun/18/2022 20:16"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
