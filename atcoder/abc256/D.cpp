@@ -35,7 +35,7 @@ void test() {
     vector<vector<int>> v(n, vector<int>(2));
     for (auto &i : v) cin >> i[0] >> i[1];
     sort(all(v));
-    // v.resize(unique(all(v)) - v.begin());
+    v.resize(unique(all(v)) - v.begin());
     auto ans = merge(v);
     for (auto &i : ans) cout << i[0] << ' ' << i[1] << '\n';
 }
