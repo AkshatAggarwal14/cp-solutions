@@ -13,42 +13,65 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
+vector<vector<ll>> adj, adj_rev;
+vector<ll> used;
+vector<ll> order, component;
+
+void dfs1(ll v) {
+    used[v] = true;
+
+    for (auto u : adj[v])
+        if (!used[u])
+            dfs1(u);
+
+    order.push_back(v);
+}
+
+void dfs2(ll v) {
+    used[v] = true;
+    component.push_back(v);
+
+    for (auto u : adj_rev[v])
+        if (!used[u])
+            dfs2(u);
+}
+
 void test() {
-    int n;
+    // find cycles in directed graph
+    // find sum of minimum weight in a cycle
+    ll n;
     cin >> n;
-    vector<vector<int>> adj(n);
+    adj.resize(n), adj_rev.resize(n);
     vector<ll> val(n);
-    for (int i = 0; i < n; ++i) {
-        int u;
+    for (ll i = 0; i < n; ++i) {
+        ll u;
         cin >> u, --u;
         adj[i].push_back(u);
+        adj_rev[u].push_back(i);
     }
     for (ll &i : val) cin >> i;
-    vector<int> vis(n, false);
+    // find SCC for each component
+    used.assign(n, false);
+
+    for (ll i = 0; i < n; i++)
+        if (!used[i]) dfs1(i);
+    used.assign(n, false);
+    reverse(order.begin(), order.end());
     ll ans = 0;
-    vector<int> component;
-    function<void(int)> dfs = [&](int node) {
-        vis[node] = 1, component.push_back(node);
-        for (const int &child : adj[node]) {
-            if (vis[child] == 0) {
-                dfs(child);
-            } else if (vis[child] == 1) {
-                ll mn = INF;
-                while (component.back() != child) {
-                    mn = min(mn, val[component.back()]);
-                    component.pop_back();
-                }
-                mn = min(mn, val[child]);
-                component.clear();
-                ans += mn;
+    for (auto v : order) {
+        if (!used[v]) {
+            dfs2(v);
+            if (sz(component) > 1) {
+                ll mini = INF;
+                for (auto &u : component)
+                    mini = min(mini, val[u]);
+                ans += mini;
             }
+            dbg(component);
+            // ... processing next component ...
+
+            component.clear();
         }
-        vis[node] = 2;
-    };
-    for (int i = 0; i < n; ++i) {
-        if (vis[i]) continue;
-        component.clear();
-        dfs(i);
     }
     cout << ans << '\n';
 }
