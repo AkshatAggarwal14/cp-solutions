@@ -16,8 +16,11 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     ll n, m;
     cin >> n >> m;
-    // (1, 1) -> (1, m) -> (n, m)
-    cout << m * (m - 1) / 2 + m * (n * (n + 1)) / 2 << '\n';
+    auto get = [&](ll i, ll j) { return (i - 1) * m + j; };
+    auto AP = [&](ll a, ll l, ll n_) { return (n_ * (a + l)) / 2; };
+    ll ans1 = AP(get(1, 1), get(n, 1), n) + AP(get(n, 1), get(n, m), m) - get(n, 1);
+    ll ans2 = AP(get(1, 1), get(1, m), m) + AP(get(1, m), get(n, m), n) - get(1, m);
+    cout << min(ans1, ans2) << '\n';
 }
 
 int32_t main() {
