@@ -34,7 +34,7 @@ void test() {
         ll t;
         cin >> t;
         ll pipes = (sum + t - 1) / t;  // ceil(sum / t) <- can be used to find pipes
-        if (t < mx) {
+        if (pipes > n || t < mx) {
             cout << "-1\n";
         } else {
             cout << pipes << '\n';
