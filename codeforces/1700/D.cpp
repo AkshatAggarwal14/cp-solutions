@@ -24,16 +24,15 @@ void test() {
         cin >> a[i];
         sum += a[i];
         ll pipes = i + 1;
-        ll min_time = (sum + pipes - 1) / pipes;  // ceil(sum / pipes)
+        ll min_time = (sum + pipes - 1) / pipes;
         mx = max(mx, min_time);
     }
     ll q;
     cin >> q;
-    // if there are p pipes open, p is water flow per second, so it takes ceil(capacity / p) seconds to fill
     while (q--) {
         ll t;
         cin >> t;
-        ll pipes = (sum + t - 1) / t;  // ceil(sum / t) <- can be used to find pipes
+        ll pipes = (sum + t - 1) / t;
         if (pipes > n || t < mx) {
             cout << "-1\n";
         } else {
