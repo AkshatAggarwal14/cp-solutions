@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1316 | [B - Unbalanced Squares](https://atcoder.jp/contests/arc142/tasks/arc142_b) | [C++ (GCC 9.2.1)](./atcoder/arc142/B.cpp) | `AtCoder` `*400` | Jun/19/2022 18:17 | 
 1315 | [A - Optimal Path](https://codeforces.com/contest/1700/problem/A) | [GNU C++20 (64)](./codeforces/1700/A.cpp) | `dp` `greedy` `greedy` `math` `math` `*800` | Jun/19/2022 17:22 | 
 1314 | [D - River Locks](https://codeforces.com/contest/1700/problem/D) | [GNU C++20 (64)](./codeforces/1700/D.cpp) | `binary search` `dp` `greedy` `math` `*1900` | Jun/19/2022 17:16 | 
 1313 | [B - Palindromic Numbers ](https://codeforces.com/contest/1700/problem/B) | [GNU C++20 (64)](./codeforces/1700/B.cpp) | `constructive algorithms` `implementation` `math` `*1100` | Jun/19/2022 15:00 | 

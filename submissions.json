@@ -4911,6 +4911,22 @@
     ],
     "timestamp": "Jun/18/2022 20:16"
   },
+  "AC32599899": {
+    "contest_id": "arc142",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc142/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Unbalanced Squares",
+    "problem_url": "https://atcoder.jp/contests/arc142/tasks/arc142_b",
+    "submission_id": "AC32599899",
+    "submission_url": "https://atcoder.jp/contests/arc142/submissions/32599899",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jun/19/2022 18:17"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
