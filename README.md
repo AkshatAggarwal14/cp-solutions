@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1313 | [A - Optimal Path](https://codeforces.com/contest/1700/problem/A) | [GNU C++20 (64)](./codeforces/1700/A.cpp) | `dp` `greedy` `greedy` `math` `math` `*800` | Jun/19/2022 17:22 | 
 1312 | [F - Cumulative Cumulative Cumulative Sum](https://atcoder.jp/contests/abc256/tasks/abc256_f) | [C++ (GCC 9.2.1)](./atcoder/abc256/F.cpp) | `AtCoder` `*500` | Jun/18/2022 20:16 | 
 1311 | [D - Union of Interval](https://atcoder.jp/contests/abc256/tasks/abc256_d) | [C++ (GCC 9.2.1)](./atcoder/abc256/D.cpp) | `AtCoder` `*400` | Jun/18/2022 19:28 | 
 1310 | [E - Takahashi's Anguish](https://atcoder.jp/contests/abc256/tasks/abc256_e) | [C++ (GCC 9.2.1)](./atcoder/abc256/E.cpp) | `AtCoder` `*500` | Jun/18/2022 19:26 | 
