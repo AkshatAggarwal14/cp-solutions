@@ -32106,6 +32106,24 @@
     ],
     "timestamp": "Jun/19/2022 17:22"
   },
+  "CF161332877": {
+    "contest_id": 1700,
+    "language": "PyPy 3-64",
+    "path": "codeforces/1700/B.py",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Palindromic Numbers ",
+    "problem_url": "https://codeforces.com/contest/1700/problem/B",
+    "submission_id": "CF161332877",
+    "submission_url": "https://codeforces.com/contest/1700/submission/161332877",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Jun/20/2022 23:40"
+  },
   "CF161337562": {
     "contest_id": 1661,
     "language": "GNU C++20 (64)",
