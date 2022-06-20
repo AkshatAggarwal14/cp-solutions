@@ -32106,6 +32106,24 @@
     ],
     "timestamp": "Jun/19/2022 17:22"
   },
+  "CF161337562": {
+    "contest_id": 1661,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1661/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Water the Trees",
+    "problem_url": "https://codeforces.com/contest/1661/problem/C",
+    "submission_id": "CF161337562",
+    "submission_url": "https://codeforces.com/contest/1661/submission/161337562",
+    "tags": [
+      "binary search",
+      "greedy",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Jun/21/2022 00:42"
+  },
   "CF161337623": {
     "contest_id": 1661,
     "language": "GNU C++20 (64)",

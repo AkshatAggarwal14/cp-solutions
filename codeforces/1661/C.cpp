@@ -30,18 +30,24 @@ void test() {
             cnt[2] += diff / 2;
             cnt[1] += diff % 2;
         }
-        ll L = 1, R = cnt[2] - cnt[1];
-        --L, ++R;
-        while (R > L + 1) {
-            ll M = (L + R) / 2;
-            if (cnt[2] - M + 1 >= cnt[1] + 2 * M) {
-                L = M;
-            } else {
-                R = M;
+        // dbg(cnt, mx);
+        // equalise number of 1s and 2s
+        if (cnt[2] > cnt[1]) {
+            ll L = 0, R = cnt[2] - cnt[1];
+            --L, ++R;
+            while (R > L + 1) {
+                ll M = (L + R) / 2;
+                if (cnt[2] - M + 1 >= cnt[1] + 2 * M) {
+                    L = M;
+                } else {
+                    R = M;
+                }
             }
+            cnt[2] -= L;
+            cnt[1] += 2 * L;
+            // dbg(L, R);
         }
-        cnt[2] -= L;
-        cnt[1] += 2 * L;
+        // dbg(cnt);
         if (cnt[1] > cnt[2]) return 2 * cnt[1] - 1;
         if (cnt[1] == cnt[2]) return 2 * cnt[1];
         return 2 * cnt[2];
