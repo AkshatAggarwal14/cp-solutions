@@ -34,7 +34,6 @@ void test() {
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
-            // Minimum count of 2 + 1 >= count of 1
             if (cnt[2] - M + 1 >= cnt[1] + 2 * M) {
                 L = M;
             } else {
