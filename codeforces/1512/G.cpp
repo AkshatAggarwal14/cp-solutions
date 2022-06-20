@@ -15,9 +15,9 @@ auto sz = [](const auto &container) { return int(container.size()); };
 #define all(x) begin(x), end(x)
 
 constexpr ll N = 1e7;
+array<ll, N + 1> sum;
 array<ll, N + 1> smallest;
 void fill() {
-    array<ll, N + 1> sum;
     for (ll i = 1; i <= N; ++i) sum[i] = 1, smallest[i] = -1;
     for (ll i = 2; i <= N; ++i) {
         for (ll j = i; j <= N; j += i) {
