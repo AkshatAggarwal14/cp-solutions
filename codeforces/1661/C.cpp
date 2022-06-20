@@ -24,30 +24,30 @@ void test() {
     vector<ll> a(n);
     for (auto &i : a) cin >> i;
     auto solve_for = [&](ll mx) {
-        ll c1 = 0, c2 = 0;
+        vector<ll> cnt(3, 0);
         for (ll i = 0; i < n; ++i) {
             ll diff = mx - a[i];
-            c2 += diff / 2;
-            c1 += diff % 2;
+            cnt[2] += diff / 2;
+            cnt[1] += diff % 2;
         }
-        ll L = 1, R = c2 - c1;
+        ll L = 1, R = cnt[2] - cnt[1];
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
             // Minimum count of 2 + 1 >= count of 1
-            if (c2 - M + 1 >= c1 + 2 * M) {
+            if (cnt[2] - M + 1 >= cnt[1] + 2 * M) {
                 L = M;
             } else {
                 R = M;
             }
         }
-        c2 -= L;
-        c1 += 2 * L;
-        if (c1 > c2) return 2 * c1 - 1;
-        return 2 * c2;
+        cnt[2] -= L;
+        cnt[1] += 2 * L;
+        if (cnt[1] > cnt[2]) return 2 * cnt[1] - 1;
+        if (cnt[1] == cnt[2]) return 2 * cnt[1];
+        return 2 * cnt[2];
     };
     ll maxi = *max_element(all(a));
-    // >= maxi + 2 dont make sense as maxi + 2 is just maxi with +2 for each element
     cout << min(solve_for(maxi), solve_for(maxi + 1)) << '\n';
 }
 
