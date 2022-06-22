@@ -4927,6 +4927,22 @@
     ],
     "timestamp": "Jun/19/2022 18:17"
   },
+  "AC32657342": {
+    "contest_id": "arc142",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc142/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Reverse and Minimize",
+    "problem_url": "https://atcoder.jp/contests/arc142/tasks/arc142_a",
+    "submission_id": "AC32657342",
+    "submission_url": "https://atcoder.jp/contests/arc142/submissions/32657342",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jun/22/2022 15:01"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
