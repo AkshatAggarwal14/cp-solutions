@@ -32284,5 +32284,25 @@
       "*1800"
     ],
     "timestamp": "Jun/21/2022 03:13"
+  },
+  "CF161463086": {
+    "contest_id": 1408,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1408/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Discrete Acceleration",
+    "problem_url": "https://codeforces.com/contest/1408/problem/C",
+    "submission_id": "CF161463086",
+    "submission_url": "https://codeforces.com/contest/1408/submission/161463086",
+    "tags": [
+      "binary search",
+      "dp",
+      "implementation",
+      "math",
+      "two pointers",
+      "*1500"
+    ],
+    "timestamp": "Jun/22/2022 15:41"
   }
 }

@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1322 | [C - Discrete Acceleration](https://codeforces.com/contest/1408/problem/C) | [GNU C++20 (64)](./codeforces/1408/C.cpp) | `binary search` `dp` `implementation` `math` `two pointers` `*1500` | Jun/22/2022 15:41 | 
 1321 | [D - XOR-pyramid](https://codeforces.com/contest/984/problem/D) | [GNU C++20 (64)](./codeforces/984/D.cpp) | `dp` `*1800` | Jun/21/2022 03:13 | 
 1320 | [B - XOR-pyramid](https://codeforces.com/contest/983/problem/B) | [GNU C++20 (64)](./codeforces/983/B.cpp) | `dp` `*1800` | Jun/21/2022 03:07 | 
 1319 | [C - Water the Trees](https://codeforces.com/contest/1661/problem/C) | [GNU C++20 (64)](./codeforces/1661/C.cpp) | `binary search` `greedy` `math` `*1700` | Jun/21/2022 00:49 | 
