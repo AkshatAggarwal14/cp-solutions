@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1325 | [D - Permutation Graph](https://codeforces.com/contest/1696/problem/D) | [GNU C++20 (64)](./codeforces/1696/D.cpp) | `binary search` `constructive algorithms` `data structures` `greedy` | Jun/25/2022 23:47 | 
 1324 | [D - Jumping Takahashi 2](https://atcoder.jp/contests/abc257/tasks/abc257_d) | [C++ (GCC 9.2.1)](./atcoder/abc257/D.cpp) | `AtCoder` `*400` | Jun/25/2022 18:55 | 
 1323 | [C - Discrete Acceleration](https://codeforces.com/contest/1408/problem/C) | [GNU C++20 (64)](./codeforces/1408/C.cpp) | `binary search` `dp` `implementation` `math` `two pointers` `*1500` | Jun/22/2022 15:41 | 
 1322 | [A - Reverse and Minimize](https://atcoder.jp/contests/arc142/tasks/arc142_a) | [C++ (GCC 9.2.1)](./atcoder/arc142/A.cpp) | `AtCoder` `*300` | Jun/22/2022 15:01 | 
