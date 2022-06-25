@@ -14,11 +14,11 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 struct graph {
-    ll n;
+    int n;
     vector<vector<ll>> adj;
     vector<ll> d;
-    graph(ll &vertices) : n(vertices), adj(n), d(n, -1) {}
-    void add_edge(ll u, ll v) {
+    graph(int &vertices) : n(vertices), adj(n), d(n, -1) {}
+    void add_edge(int u, int v) {
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
@@ -65,24 +65,24 @@ class Sparse_Table {
 };
 
 void test() {
-    ll n;
+    int n;
     cin >> n;
-    vector<ll> a(n);
+    vector<int> a(n);
     for (auto &i : a) cin >> i;
-    vector<ll> p(n);
+    vector<int> p(n);
     iota(all(p), 0LL);
     // gives minimum idx
-    Sparse_Table<ll> Min(p, [&](const ll &i, const ll &j) { return ((a[i] < a[j]) ? i : j); });
+    Sparse_Table<int> Min(p, [&](const ll &i, const ll &j) { return ((a[i] < a[j]) ? i : j); });
     // gives maximum idx
-    Sparse_Table<ll> Max(p, [&](const ll &i, const ll &j) { return ((a[i] > a[j]) ? i : j); });
+    Sparse_Table<int> Max(p, [&](const ll &i, const ll &j) { return ((a[i] > a[j]) ? i : j); });
 
     // {mx, mn}
-    auto edge_type_1 = [&](ll i) {
-        ll L = i, R = n - 1;
+    auto edge_type_1 = [&](int i) {
+        int L = i, R = n - 1;
         --L, ++R;
         // find farthest L such that in [i, L] a[i] is maximum
         while (R > L + 1) {
-            ll M = (L + R) / 2;
+            int M = (L + R) / 2;
             if (i == Max.query(i, M)) {
                 L = M;
             } else {
@@ -93,11 +93,11 @@ void test() {
         return Min.query(i, L);
     };
     // {mn, mx}
-    auto edge_type_2 = [&](ll i) {
-        ll L = i, R = n - 1;
+    auto edge_type_2 = [&](int i) {
+        int L = i, R = n - 1;
         --L, ++R;
         while (R > L + 1) {
-            ll M = (L + R) / 2;
+            int M = (L + R) / 2;
             if (i == Min.query(i, M)) {
                 L = M;
             } else {
@@ -107,9 +107,9 @@ void test() {
         return Max.query(i, L);
     };
     graph g(n);
-    for (ll i = 0; i < n; ++i) {
-        ll e1 = edge_type_1(i);
-        ll e2 = edge_type_2(i);
+    for (int i = 0; i < n; ++i) {
+        int e1 = edge_type_1(i);
+        int e2 = edge_type_2(i);
         if (e1 != i) g.add_edge(i, e1);
         if (e2 != i) g.add_edge(i, e2);
     }
