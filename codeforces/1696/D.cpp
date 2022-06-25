@@ -65,19 +65,17 @@ class Sparse_Table {
 };
 
 void test() {
-    using pl = pair<ll, ll>;
     ll n;
     cin >> n;
-    vector<pl> a(n);
-    for (ll i = 0; i < n; ++i) cin >> a[i].first, a[i].second = i;
+    vector<ll> a(n);
+    for (auto &i : a) cin >> i;
+    vector<ll> p(n);
+    iota(all(p), 0LL);
     // gives minimum idx
-    Sparse_Table<pl> Min(a, [&](const pl &i, const pl &j) {
-        return ((i.first < j.first) ? i : j);
-    });
+    Sparse_Table<ll> Min(p, [&](const ll &i, const ll &j) { return ((a[i] < a[j]) ? i : j); });
     // gives maximum idx
-    Sparse_Table<pl> Max(a, [&](const pl &i, const pl &j) {
-        return ((i.first > j.first) ? i : j);
-    });
+    Sparse_Table<ll> Max(p, [&](const ll &i, const ll &j) { return ((a[i] > a[j]) ? i : j); });
+
     // {mx, mn}
     auto edge_type_1 = [&](ll i) {
         ll L = i, R = n - 1;
@@ -85,14 +83,14 @@ void test() {
         // find farthest L such that in [i, L] a[i] is maximum
         while (R > L + 1) {
             ll M = (L + R) / 2;
-            if (i == Max.query(i, M).second) {
+            if (i == Max.query(i, M)) {
                 L = M;
             } else {
                 R = M;
             }
         }
         // find index with minimum element in [i, L] and reduce it to [i, found] -> [mx, mn]
-        return Min.query(i, L).second;
+        return Min.query(i, L);
     };
     // {mn, mx}
     auto edge_type_2 = [&](ll i) {
@@ -100,13 +98,13 @@ void test() {
         --L, ++R;
         while (R > L + 1) {
             ll M = (L + R) / 2;
-            if (i == Min.query(i, M).second) {
+            if (i == Min.query(i, M)) {
                 L = M;
             } else {
                 R = M;
             }
         }
-        return Max.query(i, L).second;
+        return Max.query(i, L);
     };
     graph g(n);
     for (ll i = 0; i < n; ++i) {
