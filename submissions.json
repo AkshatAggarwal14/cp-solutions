@@ -4943,6 +4943,22 @@
     ],
     "timestamp": "Jun/22/2022 15:01"
   },
+  "AC32723576": {
+    "contest_id": "abc257",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc257/C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Robot Takahashi",
+    "problem_url": "https://atcoder.jp/contests/abc257/tasks/abc257_c",
+    "submission_id": "AC32723576",
+    "submission_url": "https://atcoder.jp/contests/abc257/submissions/32723576",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jun/25/2022 17:55"
+  },
   "AC32743676": {
     "contest_id": "abc257",
     "language": "C++ (GCC 9.2.1)",
