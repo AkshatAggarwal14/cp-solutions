@@ -12,13 +12,14 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1330 | [D - Permutation Graph](https://codeforces.com/contest/1696/problem/D) | [GNU C++20 (64)](./codeforces/1696/D.cpp) | `binary search` `constructive algorithms` `data structures` `greedy` | Jun/25/2022 23:47 | 
-1329 | [C - Fishingprince Plays With Array](https://codeforces.com/contest/1696/problem/C) | [GNU C++20 (64)](./codeforces/1696/C.cpp) | `constructive algorithms` `data structures` `dfs and similar` `greedy` | Jun/25/2022 23:34 | 
-1328 | [B - NIT Destroys the Universe](https://codeforces.com/contest/1696/problem/B) | [GNU C++20 (64)](./codeforces/1696/B.cpp) | `greedy` `math` | Jun/25/2022 20:15 | 
-1327 | [A - NIT orz!](https://codeforces.com/contest/1696/problem/A) | [GNU C++20 (64)](./codeforces/1696/A.cpp) | `bitmasks` `greedy` | Jun/25/2022 20:11 | 
-1326 | [D - Jumping Takahashi 2](https://atcoder.jp/contests/abc257/tasks/abc257_d) | [C++ (GCC 9.2.1)](./atcoder/abc257/D.cpp) | `AtCoder` `*400` | Jun/25/2022 18:55 | 
-1325 | [C - Robot Takahashi](https://atcoder.jp/contests/abc257/tasks/abc257_c) | [C++ (GCC 9.2.1)](./atcoder/abc257/C.cpp) | `AtCoder` `*300` | Jun/25/2022 17:55 | 
-1324 | [B - 1D Pawn](https://atcoder.jp/contests/abc257/tasks/abc257_b) | [C++ (GCC 9.2.1)](./atcoder/abc257/B.cpp) | `AtCoder` `*200` | Jun/25/2022 17:44 | 
+1331 | [D - Permutation Graph](https://codeforces.com/contest/1696/problem/D) | [GNU C++20 (64)](./codeforces/1696/D.cpp) | `binary search` `constructive algorithms` `data structures` `greedy` | Jun/25/2022 23:47 | 
+1330 | [C - Fishingprince Plays With Array](https://codeforces.com/contest/1696/problem/C) | [GNU C++20 (64)](./codeforces/1696/C.cpp) | `constructive algorithms` `data structures` `dfs and similar` `greedy` | Jun/25/2022 23:34 | 
+1329 | [B - NIT Destroys the Universe](https://codeforces.com/contest/1696/problem/B) | [GNU C++20 (64)](./codeforces/1696/B.cpp) | `greedy` `math` | Jun/25/2022 20:15 | 
+1328 | [A - NIT orz!](https://codeforces.com/contest/1696/problem/A) | [GNU C++20 (64)](./codeforces/1696/A.cpp) | `bitmasks` `greedy` | Jun/25/2022 20:11 | 
+1327 | [D - Jumping Takahashi 2](https://atcoder.jp/contests/abc257/tasks/abc257_d) | [C++ (GCC 9.2.1)](./atcoder/abc257/D.cpp) | `AtCoder` `*400` | Jun/25/2022 18:55 | 
+1326 | [C - Robot Takahashi](https://atcoder.jp/contests/abc257/tasks/abc257_c) | [C++ (GCC 9.2.1)](./atcoder/abc257/C.cpp) | `AtCoder` `*300` | Jun/25/2022 17:55 | 
+1325 | [B - 1D Pawn](https://atcoder.jp/contests/abc257/tasks/abc257_b) | [C++ (GCC 9.2.1)](./atcoder/abc257/B.cpp) | `AtCoder` `*200` | Jun/25/2022 17:44 | 
+1324 | [A - A to Z String 2](https://atcoder.jp/contests/abc257/tasks/abc257_a) | [C++ (GCC 9.2.1)](./atcoder/abc257/A.cpp) | `AtCoder` `*100` | Jun/25/2022 17:34 | 
 1323 | [C - Discrete Acceleration](https://codeforces.com/contest/1408/problem/C) | [GNU C++20 (64)](./codeforces/1408/C.cpp) | `binary search` `dp` `implementation` `math` `two pointers` `*1500` | Jun/22/2022 15:41 | 
 1322 | [A - Reverse and Minimize](https://atcoder.jp/contests/arc142/tasks/arc142_a) | [C++ (GCC 9.2.1)](./atcoder/arc142/A.cpp) | `AtCoder` `*300` | Jun/22/2022 15:01 | 
 1321 | [D - XOR-pyramid](https://codeforces.com/contest/984/problem/D) | [GNU C++20 (64)](./codeforces/984/D.cpp) | `dp` `*1800` | Jun/21/2022 03:13 | 
