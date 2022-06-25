@@ -22,23 +22,40 @@ void test() {
     cin >> k;
     vector<ll> b(k);
     for (ll &i : b) cin >> i;
-    // expand both and check equal
-    auto expand = [&](vector<ll> &A) {
-        vector<pair<ll, ll>> breaks;
-        for (ll i = 0; i < sz(A); ++i) {
-            pair<ll, ll> curr = {A[i], 1};
-            while (curr.first % m == 0) {
-                curr.first /= m;
-                curr.second *= m;
-            }
-            if (breaks.empty() || breaks.back().first != curr.first)
-                breaks.push_back(curr);
-            else
-                breaks.back().second += curr.second;
+    vector<pair<ll, ll>> breaks;
+    for (ll i = 0; i < n; ++i) {
+        ll t = a[i];
+        ll p = 1;
+        while (t % m == 0) {
+            t /= m;
+            p *= m;
         }
-        return breaks;
-    };
-    cout << ((expand(a) == expand(b)) ? "Yes" : "No") << '\n';
+        breaks.push_back({t, p});
+    }
+    vector<pair<ll, ll>> n_breaks = {breaks[0]};
+    for (ll i = 1; i < n; ++i) {
+        if (n_breaks.back().first == breaks[i].first)
+            n_breaks.back().second += breaks[i].second;
+        else
+            n_breaks.push_back(breaks[i]);
+    }
+    reverse(all(n_breaks));
+    dbg(n_breaks);
+    for (ll i = 0; i < k; ++i) {
+        if (n_breaks.empty()) return void(cout << "No\n");
+        auto &f = n_breaks.back();
+        if (b[i] % f.first) return void(cout << "No\n");
+        ll occ = b[i] / f.first;
+        dbg(occ);
+        ll t = occ;
+        while (t % m == 0) t /= m;
+        if (occ > f.second || t != 1) return void(cout << "No\n");
+        f.second -= occ;
+        if (f.second == 0) n_breaks.pop_back();
+    }
+    dbg(n_breaks);
+    if (!n_breaks.empty()) return void(cout << "No\n");
+    cout << "Yes\n";
 }
 
 int32_t main() {
