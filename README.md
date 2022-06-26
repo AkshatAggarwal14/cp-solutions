@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1332 | [C - Swap Letters](https://codeforces.com/contest/1215/problem/C) | [GNU C++20 (64)](./codeforces/1215/C.cpp) | `constructive algorithms` `greedy` `*1500` | Jun/26/2022 23:20 | 
+1333 | [C - Swap Letters](https://codeforces.com/contest/1215/problem/C) | [GNU C++20 (64)](./codeforces/1215/C.cpp) | `constructive algorithms` `greedy` `*1500` | Jun/26/2022 23:20 | 
+1332 | [B - The Number of Products](https://codeforces.com/contest/1215/problem/B) | [GNU C++20 (64)](./codeforces/1215/B.cpp) | `combinatorics` `dp` `implementation` `*1400` | Jun/26/2022 23:00 | 
 1331 | [D - Permutation Graph](https://codeforces.com/contest/1696/problem/D) | [GNU C++20 (64)](./codeforces/1696/D.cpp) | `binary search` `constructive algorithms` `data structures` `greedy` | Jun/25/2022 23:47 | 
 1330 | [C - Fishingprince Plays With Array](https://codeforces.com/contest/1696/problem/C) | [GNU C++20 (64)](./codeforces/1696/C.cpp) | `constructive algorithms` `data structures` `dfs and similar` `greedy` | Jun/25/2022 23:34 | 
 1329 | [B - NIT Destroys the Universe](https://codeforces.com/contest/1696/problem/B) | [GNU C++20 (64)](./codeforces/1696/B.cpp) | `greedy` `math` | Jun/25/2022 20:15 | 

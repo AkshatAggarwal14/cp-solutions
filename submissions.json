@@ -32507,6 +32507,24 @@
     ],
     "timestamp": "Jun/25/2022 23:47"
   },
+  "CF161884159": {
+    "contest_id": 1215,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1215/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The Number of Products",
+    "problem_url": "https://codeforces.com/contest/1215/problem/B",
+    "submission_id": "CF161884159",
+    "submission_url": "https://codeforces.com/contest/1215/submission/161884159",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Jun/26/2022 23:00"
+  },
   "CF161885607": {
     "contest_id": 1215,
     "language": "GNU C++20 (64)",
