@@ -32506,5 +32506,22 @@
       "greedy"
     ],
     "timestamp": "Jun/25/2022 23:47"
+  },
+  "CF161885607": {
+    "contest_id": 1215,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1215/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Swap Letters",
+    "problem_url": "https://codeforces.com/contest/1215/problem/C",
+    "submission_id": "CF161885607",
+    "submission_url": "https://codeforces.com/contest/1215/submission/161885607",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Jun/26/2022 23:20"
   }
 }
