@@ -14,13 +14,12 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
-    // take 1 element and find farthest element from it by keep dividing other elements in 2 parts, then we get farthest element, and then get farthest from that by querying that and remaining set
     ll n;
     cin >> n;
-    auto ask = [&](ll e, ll l, ll r) {
-        cout << "1 " << r - l + 1 - (l <= e && e <= r) << ' ' << e << ' ';
+    auto ask = [&](ll p, ll l, ll r) {
+        cout << "1 " << r - l + 1 - (l <= p && p <= r) << ' ' << p << ' ';
         for (ll i = l; i <= r; ++i)
-            if (i != e) cout << i << ' ';
+            if (i != p) cout << i << ' ';
         cout << endl;
         ll res;
         cin >> res;
