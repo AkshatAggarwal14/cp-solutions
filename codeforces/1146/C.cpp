@@ -41,7 +41,6 @@ void test() {
     cout << "-1 " << ans << endl;
 }
 
-// if bit is set, put in one set otherwise in other
 void less_queries() {
     ll n;
     cin >> n;
