@@ -12,15 +12,16 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1344 | [E - Riding in a Lift](https://codeforces.com/contest/479/problem/E) | [GNU C++20 (64)](./codeforces/479/E.cpp) | `combinatorics` `dp` `*1900` | Jun/28/2022 18:19 | 
-1343 | [B - Towers](https://codeforces.com/contest/479/problem/B) | [GNU C++20 (64)](./codeforces/479/B.cpp) | `brute force` `constructive algorithms` `greedy` `implementation` `sortings` `*1400` | Jun/28/2022 18:16 | 
-1342 | [B1 - Tokitsukaze and Good 01-String (easy version)](https://codeforces.com/contest/1678/problem/B1) | [GNU C++20 (64)](./codeforces/1678/B1.cpp) | `implementation` `*800` | Jun/28/2022 16:16 | 
-1341 | [C - Binary Search](https://codeforces.com/contest/1436/problem/C) | [GNU C++20 (64)](./codeforces/1436/C.cpp) | `binary search` `combinatorics` `*1500` | Jun/27/2022 22:55 | 
-1340 | [H - Grid 1](https://atcoder.jp/contests/dp/tasks/dp_h) | [C++ (GCC 9.2.1)](./atcoder/dp/H.cpp) | `AtCoder` `*100` | Jun/27/2022 20:00 | 
-1339 | [F - LCS](https://atcoder.jp/contests/dp/tasks/dp_f) | [C++ (GCC 9.2.1)](./atcoder/dp/F.cpp) | `AtCoder` `*100` | Jun/27/2022 19:48 | 
-1338 | [D - Knapsack 1](https://atcoder.jp/contests/dp/tasks/dp_d) | [C++ (GCC 9.2.1)](./atcoder/dp/D.cpp) | `AtCoder` `*100` | Jun/27/2022 19:39 | 
-1337 | [C - Vacation](https://atcoder.jp/contests/dp/tasks/dp_c) | [C++ (GCC 9.2.1)](./atcoder/dp/C.cpp) | `AtCoder` `*100` | Jun/27/2022 18:23 | 
-1336 | [C - Tree Diameter](https://codeforces.com/contest/1146/problem/C) | [GNU C++20 (64)](./codeforces/1146/C.cpp) | `bitmasks` `graphs` `interactive` `*1700` | Jun/27/2022 16:34 | 
+1345 | [E - Riding in a Lift](https://codeforces.com/contest/479/problem/E) | [GNU C++20 (64)](./codeforces/479/E.cpp) | `combinatorics` `dp` `*1900` | Jun/28/2022 18:19 | 
+1344 | [B - Towers](https://codeforces.com/contest/479/problem/B) | [GNU C++20 (64)](./codeforces/479/B.cpp) | `brute force` `constructive algorithms` `greedy` `implementation` `sortings` `*1400` | Jun/28/2022 18:16 | 
+1343 | [B1 - Tokitsukaze and Good 01-String (easy version)](https://codeforces.com/contest/1678/problem/B1) | [GNU C++20 (64)](./codeforces/1678/B1.cpp) | `implementation` `*800` | Jun/28/2022 16:16 | 
+1342 | [C - Binary Search](https://codeforces.com/contest/1436/problem/C) | [GNU C++20 (64)](./codeforces/1436/C.cpp) | `binary search` `combinatorics` `*1500` | Jun/27/2022 22:55 | 
+1341 | [H - Grid 1](https://atcoder.jp/contests/dp/tasks/dp_h) | [C++ (GCC 9.2.1)](./atcoder/dp/H.cpp) | `AtCoder` `*100` | Jun/27/2022 20:00 | 
+1340 | [F - LCS](https://atcoder.jp/contests/dp/tasks/dp_f) | [C++ (GCC 9.2.1)](./atcoder/dp/F.cpp) | `AtCoder` `*100` | Jun/27/2022 19:48 | 
+1339 | [D - Knapsack 1](https://atcoder.jp/contests/dp/tasks/dp_d) | [C++ (GCC 9.2.1)](./atcoder/dp/D.cpp) | `AtCoder` `*100` | Jun/27/2022 19:39 | 
+1338 | [C - Vacation](https://atcoder.jp/contests/dp/tasks/dp_c) | [C++ (GCC 9.2.1)](./atcoder/dp/C.cpp) | `AtCoder` `*100` | Jun/27/2022 18:23 | 
+1337 | [C - Tree Diameter](https://codeforces.com/contest/1146/problem/C) | [GNU C++20 (64)](./codeforces/1146/C.cpp) | `bitmasks` `graphs` `interactive` `*1700` | Jun/27/2022 16:34 | 
+1336 | [B - Frog 2](https://atcoder.jp/contests/dp/tasks/dp_b) | [C++ (GCC 9.2.1)](./atcoder/dp/B.cpp) | `AtCoder` `*100` | Jun/27/2022 15:29 | 
 1335 | [F - Clear the String](https://codeforces.com/contest/1132/problem/F) | [GNU C++20 (64)](./codeforces/1132/F.cpp) | `dp` `*2000` | Jun/27/2022 14:16 | 
 1334 | [C - Swap Letters](https://codeforces.com/contest/1215/problem/C) | [GNU C++20 (64)](./codeforces/1215/C.cpp) | `constructive algorithms` `greedy` `*1500` | Jun/26/2022 23:20 | 
 1333 | [B - The Number of Products](https://codeforces.com/contest/1215/problem/B) | [GNU C++20 (64)](./codeforces/1215/B.cpp) | `combinatorics` `dp` `implementation` `*1400` | Jun/26/2022 23:00 | 
