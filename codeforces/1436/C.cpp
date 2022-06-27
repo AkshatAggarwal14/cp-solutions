@@ -95,14 +95,12 @@ void test() {
     ll l = 0, r = n;
     while (l < r) {
         ll m = (l + r) / 2;
-        if (m == pos) {
+        if (m < pos) ++less;
+        if (m > pos) ++more;
+        if (m <= pos) {
             l = m + 1;
-        } else if (m < pos) {
-            l = m + 1;
-            ++less;
         } else {
             r = m;
-            ++more;
         }
     }
     ll larger = n - x, smaller = x - 1;
