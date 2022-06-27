@@ -6,117 +6,83 @@ using namespace std;
 #define dbg(...)
 #endif
 using ll = long long;
-auto sz = [](const auto& container) { return int(container.size()); };
+auto sz = [](const auto &container) { return int(container.size()); };
 #define all(x) begin(x), end(x)
 
 const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// https://github.com/naman1601/cp-templates/blob/main/mint.sublime-snippet
-template <int Modulus = MOD>
-struct Mint {
-    int value;
+ll modpow(ll x, ll y, ll m) {
+    if (y == 0) return 1 % m;
+    ll u = modpow(x, y / 2, m);
+    u = (u * u) % m;
+    if (y % 2 == 1) u = (u * x) % m;
+    return u;
+}
 
-    Mint(long long v = 0) {
-        value = int(v % ll(Modulus));
-        if (value < 0) value += Modulus;
-    }
-    Mint(long long a, long long b) : value(0) {
-        *this += a;
-        *this /= b;
-    }
-    friend string to_string(const Mint& a) { return to_string(a.value); }
-    Mint& operator+=(Mint const& b) {
-        value = ((value + b.value) % Modulus + Modulus) % Modulus;
-        return *this;
-    }
-    Mint& operator-=(Mint const& b) {
-        value = ((value - b.value) % Modulus + Modulus) % Modulus;
-        return *this;
-    }
-    Mint& operator*=(Mint const& b) {
-        value = (int((value * 1LL * b.value) % Modulus) + Modulus) % Modulus;
-        return *this;
-    }
+// a**(p - 1) % p == 1
+// a*(a**(p - 2)) % p == 1
+// a**(p - 2) % p == 1 / a
+ll inverse(ll a, ll m = MOD) { return modpow(a, m - 2, m); }  // Fermats little theorem
 
-    Mint mexp(Mint a, long long e) {
-        Mint res = 1;
-        while (e) {
-            if (e & 1) res *= a;
-            a *= a;
-            e >>= 1;
-        }
-        return res;
+ll fact(ll n) {
+    ll p = 1;
+    for (ll i = 2; i <= n; ++i) {
+        p *= i;
+        p %= MOD;
     }
-
-    Mint inverse(Mint a) { return mexp(a, Modulus - 2); }
-    Mint& operator/=(Mint const& b) { return *this *= inverse(b); }
-    friend Mint operator+(Mint a, Mint const b) { return a += b; }
-    friend Mint operator-(Mint a, Mint const b) { return a -= b; }
-    friend Mint operator-(Mint const a) { return 0 - a; }
-    friend Mint operator*(Mint a, Mint const b) { return a *= b; }
-    friend Mint operator/(Mint a, Mint const b) { return a /= b; }
-    friend istream& operator>>(istream& istream, Mint& a) {
-        long long v;
-        istream >> v;
-        a = v;
-        return istream;
-    }
-    friend ostream& operator<<(ostream& ostream, Mint const& a) { return ostream << a.value; }
-    friend bool operator==(Mint const& a, Mint const& b) { return a.value == b.value; }
-    friend bool operator!=(Mint const& a, Mint const& b) { return a.value != b.value; }
+    return p;
 };
 
-using mint = Mint<MOD>;
-const ll MAXN = 1'010;
-vector<mint> fact(MAXN, 1), invf(MAXN, 1);
-
-void init() {
-    for (ll i = 2; i < MAXN; i++) fact[i] = fact[i - 1] * i;
-    invf[MAXN - 1] = 1 / fact[MAXN - 1];
-    for (ll i = MAXN - 2; i >= 2; i--) invf[i] = invf[i + 1] * (i + 1);
-}
-
-mint C(ll a, ll b) {
-    if (a < b) return mint();
-    return fact[a] * invf[b] * invf[a - b];
-}
-
-mint P(ll a, ll b) {
-    if (a < b) return mint();
-    return fact[a] * invf[a - b];
+ll ncr(ll n, ll r) {
+    if (n < r) return 0;
+    if (r == 0) return 1;
+    ll res = fact(n);
+    res *= inverse(fact(r));
+    res %= MOD;
+    res *= inverse(fact(n - r));
+    res %= MOD;
+    return res;
 }
 
 void test() {
     ll n, x, pos;
     cin >> n >> x >> pos;
-    ll less = 0, more = 0;
-    ll l = 0, r = n;
-    while (l < r) {
-        ll m = (l + r) / 2;
-        if (m < pos) ++less;
-        if (m > pos) ++more;
-        if (m <= pos) {
-            l = m + 1;
-        } else {
-            r = m;
+    auto simulate = [&]() -> pair<ll, ll> {
+        ll less = 0, greater = 0;
+        ll l = 0, r = n;
+        while (l < r) {
+            ll m = (l + r) / 2;
+            if (m < pos) ++less;
+            if (m > pos) ++greater;
+            if (m <= pos) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
         }
-    }
-    ll larger = n - x, smaller = x - 1;
-    mint ans = 1;
-    ans *= C(larger, more) * fact[more];   // selecting and arranging more
-    ans *= C(smaller, less) * fact[less];  // selecting and arranging less
-    ans *= fact[n - (1 + more + less)];    // arranging remaining
-    cout << ans << '\n';
+        return {less, greater};
+    };
+    auto C = simulate();
+    ll larger = n - x;
+    ll smaller = x - 1;
+    ll ans = 1;
+    (ans *= ncr(larger, C.second)) %= MOD;  // ways to choose greater elems
+    (ans *= fact(C.second)) %= MOD;         // relative ordering of greater elems
+
+    (ans *= ncr(smaller, C.first)) %= MOD;  // ways to choose smaller elems
+    (ans *= fact(C.first)) %= MOD;          // relative ordering of smaller elems
+
+    ll left = n - (1 + C.first + C.second);  // left! = ways to order other elems
+    cout << (ans * fact(left)) % MOD << '\n';
 }
 
 int32_t main() {
-    init();
     cin.tie(nullptr)->sync_with_stdio(false);
 #ifdef LOCAL
-    [[maybe_unused]] FILE* in = freopen("input.txt", "r", stdin);
-    [[maybe_unused]] FILE* out = freopen("output.txt", "w", stdout);
+    [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
+    [[maybe_unused]] FILE *out = freopen("output.txt", "w", stdout);
 #endif
     cout << fixed << setprecision(12);
     int tc = 1;
