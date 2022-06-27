@@ -24,10 +24,7 @@ void test() {
         ll &ans = dp[l][r];
         if (ans != -1) return ans;
 
-        ll different = l;
-        while (different < r && s[different] == s[l]) different++;
-        // take equal chars together and move to next
-        ans = 1 + dfs(different, r);
+        ans = 1 + dfs(l + 1, r);  // take one char and move to next
         for (ll i = l + 1; i <= r; ++i) {
             if (s[l] == s[i]) {  // l_th letter deleted with i_th
                 ans = min(ans, dfs(l + 1, i - 1) + dfs(i, r));
