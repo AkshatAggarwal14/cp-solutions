@@ -41,40 +41,13 @@ void test() {
     cout << "-1 " << ans << endl;
 }
 
-void less_queries() {
-    ll n;
-    cin >> n;
-    ll ans = 0;
-    auto ask = [](const vector<ll> &A, const vector<ll> &B) {
-        cout << sz(A) << ' ' << sz(B) << ' ';
-        for (auto &x : A) cout << x << ' ';
-        for (auto &x : B) cout << x << ' ';
-        cout << endl;
-        ll res;
-        cin >> res;
-        return res;
-    };
-    for (ll bit = 0; (1 << bit) < n; ++bit) {
-        vector<ll> a, b;
-        for (ll i = 1; i <= n; ++i) {
-            if (i & (1 << bit))
-                a.push_back(i);
-            else
-                b.push_back(i);
-        }
-        ans = max(ans, ask(a, b));
-    }
-    cout << "-1 " << ans << endl;
-}
-
 int32_t main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     cout << fixed << setprecision(12);
     int tc = 1;
     cin >> tc;
     for (int tt = 1; tt <= tc; ++tt) {
-        // test();
-        less_queries();
+        test();
     }
     return 0;
 }
