@@ -5,41 +5,25 @@
 using namespace std;
 #define dbg(...)
 #endif
-#define int long long
-
-void test() {
-    int n, W;
-    cin >> n >> W;
-    vector<int> wt(n), val(n);
-    for (int i = 0; i < n; ++i) cin >> wt[i] >> val[i];
-
-    // in one iteration we just use, current and previous row, thus DP can be space optimised to O(2*W) instead of O(n*W)
-    vector<vector<int>> dp(2, vector<int>(W + 1, -1));
-    for (int i = 0; i <= n; ++i) {
-        for (int w = 0; w <= W; ++w) {
-            if (i == 0 || w == 0)
-                dp[i % 2][w] = 0;
-            else {
-                dp[i % 2][w] = dp[(i - 1) % 2][w];
-                if (wt[i - 1] <= w)
-                    dp[i % 2][w] = max(val[i - 1] + dp[(i - 1) % 2][w - wt[i - 1]], dp[i % 2][w]);
-            }
-        }
-    }
-
-    cout << dp[n % 2][W] << '\n';
-}
+using ll = long long;
 
 int32_t main() {
     cin.tie(nullptr)->sync_with_stdio(false);
-    test();
+    int n, W;
+    cin >> n >> W;
+    vector<ll> w(n), v(n);
+    for (ll i = 0; i < n; ++i) cin >> w[i] >> v[i];
+    vector<vector<ll>> dp(n, vector<ll>(W + 1, -1));
+    function<ll(ll, ll)> dfs = [&](ll id, ll wt) {
+        if (wt == 0 || id < 0) return 0LL;
+        ll &ans = dp[id][wt];
+        if (ans != -1) return ans;
+        ans = dfs(id - 1, wt);
+        if (wt >= w[id]) {
+            ans = max(ans, dfs(id - 1, wt - w[id]) + v[id]);
+        }
+        return ans;
+    };
+    cout << dfs(n - 1, W) << '\n';
     return 0;
 }
-
-/*
-3 50
-10 20 30
-60 100 120
-
-answer = 220
-*/
