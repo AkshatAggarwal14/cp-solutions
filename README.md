@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1335 | [E - Riding in a Lift](https://codeforces.com/contest/479/problem/E) | [GNU C++20 (64)](./codeforces/479/E.cpp) | `combinatorics` `dp` `*1900` | Jun/28/2022 18:19 | 
 1334 | [C - Swap Letters](https://codeforces.com/contest/1215/problem/C) | [GNU C++20 (64)](./codeforces/1215/C.cpp) | `constructive algorithms` `greedy` `*1500` | Jun/26/2022 23:20 | 
 1333 | [B - The Number of Products](https://codeforces.com/contest/1215/problem/B) | [GNU C++20 (64)](./codeforces/1215/B.cpp) | `combinatorics` `dp` `implementation` `*1400` | Jun/26/2022 23:00 | 
 1332 | [A - Yellow Cards](https://codeforces.com/contest/1215/problem/A) | [GNU C++20 (64)](./codeforces/1215/A.cpp) | `greedy` `implementation` `math` `*1000` | Jun/26/2022 22:55 | 
