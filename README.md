@@ -12,14 +12,15 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1360 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
-1359 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
-1358 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
-1357 | [E - K-periodic Garland](https://codeforces.com/contest/1353/problem/E) | [GNU C++20 (64)](./codeforces/1353/E.cpp) | `brute force` `dp` `greedy` `*1900` | Jul/02/2022 14:59 | 
-1356 | [D - Dirty Deeds Done Dirt Cheap](https://codeforces.com/contest/1148/problem/D) | [GNU C++20 (64)](./codeforces/1148/D.cpp) | `greedy` `sortings` `*1800` | Jul/01/2022 23:39 | 
-1355 | [D - Required Length](https://codeforces.com/contest/1681/problem/D) | [GNU C++20 (64)](./codeforces/1681/D.cpp) | `brute force` `dfs and similar` `dp` `hashing` `shortest paths` `*1700` | Jun/30/2022 22:12 | 
-1354 | [C - Minimal string](https://codeforces.com/contest/797/problem/C) | [GNU C++20 (64)](./codeforces/797/C.cpp) | `data structures` `greedy` `strings` `*1700` | Jun/30/2022 20:36 | 
-1353 | [D - Flowers](https://codeforces.com/contest/474/problem/D) | [GNU C++20 (64)](./codeforces/474/D.cpp) | `dp` `*1700` | Jun/30/2022 14:51 | 
+1361 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
+1360 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
+1359 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
+1358 | [E - K-periodic Garland](https://codeforces.com/contest/1353/problem/E) | [GNU C++20 (64)](./codeforces/1353/E.cpp) | `brute force` `dp` `greedy` `*1900` | Jul/02/2022 14:59 | 
+1357 | [D - Dirty Deeds Done Dirt Cheap](https://codeforces.com/contest/1148/problem/D) | [GNU C++20 (64)](./codeforces/1148/D.cpp) | `greedy` `sortings` `*1800` | Jul/01/2022 23:39 | 
+1356 | [D - Required Length](https://codeforces.com/contest/1681/problem/D) | [GNU C++20 (64)](./codeforces/1681/D.cpp) | `brute force` `dfs and similar` `dp` `hashing` `shortest paths` `*1700` | Jun/30/2022 22:12 | 
+1355 | [C - Minimal string](https://codeforces.com/contest/797/problem/C) | [GNU C++20 (64)](./codeforces/797/C.cpp) | `data structures` `greedy` `strings` `*1700` | Jun/30/2022 20:36 | 
+1354 | [D - Flowers](https://codeforces.com/contest/474/problem/D) | [GNU C++20 (64)](./codeforces/474/D.cpp) | `dp` `*1700` | Jun/30/2022 14:51 | 
+1353 | [D - Rating Compression](https://codeforces.com/contest/1450/problem/D) | [GNU C++20 (64)](./codeforces/1450/D.cpp) | `binary search` `data structures` `greedy` `implementation` `two pointers` `*1800` | Jun/29/2022 02:36 | 
 1352 | [C - 3SUM Closure](https://codeforces.com/contest/1698/problem/C) | [GNU C++20 (64)](./codeforces/1698/C.cpp) | `brute force` | Jun/28/2022 23:01 | 
 1351 | [D - Fixed Point Guessing](https://codeforces.com/contest/1698/problem/D) | [GNU C++20 (64)](./codeforces/1698/D.cpp) | `binary search` `constructive algorithms` `interactive` | Jun/28/2022 21:04 | 
 1350 | [B - Rising Sand](https://codeforces.com/contest/1698/problem/B) | [GNU C++20 (64)](./codeforces/1698/B.cpp) | `constructive algorithms` `implementation` | Jun/28/2022 20:21 | 
