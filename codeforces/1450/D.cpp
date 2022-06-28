@@ -30,6 +30,7 @@ void test() {
         if (occ == 0) continue;
         if (curr != small) break;
         ans += '1';
+        if (occ > 1) break;
         if (a.front() == small) {
             a.pop_front();
         } else if (a.back() == small) {
@@ -37,7 +38,6 @@ void test() {
         } else {
             break;
         }
-        if (occ > 1) break;
         curr++;
     }
     while (sz(ans) < n - 1) ans += '0';
