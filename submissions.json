@@ -32965,6 +32965,22 @@
     ],
     "timestamp": "Jun/28/2022 18:19"
   },
+  "CF162072515": {
+    "contest_id": 1698,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1698/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Rising Sand",
+    "problem_url": "https://codeforces.com/contest/1698/problem/B",
+    "submission_id": "CF162072515",
+    "submission_url": "https://codeforces.com/contest/1698/submission/162072515",
+    "tags": [
+      "constructive algorithms",
+      "implementation"
+    ],
+    "timestamp": "Jun/28/2022 20:21"
+  },
   "CF162111583": {
     "contest_id": 1698,
     "language": "GNU C++20 (64)",
