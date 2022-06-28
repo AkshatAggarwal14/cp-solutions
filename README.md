@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1347 | [C - 3SUM Closure](https://codeforces.com/contest/1698/problem/C) | [GNU C++20 (64)](./codeforces/1698/C.cpp) | `brute force` | Jun/28/2022 23:01 | 
 1346 | [E - Riding in a Lift](https://codeforces.com/contest/479/problem/E) | [GNU C++20 (64)](./codeforces/479/E.cpp) | `combinatorics` `dp` `*1900` | Jun/28/2022 18:19 | 
 1345 | [B - Towers](https://codeforces.com/contest/479/problem/B) | [GNU C++20 (64)](./codeforces/479/B.cpp) | `brute force` `constructive algorithms` `greedy` `implementation` `sortings` `*1400` | Jun/28/2022 18:16 | 
 1344 | [B1 - Tokitsukaze and Good 01-String (easy version)](https://codeforces.com/contest/1678/problem/B1) | [GNU C++20 (64)](./codeforces/1678/B1.cpp) | `implementation` `*800` | Jun/28/2022 16:16 | 

@@ -32964,5 +32964,20 @@
       "*1900"
     ],
     "timestamp": "Jun/28/2022 18:19"
+  },
+  "CF162158644": {
+    "contest_id": 1698,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1698/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "3SUM Closure",
+    "problem_url": "https://codeforces.com/contest/1698/problem/C",
+    "submission_id": "CF162158644",
+    "submission_url": "https://codeforces.com/contest/1698/submission/162158644",
+    "tags": [
+      "brute force"
+    ],
+    "timestamp": "Jun/28/2022 23:01"
   }
 }
