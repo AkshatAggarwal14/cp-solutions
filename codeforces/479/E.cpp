@@ -91,10 +91,10 @@ void test() {
             // find range from which we can reach current floor from last move
             if (i < b) {
                 // range {mx, 1} - dp[i][j - 1]
-                dp[i][j] = pref[(b + i - 1) / 2] - dp[i][j - 1];
+                dp[i][j] += pref[(b + i - 1) / 2] - dp[i][j - 1];
             } else if (i > b) {
                 // range {mn, n} - dp[i][j - 1]
-                dp[i][j] = pref[n] - pref[(b + i) / 2] - dp[i][j - 1];
+                dp[i][j] += pref[n] - pref[(b + i) / 2] - dp[i][j - 1];
             }
         }
     }
