@@ -13,62 +13,31 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-mt19937 rng(uint32_t(chrono::steady_clock::now().time_since_epoch().count()));
-#define uid(a, b) uniform_int_distribution<ll>(a, b)(rng)
-
-string alphabet = "abcdefghijklmnopqrstuvwxyz";
-string randomString(ll length) {
-    string res = "";
-    for (ll i = 0; i < length; ++i) {
-        ll choice = uid(0, int(alphabet.length()) - 1);
-        res += alphabet[choice];
-    }
-    return res;
-}
-
 void test() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    set<ll> has;
+    for (auto &i : a) cin >> i;
+    ll pos = 0, neg = 0, zero = 0;
     for (ll i = 0; i < n; ++i) {
-        cin >> a[i];
-        has.insert(a[i]);
+        if (a[i] == 0) ++zero;
+        if (a[i] > 0) ++pos;
+        if (a[i] < 0) ++neg;
     }
-    sort(all(a));
-    for (ll i = 0; i < n - 2; ++i) {
-        ll sum = a[i] + a[i + 1] + a[i + 2];
-        if (!has.count(sum)) return void(cout << "NO\n");
-    }
-    for (ll i = 1; i < n - 1; ++i) {
-        ll sum = a[0] + a[i] + a[i + 1];
-        if (!has.count(sum)) return void(cout << "NO\n");
-    }
-
-    ll tries = 50;
-    while (tries--) {
-        for (ll i = 0; i < n - 2; ++i) {
-            ll j = uid(i + 1, n - 2);
-            ll k = uid(j + 1, n - 1);
-            if (!has.count(a[i] + a[j] + a[k])) return void(cout << "NO\n");
-        }
-    }
-    reverse(all(a));
-    for (ll i = 0; i < n - 2; ++i) {
-        ll sum = a[i] + a[i + 1] + a[i + 2];
-        if (!has.count(sum)) return void(cout << "NO\n");
-    }
-    for (ll i = 1; i < n - 1; ++i) {
-        ll sum = a[0] + a[i] + a[i + 1];
-        if (!has.count(sum)) return void(cout << "NO\n");
-    }
-
-    tries = 50;
-    while (tries--) {
-        for (ll i = 0; i < n - 2; ++i) {
-            ll j = uid(i + 1, n - 2);
-            ll k = uid(j + 1, n - 1);
-            if (!has.count(a[i] + a[j] + a[k])) return void(cout << "NO\n");
+    if (pos >= 3 || neg >= 3) return void(cout << "NO\n");
+    zero = min(zero, 3LL);
+    vector<ll> a_n;
+    set<ll> has;
+    for (ll i = 0; i < n; ++i)
+        if (a[i] != 0) a_n.push_back(a[i]), has.insert(a[i]);
+    for (ll i = 0; i < zero; ++i) a_n.push_back(0), has.insert(0);
+    n = sz(a_n);
+    for (ll i = 0; i < n; ++i) {
+        for (ll j = i + 1; j < n; ++j) {
+            for (ll k = j + 1; k < n; ++k) {
+                if (!has.count(a_n[i] + a_n[j] + a_n[k]))
+                    return void(cout << "NO\n");
+            }
         }
     }
     cout << "YES\n";
