@@ -27,8 +27,8 @@ void test() {
     string ans;
     ll curr = 1;
     for (auto &[small, occ] : cnt) {
-        if (occ == 0) continue;  // &= cnt[i]
-        if (curr != small || sz(ans) == n - 1) break;
+        if (occ == 0) continue;
+        if (curr != small) break;
         ans += '1';
         if (a.front() == small) {
             a.pop_front();
@@ -41,7 +41,7 @@ void test() {
         curr++;
     }
     while (sz(ans) < n - 1) ans += '0';
-    ans += (isPerm ? '1' : '0');
+    if (sz(ans) < n) ans += (isPerm ? '1' : '0');
     reverse(all(ans));
     cout << ans << '\n';
 }
