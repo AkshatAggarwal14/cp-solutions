@@ -26,16 +26,17 @@ void test() {
     vector<vector<int>> id(AL);
     for (int i = 0; i < n; ++i) id[s[i] - 'a'].push_back(i);
     for (int i = 0; i < AL; ++i) reverse(all(id[i]));
-
     for (int i = 0; i < n;) {
         if (id[s[i] - 'a'].empty() || id[s[i] - 'a'].back() != i) continue;
         int k = -1;
+        dbg(id);
         for (int j = 0; j < AL; ++j) {
             if (id[j].empty()) continue;
             k = id[j].back();
             break;
         }
-        while (!t.empty() && t.back() <= s[k]) {  // acdbd
+        dbg(i, k);
+        while (!t.empty() && t.back() <= s[k]) {
             u += t.back();
             t.pop_back();
         }
@@ -43,12 +44,15 @@ void test() {
             id[s[j] - 'a'].pop_back();
             t += s[j];
         }
+        dbg(t);
         while (!t.empty() && t.back() <= s[k]) {
             u += t.back();
             t.pop_back();
         }
+        dbg(u);
         i = k + 1;
     }
+    dbg(t);
     while (!t.empty()) {
         u += t.back();
         t.pop_back();
