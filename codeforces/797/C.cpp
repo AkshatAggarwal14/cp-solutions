@@ -28,6 +28,7 @@ void test() {
     for (int i = 0; i < AL; ++i) reverse(all(id[i]));
 
     for (int i = 0; i < n;) {
+        if (id[s[i] - 'a'].empty() || id[s[i] - 'a'].back() != i) continue;
         int k = -1;
         for (int j = 0; j < AL; ++j) {
             if (id[j].empty()) continue;
