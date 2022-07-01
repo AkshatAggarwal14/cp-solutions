@@ -12,10 +12,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1356 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
-1355 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
-1354 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
-1353 | [E - K-periodic Garland](https://codeforces.com/contest/1353/problem/E) | [GNU C++20 (64)](./codeforces/1353/E.cpp) | `brute force` `dp` `greedy` `*1900` | Jul/02/2022 14:59 | 
+1357 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
+1356 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
+1355 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
+1354 | [E - K-periodic Garland](https://codeforces.com/contest/1353/problem/E) | [GNU C++20 (64)](./codeforces/1353/E.cpp) | `brute force` `dp` `greedy` `*1900` | Jul/02/2022 14:59 | 
+1353 | [D - Dirty Deeds Done Dirt Cheap](https://codeforces.com/contest/1148/problem/D) | [GNU C++20 (64)](./codeforces/1148/D.cpp) | `greedy` `sortings` `*1800` | Jul/01/2022 23:39 | 
 1352 | [C - 3SUM Closure](https://codeforces.com/contest/1698/problem/C) | [GNU C++20 (64)](./codeforces/1698/C.cpp) | `brute force` | Jun/28/2022 23:01 | 
 1351 | [D - Fixed Point Guessing](https://codeforces.com/contest/1698/problem/D) | [GNU C++20 (64)](./codeforces/1698/D.cpp) | `binary search` `constructive algorithms` `interactive` | Jun/28/2022 21:04 | 
 1350 | [B - Rising Sand](https://codeforces.com/contest/1698/problem/B) | [GNU C++20 (64)](./codeforces/1698/B.cpp) | `constructive algorithms` `implementation` | Jun/28/2022 20:21 | 
