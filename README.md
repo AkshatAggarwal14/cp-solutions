@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1353 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
 1352 | [C - 3SUM Closure](https://codeforces.com/contest/1698/problem/C) | [GNU C++20 (64)](./codeforces/1698/C.cpp) | `brute force` | Jun/28/2022 23:01 | 
 1351 | [D - Fixed Point Guessing](https://codeforces.com/contest/1698/problem/D) | [GNU C++20 (64)](./codeforces/1698/D.cpp) | `binary search` `constructive algorithms` `interactive` | Jun/28/2022 21:04 | 
 1350 | [B - Rising Sand](https://codeforces.com/contest/1698/problem/B) | [GNU C++20 (64)](./codeforces/1698/B.cpp) | `constructive algorithms` `implementation` | Jun/28/2022 20:21 | 
