@@ -5119,6 +5119,22 @@
     ],
     "timestamp": "Jun/27/2022 20:00"
   },
+  "AC32934310": {
+    "contest_id": "abc258",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc258/G.cpp",
+    "platform": "AtCoder",
+    "problem_index": "G",
+    "problem_name": "Triangle",
+    "problem_url": "https://atcoder.jp/contests/abc258/tasks/abc258_g",
+    "submission_id": "AC32934310",
+    "submission_url": "https://atcoder.jp/contests/abc258/submissions/32934310",
+    "tags": [
+      "AtCoder",
+      "*600"
+    ],
+    "timestamp": "Jul/02/2022 19:16"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
