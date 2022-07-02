@@ -12,10 +12,11 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1365 | [G - Triangle](https://atcoder.jp/contests/abc258/tasks/abc258_g) | [C++ (GCC 9.2.1)](./atcoder/abc258/G.cpp) | `AtCoder` `*600` | Jul/02/2022 19:16 | 
-1364 | [D - Trophy](https://atcoder.jp/contests/abc258/tasks/abc258_d) | [C++ (GCC 9.2.1)](./atcoder/abc258/D.cpp) | `AtCoder` `*400` | Jul/02/2022 19:15 | 
-1363 | [C - Rotation](https://atcoder.jp/contests/abc258/tasks/abc258_c) | [C++ (GCC 9.2.1)](./atcoder/abc258/C.cpp) | `AtCoder` `*300` | Jul/02/2022 17:44 | 
-1362 | [B - Number Box](https://atcoder.jp/contests/abc258/tasks/abc258_b) | [C++ (GCC 9.2.1)](./atcoder/abc258/B.cpp) | `AtCoder` `*200` | Jul/02/2022 17:41 | 
+1366 | [G - Triangle](https://atcoder.jp/contests/abc258/tasks/abc258_g) | [C++ (GCC 9.2.1)](./atcoder/abc258/G.cpp) | `AtCoder` `*600` | Jul/02/2022 19:16 | 
+1365 | [D - Trophy](https://atcoder.jp/contests/abc258/tasks/abc258_d) | [C++ (GCC 9.2.1)](./atcoder/abc258/D.cpp) | `AtCoder` `*400` | Jul/02/2022 19:15 | 
+1364 | [C - Rotation](https://atcoder.jp/contests/abc258/tasks/abc258_c) | [C++ (GCC 9.2.1)](./atcoder/abc258/C.cpp) | `AtCoder` `*300` | Jul/02/2022 17:44 | 
+1363 | [B - Number Box](https://atcoder.jp/contests/abc258/tasks/abc258_b) | [C++ (GCC 9.2.1)](./atcoder/abc258/B.cpp) | `AtCoder` `*200` | Jul/02/2022 17:41 | 
+1362 | [A - When?](https://atcoder.jp/contests/abc258/tasks/abc258_a) | [C++ (GCC 9.2.1)](./atcoder/abc258/A.cpp) | `AtCoder` `*100` | Jul/02/2022 17:32 | 
 1361 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
 1360 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
 1359 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
