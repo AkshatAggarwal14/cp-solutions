@@ -12,8 +12,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1363 | [G - Triangle](https://atcoder.jp/contests/abc258/tasks/abc258_g) | [C++ (GCC 9.2.1)](./atcoder/abc258/G.cpp) | `AtCoder` `*600` | Jul/02/2022 19:16 | 
-1362 | [D - Trophy](https://atcoder.jp/contests/abc258/tasks/abc258_d) | [C++ (GCC 9.2.1)](./atcoder/abc258/D.cpp) | `AtCoder` `*400` | Jul/02/2022 19:15 | 
+1364 | [G - Triangle](https://atcoder.jp/contests/abc258/tasks/abc258_g) | [C++ (GCC 9.2.1)](./atcoder/abc258/G.cpp) | `AtCoder` `*600` | Jul/02/2022 19:16 | 
+1363 | [D - Trophy](https://atcoder.jp/contests/abc258/tasks/abc258_d) | [C++ (GCC 9.2.1)](./atcoder/abc258/D.cpp) | `AtCoder` `*400` | Jul/02/2022 19:15 | 
+1362 | [C - Rotation](https://atcoder.jp/contests/abc258/tasks/abc258_c) | [C++ (GCC 9.2.1)](./atcoder/abc258/C.cpp) | `AtCoder` `*300` | Jul/02/2022 17:44 | 
 1361 | [C - Vasya and Petya's Game](https://codeforces.com/contest/577/problem/C) | [GNU C++20 (64)](./codeforces/577/C.cpp) | `implementation` `number theory` `*1500` | Jul/02/2022 17:23 | 
 1360 | [B - Modulo Sum](https://codeforces.com/contest/577/problem/B) | [GNU C++20 (64)](./codeforces/577/B.cpp) | `combinatorics` `data structures` `dp` `two pointers` `*1900` | Jul/02/2022 16:56 | 
 1359 | [G - Old Floppy Drive ](https://codeforces.com/contest/1490/problem/G) | [GNU C++20 (64)](./codeforces/1490/G.cpp) | `binary search` `data structures` `math` `*1900` | Jul/02/2022 16:07 | 
