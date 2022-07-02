@@ -28,9 +28,24 @@ void test() {
     while (m--) {
         ll x;
         cin >> x;
-        ll trips = 0;
-        if (sum > 0 && x > pref[n - 1])
-            trips = (x - pref[n - 1] + sum - 1) / sum;
+        if (sum <= 0 || x <= pref[n - 1]) {
+            // 1 iteration
+            ll ans = -1;
+            ll L = 0, R = n - 1;
+            --L, ++R;
+            while (R > L + 1) {
+                ll M = (L + R) / 2;
+                if (pref[M] >= x) {
+                    R = M;
+                    ans = M;
+                } else {
+                    L = M;
+                }
+            }
+            cout << ans << ' ';
+            continue;
+        }
+        ll trips = (x - pref[n - 1] + sum - 1) / sum;
         ll nx = x - sum * trips;
         // find first position where pref[i] >= nx
         ll L = 0, R = n - 1;
