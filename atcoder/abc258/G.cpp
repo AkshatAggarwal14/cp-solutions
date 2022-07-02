@@ -12,32 +12,40 @@ auto sz = [](const auto &container) { return int(container.size()); };
 const ll INF = 1e18;
 const ll N = 3010;
 const ll MOD = 1e9 + 7;  // 998244353
-
 void test() {
-    int n;
-    bitset<N> b[N], suf;
+    vector<bitset<N>> v(N);
+    ll n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
+    vector<vector<bool>> grid(n, vector<bool>(n));
+    for (ll i = 0; i < n; ++i) {
         string s;
         cin >> s;
-        for (int j = 0; j < n; j++) {
-            b[i][j] = s[j] - '0';
+        for (ll j = 0; j < n; ++j) {
+            grid[i][j] = (s[j] == '1');
         }
+        v[i] = bitset<N>(s);
     }
-
+    vector<bitset<N>> use(N);
+    use.back().set();
+    for (ll i = N - 2; i >= 0; --i) {
+        use[i] = (use[i + 1] >> 1);
+    }
+    // dbg(use, v);
     ll ans = 0;
-    for (int j = 1; j < n - 1; j++) {
-        suf.reset();
-        for (int k = j + 1; k < n; k++)
-            if (b[j][k]) suf[k] = 1;
-
-        for (int i = 0; i < j; i++) {
-            if (b[i][j]) {
-                ans += (suf & b[i]).count();
+    for (ll i = 0; i < n; ++i) {
+        for (ll j = i + 1; j < n; ++j) {
+            if (grid[i][j]) {
+                ll id = (n - (j + 1));
+                if (id != 0) {
+                    auto X = use[id - 1];
+                    X &= (v[i] & v[j]);
+                    // dbg(X, id, i, j);
+                    ans += X.count();
+                }
             }
         }
     }
-    cout << ans;
+    cout << ans << '\n';
 }
 
 int32_t main() {
