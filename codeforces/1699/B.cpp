@@ -16,17 +16,32 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     ll n, m;
     cin >> n >> m;
-    vector<vector<char>> grid(2, vector<char>(m, '0'));
+    vector<vector<char>> grid(2, vector<char>(m, '.'));
     for (ll i = 0; i < m; ++i) {
-        if (i % 4 == 1 || i % 4 == 2)
+        if (i % 4 == 1 || i % 4 == 2) {
             grid[0][i] = '1';
-        else
+            grid[1][i] = '0';
+        } else {
+            grid[0][i] = '0';
             grid[1][i] = '1';
+        }
     }
     for (ll i = 0; i < n / 2; ++i) {
-        for (ll j = 0; j < m; ++j) cout << grid[0][j] << " \n"[j == m - 1];
-        for (ll j = 0; j < m; ++j) cout << grid[1][j] << " \n"[j == m - 1];
-        swap(grid[0], grid[1]);
+        if (i & 1) {
+            for (ll j = 0; j < m; ++j) {
+                cout << grid[0][j] << " \n"[j == m - 1];
+            }
+            for (ll j = 0; j < m; ++j) {
+                cout << grid[1][j] << " \n"[j == m - 1];
+            }
+        } else {
+            for (ll j = 0; j < m; ++j) {
+                cout << grid[1][j] << " \n"[j == m - 1];
+            }
+            for (ll j = 0; j < m; ++j) {
+                cout << grid[0][j] << " \n"[j == m - 1];
+            }
+        }
     }
 }
 
