@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1367 | [B - Almost Ternary Matrix](https://codeforces.com/contest/1699/problem/B) | [GNU C++20 (64)](./codeforces/1699/B.cpp) | `bitmasks` `constructive algorithms` `matrices` | Jul/04/2022 22:33 | 
 1366 | [G - Triangle](https://atcoder.jp/contests/abc258/tasks/abc258_g) | [C++ (GCC 9.2.1)](./atcoder/abc258/G.cpp) | `AtCoder` `*600` | Jul/02/2022 19:16 | 
 1365 | [D - Trophy](https://atcoder.jp/contests/abc258/tasks/abc258_d) | [C++ (GCC 9.2.1)](./atcoder/abc258/D.cpp) | `AtCoder` `*400` | Jul/02/2022 19:15 | 
 1364 | [C - Rotation](https://atcoder.jp/contests/abc258/tasks/abc258_c) | [C++ (GCC 9.2.1)](./atcoder/abc258/C.cpp) | `AtCoder` `*300` | Jul/02/2022 17:44 | 
