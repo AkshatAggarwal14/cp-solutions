@@ -29,8 +29,7 @@ void test() {
     for (ll S = 1; S <= sum / 2; ++S) dp[S] = false;
     for (ll i = 0; i < n; ++i)
         for (ll j = sum / 2; j >= a[i]; --j)
-            if (dp[j - a[i]])
-                dp[j] = true;
+            dp[j] = dp[j] | dp[j - a[i]];
     if (!dp[sum / 2]) return void(cout << "0\n");
 
     for (ll k = 0; k < n; ++k) {
@@ -55,7 +54,6 @@ void test() {
             cout << k + 1 << '\n';
             return;
         }
-
         sum += val;
     }
     cout << "1\n1\n";
