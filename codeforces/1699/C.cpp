@@ -102,12 +102,10 @@ void test() {
         if (l <= pos[cur] && pos[cur] <= r) {
             unlocked++;
         } else {
-            // permute unlocked in range
             ans *= P(r - l + 1 - locked, unlocked);
-            // all permuted get locked
-            // this one never visited yet, gets locked too
-            locked += unlocked + 1;
+            locked += unlocked;
             unlocked = 0;
+            locked++;
             r = max(r, pos[cur]);
             l = min(l, pos[cur]);
         }
