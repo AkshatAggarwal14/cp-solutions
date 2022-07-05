@@ -32,8 +32,6 @@ void test() {
                 dp[j] = true;
     if (!dp[sum / 2]) return void(cout << "0\n");
 
-    // now divide array by its gcd, and we will surely have an odd element now, thus find it and output index
-    // we could also divide array by 2, and repeat above process
     for (ll i = 0; i < n; ++i) {
         if ((a[i] / g) & 1) {
             cout << "1\n";
