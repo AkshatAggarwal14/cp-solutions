@@ -17,8 +17,8 @@ void test() {
     ll n;
     cin >> n;
     vector<ll> a(n);
-    ll sum = 0, g = 0;
-    for (ll &i : a) cin >> i, sum += i, g = gcd(g, i);
+    ll sum = 0;
+    for (ll &i : a) cin >> i, sum += i;
     if (sum & 1) return void(cout << "0\n");  // if odd cant divide into 2 parts
     // else remove one element and check
 
@@ -26,19 +26,40 @@ void test() {
     // dp[i] = true if we can make a subset with sum = i
     // if can never achieve half sum
     dp[0] = true;
+    for (ll S = 1; S <= sum / 2; ++S) dp[S] = false;
     for (ll i = 0; i < n; ++i)
         for (ll j = sum / 2; j >= a[i]; --j)
             if (dp[j - a[i]])
                 dp[j] = true;
     if (!dp[sum / 2]) return void(cout << "0\n");
 
-    for (ll i = 0; i < n; ++i) {
-        if ((a[i] / g) & 1) {
+    for (ll k = 0; k < n; ++k) {
+        ll val = a[k];
+        sum -= val;
+        ll Sum = sum / 2;
+        if (sum & 1) {
             cout << "1\n";
-            cout << i + 1 << '\n';
+            cout << k + 1 << '\n';
             return;
         }
+        // remove one element and check if sum / 2 can be reached
+        dp[0] = true;
+        for (ll S = 1; S <= Sum; ++S) dp[S] = false;
+        for (ll i = 0; i < n; ++i)
+            if (i != k)
+                for (ll j = Sum; j >= a[i]; --j)
+                    if (dp[j - a[i]])
+                        dp[j] = true;
+        if (!dp[Sum]) {
+            cout << "1\n";
+            cout << k + 1 << '\n';
+            return;
+        }
+
+        sum += val;
     }
+    cout << "1\n1\n";
+    // assert(false);
 }
 
 int32_t main() {
