@@ -105,7 +105,6 @@ void test() {
         cin >> num;
         st.update(i, Node(num));
     }
-    // ans[l, r] = length[l, r] - cnt[gcd[l, r]]
     int q;
     cin >> q;
     while (q--) {
