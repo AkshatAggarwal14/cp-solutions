@@ -1,165 +1,136 @@
-// Problem: D. Distinct Characters Queries
-// Contest: Codeforces - Codeforces Round #590 (Div. 3)
-// URL: https://codeforces.com/contest/1234/problem/D
-// Author: Akshat Aggarwal , @master._.mind , NIT Hamirpur
-// Created at: 04/08/2021 15:33:21 (UTC +5:30)
-//
-// Powered by CP Editor (https://cpeditor.org)
-
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-
-#include "bits/stdc++.h"
-
-using namespace std;
-using namespace __gnu_pbds;
-
-template <typename T>
-using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : k-th element in the set
-
-#define ll long long
-#define db long double
-#define str string
-#define ull unsigned long long
-#define fo(i, n) for (ll i = 0; i < n; i++)
-#define ln '\n'
-#define rep(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? i++ : i--)
-#define deb(x) cout << "[" << #x << "]: " << x << ln
-#define deb2(x, y) cout << "[" << #x << "]: " << x << ", [" << #y << "]: " << y << ln
-#define bit(x) __builtin_popcount(x)
-#define bitll(x) __builtin_popcountll(x)
-#define popb pop_back
-#define pb push_back
-#define eb emplace_back
-#define mp(x, y) make_pair(x, y)
-#define ub upper_bound
-#define lb lower_bound
-#define ff first
-#define ss second
-#define all(x) (x).begin(), (x).end()
-#define uniq(x) (x).erase(unique(all(x)), (x).end())
-#define rall(x) (x).rbegin(), (x).rend()
-#define ps(x, y) fixed << setprecision(y) << x
-#define clr(x) memset(x, 0, sizeof(x))
-#define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
-#define PI 3.1415926535897932384626
-#define sz(x) ((ll)(x).size())
-#define present(b, a) ((a).find((b)) != (a).end())  //if b is present in a
-#define yes() cout << "YES\n"
-#define no() cout << "NO\n"
-const ll mod = 1e9 + 7;  //1000000007
-const ll mod2 = 998244353;
-const ll inf = LLONG_MAX;
-const db eps = 1e-12;
-typedef pair<ll, ll> pl;
-typedef pair<db, db> pd;
-typedef vector<ll> vl;
-typedef vector<pl> vpl;
-typedef vector<vl> vvl;
-
-//debug template begins
-string to_string(string s) { return '"' + s + '"'; }
-string to_string(char ch) {
-    string s(1, ch);
-    return '\'' + s + '\'';
-}
-string to_string(const char *s) { return to_string((string)s); }
-string to_string(bool b) { return (b ? "true" : "false"); }
-
-template <typename A, typename B>
-string to_string(pair<A, B> p) { return "{" + to_string(p.ff) + ", " + to_string(p.ss) + "}"; }
-
-template <typename A>
-string to_string(A v) {
-    bool first = true;
-    string res = "{";
-    for (const auto &x : v) {
-        if (!first) {
-            res += ", ";
-        }
-        first = false;
-        res += to_string(x);
-    }
-    res += "}";
-    return res;
-}
-
-void debug_out() { cerr << endl; }
-template <typename Head, typename... Tail>
-void debug_out(Head H, Tail... T) {
-    cerr << to_string(H) << ln;
-    debug_out(T...);
-}
-
-#ifndef ONLINE_JUDGE
-#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#ifdef LOCAL
+#include "Akshat.hpp"
 #else
-#define debug(...) 42
+#include "bits/stdc++.h"
+using namespace std;
+#define dbg(...)
 #endif
-//debug template ends
+using ll = long long;
+auto sz = [](const auto &container) { return int(container.size()); };
+#define all(x) begin(x), end(x)
 
-template <typename T>
-void print(T &&t) { cout << t << "\n"; }
-template <typename T, typename... Args>
-void print(T &&t, Args &&...args) {
-    cout << t << " ";
-    print(forward<Args>(args)...);
-}  //print template ends
+const ll INF = 1e18;
+const ll N = 1e5 + 5;
+const ll MOD = 1e9 + 7;  // 998244353
 
-template <typename T, typename T1>
-T amax(T &a, T1 b) {
-    if (b > a) a = b;
-    return a;
-}
-template <typename T, typename T1>
-T amin(T &a, T1 b) {
-    if (b < a) a = b;
-    return a;
-}
+// can use decltype while initialising to make a little bit faster
+template <class T, class op = function<T(const T &, const T &)>, class id = function<T()>>
+class SegTree {
+   public:
+    SegTree() = default;
+    SegTree(int n, op operation_, id identity_)
+        : SegTree(vector<T>(n, identity_()), operation_, identity_) {}
+    int ceil_pow2(int n) {
+        int x = 0;
+        while ((1U << x) < (unsigned int)(n)) x++;
+        return x;
+    }
+    SegTree(const vector<T> &v, op operation_, id identity_)
+        : operation(operation_), initialize(identity_), _n(int(v.size())) {
+        height = ceil_pow2(_n);
+        size = (1 << height);
+        tree.resize(2 * size, initialize());
+        for (int i = 0; i < _n; i++) tree[size + i] = v[i];
+        for (int i = size - 1; i >= 1; i--) {
+            calc(i);
+        }
+    }
 
-void Solution() {
-    str s;
+    T _query(int node, int node_lo, int node_hi, int q_lo, int q_hi) {
+        // if range is completely inside [q_lo, q_hi], then just return its ans
+        if (q_lo <= node_lo && node_hi <= q_hi)
+            return tree[node];
+        if (node_hi < q_lo || q_hi < node_lo)
+            return initialize();  // if disjoint ignore
+        int last_in_left = (node_lo + node_hi) / 2;
+        return operation(_query(2 * node, node_lo, last_in_left, q_lo, q_hi),
+                         _query(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi));
+    }
+
+    void _update(int node, int node_lo, int node_hi, int q_lo, int q_hi, T value) {
+        // happens only once when leaf [id, id]
+        if (q_lo <= node_lo && node_hi <= q_hi) {
+            tree[node] = value;
+            return;
+        }
+        // in disjoint just return
+        if (node_hi < q_lo || q_hi < node_lo) return;
+        int last_in_left = (node_lo + node_hi) / 2;
+        _update(2 * node, node_lo, last_in_left, q_lo, q_hi, value);
+        _update(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi, value);
+
+        // after updating now set, Post Call Area
+        calc(node);
+    }
+
+    T all_query() { return tree[1]; }
+    T query(int p) {
+        assert(0 <= p && p < _n);
+        return tree[p + size];
+    }
+    T query(int l, int r) {
+        assert(0 <= l && l <= r && r < _n);
+        return _query(1, 0, size - 1, l, r);
+    }
+    void update(int p, T x) {
+        assert(0 <= p && p < _n);
+        _update(1, 0, size - 1, p, p, x);
+    }
+
+   private:
+    vector<T> tree;
+    void calc(int k) { tree[k] = operation(tree[2 * k], tree[2 * k + 1]); }
+    op operation;
+    id initialize;
+    int _n, size, height;
+};
+
+void test() {
+    string s;
     cin >> s;
-    ll q;
+    int n = sz(s);
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i) a[i] = (1 << (s[i] - 'a'));
+    SegTree<int> st(
+        a,
+        [](const int &i, const int &j) { return i | j; },
+        []() { return 0; });
+    int q;
     cin >> q;
-
-    vector<set<ll>> idx(26);
-    fo(i, sz(s)) idx[s[i] - 'a'].insert(i + 1);
-    ll t, l, r, pos;
-    char c;
     while (q--) {
-        cin >> t;
-        if (t == 1) {
-            cin >> pos >> c;
-            idx[s[pos - 1] - 'a'].erase(pos);  //delete before insert (if c is already at pos)
-            s[pos - 1] = c;
-            idx[c - 'a'].insert(pos);
+        int type;
+        cin >> type;
+        if (type == 1) {
+            int pos;
+            char c;
+            cin >> pos >> c, --pos;
+            a[pos] = (1 << (c - 'a'));
+            st.update(pos, a[pos]);
         } else {
-            cin >> l >> r;
-            ll cnt = 0;
-            fo(i, 26) {
-                if (idx[i].empty()) continue;
-                auto it = idx[i].lower_bound(l);
-                if (it == idx[i].end()) continue;
-                if (*it <= r) cnt++;
+            int l, r;
+            cin >> l >> r, --l, --r;
+            int val = st.query(l, r);
+            int ans = 0;
+            while (val) {
+                ans += val & 1;
+                val >>= 1;
             }
-            print(cnt);
+            cout << ans << '\n';
         }
     }
 }
 
-int main() {
-    ios_base::sync_with_stdio(false), cin.tie(nullptr);
-
-    ll tc = 1;
-    //cin >> tc;
-    while (tc--) {
-        Solution();
+int32_t main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+#ifdef LOCAL
+    [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
+    [[maybe_unused]] FILE *out = freopen("output.txt", "w", stdout);
+#endif
+    cout << fixed << setprecision(12);
+    int tc = 1;
+    // cin >> tc;
+    for (int tt = 1; tt <= tc; ++tt) {
+        test();
     }
-
-    cerr << clock() / CLOCKS_PER_SEC * 1000 << " ms" << endl;
     return 0;
 }
