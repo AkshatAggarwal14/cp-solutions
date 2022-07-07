@@ -13,72 +13,105 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
+// can use decltype while initialising to make a little bit faster
 template <class T>
-class Sparse_Table {
-    int N, K;
-    vector<int> LOG;
-    vector<vector<T>> st;
-
+class SegTree {
    public:
-    Sparse_Table() = default;
-    Sparse_Table(const vector<T> &arr)
-        : N(int(arr.size())), K(__lg(N)), LOG(N + 1), st(N, vector<T>(K + 1)) {
-        LOG[1] = 0;
-        for (int i = 2; i <= N; i++) LOG[i] = LOG[i / 2] + 1;
-        for (int i = 0; i < N; i++)
-            st[i][0] = arr[i];
-        for (int j = 1; j <= K; j++)
-            for (int i = 0; i + (1 << j) <= N; i++)
-                st[i][j] = T::merge(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+    SegTree() = default;
+    SegTree(int n)
+        : SegTree(vector<T>(n, T())) {}
+    int ceil_pow2(int n) {
+        int x = 0;
+        while ((1U << x) < (unsigned int)(n)) x++;
+        return x;
     }
-    T query(int L, int R) {
-        if (L > R) swap(L, R);
-        int j = LOG[R - L + 1];
-        T res = T::merge(st[L][j], st[R - (1 << j) + 1][j]);
-        return res;
-    }
-    T slow_query(int L, int R) {
-        T res = T();
-        for (int j = K; j >= 0; j--) {
-            if ((1 << j) <= R - L + 1) {
-                res = T::merge(res, st[L][j]);
-                L += (1 << j);
-            }
+    SegTree(const vector<T> &v)
+        : _n(int(v.size())) {
+        height = ceil_pow2(_n);
+        size = (1 << height);
+        tree.resize(2 * size, T());
+        for (int i = 0; i < _n; i++) tree[size + i] = v[i];
+        for (int i = size - 1; i >= 1; i--) {
+            calc(i);
         }
-        return res;
     }
-};
 
-struct Node {
-    int Gcd, cnt;
-    Node() : Node(0) {}
-    Node(int v) : Gcd(v), cnt(1) {}
-    Node(int g, int c) : Gcd(g), cnt(c) {}
-    static Node merge(const Node &i, const Node &j) {
-        int g = gcd(i.Gcd, j.Gcd);
-        int c = 0;
-        if (i.Gcd == g) c += i.cnt;
-        if (j.Gcd == g) c += j.cnt;
-        return Node(g, c);
+    T _query(int node, int node_lo, int node_hi, int q_lo, int q_hi) {
+        // if range is completely inside [q_lo, q_hi], then just return its ans
+        if (q_lo <= node_lo && node_hi <= q_hi)
+            return tree[node];
+        if (node_hi < q_lo || q_hi < node_lo)
+            return T();  // if disjoint ignore
+        int last_in_left = (node_lo + node_hi) / 2;
+        return T::merge(_query(2 * node, node_lo, last_in_left, q_lo, q_hi),
+                        _query(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi));
     }
+
+    void _update(int node, int node_lo, int node_hi, int q_lo, int q_hi, T value) {
+        // happens only once when leaf [id, id]
+        if (q_lo <= node_lo && node_hi <= q_hi) {
+            tree[node] = value;
+            return;
+        }
+        // in disjoint just return
+        if (node_hi < q_lo || q_hi < node_lo) return;
+        int last_in_left = (node_lo + node_hi) / 2;
+        _update(2 * node, node_lo, last_in_left, q_lo, q_hi, value);
+        _update(2 * node + 1, last_in_left + 1, node_hi, q_lo, q_hi, value);
+
+        // after updating now set, Post Call Area
+        calc(node);
+    }
+
+    T all_query() { return tree[1]; }
+    T query(int p) {
+        assert(0 <= p && p < _n);
+        return tree[p + size];
+    }
+    T query(int l, int r) {
+        assert(0 <= l && l <= r && r < _n);
+        return _query(1, 0, size - 1, l, r);
+    }
+    void update(int p, T x) {
+        assert(0 <= p && p < _n);
+        _update(1, 0, size - 1, p, p, x);
+    }
+
+   private:
+    vector<T> tree;
+    void calc(int k) { tree[k] = T::merge(tree[2 * k], tree[2 * k + 1]); }
+    int _n, size, height;
 };
 
 void test() {
+    struct Node {
+        int Gcd, cnt;
+        Node() : Node(0) {}
+        Node(int v) : Gcd(v), cnt(1) {}
+        Node(int g, int c) : Gcd(g), cnt(c) {}
+        static Node merge(const Node &i, const Node &j) {
+            int g = gcd(i.Gcd, j.Gcd);
+            int c = 0;
+            if (i.Gcd == g) c += i.cnt;
+            if (j.Gcd == g) c += j.cnt;
+            return Node(g, c);
+        }
+    };
+
     int n;
     cin >> n;
-    vector<Node> a(n);
+    SegTree<Node> st(n);
     for (int i = 0, num; i < n; ++i) {
         cin >> num;
-        a[i] = num;
+        st.update(i, Node(num));
     }
     // ans[l, r] = length[l, r] - cnt[gcd[l, r]]
-    Sparse_Table<Node> st(a);
     int q;
     cin >> q;
     while (q--) {
         int l, r;
         cin >> l >> r, --l, --r;
-        cout << r - l + 1 - st.slow_query(l, r).cnt << '\n';
+        cout << r - l + 1 - st.query(l, r).cnt << '\n';
     }
 }
 
