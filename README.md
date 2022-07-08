@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1373 | [B - Permutation](https://codeforces.com/contest/1701/problem/B) | [GNU C++20 (64)](./codeforces/1701/B.cpp) | `greedy` | Jul/08/2022 23:24 | 
+1374 | [B - Permutation](https://codeforces.com/contest/1701/problem/B) | [GNU C++20 (64)](./codeforces/1701/B.cpp) | `greedy` | Jul/08/2022 23:24 | 
+1373 | [C - Schedule Management](https://codeforces.com/contest/1701/problem/C) | [GNU C++20 (64)](./codeforces/1701/C.cpp) | `binary search` `greedy` | Jul/08/2022 23:22 | 
 1372 | [F - Ant colony](https://codeforces.com/contest/474/problem/F) | [GNU C++20 (64)](./codeforces/474/F.cpp) | `data structures` `math` `number theory` `*2100` | Jul/08/2022 01:02 | 
 1371 | [D - Distinct Characters Queries](https://codeforces.com/contest/1234/problem/D) | [GNU C++20 (64)](./codeforces/1234/D.cpp) | `data structures` `*1600` | Jul/08/2022 00:31 | 
 1370 | [C - Little Alawn's Puzzle](https://codeforces.com/contest/1534/problem/C) | [GNU C++20 (64)](./codeforces/1534/C.cpp) | `combinatorics` `dp` `dsu` `graphs` `math` `*1300` | Jul/06/2022 02:09 | 
