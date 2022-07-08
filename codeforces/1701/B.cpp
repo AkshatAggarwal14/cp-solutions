@@ -16,12 +16,18 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     int n;
     cin >> n;
+    vector<bool> vis(n, false);
+    int ctr = 0;
     cout << "2\n";
-    for (int i = 1; i <= n; i += 2) {
+    for (int i = 1; i <= n; ++i) {
+        if (vis[i]) continue;
         for (int j = i; j <= n; j *= 2) {
             cout << j << ' ';
+            ++ctr;
+            vis[j] = true;
         }
     }
+    assert(ctr == n);
     cout << '\n';
 }
 
