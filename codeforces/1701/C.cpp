@@ -20,20 +20,26 @@ void test() {
     vector<ll> cnt(n + 1, 0);
     ll mx = 0;
     for (ll &i : a) cin >> i, ++cnt[i], mx = max(mx, cnt[i]);
-    auto can = [&](ll hours) {
-        ll tasks_left = 0, tasks_can_do = 0;
+    auto can = [&](ll hours) -> bool {
+        vector<ll> hours_free(n + 1);
+        ll left_tasks = 0;
+        ll left_2hours = 0;
         for (ll i = 1; i <= n; ++i) {
-            ll hours_left = max(hours - cnt[i], 0LL);
-            tasks_left += cnt[i] - min(hours, cnt[i]);
-            tasks_can_do += hours_left / 2;
+            hours_free[i] = max(hours - cnt[i], 0LL);
+            left_tasks += cnt[i] - min(hours, cnt[i]);
+            left_2hours += hours_free[i] / 2;
         }
-        return tasks_left <= tasks_can_do;
+        return left_tasks <= left_2hours;
     };
     ll L = 1, R = mx;
     --L, ++R;
     while (R > L + 1) {
         ll M = (R + L) / 2;
-        (can(M) ? R : L) = M;
+        if (can(M)) {
+            R = M;
+        } else {
+            L = M;
+        }
     }
     cout << R << '\n';
 }
