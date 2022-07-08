@@ -33702,6 +33702,25 @@
     ],
     "timestamp": "Jul/08/2022 01:02"
   },
+  "CF163305185": {
+    "contest_id": 1701,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1701/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Permutation Restoration",
+    "problem_url": "https://codeforces.com/contest/1701/problem/D",
+    "submission_id": "CF163305185",
+    "submission_url": "https://codeforces.com/contest/1701/submission/163305185",
+    "tags": [
+      "binary search",
+      "data structures",
+      "greedy",
+      "math",
+      "sortings"
+    ],
+    "timestamp": "Jul/08/2022 22:33"
+  },
   "CF163305847": {
     "contest_id": 1701,
     "language": "GNU C++20 (64)",
