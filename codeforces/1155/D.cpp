@@ -29,7 +29,6 @@ void test() {
     */
 
     vector<vector<ll>> dp(n, vector<ll>(3, -1));
-    // or could have used dp[n][2][2];
 
     //? States
     // dp[i][0] => ending at ith element but the subarray is already used [not usable]
