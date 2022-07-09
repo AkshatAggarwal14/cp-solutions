@@ -16,38 +16,19 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     int n;
     cin >> n;
-    vector<ll> b(n);
     vector<array<ll, 3>> LR(n);
-    for (ll i = 0; i < n; ++i) {
-        cin >> b[i];
-        ll id = i + 1;
-        ll L = 1, R = n;
-        --L, ++R;
-        while (R > L + 1) {
-            ll M = (L + R) / 2;
-            if (id / M <= b[i]) {
-                R = M;
-            } else {
-                L = M;
-            }
-        }
-        LR[i][0] = R;
-        L = 1, R = n;
-        --L, ++R;
-        while (R > L + 1) {
-            ll M = (L + R) / 2;
-            if (id / M >= b[i]) {
-                L = M;
-            } else {
-                R = M;
-            }
-        }
-        LR[i][1] = L;
-        LR[i][2] = i;
+    for (ll i = 0, num; i < n; ++i) {
+        cin >> num;
+        // floor((i + 1) / a[i]) = b[i]
+        // b[i] <= (i + 1) / a[i] < b[i] + 1
+        // a[i] <= (i + 1) / b[i]
+        // a[i] > (i + 1) / (b[i] + 1)
+        LR[i] = {(i + 1) / (num + 1) + 1, (num == 0 ? n : (i + 1) / num), i};
     }
     set<ll> unvis;
     for (ll i = 1; i <= n; ++i) unvis.insert(i);
     sort(all(LR), [](const auto &i, const auto &j) {
+        //! sort by R as we need to use up all smaller values earlier
         return i[1] < j[1];
     });
     vector<ll> ans(n, -1);
