@@ -31,6 +31,7 @@ void test() {
     }
     for (int i = 0; i < n; ++i) {
         for (auto &[p, e] : a[i]) {
+            if (sz(maxi[p].second) > 1) continue;
             if (maxi[p].first == e) {
                 maxi[p].second.push_back(i);
             }
