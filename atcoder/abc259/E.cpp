@@ -19,7 +19,7 @@ void test() {
     // if a number has a prime factor with highest power among all, then it contributes +1 if and only if no other number has same power
     // if left all give LCM of overall so add 1
     vector<map<int, int>> a(n);
-    map<int, pair<int, vector<int>>> maxi;  // [p, [max(e), indices]]
+    map<int, pair<int, vector<int>>> maxi;
     for (int i = 0; i < n; ++i) {
         int m;
         cin >> m;
@@ -31,7 +31,6 @@ void test() {
     }
     for (int i = 0; i < n; ++i) {
         for (auto &[p, e] : a[i]) {
-            if (sz(maxi[p].second) > 1) continue;
             if (maxi[p].first == e) {
                 maxi[p].second.push_back(i);
             }
