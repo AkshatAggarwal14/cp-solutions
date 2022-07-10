@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1378 | [G1 - Passable Paths (easy version)](https://codeforces.com/contest/1702/problem/G1) | [GNU C++20 (64)](./codeforces/1702/G1.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:34 | 
+1379 | [G1 - Passable Paths (easy version)](https://codeforces.com/contest/1702/problem/G1) | [GNU C++20 (64)](./codeforces/1702/G1.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:34 | 
+1378 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++20 (64)](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:27 | 
 1377 | [D - Beautiful Array](https://codeforces.com/contest/1155/problem/D) | [GNU C++20 (64)](./codeforces/1155/D.cpp) | `brute force` `data structures` `divide and conquer` `dp` `greedy` `*1900` | Jul/09/2022 22:45 | 
 1376 | [D - Permutation Restoration](https://codeforces.com/contest/1701/problem/D) | [GNU C++20 (64)](./codeforces/1701/D.cpp) | `binary search` `data structures` `greedy` `math` `number theory` `sortings` `two pointers` | Jul/09/2022 10:03 | 
 1375 | [B - Permutation](https://codeforces.com/contest/1701/problem/B) | [GNU C++20 (64)](./codeforces/1701/B.cpp) | `greedy` | Jul/08/2022 23:24 | 
