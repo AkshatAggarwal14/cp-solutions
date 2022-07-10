@@ -20,17 +20,21 @@ void test() {
     bool flag = false;
     vector<ll> deg(n, 0);
     vector<vector<int>> g(n);
+    set<pair<int, int>> st;
     for (auto &[a, b] : edges) {
         cin >> a >> b, --a, --b;
+        if (st.count({a, b})) swap(a, b);
         if (a == b) flag = true;
         g[a].push_back(b);
         g[b].push_back(a);
+        st.insert({a, b});
         ++deg[a], ++deg[b];
-        if (deg[a] > 2 || deg[b] > 2) flag = true;
     }
+    for (ll i = 0; i < n; ++i)
+        if (deg[i] > 2) return void(cout << "NO\n");
     if (flag) return void(cout << "NO\n");
+    vector<ll> col(n, -1);
     auto bipartite = [&]() {
-        vector<ll> col(n, -1);
         queue<pair<ll, ll>> q;
         for (ll i = 0; i < n; i++) {
             if (col[i] == -1) {
