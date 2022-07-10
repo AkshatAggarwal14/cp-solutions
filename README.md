@@ -12,12 +12,13 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1383 | [G1 - Passable Paths (easy version)](https://codeforces.com/contest/1702/problem/G1) | [GNU C++20 (64)](./codeforces/1702/G1.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:34 | 
-1382 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++20 (64)](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:27 | 
-1381 | [F - Equate Multisets](https://codeforces.com/contest/1702/problem/F) | [GNU C++20 (64)](./codeforces/1702/F.cpp) | `constructive algorithms` `data structures` `graph matchings` | Jul/10/2022 22:52 | 
-1380 | [E - Split Into Two Sets](https://codeforces.com/contest/1702/problem/E) | [GNU C++20 (64)](./codeforces/1702/E.cpp) | `dfs and similar` `dsu` `graphs` | Jul/10/2022 22:49 | 
-1379 | [D - Not a Cheap String](https://codeforces.com/contest/1702/problem/D) | [GNU C++20 (64)](./codeforces/1702/D.cpp) | `greedy` | Jul/10/2022 20:22 | 
-1378 | [C - Train and Queries](https://codeforces.com/contest/1702/problem/C) | [GNU C++20 (64)](./codeforces/1702/C.cpp) | `data structures` `greedy` | Jul/10/2022 20:17 | 
+1384 | [G1 - Passable Paths (easy version)](https://codeforces.com/contest/1702/problem/G1) | [GNU C++20 (64)](./codeforces/1702/G1.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:34 | 
+1383 | [G2 - Passable Paths (hard version)](https://codeforces.com/contest/1702/problem/G2) | [GNU C++20 (64)](./codeforces/1702/G2.cpp) | `dfs and similar` `sortings` `trees` | Jul/10/2022 23:27 | 
+1382 | [F - Equate Multisets](https://codeforces.com/contest/1702/problem/F) | [GNU C++20 (64)](./codeforces/1702/F.cpp) | `constructive algorithms` `data structures` `graph matchings` | Jul/10/2022 22:52 | 
+1381 | [E - Split Into Two Sets](https://codeforces.com/contest/1702/problem/E) | [GNU C++20 (64)](./codeforces/1702/E.cpp) | `dfs and similar` `dsu` `graphs` | Jul/10/2022 22:49 | 
+1380 | [D - Not a Cheap String](https://codeforces.com/contest/1702/problem/D) | [GNU C++20 (64)](./codeforces/1702/D.cpp) | `greedy` | Jul/10/2022 20:22 | 
+1379 | [C - Train and Queries](https://codeforces.com/contest/1702/problem/C) | [GNU C++20 (64)](./codeforces/1702/C.cpp) | `data structures` `greedy` | Jul/10/2022 20:17 | 
+1378 | [B - Polycarp Writes a String from Memory](https://codeforces.com/contest/1702/problem/B) | [GNU C++20 (64)](./codeforces/1702/B.cpp) | `greedy` | Jul/10/2022 20:13 | 
 1377 | [D - Beautiful Array](https://codeforces.com/contest/1155/problem/D) | [GNU C++20 (64)](./codeforces/1155/D.cpp) | `brute force` `data structures` `divide and conquer` `dp` `greedy` `*1900` | Jul/09/2022 22:45 | 
 1376 | [D - Permutation Restoration](https://codeforces.com/contest/1701/problem/D) | [GNU C++20 (64)](./codeforces/1701/D.cpp) | `binary search` `data structures` `greedy` `math` `number theory` `sortings` `two pointers` | Jul/09/2022 10:03 | 
 1375 | [B - Permutation](https://codeforces.com/contest/1701/problem/B) | [GNU C++20 (64)](./codeforces/1701/B.cpp) | `greedy` | Jul/08/2022 23:24 | 
