@@ -33878,6 +33878,23 @@
     ],
     "timestamp": "Jul/09/2022 22:45"
   },
+  "CF163589091": {
+    "contest_id": 1702,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1702/G1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G1",
+    "problem_name": "Passable Paths (easy version)",
+    "problem_url": "https://codeforces.com/contest/1702/problem/G1",
+    "submission_id": "CF163589091",
+    "submission_url": "https://codeforces.com/contest/1702/submission/163589091",
+    "tags": [
+      "dfs and similar",
+      "sortings",
+      "trees"
+    ],
+    "timestamp": "Jul/10/2022 23:33"
+  },
   "CF163589244": {
     "contest_id": 1702,
     "language": "GNU C++20 (64)",

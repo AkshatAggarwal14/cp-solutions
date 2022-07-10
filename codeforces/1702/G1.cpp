@@ -154,7 +154,7 @@ void test() {
                 continue;
             }
 
-            success = false;  // maybe start and end in different branches than v
+            success = false;
         }
 
         success &= (lca.get_lca(start, end) == anc);
