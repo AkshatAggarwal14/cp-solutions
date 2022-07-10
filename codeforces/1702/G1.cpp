@@ -144,12 +144,12 @@ void test() {
             if (lca.on_path(v, start, end))  // if v lies on path from s to e
                 continue;
 
-            if (lca.on_path(start, v, anc)) {  // if start lies on path from lca of all to v, then start is modified
+            if (lca.on_path(start, anc, v)) {  // if start lies on path from lca of all to v, then start is modified
                 start = v;
                 continue;
             }
 
-            if (lca.on_path(end, v, anc)) {
+            if (lca.on_path(end, anc, v)) {
                 end = v;
                 continue;
             }
