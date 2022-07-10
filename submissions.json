@@ -33878,6 +33878,23 @@
     ],
     "timestamp": "Jul/09/2022 22:45"
   },
+  "CF163582880": {
+    "contest_id": 1702,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1702/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Equate Multisets",
+    "problem_url": "https://codeforces.com/contest/1702/problem/F",
+    "submission_id": "CF163582880",
+    "submission_url": "https://codeforces.com/contest/1702/submission/163582880",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "graph matchings"
+    ],
+    "timestamp": "Jul/10/2022 22:37"
+  },
   "CF163584566": {
     "contest_id": 1702,
     "language": "GNU C++20 (64)",

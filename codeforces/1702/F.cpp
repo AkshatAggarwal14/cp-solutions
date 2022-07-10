@@ -28,7 +28,6 @@ void test() {
         cin >> b[i];
         while (!(b[i] & 1)) b[i] >>= 1;
     }
-    // after dividing by 2, we need to match prefixes
     dbg(st, b);
     sort(b.begin(), b.end());  // odds from small to big
     for (int i = 0; i < n; ++i) {
