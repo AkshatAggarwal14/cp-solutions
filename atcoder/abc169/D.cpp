@@ -19,12 +19,10 @@ int main() {
     ll ans = 0;
     // break p^e into 1 + 2 + 3...
     for (auto &[p, e] : pr) {
-        // ll x = 1;
-        // while (x * (x + 1) <= 2 * e) ++x;
-        // --x;
-        // ans += x;
-        double val = (sqrt(1 + 8 * e) - 1) / 2.0;
-        ans += ll(val);
+        ll x = 1;
+        while (x * (x + 1) <= 2 * e) ++x;
+        --x;
+        ans += x;
     }
     cout << ans << '\n';
 }
