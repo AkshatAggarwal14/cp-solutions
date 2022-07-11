@@ -10,22 +10,19 @@ int main() {
     while (tc--) {
         int n;
         cin >> n;
-        vector<ll> a(n);
-        for (ll i = 0; i < n; ++i) cin >> a[i];
-        // him[i] -- the smallest # of skip points required to kill bosses [i; n) if it's our friend's turn to move
-        // us[i]  -- ......                                                       if it's our turn to move
-        vector<ll> him(n + 1);
-        vector<ll> us(n + 1);
-        him[n] = us[n] = 0;
-        for (int i = n - 1; i >= 0; i--) {
-            // calculate him[i]
-            him[i] = us[i + 1] + a[i];
-            if (i + 2 <= n) him[i] = min(him[i], us[i + 2] + a[i] + a[i + 1]);
-
-            // calculate us[i]
-            us[i] = him[i + 1];
-            if (i + 2 <= n) us[i] = min(us[i], him[i + 2]);
+        vector<ll> a(n + 1);
+        for (ll i = 1; i <= n; ++i) cin >> a[i];
+        // friend starts, if he playes, he uses skip points for 1s
+        // i can freely play
+        // dp[i][0] -> skip points needed for first i elements, if friend played last turn
+        // dp[i][1] -> skip points needed for first i elements, if i played last turn
+        vector<vector<ll>> dp(n + 1, vector<ll>(2, INF));
+        dp[0][1] = 0;
+        dp[1][0] = a[1];  // first move by friend
+        for (ll i = 2; i <= n; ++i) {
+            dp[i][0] = min(dp[i - 1][1], dp[i - 2][1] + a[i - 1]) + a[i];
+            dp[i][1] = min(dp[i - 1][0], dp[i - 2][0]);
         }
-        cout << him[0] << '\n';
+        cout << min(dp[n][0], dp[n][1]) << '\n';
     }
 }
