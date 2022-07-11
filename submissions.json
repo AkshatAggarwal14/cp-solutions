@@ -5231,6 +5231,22 @@
     ],
     "timestamp": "Jul/02/2022 19:16"
   },
+  "AC33160596": {
+    "contest_id": "abc169",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc169/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Div Game",
+    "problem_url": "https://atcoder.jp/contests/abc169/tasks/abc169_d",
+    "submission_id": "AC33160596",
+    "submission_url": "https://atcoder.jp/contests/abc169/submissions/33160596",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jul/11/2022 12:29"
+  },
   "CF102985611": {
     "contest_id": 281,
     "language": "GNU C++17",
