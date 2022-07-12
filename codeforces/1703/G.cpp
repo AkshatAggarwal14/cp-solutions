@@ -12,25 +12,29 @@ auto sz = [](const auto &container) { return int(container.size()); };
 const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
+// const ll LG = 32;
+const ll LG = 5;
 
 void test() {
-    ll n, cost;
-    cin >> n >> cost;
+    // all values will become 0 in 30 bad keys
+    // so need to go atmost 30 values in front
+    // first we will use all good keys, later all bad keys
+    // because if we take a bad key before good key, the value of good key will be decreased and thus not optimal
+    ll n, k;
+    cin >> n >> k;
     vector<ll> a(n);
-    for (ll &A : a) cin >> A;
-    vector<vector<ll>> dp(n + 1, vector<ll>(32));
-    // dp[i][j] = max coins for chests from [i..n] with j bad keys left
-    for (ll i = 0; i < 32; ++i) dp[n][i] = 0;  // empty set - no chests
-    for (ll i = n - 1; i >= 0; --i) {
-        for (ll j = 30; j >= 0; --j) {
-            ll &ans = dp[i][j];
-            // good key
-            ans = max(ans, dp[i + 1][j] + (a[i] >> j) - cost);
-            // bad key - divide this element and rest also
-            ans = max(ans, dp[i + 1][j + 1] + (a[i] >> (j + 1)));
+    for (auto &x : a) cin >> x;
+    ll good_cost = 0, ans = accumulate(all(a), 0LL) - k * n;  // all good
+    for (ll i = 0; i < n; i++) {
+        ll bad_cost = 0, cnt = 1;
+        for (ll j = i; j < min(i + 32, n); j++) {
+            bad_cost += (a[j] >> cnt);
+            ++cnt;
         }
+        ans = max(ans, bad_cost + good_cost);
+        good_cost += (a[i] - k);
     }
-    cout << dp[0][0] << '\n';
+    cout << ans << '\n';
 }
 
 int32_t main() {
