@@ -14,8 +14,8 @@ int main() {
         g[--u].push_back(--v);
         g[v].push_back(u);
     }
-    vector<unordered_map<ll, ll>> cnt(n);  // cnt[i] = {{color, occurences}, ...} for node i
-    vector<map<ll, ll>> occur(n);          // occur[i] = {{occurences, sum}, ...} for node i
+    vector<map<ll, ll>> cnt(n);    // cnt[i] = {{color, occurences}, ...} for node i
+    vector<map<ll, ll>> occur(n);  // occur[i] = {{occurences, sum}, ...} for node i
     vector<ll> ans(n);
     //! small to large merging
     function<void(int, int)> dfs = [&](int node, int par) {
@@ -28,9 +28,7 @@ int main() {
                 if (cnt[child].size() > cnt[node].size()) swap(cnt[child], cnt[node]),
                                                           swap(occur[child], occur[node]);
 
-                // cnt[node] -> bigger map
-                // cnt[child] -> smaller map
-                // update answer, by adding occurences from smaller map to bigger map
+                // update answer
                 for (auto &[x, y] : cnt[child]) {
                     ll &occ_in_large = cnt[node][x];
                     occur[node][occ_in_large] -= x;  // remove from old sum
