@@ -33,10 +33,9 @@ int main() {
                 // update answer, by adding occurences from smaller map to bigger map
                 for (auto &[x, y] : cnt[child]) {
                     ll &occ_in_large = cnt[node][x];
-                    if (occur[node].count(occ_in_large))
-                        occur[node][occ_in_large] -= x;  // remove from old sum
-                    occ_in_large += y;                   // merged
-                    occur[node][occ_in_large] += x;      // add to new sum
+                    occur[node][occ_in_large] -= x;  // remove from old sum
+                    occ_in_large += y;               // merged
+                    occur[node][occ_in_large] += x;  // add to new sum
                 }
                 cnt[child].clear();  // cleared
             }
