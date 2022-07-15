@@ -1,50 +1,62 @@
-#ifdef LOCAL
-#include "Akshat.hpp"
-#else
 #include "bits/stdc++.h"
 using namespace std;
-#define dbg(...)
-#endif
 using ll = long long;
-auto sz = [](const auto &container) { return int(container.size()); };
-#define all(x) begin(x), end(x)
-
-const ll INF = 1e18;
-const ll N = 1e5 + 5;
-const ll MOD = 1e9 + 7;  // 998244353
-
+#define int ll
 void test() {
-    int n, c, q;
-    cin >> n >> c >> q;
-    string s;
-    cin >> s;
-    vector<ll> len;
-    len.push_back(n);
-    vector<array<ll, 2>> Q(c);
-    for (auto &[x, y] : Q) cin >> x >> y, --x, --y, len.push_back(y - x + 1);
-    for (int i = 1; i < int(len.size()); ++i) len[i] += len[i - 1];
-    while (q--) {
-        ll id;
-        cin >> id;
-        while (id > n) {
-            auto i = lower_bound(len.begin(), len.end(), id) - len.begin();
-            id = id - len[i - 1] + Q[i - 1][0];
-        }
-        cout << s[id - 1] << '\n';
-    }
+	int n, c, q;
+	cin >> n >> c >> q;
+	string s;
+	cin >> s;
+	vector<int> len;
+	len.push_back(n);
+	vector<array<int, 2>> Q(c);
+	for(auto &[x, y]: Q) cin >> x >> y, --x, --y, len.push_back(y - x  + 1);
+	for(int i = 1; i < int(len.size()); ++i) len[i] += len[i - 1];
+	while(q--) {
+		int id;
+		cin >> id;
+		int cnt = 0;
+		while(id > n) {
+			auto i = lower_bound(len.begin(), len.end(), id) - len.begin();
+			id = id - len[i - 1] + Q[i - 1][0];
+			++cnt;
+			assert(cnt <= c + 2);
+		}
+		cout << s[id - 1] << '\n';
+		/*
+		while(true) {
+			if(id <= n) break; 
+			auto i = lower_bound(len.begin(), len.end(), id) - len.begin();
+			if(i == 0) break;
+			cerr << i << '\n';
+			int l = Q[i - 1][0], r = Q[i - 1][1];
+			--l, --r;
+			cerr << l << ' ' << r << ' ' << id << '\n';
+			int before = len[i - 1];
+			int pos_now = id - before;
+			int new_pos = pos_now + l - 1;
+			id = new_pos + 1;
+		}
+		cout << s[id - 1] << '\n';
+		if(i == 0) {
+			--id;
+			cout << s[id] << '\n';
+		} else {
+			id -= len[i - 1];
+			--id;
+			int l = Q[i - 1][0], r = Q[i - 1][1];
+			--l, --r;
+			cerr << l << ' ' << r << ' ' << id << '\n';
+			cout << s[id + l] << '\n';
+		} */
+	}
 }
 
 int32_t main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
-#ifdef LOCAL
-    [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
-    [[maybe_unused]] FILE *out = freopen("output.txt", "w", stdout);
-#endif
-    cout << fixed << setprecision(12);
-    int tc = 1;
-    cin >> tc;
-    for (int tt = 1; tt <= tc; ++tt) {
-        test();
-    }
-    return 0;
+	cin.tie(nullptr)->sync_with_stdio(false);
+	int tc = 1;
+	cin >> tc;
+	while(tc--) {
+		test();
+	}
 }
