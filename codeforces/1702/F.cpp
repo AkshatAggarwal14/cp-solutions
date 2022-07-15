@@ -1,60 +1,75 @@
-#ifdef LOCAL
-#include "Akshat.hpp"
-#else
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 using namespace std;
-#define dbg(...)
-#endif
-using ll = long long;
-auto sz = [](const auto &container) { return int(container.size()); };
-#define all(x) begin(x), end(x)
 
-const ll INF = 1e18;
-const ll N = 1e5 + 5;
-const ll MOD = 1e9 + 7;  // 998244353
+struct binary_trie {
+    struct TrieNode {
+        TrieNode *bit[2];
+        int cnt, end;
+        TrieNode() {
+            cnt = end = 0;
+            bit[0] = bit[1] = nullptr;
+        }
+    };
+
+    TrieNode *root = new TrieNode();
+    void insert(int x) {
+        TrieNode *cur = root;
+        // add from highest set bit
+        // to match prefix when find()
+        for (int i = __lg(x); i >= 0; --i) {
+            int b = (x >> i) & 1;
+            if (!cur->bit[b]) {
+                cur->bit[b] = new TrieNode();
+            }
+            cur = cur->bit[b];
+            ++cur->cnt;
+        }
+        ++cur->end;
+    }
+
+    void remove(int x) {
+        TrieNode *cur = root;
+        for (int i = __lg(x); i >= 0; --i) {
+            int b = (x >> i) & 1;
+            if (!cur->bit[b]) return;
+            cur = cur->bit[b];
+            --cur->cnt;
+        }
+        --cur->end;
+        return;
+    }
+
+    bool find(int x) {
+        TrieNode *cur = root;
+        for (int i = __lg(x); i >= 0; --i) {
+            int b = (x >> i) & 1;
+            if (!cur->bit[b]) return false;
+            cur = cur->bit[b];
+        }
+        return cur->cnt > 0;
+    }
+};
 
 void test() {
     int n;
     cin >> n;
-    multiset<int> st;
-    for (int i = 0; i < n; i++) {
-        int a;
-        cin >> a;
-        while (!(a & 1)) a >>= 1;
-        st.insert(a);
-    }
-    vector<int> b(n);
-    for (int i = 0; i < n; i++) {
-        cin >> b[i];
-        while (!(b[i] & 1)) b[i] >>= 1;
-    }
-    dbg(st, b);
-    sort(b.begin(), b.end());  // odds from small to big
-    for (int i = 0; i < n; ++i) {
-        while (b[i]) {
-            auto it = st.lower_bound(b[i]);
-            if (it != st.end() && (*it == b[i])) {
-                st.erase(it);
-                break;
-            }
-            b[i] >>= 1;  // make smaller
-        }
-        if (b[i] == 0) return void(cout << "NO\n");
+    vector<int> a(n), b(n);
+    binary_trie trie;
+    for (auto &A : a) cin >> A, A >>= __builtin_ctz(A);  // remove trailing zeroes
+    for (auto &B : b) cin >> B, B >>= __builtin_ctz(B), trie.insert(B);
+    sort(a.rbegin(), a.rend());  // desc order
+    for (auto &A : a) {
+        if (!trie.find(A)) return void(cout << "NO\n");
+        trie.remove(A);
     }
     cout << "YES\n";
 }
 
-int32_t main() {
+int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
-#ifdef LOCAL
-    [[maybe_unused]] FILE *in = freopen("input.txt", "r", stdin);
-    [[maybe_unused]] FILE *out = freopen("output.txt", "w", stdout);
-#endif
-    cout << fixed << setprecision(12);
-    int tc = 1;
+    int tc;
     cin >> tc;
-    for (int tt = 1; tt <= tc; ++tt) {
+    while (tc--) {
         test();
     }
-    return 0;
 }
