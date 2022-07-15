@@ -41,36 +41,17 @@ struct binary_trie {
         --cur->end;
     }
 
-    bool find(int x) {
-        TrieNode *cur = root;
-        for (int i = 31; i >= 0; --i) {
-            int b = (x >> i) & 1;
-            if (!cur->bit[b]) return false;
-            cur = cur->bit[b];
-        }
-        return cur->cnt > 0;
-    }
-
-    // if max is true we get max xor, else we get min xor
-    int get_xor(int x, bool max = true) {
+    int get_min_xor(int x) {
         TrieNode *cur = root;
         int ans = 0;
         for (int i = 31; i >= 0; --i) {
+            // start from end to get max ans
             int b = (x >> i) & 1;
-            if (max) {
-                if (cur->bit[b ^ 1]) {  // if opposite set
-                    ans |= (1 << i);
-                    cur = cur->bit[b ^ 1];
-                } else if (cur->bit[b]) {
-                    cur = cur->bit[b];
-                }
-            } else {
-                if (cur->bit[b]) {  // if same set
-                    cur = cur->bit[b];
-                } else if (cur->bit[b ^ 1]) {
-                    ans |= (1 << i);
-                    cur = cur->bit[b ^ 1];
-                }
+            if (cur->bit[b]) {  // if opposite set
+                cur = cur->bit[b];
+            } else if (cur->bit[b ^ 1]) {
+                ans |= (1 << i);
+                cur = cur->bit[b ^ 1];
             }
         }
         return ans;
@@ -90,9 +71,9 @@ int32_t main() {
         trie.insert(num);
     }
     for (auto &i : a) {
-        int val = trie.get_xor(i, false);
-        cout << val << ' ';
+        int val = trie.get_min_xor(i);
         trie.remove(val ^ i);
+        cout << val << ' ';
     }
 
     return 0;
