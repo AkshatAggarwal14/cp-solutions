@@ -12,11 +12,12 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1405 | [C - Save the Nature](https://codeforces.com/contest/1241/problem/C) | [GNU C++20 (64)](./codeforces/1241/C.cpp) | `binary search` `data structures` `greedy` `*1600` | Jul/16/2022 18:54 | 
-1404 | [A - CME](https://codeforces.com/contest/1241/problem/A) | [GNU C++20 (64)](./codeforces/1241/A.cpp) | `math` `*800` | Jul/16/2022 18:25 | 
-1403 | [B - Strings Equalization](https://codeforces.com/contest/1241/problem/B) | [GNU C++20 (64)](./codeforces/1241/B.cpp) | `brute force` `strings` `*1000` | Jul/16/2022 18:25 | 
-1402 | [C - Perfect Security](https://codeforces.com/contest/923/problem/C) | [GNU C++20 (64)](./codeforces/923/C.cpp) | `data structures` `greedy` `strings` `trees` `*1800` | Jul/16/2022 01:22 | 
-1401 | [F - Equate Multisets](https://codeforces.com/contest/1702/problem/F) | [GNU C++20 (64)](./codeforces/1702/F.cpp) | `constructive algorithms` `data structures` `greedy` `math` `number theory` `*1700` | Jul/16/2022 00:15 | 
+1406 | [C - Save the Nature](https://codeforces.com/contest/1241/problem/C) | [GNU C++20 (64)](./codeforces/1241/C.cpp) | `binary search` `data structures` `greedy` `*1600` | Jul/16/2022 18:54 | 
+1405 | [A - CME](https://codeforces.com/contest/1241/problem/A) | [GNU C++20 (64)](./codeforces/1241/A.cpp) | `math` `*800` | Jul/16/2022 18:25 | 
+1404 | [B - Strings Equalization](https://codeforces.com/contest/1241/problem/B) | [GNU C++20 (64)](./codeforces/1241/B.cpp) | `brute force` `strings` `*1000` | Jul/16/2022 18:25 | 
+1403 | [C - Perfect Security](https://codeforces.com/contest/923/problem/C) | [GNU C++20 (64)](./codeforces/923/C.cpp) | `data structures` `greedy` `strings` `trees` `*1800` | Jul/16/2022 01:22 | 
+1402 | [F - Equate Multisets](https://codeforces.com/contest/1702/problem/F) | [GNU C++20 (64)](./codeforces/1702/F.cpp) | `constructive algorithms` `data structures` `greedy` `math` `number theory` `*1700` | Jul/16/2022 00:15 | 
+1401 | [A - Mark the Photographer](https://codeforces.com/contest/1705/problem/A) | [GNU C++20 (64)](./codeforces/1705/A.cpp) | `greedy` `sortings` | Jul/15/2022 23:44 | 
 1400 | [E - Vasya and Binary String](https://codeforces.com/contest/1107/problem/E) | [GNU C++20 (64)](./codeforces/1107/E.cpp) | `dp` `*2400` | Jul/13/2022 17:41 | 
 1399 | [F - Yet Another Problem About Pairs Satisfying an Inequality](https://codeforces.com/contest/1703/problem/F) | [GNU C++20 (64)](./codeforces/1703/F.cpp) | `binary search` `data structures` `dp` `greedy` `sortings` | Jul/13/2022 03:02 | 
 1398 | [C - Cypher](https://codeforces.com/contest/1703/problem/C) | [GNU C++20 (64)](./codeforces/1703/C.cpp) | `implementation` `strings` | Jul/13/2022 03:01 | 
