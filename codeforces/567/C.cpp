@@ -20,7 +20,7 @@ void test() {
     for (ll &A : a) cin >> A;
     if (n < 3) return void(cout << "0\n");
     // lets fix middle element, thus we need count of a[i]/k, before element, and k * a[i] after element
-    map<ll, ll> pre, suff;
+    unordered_map<ll, ll> pre, suff;
     ll ans = 0;
     for (int i = 1; i < n; ++i) ++suff[a[i]];
     for (int i = 1; i < n; ++i) {
