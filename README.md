@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1415 | [D - Difference Array](https://codeforces.com/contest/1708/problem/D) | [GNU C++20 (64)](./codeforces/1708/D.cpp) | `brute force` `sortings` | Jul/16/2022 23:48 | 
+1416 | [D - Difference Array](https://codeforces.com/contest/1708/problem/D) | [GNU C++20 (64)](./codeforces/1708/D.cpp) | `brute force` `sortings` | Jul/16/2022 23:48 | 
+1415 | [B - Difference Array](https://codeforces.com/contest/1707/problem/B) | [GNU C++20 (64)](./codeforces/1707/B.cpp) | `brute force` `implementation` `math` `sortings` | Jul/16/2022 23:47 | 
 1414 | [C - Doremy's IQ](https://codeforces.com/contest/1708/problem/C) | [GNU C++20 (64)](./codeforces/1708/C.cpp) | `binary search` `greedy` | Jul/16/2022 22:51 | 
 1413 | [B - Difference of GCDs](https://codeforces.com/contest/1708/problem/B) | [GNU C++20 (64)](./codeforces/1708/B.cpp) | `constructive algorithms` `math` | Jul/16/2022 20:40 | 
 1412 | [A - Difference Operations](https://codeforces.com/contest/1708/problem/A) | [GNU C++20 (64)](./codeforces/1708/A.cpp) | `greedy` | Jul/16/2022 20:13 | 
