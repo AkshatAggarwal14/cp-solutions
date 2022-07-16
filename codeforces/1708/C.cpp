@@ -14,7 +14,6 @@ const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
 void test() {
-    //? M2 - could also binary search for the first index L such that [L, n] reduces mid value to 0, then for [0, L] print 1 if value smaller, else 0, print 1 for everything in [L, n]
     ll n, q;
     cin >> n >> q;
     vector<ll> a(n);
