@@ -34747,6 +34747,22 @@
     ],
     "timestamp": "Jul/16/2022 18:54"
   },
+  "CF164529074": {
+    "contest_id": 1708,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1708/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Difference Array",
+    "problem_url": "https://codeforces.com/contest/1708/problem/D",
+    "submission_id": "CF164529074",
+    "submission_url": "https://codeforces.com/contest/1708/submission/164529074",
+    "tags": [
+      "brute force",
+      "sortings"
+    ],
+    "timestamp": "Jul/16/2022 22:44"
+  },
   "CF164530383": {
     "contest_id": 1708,
     "language": "GNU C++20 (64)",
