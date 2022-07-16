@@ -12,8 +12,9 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1413 | [C - Doremy's IQ](https://codeforces.com/contest/1708/problem/C) | [GNU C++20 (64)](./codeforces/1708/C.cpp) | `binary search` `greedy` | Jul/16/2022 22:51 | 
-1412 | [D - Difference Array](https://codeforces.com/contest/1708/problem/D) | [GNU C++20 (64)](./codeforces/1708/D.cpp) | `brute force` `sortings` | Jul/16/2022 22:44 | 
+1414 | [C - Doremy's IQ](https://codeforces.com/contest/1708/problem/C) | [GNU C++20 (64)](./codeforces/1708/C.cpp) | `binary search` `greedy` | Jul/16/2022 22:51 | 
+1413 | [D - Difference Array](https://codeforces.com/contest/1708/problem/D) | [GNU C++20 (64)](./codeforces/1708/D.cpp) | `brute force` `sortings` | Jul/16/2022 22:44 | 
+1412 | [B - Difference of GCDs](https://codeforces.com/contest/1708/problem/B) | [GNU C++20 (64)](./codeforces/1708/B.cpp) | `constructive algorithms` `math` | Jul/16/2022 20:40 | 
 1411 | [C - Save the Nature](https://codeforces.com/contest/1241/problem/C) | [GNU C++20 (64)](./codeforces/1241/C.cpp) | `binary search` `data structures` `greedy` `*1600` | Jul/16/2022 18:54 | 
 1410 | [B - Strings Equalization](https://codeforces.com/contest/1241/problem/B) | [GNU C++20 (64)](./codeforces/1241/B.cpp) | `brute force` `strings` `*1000` | Jul/16/2022 18:25 | 
 1409 | [A - CME](https://codeforces.com/contest/1241/problem/A) | [GNU C++20 (64)](./codeforces/1241/A.cpp) | `math` `*800` | Jul/16/2022 18:25 | 
