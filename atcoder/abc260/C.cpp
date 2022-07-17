@@ -16,14 +16,27 @@ const ll MOD = 1e9 + 7;  // 998244353
 void test() {
     ll n, x, y;
     cin >> n >> x >> y;
-    vector<array<ll, 2>> dp(n + 1);
-    dp[1][0] = 0;  // [0] -> red
-    dp[1][1] = 1;  // [1] -> blue
-    for (int i = 2; i <= n; ++i) {
-        dp[i][1] = (dp[i - 1][0] + (y * dp[i - 1][1]));
-        dp[i][0] = (dp[i - 1][0] + (x * dp[i][1]));
+    queue<pair<char, pair<ll, ll>>> bfs;
+    bfs.push({'R', {n, 1}});
+    ll ans = 0;
+    while (!bfs.empty()) {
+        auto [col, _] = bfs.front();
+        auto [lev, cnt] = _;
+        bfs.pop();
+        if (lev == 1) {
+            if (col == 'B') ans += cnt;
+            continue;
+        }
+        assert(lev >= 2);
+        if (col == 'B') {
+            bfs.push({'R', {lev - 1, cnt}});
+            bfs.push({'B', {lev - 1, y * cnt}});
+        } else {
+            bfs.push({'R', {lev - 1, cnt}});
+            bfs.push({'B', {lev, x * cnt}});
+        }
     }
-    cout << dp[n][0] << '\n';
+    cout << ans << '\n';
 }
 
 int32_t main() {
