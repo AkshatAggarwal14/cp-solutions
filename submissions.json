@@ -5375,6 +5375,22 @@
     ],
     "timestamp": "Jul/11/2022 12:29"
   },
+  "AC33314540": {
+    "contest_id": "abc260",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc260/D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Draw Your Cards",
+    "problem_url": "https://atcoder.jp/contests/abc260/tasks/abc260_d",
+    "submission_id": "AC33314540",
+    "submission_url": "https://atcoder.jp/contests/abc260/submissions/33314540",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jul/17/2022 18:41"
+  },
   "AC33327810": {
     "contest_id": "abc260",
     "language": "C++ (GCC 9.2.1)",
