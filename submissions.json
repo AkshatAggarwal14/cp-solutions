@@ -5375,6 +5375,22 @@
     ],
     "timestamp": "Jul/11/2022 12:29"
   },
+  "AC33293080": {
+    "contest_id": "abc260",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/abc260/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "A Unique Letter",
+    "problem_url": "https://atcoder.jp/contests/abc260/tasks/abc260_a",
+    "submission_id": "AC33293080",
+    "submission_url": "https://atcoder.jp/contests/abc260/submissions/33293080",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jul/17/2022 17:32"
+  },
   "AC33297780": {
     "contest_id": "abc260",
     "language": "C++ (GCC 9.2.1)",
