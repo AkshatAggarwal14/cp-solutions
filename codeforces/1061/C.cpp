@@ -44,6 +44,7 @@ void test() {
         return (A + B) % MOD;
     };
     vector<ll> dp(n + 1);
+    dp[0] = 1;
     // dp[i] = Number of good subsequences of length i
     for (int i = 0; i < n; ++i) {
         vector<int> t;
@@ -57,7 +58,6 @@ void test() {
         for (auto &j : t) {
             dp[j] = add(dp[j], dp[j - 1]);
         }
-        ++dp[1];
     }
     ll ans = 0;
     for (ll i = 1; i <= n; ++i) ans = add(ans, dp[i]);
