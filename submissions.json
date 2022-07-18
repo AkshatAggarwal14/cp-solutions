@@ -34954,6 +34954,23 @@
     ],
     "timestamp": "Jul/17/2022 10:28"
   },
+  "CF164818650": {
+    "contest_id": 222,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/222/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Decoding Genome",
+    "problem_url": "https://codeforces.com/contest/222/problem/E",
+    "submission_id": "CF164818650",
+    "submission_url": "https://codeforces.com/contest/222/submission/164818650",
+    "tags": [
+      "dp",
+      "matrices",
+      "*1900"
+    ],
+    "timestamp": "Jul/19/2022 02:27"
+  },
   "CF164820389": {
     "contest_id": 1117,
     "language": "GNU C++20 (64)",
