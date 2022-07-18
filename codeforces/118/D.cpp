@@ -18,22 +18,24 @@ int main() {
         if (used_n1 > n1 || used_n2 > n2) return 0;
         if (type == 0 && consec > k1) return 0;
         if (type == 1 && consec > k2) return 0;
-        if (used_n1 == n1 && used_n2 == n2) return 1;  //! end
+        if (used_n1 == n1 && used_n2 == n2) return 1;
 
         int &ans = dp[used_n1][used_n2][consec][type];
         if (ans != -1) return ans;
-        ans = 0;
+        int ans1 = 0, ans2 = 0;
         // use type 0:
-        if (type == 0)
-            (ans += dfs(used_n1 + 1, used_n2, consec + 1, 0)) %= MOD;
-        else
-            (ans += dfs(used_n1 + 1, used_n2, 1, 0)) %= MOD;
+        if (type == 0) {
+            ans1 = dfs(used_n1 + 1, used_n2, consec + 1, 0);
+        } else {
+            ans1 = dfs(used_n1 + 1, used_n2, 1, 0);
+        }
         // use type 1:
-        if (type == 1)
-            (ans += dfs(used_n1, used_n2 + 1, consec + 1, 1)) %= MOD;
-        else
-            (ans += dfs(used_n1, used_n2 + 1, 1, 1)) %= MOD;
-        return ans;
+        if (type == 1) {
+            ans2 = dfs(used_n1, used_n2 + 1, consec + 1, 1);
+        } else {
+            ans2 = dfs(used_n1, used_n2 + 1, 1, 1);
+        }
+        return ans = (ans1 + ans2) % MOD;
     };
     cout << dfs(0, 0, 0, 0) << '\n';
 }
