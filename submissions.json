@@ -34954,6 +34954,25 @@
     ],
     "timestamp": "Jul/17/2022 10:28"
   },
+  "CF164807706": {
+    "contest_id": 1673,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1673/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Palindrome Basis",
+    "problem_url": "https://codeforces.com/contest/1673/problem/C",
+    "submission_id": "CF164807706",
+    "submission_url": "https://codeforces.com/contest/1673/submission/164807706",
+    "tags": [
+      "brute force",
+      "dp",
+      "math",
+      "number theory",
+      "*1500"
+    ],
+    "timestamp": "Jul/19/2022 00:16"
+  },
   "CF164818650": {
     "contest_id": 222,
     "language": "GNU C++20 (64)",
