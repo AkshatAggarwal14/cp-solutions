@@ -34954,6 +34954,24 @@
     ],
     "timestamp": "Jul/17/2022 10:28"
   },
+  "CF164797702": {
+    "contest_id": 1706,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1706/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Another String Minimization Problem",
+    "problem_url": "https://codeforces.com/contest/1706/problem/A",
+    "submission_id": "CF164797702",
+    "submission_url": "https://codeforces.com/contest/1706/submission/164797702",
+    "tags": [
+      "bitmasks",
+      "greedy",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Jul/18/2022 22:55"
+  },
   "CF164798048": {
     "contest_id": 1706,
     "language": "GNU C++20 (64)",
