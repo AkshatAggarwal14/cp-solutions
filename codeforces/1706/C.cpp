@@ -2,12 +2,6 @@
 using namespace std;
 using ll = long long;
 
-const ll N = 1e5 + 2;
-const ll INF = 1e18;
-
-ll dp[N][2];
-int a[N];
-
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
@@ -16,21 +10,26 @@ int main() {
     while (tc--) {
         int n;
         cin >> n;
-        for (int i = 0; i < n; ++i) cin >> a[i], dp[i][0] = dp[i][1] = -1;
-        function<ll(int, int)> dfs = [&](int idx, int turn) {
-            if (idx >= n - 1) return 0LL;
-            ll &ans = dp[idx][turn];
-            if (ans != -1) return ans;
-            ll cur = max(max(a[idx + 1], a[idx - 1]) + 1 - a[idx], 0);
-            if (turn)
-                ans = min(cur + dfs(idx + 2, 1), dfs(idx + 1, 0));  // 101, 1001
+        vector<int> a(n);
+        for (auto &A : a) cin >> A;
+        vector<ll> cost1(n, 0), cost2(n, 0);
+        for (ll i = 1; i < n - 1; ++i) {
+            if (i & 1)
+                cost1[i] = max(max(a[i + 1], a[i - 1]) + 1 - a[i], 0);
             else
-                ans = cur + dfs(idx + 2, 0);  // 010
-            return ans;
-        };
-        if (n & 1)
-            cout << dfs(1, 0) << '\n';
-        else
-            cout << dfs(1, 1) << '\n';
+                cost2[i] = max(max(a[i + 1], a[i - 1]) + 1 - a[i], 0);
+        }
+        for (int i = 1; i < n; ++i) cost1[i] += cost1[i - 1];
+        for (int i = n - 2; i >= 0; --i) cost2[i] += cost2[i + 1];
+        if (n == 4) {
+            cout << min(cost1[1], cost2[2]) << '\n';  // 01, 10
+        } else if (n % 2 == 0) {
+            ll ans = min(cost1[n - 1], cost2[0]);  // 1010, 0101
+            for (ll i = 2; i < n - 2; i += 2)
+                ans = min(ans, cost1[i] + cost2[i + 1]);  // 1001
+            cout << ans << '\n';
+        } else {
+            cout << cost1[n - 1] << '\n';  // 101
+        }
     }
 }
