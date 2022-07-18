@@ -34954,6 +34954,24 @@
     ],
     "timestamp": "Jul/17/2022 10:28"
   },
+  "CF164820389": {
+    "contest_id": 1117,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1117/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Magic Gems",
+    "problem_url": "https://codeforces.com/contest/1117/problem/D",
+    "submission_id": "CF164820389",
+    "submission_url": "https://codeforces.com/contest/1117/submission/164820389",
+    "tags": [
+      "dp",
+      "math",
+      "matrices",
+      "*2100"
+    ],
+    "timestamp": "Jul/19/2022 02:57"
+  },
   "CF164821368": {
     "contest_id": 621,
     "language": "GNU C++20 (64)",
