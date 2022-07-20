@@ -34954,6 +34954,24 @@
     ],
     "timestamp": "Jul/17/2022 10:28"
   },
+  "CF165051235": {
+    "contest_id": 845,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/845/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Driving Test",
+    "problem_url": "https://codeforces.com/contest/845/problem/D",
+    "submission_id": "CF165051235",
+    "submission_url": "https://codeforces.com/contest/845/submission/165051235",
+    "tags": [
+      "data structures",
+      "dp",
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Jul/21/2022 01:35"
+  },
   "CF165051917": {
     "contest_id": 845,
     "language": "GNU C++20 (64)",

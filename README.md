@@ -12,7 +12,8 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1418 | [B - Luba And The Ticket](https://codeforces.com/contest/845/problem/B) | [GNU C++20 (64)](./codeforces/845/B.cpp) | `brute force` `greedy` `implementation` `*1600` | Jul/21/2022 01:43 | 
+1419 | [B - Luba And The Ticket](https://codeforces.com/contest/845/problem/B) | [GNU C++20 (64)](./codeforces/845/B.cpp) | `brute force` `greedy` `implementation` `*1600` | Jul/21/2022 01:43 | 
+1418 | [D - Driving Test](https://codeforces.com/contest/845/problem/D) | [GNU C++20 (64)](./codeforces/845/D.cpp) | `data structures` `dp` `greedy` `*1800` | Jul/21/2022 01:35 | 
 1417 | [C - Multiplicity](https://codeforces.com/contest/1061/problem/C) | [GNU C++20 (64)](./codeforces/1061/C.cpp) | `data structures` `dp` `implementation` `math` `number theory` `*1700` | Jul/17/2022 10:28 | 
 1416 | [C - Geometric Progression](https://codeforces.com/contest/567/problem/C) | [GNU C++20 (64)](./codeforces/567/C.cpp) | `binary search` `data structures` `dp` `*1700` | Jul/17/2022 01:10 | 
 1415 | [D - Difference Array](https://codeforces.com/contest/1708/problem/D) | [GNU C++20 (64)](./codeforces/1708/D.cpp) | `brute force` `sortings` | Jul/16/2022 23:48 | 
