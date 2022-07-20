@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1440 | [E - Sereja and Brackets](https://codeforces.com/contest/381/problem/E) | [GNU C++20 (64)](./codeforces/381/E.cpp) | `data structures` `*2000` | Jul/21/2022 03:45 | 
 1439 | [B - Luba And The Ticket](https://codeforces.com/contest/845/problem/B) | [GNU C++20 (64)](./codeforces/845/B.cpp) | `brute force` `greedy` `implementation` `*1600` | Jul/21/2022 01:43 | 
 1438 | [D - Driving Test](https://codeforces.com/contest/845/problem/D) | [GNU C++20 (64)](./codeforces/845/D.cpp) | `data structures` `dp` `greedy` `*1800` | Jul/21/2022 01:35 | 
 1437 | [A - Heidi and Library (easy)](https://codeforces.com/contest/802/problem/A) | [GNU C++20 (64)](./codeforces/802/A.cpp) | `greedy` `*1800` | Jul/20/2022 13:41 | 

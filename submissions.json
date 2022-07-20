@@ -35567,5 +35567,21 @@
       "*1600"
     ],
     "timestamp": "Jul/21/2022 01:43"
+  },
+  "CF165058892": {
+    "contest_id": 381,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/381/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Sereja and Brackets",
+    "problem_url": "https://codeforces.com/contest/381/problem/E",
+    "submission_id": "CF165058892",
+    "submission_url": "https://codeforces.com/contest/381/submission/165058892",
+    "tags": [
+      "data structures",
+      "*2000"
+    ],
+    "timestamp": "Jul/21/2022 03:45"
   }
 }
