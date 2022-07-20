@@ -11,14 +11,14 @@ int main() {
     cin >> n >> k;
     vector<int> a(n);
     for (int &A : a) cin >> A;
-    // Optimal Page replacement algorithm
+    // Optimal Page replacement: In this algorithm, pages are replaced which would not be used for the longest duration of time in the future.
     set<int> have;
     int ans = 0;
     for (int i = 0; i < n; ++i) {
         if (have.count(a[i])) continue;
         if (int(have.size()) == k) {
             // have to delete
-            int max_far = -1, book_id = -1;
+            int min_far = -1, book_id = -1;
             for (auto &book : have) {
                 int id = -1, far = INF;
                 for (int j = i + 1; j < n; ++j) {
@@ -28,8 +28,10 @@ int main() {
                         break;
                     }
                 }
-                // take farthest one out or the one that has no future occurence
-                if (far > max_far) max_far = far, book_id = a[id];
+                if (far > min_far) {
+                    min_far = far;
+                    book_id = a[id];
+                }
                 if (id == -1) {
                     book_id = book;
                     break;
