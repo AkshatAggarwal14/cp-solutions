@@ -35568,6 +35568,23 @@
     ],
     "timestamp": "Jul/21/2022 01:43"
   },
+  "CF165058818": {
+    "contest_id": 380,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/380/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Sereja and Brackets",
+    "problem_url": "https://codeforces.com/contest/380/problem/C",
+    "submission_id": "CF165058818",
+    "submission_url": "https://codeforces.com/contest/380/submission/165058818",
+    "tags": [
+      "data structures",
+      "schedules",
+      "*2000"
+    ],
+    "timestamp": "Jul/21/2022 03:43"
+  },
   "CF165058892": {
     "contest_id": 381,
     "language": "GNU C++20 (64)",
