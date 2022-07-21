@@ -38,14 +38,14 @@ void test() {
     int t1 = ropen, t2 = rclose;
     int fopen = -1, fclose = -1;
     for (int i = 0; i < n; ++i)
-        if (s[i] == '?') {
-            if (t1 > 0) {
-                s[i] = '(', --t1;
-                fopen = i;
-            } else if (t2 > 0) {
-                s[i] = ')', --t2;
-                if (fclose == -1) fclose = i;
-            }
+        if (s[i] == '?' && t1 > 0) {
+            s[i] = '(', --t1;
+            fopen = i;
+        }
+    for (int i = n - 1; i >= 0; --i)
+        if (s[i] == '?' && t2 > 0) {
+            s[i] = ')', --t2;
+            fclose = i;
         }
     // as one RBS can be recovered, at this moment "s" is always valid
     if (fopen == -1 || fclose == -1) return void(cout << "YES\n");

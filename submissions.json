@@ -35601,6 +35601,23 @@
     ],
     "timestamp": "Jul/21/2022 03:45"
   },
+  "CF165222948": {
+    "contest_id": 1709,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1709/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Recover an RBS",
+    "problem_url": "https://codeforces.com/contest/1709/problem/C",
+    "submission_id": "CF165222948",
+    "submission_url": "https://codeforces.com/contest/1709/submission/165222948",
+    "tags": [
+      "greedy",
+      "implementation",
+      "strings"
+    ],
+    "timestamp": "Jul/21/2022 22:53"
+  },
   "CF165227465": {
     "contest_id": 1709,
     "language": "GNU C++20 (64)",
