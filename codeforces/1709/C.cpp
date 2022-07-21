@@ -34,7 +34,9 @@ void test() {
     string s;
     cin >> s;
     int n = sz(s);
+    if (n & 1) return void(cout << "NO\n");
     int ropen = n / 2 - int(count(all(s), '(')), rclose = n / 2 - int(count(all(s), ')'));
+    if (ropen < 0 || rclose < 0) return void(cout << "NO\n");
     int t1 = ropen, t2 = rclose;
     int fopen = -1, fclose = -1;
     for (int i = 0; i < n; ++i)
@@ -47,7 +49,7 @@ void test() {
             s[i] = ')', --t2;
             fclose = i;
         }
-    // as one RBS can be recovered, at this moment "s" is always valid
+    if (!isValid(s)) return void(cout << "NO\n");
     if (fopen == -1 || fclose == -1) return void(cout << "YES\n");
     // swap last ( we filled with first ) we filled
     // as this is best way to swap, to get another RBS
