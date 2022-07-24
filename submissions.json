@@ -35600,5 +35600,21 @@
       "*2000"
     ],
     "timestamp": "Jul/21/2022 03:45"
+  },
+  "CF165568085": {
+    "contest_id": 1711,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1711/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Color the Picture",
+    "problem_url": "https://codeforces.com/contest/1711/problem/C",
+    "submission_id": "CF165568085",
+    "submission_url": "https://codeforces.com/contest/1711/submission/165568085",
+    "tags": [
+      "constructive algorithms",
+      "greedy"
+    ],
+    "timestamp": "Jul/24/2022 21:07"
   }
 }
