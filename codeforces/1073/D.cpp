@@ -17,20 +17,19 @@ void test() {
     int n;
     ll T;
     cin >> n >> T;
-    vector<ll> a(n);
-    for (auto &x : a) cin >> x;
-    ll ans = 0, Min = *min_element(all(a));
+    vector<ll> v(n);
+    for (auto &x : v) cin >> x;
+    ll ans = 0, Min = *min_element(all(v));
     while (T >= Min) {
-        ll count = 0, cost = 0, new_T = T;
+        ll cnt = 0, taken = 0, new_T = T;
         for (int i = 0; i < n; i++) {
-            if (new_T >= a[i]) {
-                new_T -= a[i];
-                cost += a[i];
-                count++;
-            }
+            if (v[i] > new_T) continue;
+            new_T -= v[i];
+            taken += v[i];
+            cnt++;
         }
-        ans += count * (T / cost);
-        T %= cost;
+        ans += cnt * (T / taken);
+        T %= taken;
     }
     cout << ans << "\n";
 }
