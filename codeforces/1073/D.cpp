@@ -21,6 +21,7 @@ void test() {
     for (auto &x : v) cin >> x;
     ll ans = 0, Min = *min_element(all(v));
     while (T >= Min) {
+        if (T < Min) break;
         ll cnt = 0, taken = 0, new_T = T;
         for (int i = 0; i < n; i++) {
             if (v[i] > new_T) continue;
