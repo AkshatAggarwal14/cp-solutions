@@ -5455,6 +5455,22 @@
     ],
     "timestamp": "Jul/17/2022 22:59"
   },
+  "AC33612658": {
+    "contest_id": "arc145",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc145/A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "AB Palindrome",
+    "problem_url": "https://atcoder.jp/contests/arc145/tasks/arc145_a",
+    "submission_id": "AC33612658",
+    "submission_url": "https://atcoder.jp/contests/arc145/submissions/33612658",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jul/30/2022 17:38"
+  },
   "AC33627934": {
     "contest_id": "arc145",
     "language": "C++ (GCC 9.2.1)",
