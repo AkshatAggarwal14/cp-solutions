@@ -19,9 +19,9 @@ void test() {
     if (n < a) return void(cout << "0\n");
     ll ans = 0;
     if (a > b) {
-        ans += a - 1;                      // first a games won by 2nd player
-        ans += (n / a - 1) * (a - b);      // last a - b games won by 2nd in remaining groups
-        ans += max(0LL, n % a - (b - 1));  // leftover me a jeetega except first b - 1
+        ans += a - 1;  // first a games won by 2nd player
+        ans += (n / a - 1) * (a - b);
+        ans += max(0LL, n % a - (b - 1));
     } else {
         ans = a - 1;
     }
