@@ -5455,6 +5455,22 @@
     ],
     "timestamp": "Jul/17/2022 22:59"
   },
+  "AC33635680": {
+    "contest_id": "arc145",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder/arc145/B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "AB Game",
+    "problem_url": "https://atcoder.jp/contests/arc145/tasks/arc145_b",
+    "submission_id": "AC33635680",
+    "submission_url": "https://atcoder.jp/contests/arc145/submissions/33635680",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Jul/30/2022 19:27"
+  },
   "AC33659314": {
     "contest_id": "abc262",
     "language": "C++ (GCC 9.2.1)",
