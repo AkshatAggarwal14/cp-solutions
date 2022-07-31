@@ -35885,6 +35885,23 @@
     ],
     "timestamp": "Jul/26/2022 19:30"
   },
+  "CF166408433": {
+    "contest_id": 1704,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1704/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Virus",
+    "problem_url": "https://codeforces.com/contest/1704/problem/C",
+    "submission_id": "CF166408433",
+    "submission_url": "https://codeforces.com/contest/1704/submission/166408433",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings"
+    ],
+    "timestamp": "Aug/01/2022 00:04"
+  },
   "CF166508459": {
     "contest_id": 1714,
     "language": "GNU C++20 (64)",
