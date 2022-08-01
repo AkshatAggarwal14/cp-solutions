@@ -13,7 +13,6 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// find first time greater than given, if doesnt exist use first
 void test() {
     ll n, h, m;
     cin >> n >> h >> m;
