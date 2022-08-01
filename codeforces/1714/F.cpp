@@ -13,8 +13,6 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// as tree 1 is connected to x, 2 is connected to x, 3 is connected to x
-// OR 1 2 or 3 is x
 void test() {
     ll n, aa, bb, cc;
     cin >> n >> aa >> bb >> cc;
@@ -47,6 +45,7 @@ void test() {
             edges.push_back({1, val});
             ++val;
         }
+        dbg(edges);
     } else if (b == 0) {
         ll val = 4, prev = 2;
         for (ll i = 0; i < a - 1; ++i) {
@@ -68,6 +67,7 @@ void test() {
             edges.push_back({1, val});
             ++val;
         }
+        dbg(edges);
     } else if (c == 0) {
         ll val = 4, prev = 3;
         for (ll i = 0; i < b - 1; ++i) {
@@ -89,6 +89,7 @@ void test() {
             edges.push_back({1, val});
             ++val;
         }
+        dbg(edges);
     } else {
         ll val = 5, prev = 4;
         for (ll i = 0; i < a - 1; ++i) {
@@ -118,6 +119,7 @@ void test() {
             edges.push_back({4, val});
             ++val;
         }
+        dbg(edges);
     }
     if (sz(edges) != n - 1) return void(cout << "NO\n");
     for (auto &[u, v] : edges) {
