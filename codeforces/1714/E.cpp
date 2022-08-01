@@ -29,10 +29,10 @@ void test() {
     }
     set<ll> st;
     for (ll i = 0; i < n; ++i) {
-        st.insert(T[a[i] % 20]);
-        if (sz(st) > 1) return void(cout << "NO\n");
+        ll u = a[i] % 20;
+        st.insert(T[u]);
     }
-    cout << "YES\n";
+    cout << ((sz(st) > 1) ? "NO\n" : "YES\n");
 }
 
 int32_t main() {
