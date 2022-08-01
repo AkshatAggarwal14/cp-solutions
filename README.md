@@ -12,9 +12,10 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1454 | [B - Permutation Chain](https://codeforces.com/contest/1716/problem/B) | [GNU C++20 (64)](./codeforces/1716/B.cpp) | `constructive algorithms` `math` | Aug/04/2022 20:19 | 
-1453 | [A - 2-3 Moves](https://codeforces.com/contest/1716/problem/A) | [GNU C++20 (64)](./codeforces/1716/A.cpp) | `greedy` `math` | Aug/04/2022 20:07 | 
-1452 | [G - Path Prefixes](https://codeforces.com/contest/1714/problem/G) | [GNU C++20 (64)](./codeforces/1714/G.cpp) | `binary search` `data structures` `dfs and similar` `trees` `*1700` | Aug/02/2022 12:32 | 
+1455 | [B - Permutation Chain](https://codeforces.com/contest/1716/problem/B) | [GNU C++20 (64)](./codeforces/1716/B.cpp) | `constructive algorithms` `math` | Aug/04/2022 20:19 | 
+1454 | [A - 2-3 Moves](https://codeforces.com/contest/1716/problem/A) | [GNU C++20 (64)](./codeforces/1716/A.cpp) | `greedy` `math` | Aug/04/2022 20:07 | 
+1453 | [G - Path Prefixes](https://codeforces.com/contest/1714/problem/G) | [GNU C++20 (64)](./codeforces/1714/G.cpp) | `binary search` `data structures` `dfs and similar` `trees` `*1700` | Aug/02/2022 12:32 | 
+1452 | [F - Build a Tree and That Is It](https://codeforces.com/contest/1714/problem/F) | [GNU C++20 (64)](./codeforces/1714/F.cpp) | `constructive algorithms` `implementation` `trees` `*1900` | Aug/01/2022 23:38 | 
 1451 | [D - Berland Fair](https://codeforces.com/contest/1073/problem/D) | [GNU C++20 (64)](./codeforces/1073/D.cpp) | `binary search` `brute force` `data structures` `greedy` `*1700` | Jul/26/2022 19:30 | 
 1450 | [C - Color the Picture](https://codeforces.com/contest/1711/problem/C) | [GNU C++20 (64)](./codeforces/1711/C.cpp) | `constructive algorithms` `greedy` | Jul/24/2022 21:07 | 
 1449 | [B - Party](https://codeforces.com/contest/1711/problem/B) | [GNU C++20 (64)](./codeforces/1711/B.cpp) | `brute force` `graphs` | Jul/24/2022 20:41 | 
