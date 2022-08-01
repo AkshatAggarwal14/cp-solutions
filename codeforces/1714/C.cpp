@@ -13,7 +13,6 @@ const ll INF = 1e18;
 const ll N = 1e5 + 5;
 const ll MOD = 1e9 + 7;  // 998244353
 
-// 98...1 take all you can and reverse
 void test() {
     ll s;
     cin >> s;

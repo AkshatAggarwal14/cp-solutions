@@ -35885,6 +35885,22 @@
     ],
     "timestamp": "Jul/26/2022 19:30"
   },
+  "CF166514369": {
+    "contest_id": 1714,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1714/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Minimum  Varied Number",
+    "problem_url": "https://codeforces.com/contest/1714/problem/C",
+    "submission_id": "CF166514369",
+    "submission_url": "https://codeforces.com/contest/1714/submission/166514369",
+    "tags": [
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Aug/01/2022 20:17"
+  },
   "CF166568082": {
     "contest_id": 1714,
     "language": "GNU C++20 (64)",
