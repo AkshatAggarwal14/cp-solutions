@@ -16,6 +16,7 @@ const ll MOD = 1e9 + 7;  // 998244353
 // such that it covers the entire range [0, K]
 vector<pair<ll, ll>> MinimumPairs(vector<pair<ll, ll>> arr, ll K) {
     int N = sz(arr);
+    sort(arr.begin(), arr.end());
     if (arr[0].first != 0) return {};
     int ans = 0;
     ll R = 0;
