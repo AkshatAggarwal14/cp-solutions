@@ -36313,5 +36313,23 @@
       "math"
     ],
     "timestamp": "Aug/04/2022 20:19"
+  },
+  "CF167264701": {
+    "contest_id": 1713,
+    "language": "GNU C++20 (64)",
+    "path": "codeforces/1713/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Build Permutation",
+    "problem_url": "https://codeforces.com/contest/1713/problem/C",
+    "submission_id": "CF167264701",
+    "submission_url": "https://codeforces.com/contest/1713/submission/167264701",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Aug/06/2022 20:45"
   }
 }
