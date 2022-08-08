@@ -12,6 +12,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
+1475 | [F - Telepanting](https://codeforces.com/contest/1552/problem/F) | [GNU C++20 (64)](./codeforces/1552/F.cpp) | `binary search` `data structures` `dp` `sortings` `*2200` | Aug/08/2022 19:14 | 
 1474 | [C - Build Permutation](https://codeforces.com/contest/1713/problem/C) | [GNU C++20 (64)](./codeforces/1713/C.cpp) | `constructive algorithms` `dp` `math` `*1200` | Aug/06/2022 20:45 | 
 1473 | [B - Optimal Reduction](https://codeforces.com/contest/1713/problem/B) | [GNU C++20 (64)](./codeforces/1713/B.cpp) | `constructive algorithms` `sortings` `*1000` | Aug/06/2022 20:16 | 
 1472 | [A - Traveling Salesman Problem](https://codeforces.com/contest/1713/problem/A) | [GNU C++20 (64)](./codeforces/1713/A.cpp) | `geometry` `greedy` `implementation` `*800` | Aug/06/2022 20:08 | 
